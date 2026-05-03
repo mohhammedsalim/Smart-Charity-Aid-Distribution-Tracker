@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{17F017F0-B9F2-4BC8-B993-B5024D0C5D57}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Smart_Charity_and_Aid_Distribution_Tracker</RootNamespace>
+    <AssemblyName>Smart Charity and Aid Distribution Tracker</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.7\lib\net48\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Beneficiary\frmAddBeneficiary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Beneficiary\frmAddBeneficiary.Designer.cs">
+      <DependentUpon>frmAddBeneficiary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Distrbution\frmDeleteRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Distrbution\frmDeleteRecord.Designer.cs">
+      <DependentUpon>frmDeleteRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Distrbution\frmDetailsProcess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Distrbution\frmDetailsProcess.Designer.cs">
+      <DependentUpon>frmDetailsProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Distrbution\frmDistrbution.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Distrbution\frmDistrbution.Designer.cs">
+      <DependentUpon>frmDistrbution.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Distrbution\frmNewDisbursementProcess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Distrbution\frmNewDisbursementProcess.Designer.cs">
+      <DependentUpon>frmNewDisbursementProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Donations\DonorManagement\frmAddNewDonor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Donations\DonorManagement\frmAddNewDonor.Designer.cs">
+      <DependentUpon>frmAddNewDonor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Donations\DonorManagement\frmDeleteDonor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Donations\DonorManagement\frmDeleteDonor.Designer.cs">
+      <DependentUpon>frmDeleteDonor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Donations\DonorManagement\frmDonorAdjustment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Donations\DonorManagement\frmDonorAdjustment.Designer.cs">
+      <DependentUpon>frmDonorAdjustment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Donations\DonorManagement\frmDonorManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Donations\DonorManagement\frmDonorManagement.Designer.cs">
+      <DependentUpon>frmDonorManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Donations\frmDeleteSelected.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Donations\frmDeleteSelected.Designer.cs">
+      <DependentUpon>frmDeleteSelected.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Donations\frmDonationModification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Donations\frmDonationModification.Designer.cs">
+      <DependentUpon>frmDonationModification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Donations\frmDonations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Donations\frmDonations.Designer.cs">
+      <DependentUpon>frmDonations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Donations\frmRegisterNewDonation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Donations\frmRegisterNewDonation.Designer.cs">
+      <DependentUpon>frmRegisterNewDonation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\frmAddNewBalance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\frmAddNewBalance.Designer.cs">
+      <DependentUpon>frmAddNewBalance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Beneficiary\frmBeneficiarie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Beneficiary\frmBeneficiarie.Designer.cs">
+      <DependentUpon>frmBeneficiarie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Beneficiary\frmBeneficiaryAidRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Beneficiary\frmBeneficiaryAidRecord.Designer.cs">
+      <DependentUpon>frmBeneficiaryAidRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DashBoard\frmDashBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DashBoard\frmDashBoard.Designer.cs">
+      <DependentUpon>frmDashBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Beneficiary\frmDeleteBeneficiary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Beneficiary\frmDeleteBeneficiary.Designer.cs">
+      <DependentUpon>frmDeleteBeneficiary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Beneficiary\frmEditBeneficiary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Beneficiary\frmEditBeneficiary.Designer.cs">
+      <DependentUpon>frmEditBeneficiary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\frmInventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\frmInventory.Designer.cs">
+      <DependentUpon>frmInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\frmInventoryMovementLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\frmInventoryMovementLog.Designer.cs">
+      <DependentUpon>frmInventoryMovementLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\ItemManagement\frmAddNewCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\ItemManagement\frmAddNewCategory.Designer.cs">
+      <DependentUpon>frmAddNewCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\ItemManagement\frmDeleteItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\ItemManagement\frmDeleteItem.Designer.cs">
+      <DependentUpon>frmDeleteItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\ItemManagement\frmEditCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\ItemManagement\frmEditCategory.Designer.cs">
+      <DependentUpon>frmEditCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\ItemManagement\frmItemManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\ItemManagement\frmItemManagement.Designer.cs">
+      <DependentUpon>frmItemManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\frmQuantityAdjustment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\frmQuantityAdjustment.Designer.cs">
+      <DependentUpon>frmQuantityAdjustment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\frmReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmReports.Designer.cs">
+      <DependentUpon>frmReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\frmAddUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\frmAddUser.Designer.cs">
+      <DependentUpon>frmAddUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\frmDeleteUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\frmDeleteUser.Designer.cs">
+      <DependentUpon>frmDeleteUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\frmfrmEditUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\frmfrmEditUser.Designer.cs">
+      <DependentUpon>frmfrmEditUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\frmUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\frmUser.Designer.cs">
+      <DependentUpon>frmUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\frnResetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\frnResetPassword.Designer.cs">
+      <DependentUpon>frnResetPassword.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Beneficiary\frmAddBeneficiary.resx">
+      <DependentUpon>frmAddBeneficiary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Distrbution\frmDeleteRecord.resx">
+      <DependentUpon>frmDeleteRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Distrbution\frmDetailsProcess.resx">
+      <DependentUpon>frmDetailsProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Distrbution\frmDistrbution.resx">
+      <DependentUpon>frmDistrbution.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Distrbution\frmNewDisbursementProcess.resx">
+      <DependentUpon>frmNewDisbursementProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Donations\DonorManagement\frmAddNewDonor.resx">
+      <DependentUpon>frmAddNewDonor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Donations\DonorManagement\frmDeleteDonor.resx">
+      <DependentUpon>frmDeleteDonor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Donations\DonorManagement\frmDonorAdjustment.resx">
+      <DependentUpon>frmDonorAdjustment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Donations\DonorManagement\frmDonorManagement.resx">
+      <DependentUpon>frmDonorManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Donations\frmDeleteSelected.resx">
+      <DependentUpon>frmDeleteSelected.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Donations\frmDonationModification.resx">
+      <DependentUpon>frmDonationModification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Donations\frmDonations.resx">
+      <DependentUpon>frmDonations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Donations\frmRegisterNewDonation.resx">
+      <DependentUpon>frmRegisterNewDonation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\frmAddNewBalance.resx">
+      <DependentUpon>frmAddNewBalance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Beneficiary\frmBeneficiarie.resx">
+      <DependentUpon>frmBeneficiarie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Beneficiary\frmBeneficiaryAidRecord.resx">
+      <DependentUpon>frmBeneficiaryAidRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DashBoard\frmDashBoard.resx">
+      <DependentUpon>frmDashBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Beneficiary\frmDeleteBeneficiary.resx">
+      <DependentUpon>frmDeleteBeneficiary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Beneficiary\frmEditBeneficiary.resx">
+      <DependentUpon>frmEditBeneficiary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\frmInventory.resx">
+      <DependentUpon>frmInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\frmInventoryMovementLog.resx">
+      <DependentUpon>frmInventoryMovementLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\ItemManagement\frmAddNewCategory.resx">
+      <DependentUpon>frmAddNewCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\ItemManagement\frmDeleteItem.resx">
+      <DependentUpon>frmDeleteItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\ItemManagement\frmEditCategory.resx">
+      <DependentUpon>frmEditCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\ItemManagement\frmItemManagement.resx">
+      <DependentUpon>frmItemManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\frmQuantityAdjustment.resx">
+      <DependentUpon>frmQuantityAdjustment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Reports\frmReports.resx">
+      <DependentUpon>frmReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\frmAddUser.resx">
+      <DependentUpon>frmAddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\frmDeleteUser.resx">
+      <DependentUpon>frmDeleteUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\frmfrmEditUser.resx">
+      <DependentUpon>frmfrmEditUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\frmUser.resx">
+      <DependentUpon>frmUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\frnResetPassword.resx">
+      <DependentUpon>frnResetPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
