@@ -42,7 +42,6 @@ C:\Users\Dell\Desktop\telegram\Csharp project\Smart Charity and Aid Distribution
 C:\Users\Dell\Desktop\telegram\Csharp project\Smart Charity and Aid Distribution Tracker\Smart Charity and Aid Distribution Tracker\obj\Debug\Smart_Charity_and_Aid_Distribution_Tracker.Reports.frmReports.resources
 C:\Users\Dell\Desktop\telegram\Csharp project\Smart Charity and Aid Distribution Tracker\Smart Charity and Aid Distribution Tracker\obj\Debug\Smart_Charity_and_Aid_Distribution_Tracker.Distrbution.frmNewDisbursementProcess.resources
 C:\Users\Dell\Desktop\Smart Charity and Aid Distribution Tracker\Smart Charity and Aid Distribution Tracker\obj\Debug\Smart Charity and Aid Distribution Tracker.csproj.AssemblyReference.cache
-C:\Users\Dell\Desktop\Smart Charity and Aid Distribution Tracker\Smart Charity and Aid Distribution Tracker\obj\Debug\Smart Charity and Aid Distribution Tracker.exe.config
 C:\Users\Dell\Desktop\Smart Charity and Aid Distribution Tracker\Smart Charity and Aid Distribution Tracker\obj\Debug\Smart_Charity_and_Aid_Distribution_Tracker.frmAddBeneficiary.resources
 C:\Users\Dell\Desktop\Smart Charity and Aid Distribution Tracker\Smart Charity and Aid Distribution Tracker\obj\Debug\Smart_Charity_and_Aid_Distribution_Tracker.Distrbution.frmDeleteRecord.resources
 C:\Users\Dell\Desktop\Smart Charity and Aid Distribution Tracker\Smart Charity and Aid Distribution Tracker\obj\Debug\Smart_Charity_and_Aid_Distribution_Tracker.Distrbution.frmDetailsProcess.resources
@@ -86,3 +85,7 @@ C:\Users\Dell\Desktop\Smart Charity and Aid Distribution Tracker\Smart Charity a
 C:\Users\Dell\Desktop\Smart Charity and Aid Distribution Tracker\Smart Charity and Aid Distribution Tracker\bin\Debug\Smart Charity and Aid Distribution Tracker.pdb
 C:\Users\Dell\Desktop\Smart Charity and Aid Distribution Tracker\Smart Charity and Aid Distribution Tracker\bin\Debug\Guna.UI2.dll
 C:\Users\Dell\Desktop\Smart Charity and Aid Distribution Tracker\Smart Charity and Aid Distribution Tracker\obj\Debug\Smart Ch.8C2C4D21.Up2Date
+C:\Users\Dell\Desktop\Smart Charity and Aid Distribution Tracker\Smart Charity and Aid Distribution Tracker\obj\Debug\Smart_Charity_and_Aid_Distribution_Tracker.Form1.resources
+C:\Users\Dell\Desktop\Smart Charity and Aid Distribution Tracker\Smart Charity and Aid Distribution Tracker\obj\Debug\Smart_Charity_and_Aid_Distribution_Tracker.Forms.DashBoard.frmConfirm.resources
+C:\Users\Dell\Desktop\Smart Charity and Aid Distribution Tracker\Smart Charity and Aid Distribution Tracker\obj\Debug\Smart_Charity_and_Aid_Distribution_Tracker.Forms.Login.frmAlert.resources
+C:\Users\Dell\Desktop\Smart Charity and Aid Distribution Tracker\Smart Charity and Aid Distribution Tracker\obj\Debug\Smart Charity and Aid Distribution Tracker.exe.config

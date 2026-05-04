@@ -1,8 +1,9 @@
-﻿using Smart_Charity_and_Aid_Distribution_Tracker.Distrbution;
+﻿using Smart_Charity_and_Aid_Distribution_Tracker.Data;
+using Smart_Charity_and_Aid_Distribution_Tracker.Distrbution;
 using Smart_Charity_and_Aid_Distribution_Tracker.Donations;
 using Smart_Charity_and_Aid_Distribution_Tracker.Donations.DonorManagement;
-using Smart_Charity_and_Aid_Distribution_Tracker.Users;
 using Smart_Charity_and_Aid_Distribution_Tracker.Reports;
+using Smart_Charity_and_Aid_Distribution_Tracker.Users;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,9 +20,10 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker
         [STAThread]
         static void Main()
         {
+            DataStore.SeedData(); DataStore.SeedData1();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmLogin());
+            Application.Run(new frmBeneficiarie());
         }
     }
 }
