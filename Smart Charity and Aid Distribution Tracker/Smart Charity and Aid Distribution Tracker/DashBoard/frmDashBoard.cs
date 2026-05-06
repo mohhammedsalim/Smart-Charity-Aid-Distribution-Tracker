@@ -16,45 +16,145 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker
 {
     public partial class frmDashBoard : Form
     {
-        public frmDashBoard()
+        private Form activeForm = null;
+        private Panel pnlContainer;
+
+        public frmDashBoard(string currentUserName)
         {
             InitializeComponent();
+            InitializeContainer();
+            SetupHomeButton();
+
+            lblUserName.Text = currentUserName;
+        }
+
+        private void HighlightActiveButton(Guna.UI2.WinForms.Guna2Button activeButton)
+        {
+            btnBeneficiaries.FillColor = Color.FromArgb(240, 240, 240);
+            btnInventory.FillColor = Color.FromArgb(240, 240, 240);
+            btnDonations.FillColor = Color.FromArgb(240, 240, 240);
+            btnDisbursement.FillColor = Color.FromArgb(240, 240, 240);
+            btnReports.FillColor = Color.FromArgb(240, 240, 240);
+            btnUsers.FillColor = Color.FromArgb(240, 240, 240);
+
+            if (activeButton != null)
+            {
+                activeButton.FillColor = Color.FromArgb(235, 248, 235);
+            }
+        }
+
+        private void InitializeContainer()
+        {
+            pnlContainer = new Panel();
+            pnlContainer.Location = new Point(0, 65);
+            pnlContainer.Size = new Size(this.ClientSize.Width, this.ClientSize.Height - 65 - 38);
+            pnlContainer.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            pnlContainer.BackColor = this.BackColor;
+
+            this.Controls.Add(pnlContainer);
+            pnlContainer.BringToFront();
+
+            pnlContainer.Visible = false;
+        }
+
+        private void SetupHomeButton()
+        {
+            lblLogo.Cursor = Cursors.Hand;
+            pictureBox7.Cursor = Cursors.Hand;
+
+            lblLogo.Click += (sender, e) => ShowDashboardHome();
+            pictureBox7.Click += (sender, e) => ShowDashboardHome();
+        }
+
+        private void ShowDashboardHome()
+        {
+            if (activeForm != null)
+            {
+                activeForm.Close();
+                activeForm = null;
+            }
+            pnlContainer.Visible = false;
+            HighlightActiveButton(null);
+        }
+
+        private void OpenChildForm(Form childForm)
+        {
+            if (activeForm != null)
+            {
+                activeForm.Close();
+            }
+
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+
+            childForm.FormClosed += (sender, e) =>
+            {
+                pnlContainer.Visible = false;
+                activeForm = null;
+            };
+
+            pnlContainer.Visible = true;
+            pnlContainer.BringToFront();
+            pnlContainer.Controls.Add(childForm);
+            pnlContainer.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
+
+        private void btnRegisterNewDonation_Click(object sender, EventArgs e)
+        {
+            frmRegisterNewDonation registerDonationForm = new frmRegisterNewDonation();
+            registerDonationForm.ShowDialog();
+        }
+
+        private void btnNewDisbursementProcess_Click(object sender, EventArgs e)
+        {
+            frmNewDisbursementProcess newDisbursementForm = new frmNewDisbursementProcess();
+            newDisbursementForm.ShowDialog();
+        }
+
+        private void btnAddNewBeneficiary_Click(object sender, EventArgs e)
+        {
+            frmAddBeneficiary addBeneficiaryForm = new frmAddBeneficiary();
+            addBeneficiaryForm.ShowDialog();
         }
 
         private void btnBeneficiaries_Click(object sender, EventArgs e)
         {
-            frmBeneficiarie beneficiariesForm = new frmBeneficiarie();
-            beneficiariesForm.ShowDialog();
+            HighlightActiveButton(btnBeneficiaries);
+            OpenChildForm(new frmBeneficiarie());
         }
 
         private void btnInventory_Click(object sender, EventArgs e)
         {
-            frmInventory inventoryForm = new frmInventory();
-            inventoryForm.ShowDialog();
+            HighlightActiveButton(btnInventory);
+            OpenChildForm(new frmInventory());
         }
 
         private void btnDonations_Click(object sender, EventArgs e)
         {
-            frmDonations donationsForm = new frmDonations();
-            donationsForm.ShowDialog();
+            HighlightActiveButton(btnDonations);
+            OpenChildForm(new frmDonations());
         }
 
         private void btnDisbursement_Click(object sender, EventArgs e)
         {
-            frmDistrbution disbursementForm = new frmDistrbution();
-            disbursementForm.ShowDialog();
+            HighlightActiveButton(btnDisbursement);
+            OpenChildForm(new frmDistrbution());
         }
 
         private void btnReports_Click(object sender, EventArgs e)
         {
-            frmReports frmReports = new frmReports();
-            frmReports.ShowDialog();
+            HighlightActiveButton(btnReports);
+            OpenChildForm(new frmReports());
         }
 
         private void btnUsers_Click(object sender, EventArgs e)
         {
-            frmUser frmUser = new frmUser();
-            frmUser.ShowDialog();
+            HighlightActiveButton(btnUsers);
+            OpenChildForm(new frmUser());
         }
 
         private void btnLogout_Click(object sender, EventArgs e)

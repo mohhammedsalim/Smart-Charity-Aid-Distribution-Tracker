@@ -127,7 +127,7 @@
             // 
             // pnlBeneficiaries
             // 
-            this.pnlBeneficiaries.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.pnlBeneficiaries.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlBeneficiaries.BorderRadius = 12;
             this.pnlBeneficiaries.Controls.Add(this.pictureBox4);
@@ -324,7 +324,7 @@
             // 
             // pnlDonations
             // 
-            this.pnlDonations.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.pnlDonations.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlDonations.BorderRadius = 12;
             this.pnlDonations.Controls.Add(this.pictureBox6);
@@ -394,7 +394,7 @@
             // 
             // pnlInventory
             // 
-            this.pnlInventory.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.pnlInventory.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlInventory.BorderRadius = 12;
             this.pnlInventory.Controls.Add(this.pictureBox9);
@@ -465,8 +465,8 @@
             // 
             // pnlAlerts
             // 
-            this.pnlAlerts.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.pnlAlerts.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlAlerts.BackColor = System.Drawing.Color.Transparent;
             this.pnlAlerts.BorderRadius = 16;
@@ -532,8 +532,8 @@
             // 
             // dgvAlerts
             // 
-            this.dgvAlerts.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.dgvAlerts.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvAlerts.BackgroundColor = System.Drawing.Color.White;
             this.dgvAlerts.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -547,7 +547,7 @@
             // 
             // pnlQuickAccess
             // 
-            this.pnlQuickAccess.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.pnlQuickAccess.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlQuickAccess.BackColor = System.Drawing.Color.Transparent;
             this.pnlQuickAccess.BorderRadius = 16;
@@ -612,6 +612,7 @@
             this.btnRegisterNewDonation.Size = new System.Drawing.Size(230, 90);
             this.btnRegisterNewDonation.TabIndex = 2;
             this.btnRegisterNewDonation.Text = "تسجيل تبرع جديد";
+            this.btnRegisterNewDonation.Click += new System.EventHandler(this.btnRegisterNewDonation_Click);
             // 
             // btnNewDisbursementProcess
             // 
@@ -625,6 +626,7 @@
             this.btnNewDisbursementProcess.Size = new System.Drawing.Size(230, 90);
             this.btnNewDisbursementProcess.TabIndex = 3;
             this.btnNewDisbursementProcess.Text = "عملية صرف جديدة";
+            this.btnNewDisbursementProcess.Click += new System.EventHandler(this.btnNewDisbursementProcess_Click);
             // 
             // btnAddNewBeneficiary
             // 
@@ -638,10 +640,11 @@
             this.btnAddNewBeneficiary.Size = new System.Drawing.Size(230, 90);
             this.btnAddNewBeneficiary.TabIndex = 4;
             this.btnAddNewBeneficiary.Text = "إضافة مستفيد جديد";
+            this.btnAddNewBeneficiary.Click += new System.EventHandler(this.btnAddNewBeneficiary_Click);
             // 
             // pnlUserAndTime
             // 
-            this.pnlUserAndTime.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.pnlUserAndTime.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlUserAndTime.Controls.Add(this.picMain);
             this.pnlUserAndTime.Controls.Add(this.lblAmPm);
@@ -681,7 +684,7 @@
             // 
             // pnlNavbar
             // 
-            this.pnlNavbar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.pnlNavbar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlNavbar.Controls.Add(this.pictureBox7);
             this.pnlNavbar.Controls.Add(this.lblLogo);
@@ -725,7 +728,7 @@
             // 
             // pnlDisbursement
             // 
-            this.pnlDisbursement.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.pnlDisbursement.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlDisbursement.BorderRadius = 12;
             this.pnlDisbursement.Controls.Add(this.pictureBox3);

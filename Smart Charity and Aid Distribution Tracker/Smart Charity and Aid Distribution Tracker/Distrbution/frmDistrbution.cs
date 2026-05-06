@@ -19,20 +19,8 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Distrbution
 
         private void btnBackToDashBoard_Click(object sender, EventArgs e)
         {
-            Form dashboardForm = Application.OpenForms["frmDashBoard"];
-
-            if (dashboardForm != null)
-            {
-                dashboardForm.Show();
-            }
-            else
-            {
-                frmDashBoard newDashboardForm = new frmDashBoard();
-                newDashboardForm.Show();
-            }
             this.Close();
         }
-
         private void btnNewDisbursementProcess_Click(object sender, EventArgs e)
         {
             frmNewDisbursementProcess newDisbursementProcessForm = new frmNewDisbursementProcess();

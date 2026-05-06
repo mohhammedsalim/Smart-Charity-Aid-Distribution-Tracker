@@ -19,17 +19,6 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker
 
         private void btnBackToDashBoard_Click(object sender, EventArgs e)
         {
-            Form dashboardForm = Application.OpenForms["frmDashBoard"];
-
-            if (dashboardForm != null)
-            {
-                dashboardForm.Show();
-            }
-            else
-            {
-                frmDashBoard newDashboardForm = new frmDashBoard();
-                newDashboardForm.Show();
-            }
             this.Close();
         }
 

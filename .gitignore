@@ -1,0 +1,72 @@
+# ========================
+# Visual Studio
+# ========================
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# ========================
+# Build Folders
+# ========================
+bin/
+obj/
+Debug/
+Release/
+x64/
+x86/
+
+# ========================
+# Output Files
+# ========================
+*.exe
+*.dll
+*.pdb
+*.cache
+*.log
+
+# ========================
+# NuGet Packages
+# ========================
+packages/
+*.nupkg
+
+# لكن خليه لو تستخدم Package Restore
+!packages.config
+
+# ========================
+# Visual Studio Cache
+# ========================
+*.VC.db
+*.VC.opendb
+
+# ========================
+# Resharper / Rider (لو استخدمتهم)
+# ========================
+_ReSharper*/
+*.DotSettings.user
+
+# ========================
+# Windows Files
+# ========================
+Thumbs.db
+Desktop.ini
+
+# ========================
+# Temporary Files
+# ========================
+*.tmp
+*.temp
+
+# ========================
+# Logs
+# ========================
+*.txt
+
+# ========================
+# Ignore specific paths from your project
+# ========================
+Smart Charity and Aid Distribution Tracker/.vs/
+Smart Charity and Aid Distribution Tracker/**/bin/
+Smart Charity and Aid Distribution Tracker/**/obj/
