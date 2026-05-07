@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.pnlNavbar = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnDonors = new Guna.UI2.WinForms.Guna2Button();
             this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
             this.btnUsers = new Guna.UI2.WinForms.Guna2Button();
             this.btnReports = new Guna.UI2.WinForms.Guna2Button();
@@ -63,6 +64,7 @@
             // pnlNavbar
             // 
             this.pnlNavbar.BackColor = System.Drawing.Color.White;
+            this.pnlNavbar.Controls.Add(this.btnDonors);
             this.pnlNavbar.Controls.Add(this.btnLogout);
             this.pnlNavbar.Controls.Add(this.btnUsers);
             this.pnlNavbar.Controls.Add(this.btnReports);
@@ -77,6 +79,21 @@
             this.pnlNavbar.Name = "pnlNavbar";
             this.pnlNavbar.Size = new System.Drawing.Size(1579, 80);
             this.pnlNavbar.TabIndex = 0;
+            // 
+            // btnDonors
+            // 
+            this.btnDonors.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDonors.BorderRadius = 8;
+            this.btnDonors.FillColor = System.Drawing.Color.White;
+            this.btnDonors.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btnDonors.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnDonors.Location = new System.Drawing.Point(219, 15);
+            this.btnDonors.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDonors.Name = "btnDonors";
+            this.btnDonors.Size = new System.Drawing.Size(160, 49);
+            this.btnDonors.TabIndex = 8;
+            this.btnDonors.Text = "المتبرعين";
+            this.btnDonors.Click += new System.EventHandler(this.btnDonors_Click);
             // 
             // btnLogout
             // 
@@ -152,6 +169,7 @@
             this.btnDonations.Size = new System.Drawing.Size(160, 49);
             this.btnDonations.TabIndex = 3;
             this.btnDonations.Text = "التبرعات";
+            this.btnDonations.Click += new System.EventHandler(this.btnDonations_Click);
             // 
             // btnInventory
             // 
@@ -443,5 +461,6 @@
         private Guna.UI2.WinForms.Guna2Panel pnlDisbursement;
         private System.Windows.Forms.Label lblNumberDisbursement;
         private System.Windows.Forms.Label label10;
+        private Guna.UI2.WinForms.Guna2Button btnDonors;
     }
 }

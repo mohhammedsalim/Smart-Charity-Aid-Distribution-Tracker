@@ -192,6 +192,22 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
             usersForm.Show();
             this.Hide();
     }
+
+        private void btnDonors_Click(object sender, EventArgs e)
+        {
+            frmDonors donorsForm = new frmDonors();
+            donorsForm.Show();
+            this.Hide(); // إخفاء لوحة التحكم مؤقتاً
+        }
+
+        private void btnDonations_Click(object sender, EventArgs e)
+        {
+            frmDonations donationsForm = new frmDonations();
+            donationsForm.Show();
+            this.Hide();
+        }
+
+    }
 }
-}
+
 

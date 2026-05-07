@@ -323,5 +323,62 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Services
             _distributionDetails.Add(detail);
         }
 
+        // ==========================================
+        // --- دوال المتبرعين (Donors) ---
+        // ==========================================
+        private static List<Donor> _donors = new List<Donor>();
+
+        public static List<Donor> GetDonors() => _donors;
+
+        public static void AddDonor(Donor donor) => _donors.Add(donor);
+
+        public static void UpdateDonor(Donor donor)
+        {
+            var existing = _donors.FirstOrDefault(d => d.DonorID == donor.DonorID);
+            if (existing != null)
+            {
+                existing.FullName = donor.FullName;
+                existing.Phone = donor.Phone;
+                existing.Email = donor.Email;
+                existing.DonorType = donor.DonorType;
+                existing.Address = donor.Address;
+                existing.Notes = donor.Notes;
+            }
+        }
+
+        public static void DeleteDonor(string id)
+        {
+            var donor = _donors.FirstOrDefault(d => d.DonorID == id);
+            if (donor != null) _donors.Remove(donor);
+        }
+        // ==========================================
+        // --- دوال التبرعات (Donations) ---
+        // ==========================================
+        private static List<Donation> _donations = new List<Donation>();
+
+        public static List<Donation> GetDonations() => _donations;
+
+        public static void AddDonation(Donation donation) => _donations.Add(donation);
+
+        public static void UpdateDonation(Donation donation)
+        {
+            var existing = _donations.FirstOrDefault(d => d.DonationID == donation.DonationID);
+            if (existing != null)
+            {
+                existing.DonorID = donation.DonorID;
+                existing.DonationType = donation.DonationType;
+                existing.ItemID = donation.ItemID;
+                existing.Quantity = donation.Quantity;
+                existing.Amount = donation.Amount;
+                existing.Notes = donation.Notes;
+            }
+        }
+
+        public static void DeleteDonation(string id)
+        {
+            var donation = _donations.FirstOrDefault(d => d.DonationID == id);
+            if (donation != null) _donations.Remove(donation);
+        }
+
     }
 }
