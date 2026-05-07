@@ -1,22 +1,25 @@
-﻿using Smart_Charity_and_Aid_Distribution_Tracker.Models.Enums;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Smart_Charity_and_Aid_Distribution_Tracker.Enums;
 
 namespace Smart_Charity_and_Aid_Distribution_Tracker.Models
 {
+
     public class Distribution
     {
-        public string DistributionID { get; set; }
-        public string BeneficiaryID { get; set; }
-        public string PerformedBy { get; set; } // EmployeeID
-        public DateTime DistributionDate { get; set; }
-        public DistributionStatus Status { get; set; }
-        public string Notes { get; set; }
+        public string DistributionID { get; set; } // رقم العملية الفريد (نصي)
+        public string BeneficiaryID { get; set; } // المستفيد (FK)
+        public DateTime DistributionDate { get; set; } // تاريخ التوزيع
+        public string PerformedBy { get; set; } // الموظف المنفذ (FK - اسم المستخدم)
+        public DistributionStatus Status { get; set; } // حالة العملية
+        public string Notes { get; set; } // ملاحظات
 
-        // خاصية للتنقل، تمثل العلاقة 1-to-Many
-        public List<DistributionDetail> Details { get; set; } = new List<DistributionDetail>();
+        // خاصية للتنقل (Navigation Property) لعرض التفاصيل المرتبطة
+        public List<DistributionDetail> Details { get; set; }
+
+        public Distribution()
+        {
+            Details = new List<DistributionDetail>();
+        }
     }
 }

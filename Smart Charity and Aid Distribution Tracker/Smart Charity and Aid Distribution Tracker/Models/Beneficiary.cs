@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace Smart_Charity_and_Aid_Distribution_Tracker.Models
 {
     public class Beneficiary
@@ -14,7 +9,7 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Models
         public string Phone { get; set; }
         public string Address { get; set; }
         public int FamilySize { get; set; }
-        public string SocialStatus { get; set; } // يمكن تحويله لـ enum لاحقاً
+        public string SocialStatus { get; set; }
         public string NeedReason { get; set; }
         public DateTime RegistrationDate { get; set; }
         public bool IsActive { get; set; }

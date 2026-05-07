@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{17F017F0-B9F2-4BC8-B993-B5024D0C5D57}</ProjectGuid>
+    <ProjectGuid>{DAADC680-41B8-45EC-9508-1FF125F86B24}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Smart_Charity_and_Aid_Distribution_Tracker</RootNamespace>
     <AssemblyName>Smart Charity and Aid Distribution Tracker</AssemblyName>
@@ -52,318 +52,70 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Data\DataStore.cs" />
-    <Compile Include="Forms\Beneficiary\frmAddBeneficiary.cs">
+    <Compile Include="Data\SeedData.cs" />
+    <Compile Include="Enums\DistributionStatus.cs" />
+    <Compile Include="Enums\ItemCategory.cs" />
+    <Compile Include="Enums\UserRole.cs" />
+    <Compile Include="Forms\frmAlert.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Beneficiary\frmAddBeneficiary.Designer.cs">
-      <DependentUpon>frmAddBeneficiary.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\DashBoard\frmConfirm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\DashBoard\frmConfirm.Designer.cs">
-      <DependentUpon>frmConfirm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Distrbution\frmDeleteRecord.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Distrbution\frmDeleteRecord.Designer.cs">
-      <DependentUpon>frmDeleteRecord.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Distrbution\frmDetailsProcess.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Distrbution\frmDetailsProcess.Designer.cs">
-      <DependentUpon>frmDetailsProcess.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Distrbution\frmDistrbution.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Distrbution\frmDistrbution.Designer.cs">
-      <DependentUpon>frmDistrbution.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Distrbution\frmNewDisbursementProcess.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Distrbution\frmNewDisbursementProcess.Designer.cs">
-      <DependentUpon>frmNewDisbursementProcess.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Donations\DonorManagement\frmAddNewDonor.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Donations\DonorManagement\frmAddNewDonor.Designer.cs">
-      <DependentUpon>frmAddNewDonor.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Donations\DonorManagement\frmDeleteDonor.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Donations\DonorManagement\frmDeleteDonor.Designer.cs">
-      <DependentUpon>frmDeleteDonor.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Donations\DonorManagement\frmDonorAdjustment.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Donations\DonorManagement\frmDonorAdjustment.Designer.cs">
-      <DependentUpon>frmDonorAdjustment.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Donations\DonorManagement\frmDonorManagement.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Donations\DonorManagement\frmDonorManagement.Designer.cs">
-      <DependentUpon>frmDonorManagement.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Donations\frmDeleteSelected.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Donations\frmDeleteSelected.Designer.cs">
-      <DependentUpon>frmDeleteSelected.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Donations\frmDonationModification.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Donations\frmDonationModification.Designer.cs">
-      <DependentUpon>frmDonationModification.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Donations\frmDonations.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Donations\frmDonations.Designer.cs">
-      <DependentUpon>frmDonations.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Donations\frmRegisterNewDonation.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Donations\frmRegisterNewDonation.Designer.cs">
-      <DependentUpon>frmRegisterNewDonation.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Inventory\frmAddNewBalance.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Inventory\frmAddNewBalance.Designer.cs">
-      <DependentUpon>frmAddNewBalance.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Beneficiary\frmBeneficiarie.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Beneficiary\frmBeneficiarie.Designer.cs">
-      <DependentUpon>frmBeneficiarie.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Beneficiary\frmBeneficiaryAidRecord.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Beneficiary\frmBeneficiaryAidRecord.Designer.cs">
-      <DependentUpon>frmBeneficiaryAidRecord.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\DashBoard\frmDashBoard.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\DashBoard\frmDashBoard.Designer.cs">
-      <DependentUpon>frmDashBoard.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Beneficiary\frmDeleteBeneficiary.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Beneficiary\frmDeleteBeneficiary.Designer.cs">
-      <DependentUpon>frmDeleteBeneficiary.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Beneficiary\frmEditBeneficiary.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Beneficiary\frmEditBeneficiary.Designer.cs">
-      <DependentUpon>frmEditBeneficiary.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Inventory\frmInventory.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Inventory\frmInventory.Designer.cs">
-      <DependentUpon>frmInventory.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Inventory\frmInventoryMovementLog.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Inventory\frmInventoryMovementLog.Designer.cs">
-      <DependentUpon>frmInventoryMovementLog.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Inventory\ItemManagement\frmAddNewCategory.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Inventory\ItemManagement\frmAddNewCategory.Designer.cs">
-      <DependentUpon>frmAddNewCategory.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Inventory\ItemManagement\frmDeleteItem.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Inventory\ItemManagement\frmDeleteItem.Designer.cs">
-      <DependentUpon>frmDeleteItem.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Inventory\ItemManagement\frmEditCategory.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Inventory\ItemManagement\frmEditCategory.Designer.cs">
-      <DependentUpon>frmEditCategory.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Inventory\ItemManagement\frmItemManagement.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Inventory\ItemManagement\frmItemManagement.Designer.cs">
-      <DependentUpon>frmItemManagement.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Login\frmAlert.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Login\frmAlert.Designer.cs">
+    <Compile Include="Forms\frmAlert.Designer.cs">
       <DependentUpon>frmAlert.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Login\frmLogin.cs">
+    <Compile Include="Forms\frmBeneficiarie.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Login\frmLogin.Designer.cs">
+    <Compile Include="Forms\frmBeneficiarie.Designer.cs">
+      <DependentUpon>frmBeneficiarie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmConfirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmConfirm.Designer.cs">
+      <DependentUpon>frmConfirm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDashBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDashBoard.Designer.cs">
+      <DependentUpon>frmDashBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDistribution.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDistribution.Designer.cs">
+      <DependentUpon>frmDistribution.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmInventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmInventory.Designer.cs">
+      <DependentUpon>frmInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Inventory\frmQuantityAdjustment.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Inventory\frmQuantityAdjustment.Designer.cs">
-      <DependentUpon>frmQuantityAdjustment.cs</DependentUpon>
-    </Compile>
     <Compile Include="Models\Beneficiary.cs" />
+    <Compile Include="Models\Class1.csInventoryItem.cs" />
     <Compile Include="Models\Distribution.cs" />
     <Compile Include="Models\DistributionDetail.cs" />
-    <Compile Include="Models\Donation.cs" />
-    <Compile Include="Models\Donor.cs" />
-    <Compile Include="Models\enums\DistributionStatus.cs" />
-    <Compile Include="Models\enums\DonationType.cs" />
-    <Compile Include="Models\enums\MovementType.cs" />
-    <Compile Include="Models\enums\UserRole.cs" />
-    <Compile Include="Models\InventoryItem.cs" />
-    <Compile Include="Models\InventoryMovement.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Forms\Reports\frmReports.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Reports\frmReports.Designer.cs">
-      <DependentUpon>frmReports.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Users\frmAddUser.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Users\frmAddUser.Designer.cs">
-      <DependentUpon>frmAddUser.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Users\frmDeleteUser.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Users\frmDeleteUser.Designer.cs">
-      <DependentUpon>frmDeleteUser.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Users\frmfrmEditUser.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Users\frmfrmEditUser.Designer.cs">
-      <DependentUpon>frmfrmEditUser.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Users\frmUser.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Users\frmUser.Designer.cs">
-      <DependentUpon>frmUser.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Users\frnResetPassword.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Users\frnResetPassword.Designer.cs">
-      <DependentUpon>frnResetPassword.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Services\DataService.cs" />
+    <Compile Include="Services\SeedData.cs" />
     <Compile Include="Services\UserService.cs" />
-    <EmbeddedResource Include="Forms\Beneficiary\frmAddBeneficiary.resx">
-      <DependentUpon>frmAddBeneficiary.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\DashBoard\frmConfirm.resx">
-      <DependentUpon>frmConfirm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Distrbution\frmDeleteRecord.resx">
-      <DependentUpon>frmDeleteRecord.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Distrbution\frmDetailsProcess.resx">
-      <DependentUpon>frmDetailsProcess.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Distrbution\frmDistrbution.resx">
-      <DependentUpon>frmDistrbution.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Distrbution\frmNewDisbursementProcess.resx">
-      <DependentUpon>frmNewDisbursementProcess.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Donations\DonorManagement\frmAddNewDonor.resx">
-      <DependentUpon>frmAddNewDonor.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Donations\DonorManagement\frmDeleteDonor.resx">
-      <DependentUpon>frmDeleteDonor.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Donations\DonorManagement\frmDonorAdjustment.resx">
-      <DependentUpon>frmDonorAdjustment.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Donations\DonorManagement\frmDonorManagement.resx">
-      <DependentUpon>frmDonorManagement.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Donations\frmDeleteSelected.resx">
-      <DependentUpon>frmDeleteSelected.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Donations\frmDonationModification.resx">
-      <DependentUpon>frmDonationModification.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Donations\frmDonations.resx">
-      <DependentUpon>frmDonations.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Donations\frmRegisterNewDonation.resx">
-      <DependentUpon>frmRegisterNewDonation.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Inventory\frmAddNewBalance.resx">
-      <DependentUpon>frmAddNewBalance.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Beneficiary\frmBeneficiarie.resx">
+    <EmbeddedResource Include="Forms\frmBeneficiarie.resx">
       <DependentUpon>frmBeneficiarie.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Beneficiary\frmBeneficiaryAidRecord.resx">
-      <DependentUpon>frmBeneficiaryAidRecord.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\DashBoard\frmDashBoard.resx">
+    <EmbeddedResource Include="Forms\frmDashBoard.resx">
       <DependentUpon>frmDashBoard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Beneficiary\frmDeleteBeneficiary.resx">
-      <DependentUpon>frmDeleteBeneficiary.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Beneficiary\frmEditBeneficiary.resx">
-      <DependentUpon>frmEditBeneficiary.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Inventory\frmInventory.resx">
-      <DependentUpon>frmInventory.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Inventory\frmInventoryMovementLog.resx">
-      <DependentUpon>frmInventoryMovementLog.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Inventory\ItemManagement\frmAddNewCategory.resx">
-      <DependentUpon>frmAddNewCategory.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Inventory\ItemManagement\frmDeleteItem.resx">
-      <DependentUpon>frmDeleteItem.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Inventory\ItemManagement\frmEditCategory.resx">
-      <DependentUpon>frmEditCategory.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Inventory\ItemManagement\frmItemManagement.resx">
-      <DependentUpon>frmItemManagement.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Login\frmAlert.resx">
-      <DependentUpon>frmAlert.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Login\frmLogin.resx">
-      <DependentUpon>frmLogin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Inventory\frmQuantityAdjustment.resx">
-      <DependentUpon>frmQuantityAdjustment.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\frmDistribution.resx">
+      <DependentUpon>frmDistribution.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -374,24 +126,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Forms\Reports\frmReports.resx">
-      <DependentUpon>frmReports.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Users\frmAddUser.resx">
-      <DependentUpon>frmAddUser.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Users\frmDeleteUser.resx">
-      <DependentUpon>frmDeleteUser.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Users\frmfrmEditUser.resx">
-      <DependentUpon>frmfrmEditUser.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Users\frmUser.resx">
-      <DependentUpon>frmUser.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Users\frnResetPassword.resx">
-      <DependentUpon>frnResetPassword.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -1,10 +1,5 @@
-﻿using Smart_Charity_and_Aid_Distribution_Tracker.Models.Enums;
+﻿using Smart_Charity_and_Aid_Distribution_Tracker.Enums; // لاستخدام UserRole
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace Smart_Charity_and_Aid_Distribution_Tracker.Models
 {
     public class User
@@ -12,10 +7,10 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Models
         public string EmployeeID { get; set; }
         public string FullName { get; set; }
         public string UserName { get; set; }
-        public string Password { get; set; } // سنستخدم نص عادي في هذه المرحلة
+        public string Password { get; set; }
         public UserRole Role { get; set; }
         public bool IsActive { get; set; }
         public DateTime CreatedDate { get; set; }
-        public DateTime? LastLogin { get; set; } // علامة الاستفهام تعني أنه يمكن أن يكون null
+        public DateTime? LastLogin { get; set; }
     }
 }
