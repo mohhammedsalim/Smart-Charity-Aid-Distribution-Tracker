@@ -2,7 +2,6 @@
 using Smart_Charity_and_Aid_Distribution_Tracker.Models;
 using Smart_Charity_and_Aid_Distribution_Tracker.Services;
 using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Windows.Forms;
@@ -11,31 +10,39 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
 {
     public partial class frmInventory : Form
     {
-        // متغير لتخزين وضع اللوحة الحالية (عرض، إضافة، تعديل)
         private enum PanelMode { View, Add, Edit }
         private PanelMode _currentMode;
-
-        // متغير لتخزين عنصر المخزون المحدد حالياً
         private InventoryItem _selectedItem;
 
         public frmInventory()
         {
             InitializeComponent();
+            // ربط حدث Load هنا لضمان تشغيله عند فتح الشاشة
+            this.Load += new System.EventHandler(this.frmInventory_Load);
         }
-
-        // --- 1. أحداث تحميل وإغلاق الفورم ---
 
         private void frmInventory_Load(object sender, EventArgs e)
         {
-            // إعداد عناصر التحكم عند التحميل لأول مرة
+            // 1. ربط الأحداث يدوياً
+            this.btnBackToDashBoard.Click += new System.EventHandler(this.btnBackToDashBoard_Click);
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            this.dgvInventoryList.SelectionChanged += new System.EventHandler(this.dgvInventoryList_SelectionChanged);
+            this.btnAddNew.Click += new System.EventHandler(this.btnAddNew_Click);
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmInventory_FormClosed);
+
+            // 2. إعداد القوائم وتحميل البيانات
             SetupComboBoxes();
-            LoadInventoryItems();
-            SetPanelMode(PanelMode.View); // ابدأ بوضع العرض
+            LoadInventoryData();
+            SetPanelMode(PanelMode.View);
         }
 
         private void frmInventory_FormClosed(object sender, FormClosedEventArgs e)
         {
-            // عند إغلاق هذه الشاشة، أظهر لوحة التحكم مرة أخرى
             var dashboard = Application.OpenForms.OfType<frmDashBoard>().FirstOrDefault();
             if (dashboard != null)
             {
@@ -43,28 +50,38 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
             }
         }
 
-        // --- 2. التحكم في اللوحة الذكية (Smart Panel) ---
+        private void SetupComboBoxes()
+        {
+            // إعداد قائمة البحث
+            cmbSearch.Items.Clear();
+            cmbSearch.Items.Add("اسم الصنف");
+            cmbSearch.Items.Add("الفئة");
+            cmbSearch.SelectedIndex = 0;
+
+            // إعداد قائمة الفئات
+            cmbCategory.DataSource = Enum.GetValues(typeof(ItemCategory));
+        }
 
         private void SetPanelMode(PanelMode mode)
         {
             _currentMode = mode;
 
-            // قوائم بعناصر التحكم لسهولة الإدارة
-            var inputControls = new List<Control> { txtItemName, cmbCategory, txtUnit, numCurrentQuantity, numMinimumQuantity, txtDescription, chkIsActive };
+            pnlView.Visible = (mode == PanelMode.View);
+            pnlInputs.Visible = (mode == PanelMode.Add || mode == PanelMode.Edit);
 
-            // في وضع العرض، كل الحقول للقراءة فقط. في الأوضاع الأخرى، يمكن التعديل عليها
-            bool isViewMode = (mode == PanelMode.View);
-            foreach (var control in inputControls) control.Enabled = !isViewMode;
-            txtItemID.Enabled = false; // رقم الصنف دائماً للقراءة فقط
+            btnSave.Visible = (mode == PanelMode.Add || mode == PanelMode.Edit);
+            btnCancel.Visible = (mode == PanelMode.Add || mode == PanelMode.Edit);
 
-            // التحكم في الأزرار بناءً على الوضع
-            btnAddNew.Visible = isViewMode;
-            btnEdit.Visible = isViewMode && _selectedItem != null;
-            btnDelete.Visible = isViewMode && _selectedItem != null;
-            btnSave.Visible = !isViewMode;
-            btnCancel.Visible = !isViewMode;
+            // تطبيق الصلاحيات: المدير وأمين المخزون فقط يمكنهم الإضافة والتعديل والحذف
+            var currentUser = SessionManager.GetCurrentUser();
+            bool canModify = currentUser != null && (currentUser.Role == UserRole.Admin || currentUser.Role == UserRole.StoreKeeper);
 
-            // تحديث عنوان اللوحة وتفريغ/ملء الحقول
+            btnAddNew.Visible = (mode == PanelMode.View && canModify);
+
+            bool hasSelected = (_selectedItem != null);
+            btnEdit.Visible = (mode == PanelMode.View && hasSelected && canModify);
+            btnDelete.Visible = (mode == PanelMode.View && hasSelected && canModify);
+
             switch (mode)
             {
                 case PanelMode.View:
@@ -75,37 +92,61 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
                 case PanelMode.Add:
                     lblPanelTitle.Text = "إضافة صنف جديد";
                     ClearInputFields();
-                    txtItemName.Focus();
+                    chkIsActive.Checked = true; // افتراضياً الصنف الجديد نشط
                     break;
 
                 case PanelMode.Edit:
                     lblPanelTitle.Text = "تعديل بيانات الصنف";
                     FillInputFieldsWithSelectedItem();
-                    txtItemName.Focus();
                     break;
             }
         }
 
-        // --- 3. وظائف مساعدة للبيانات والواجهة ---
-
-        private void LoadInventoryItems()
+        private void LoadInventoryData()
         {
-            string selectedId = _selectedItem?.ItemID;
+            string searchTerm = txtSearch.Text.Trim().ToLower();
+            string searchType = cmbSearch.SelectedItem?.ToString();
 
-            dgvInventoryList.DataSource = null;
-            dgvInventoryList.DataSource = DataService.GetAllInventoryItems();
+            var query = DataService.GetInventoryItems().AsQueryable();
 
-            if (!string.IsNullOrEmpty(selectedId))
+            if (!string.IsNullOrEmpty(searchTerm))
             {
-                foreach (DataGridViewRow row in dgvInventoryList.Rows)
+                if (searchType == "اسم الصنف")
                 {
-                    if (row.Cells[nameof(InventoryItem.ItemID)].Value.ToString() == selectedId)
-                    {
-                        row.Selected = true;
-                        dgvInventoryList.CurrentCell = row.Cells[nameof(InventoryItem.ItemName)];
-                        break;
-                    }
+                    query = query.Where(i => i.ItemName.ToLower().Contains(searchTerm));
                 }
+                else if (searchType == "الفئة")
+                {
+                    query = query.Where(i => i.Category.ToString().ToLower().Contains(searchTerm));
+                }
+            }
+
+            var items = query.Select(i => new {
+                i.ItemID,
+                i.ItemName,
+                Category = i.Category.ToString(),
+                i.CurrentQuantity,
+                i.Unit,
+                Status = i.IsActive ? "نشط" : "غير نشط"
+            }).ToList();
+
+            // تفريغ مصدر البيانات أولاً لإجبار الجدول على التحديث الفوري
+            dgvInventoryList.DataSource = null;
+            dgvInventoryList.DataSource = items;
+            CustomizeDataGridView();
+        }
+
+        private void CustomizeDataGridView()
+        {
+            if (dgvInventoryList.Columns.Count > 0)
+            {
+                dgvInventoryList.Columns["ItemID"].HeaderText = "رقم الصنف";
+                dgvInventoryList.Columns["ItemName"].HeaderText = "اسم الصنف";
+                dgvInventoryList.Columns["Category"].HeaderText = "الفئة";
+                dgvInventoryList.Columns["CurrentQuantity"].HeaderText = "الكمية الحالية";
+                dgvInventoryList.Columns["Unit"].HeaderText = "الوحدة";
+                dgvInventoryList.Columns["Status"].HeaderText = "الحالة";
+                dgvInventoryList.Columns["ItemName"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             }
         }
 
@@ -113,30 +154,36 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
         {
             if (item != null)
             {
-                txtItemID.Text = item.ItemID;
-                txtItemName.Text = item.ItemName;
-                cmbCategory.SelectedItem = item.Category;
-                txtUnit.Text = item.Unit;
-                numCurrentQuantity.Value = (decimal)item.CurrentQuantity;
-                numMinimumQuantity.Value = (decimal)item.MinimumQuantity;
-                txtDescription.Text = item.Description;
-                chkIsActive.Checked = item.IsActive;
+                lblItemNameText.Text = item.ItemName;
+                lblCategoryText.Text = item.Category.ToString();
+                lblUnitText.Text = item.Unit;
+                lblCurrentQuantityText.Text = item.CurrentQuantity.ToString();
+                lblMinQtyText.Text = item.MinimumQuantity.ToString();
+                lblDescriptionText.Text = string.IsNullOrWhiteSpace(item.Description) ? "لا يوجد وصف" : item.Description;
+                lblIsActiveText.Text = item.IsActive ? "نشط" : "غير نشط";
+                lblIsActiveText.ForeColor = item.IsActive ? System.Drawing.Color.Green : System.Drawing.Color.Red;
             }
             else
             {
-                ClearInputFields();
+                lblItemNameText.Text = "----";
+                lblCategoryText.Text = "----";
+                lblUnitText.Text = "----";
+                lblCurrentQuantityText.Text = "----";
+                lblMinQtyText.Text = "----";
+                lblDescriptionText.Text = "----";
+                lblIsActiveText.Text = "----";
+                lblIsActiveText.ForeColor = System.Drawing.Color.FromArgb(64, 64, 64);
             }
         }
 
         private void ClearInputFields()
         {
-            txtItemID.Clear();
             txtItemName.Clear();
-            cmbCategory.SelectedIndex = -1;
             txtUnit.Clear();
-            numCurrentQuantity.Value = 0;
-            numMinimumQuantity.Value = 0;
+            txtCurrentQuantity.Clear();
+            txtMinimumQuantity.Clear();
             txtDescription.Clear();
+            if (cmbCategory.Items.Count > 0) cmbCategory.SelectedIndex = 0;
             chkIsActive.Checked = true;
         }
 
@@ -144,51 +191,22 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
         {
             if (_selectedItem != null)
             {
-                DisplayItemDetails(_selectedItem);
+                txtItemName.Text = _selectedItem.ItemName;
+                cmbCategory.SelectedItem = _selectedItem.Category;
+                txtUnit.Text = _selectedItem.Unit;
+                txtCurrentQuantity.Text = _selectedItem.CurrentQuantity.ToString();
+                txtMinimumQuantity.Text = _selectedItem.MinimumQuantity.ToString();
+                txtDescription.Text = _selectedItem.Description;
+                chkIsActive.Checked = _selectedItem.IsActive;
             }
-        }
-
-        private void SetupComboBoxes()
-        {
-            // إعداد قائمة البحث
-            cmbSearch.Items.Add("اسم الصنف");
-            cmbSearch.Items.Add("الفئة");
-            cmbSearch.SelectedIndex = 0;
-
-            // إعداد قائمة الفئات من الـ Enum
-            cmbCategory.DataSource = Enum.GetValues(typeof(ItemCategory));
-            // والآن سيعثر على هذه الخاصية
-
-        }
-
-        private string GenerateNewItemId()
-        {
-            var allItems = DataService.GetAllInventoryItems();
-            if (!allItems.Any()) return "ITM-001";
-
-            int maxIdNumber = allItems
-                .Select(b => int.Parse(b.ItemID.Substring(4))) // "ITM-001" -> 1
-                .Max();
-
-            return "ITM-" + (maxIdNumber + 1).ToString("D3");
-        }
-
-        // --- 4. أحداث الأزرار والجدول ---
-
-        private void btnBackToDashBoard_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
 
         private void dgvInventoryList_SelectionChanged(object sender, EventArgs e)
         {
-            if (dgvInventoryList.Rows.Count == 0 || dgvInventoryList.CurrentRow == null)
+            if (dgvInventoryList.CurrentRow != null)
             {
-                _selectedItem = null;
-            }
-            else if (dgvInventoryList.CurrentRow.DataBoundItem is InventoryItem selected)
-            {
-                _selectedItem = selected;
+                string selectedId = dgvInventoryList.CurrentRow.Cells["ItemID"].Value.ToString();
+                _selectedItem = DataService.GetInventoryItems().FirstOrDefault(i => i.ItemID == selectedId);
             }
             else
             {
@@ -197,201 +215,134 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
 
             if (_currentMode == PanelMode.View)
             {
-                DisplayItemDetails(_selectedItem);
-                btnEdit.Visible = (_selectedItem != null);
-                btnDelete.Visible = (_selectedItem != null);
-            }
-        }
-
-        // الكود القديم
-        private void dgvInventoryList_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
-        {
-            if (dgvInventoryList.Columns.Count == 0) return;
-
-            dgvInventoryList.Columns[nameof(InventoryItem.ItemID)].HeaderText = "رقم الصنف";
-            // ... بقية تخصيص الأعمدة ...
-            dgvInventoryList.Columns[nameof(InventoryItem.ItemName)].Width = 250;
-            dgvInventoryList.Columns[nameof(InventoryItem.Category)].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-        }
-
-
-        //// الكود الجديد مع تحسين العرض
-        //private void dgvInventoryList_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
-        //{
-        //    if (dgvInventoryList.Columns.Count == 0) return;
-
-        //    // --- الجزء الموجود بالفعل ---
-        //    dgvInventoryList.Columns[nameof(InventoryItem.ItemID)].HeaderText = "رقم الصنف";
-        //    dgvInventoryList.Columns[nameof(InventoryItem.ItemName)].HeaderText = "اسم الصنف";
-        //    dgvInventoryList.Columns[nameof(InventoryItem.Category)].HeaderText = "الفئة";
-        //    dgvInventoryList.Columns[nameof(InventoryItem.Unit)].HeaderText = "الوحدة";
-        //    dgvInventoryList.Columns[nameof(InventoryItem.CurrentQuantity)].HeaderText = "الكمية الحالية";
-        //    dgvInventoryList.Columns[nameof(InventoryItem.MinimumQuantity)].HeaderText = "الحد الأدنى";
-        //    dgvInventoryList.Columns[nameof(InventoryItem.IsActive)].HeaderText = "نشط";
-
-        //    dgvInventoryList.Columns[nameof(InventoryItem.Description)].Visible = false;
-
-        //    dgvInventoryList.Columns[nameof(InventoryItem.ItemName)].Width = 250;
-        //    dgvInventoryList.Columns[nameof(InventoryItem.Category)].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-
-        //    // --- !!! الجزء الجديد المضاف هنا !!! ---
-        //    // حلقة للمرور على كل صف في الجدول
-        //    foreach (DataGridViewRow row in dgvInventoryList.Rows)
-        //    {
-        //        // احصل على قيمة الخلية في عمود "الفئة"
-        //        var categoryValue = row.Cells[nameof(InventoryItem.Category)].Value;
-        //        if (categoryValue != null)
-        //        {
-        //            // حول القيمة إلى نص واستبدل الشرطة السفلية بمسافة
-        //            row.Cells[nameof(InventoryItem.Category)].Value = categoryValue.ToString().Replace("_", " ");
-        //        }
-        //    }
-        //}
-
-
-        private void btnAddNew_Click(object sender, EventArgs e)
-        {
-            _selectedItem = null;
-            dgvInventoryList.ClearSelection();
-            SetPanelMode(PanelMode.Add);
-        }
-
-        private void btnEdit_Click(object sender, EventArgs e)
-        {
-            if (_selectedItem != null)
-            {
-                SetPanelMode(PanelMode.Edit);
-            }
-            else
-            {
-                new frmAlert("الرجاء تحديد صنف أولاً لتعديل بياناته.").ShowDialog();
-            }
-        }
-
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            if (dgvInventoryList.SelectedRows.Count > 0)
-            {
-                _selectedItem = dgvInventoryList.SelectedRows[0].DataBoundItem as InventoryItem;
-            }
-            else
-            {
-                _selectedItem = null;
-            }
-            SetPanelMode(PanelMode.View);
-        }
-
-        private void btnSave_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(txtItemName.Text))
-            {
-                new frmAlert("يرجى إدخال اسم الصنف.").ShowDialog();
-                txtItemName.Focus();
-                return;
-            }
-            if (cmbCategory.SelectedIndex == -1)
-            {
-                new frmAlert("يرجى اختيار فئة الصنف.").ShowDialog();
-                cmbCategory.Focus();
-                return;
-            }
-
-            if (_currentMode == PanelMode.Add)
-            {
-                var newItem = new InventoryItem
-                {
-                    ItemID = GenerateNewItemId(),
-                    ItemName = txtItemName.Text,
-                    Category = (ItemCategory)cmbCategory.SelectedItem,
-                    Unit = txtUnit.Text,
-                    CurrentQuantity = (double)numCurrentQuantity.Value,
-                    MinimumQuantity = (double)numMinimumQuantity.Value,
-                    Description = txtDescription.Text,
-                    IsActive = chkIsActive.Checked
-                };
-
-                DataService.AddInventoryItem(newItem);
-                _selectedItem = newItem;
-                new frmAlert("تمت إضافة الصنف بنجاح!").ShowDialog();
-            }
-            else if (_currentMode == PanelMode.Edit)
-            {
-                if (_selectedItem != null)
-                {
-                    _selectedItem.ItemName = txtItemName.Text;
-                    _selectedItem.Category = (ItemCategory)cmbCategory.SelectedItem;
-                    _selectedItem.Unit = txtUnit.Text;
-                    _selectedItem.CurrentQuantity = (double)numCurrentQuantity.Value;
-                    _selectedItem.MinimumQuantity = (double)numMinimumQuantity.Value;
-                    _selectedItem.Description = txtDescription.Text;
-                    _selectedItem.IsActive = chkIsActive.Checked;
-
-                    DataService.UpdateInventoryItem(_selectedItem);
-                    new frmAlert("تم تعديل بيانات الصنف بنجاح!").ShowDialog();
-                }
-            }
-
-            LoadInventoryItems();
-            SetPanelMode(PanelMode.View);
-        }
-
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            if (_selectedItem == null)
-            {
-                new frmAlert("يرجى تحديد صنف لحذفه أولاً.").ShowDialog();
-                return;
-            }
-
-            frmConfirm confirmDialog = new frmConfirm($"هل أنت متأكد من أنك تريد حذف الصنف '{_selectedItem.ItemName}'؟");
-
-            if (confirmDialog.ShowDialog() == DialogResult.Yes)
-            {
-                DataService.DeleteInventoryItem(_selectedItem.ItemID);
-                new frmAlert("تم حذف الصنف بنجاح.").ShowDialog();
-
-                _selectedItem = null;
-                LoadInventoryItems();
                 SetPanelMode(PanelMode.View);
             }
         }
 
-        private void btnSearch_Click(object sender, EventArgs e)
+        private void btnSave_Click(object sender, EventArgs e)
         {
-            string searchTerm = txtSearch.Text.Trim().ToLower();
-            if (string.IsNullOrEmpty(searchTerm))
+            if (string.IsNullOrWhiteSpace(txtItemName.Text) || string.IsNullOrWhiteSpace(txtUnit.Text))
             {
-                LoadInventoryItems();
+                new frmAlert("يجب إدخال اسم الصنف ووحدة القياس.").ShowDialog();
                 return;
             }
 
-            var allItems = DataService.GetAllInventoryItems();
-            List<InventoryItem> filteredList = new List<InventoryItem>();
-
-            switch (cmbSearch.SelectedItem.ToString())
+            if (!double.TryParse(txtCurrentQuantity.Text, out double currentQty) || currentQty < 0)
             {
-                case "اسم الصنف":
-                    filteredList = allItems.Where(i => i.ItemName.ToLower().Contains(searchTerm)).ToList();
-                    break;
-                case "الفئة":
-                    filteredList = allItems.Where(i => i.Category.ToString().Replace("_", " ").Contains(searchTerm)).ToList();
-                    break;
+                new frmAlert("الرجاء إدخال رقم صحيح وموجب للكمية الحالية.").ShowDialog();
+                return;
             }
 
-            dgvInventoryList.DataSource = null;
-            dgvInventoryList.DataSource = filteredList;
-            if (filteredList.Count == 0)
+            if (!double.TryParse(txtMinimumQuantity.Text, out double minQty) || minQty < 0)
             {
-                new frmAlert("لم يتم العثور على نتائج تطابق بحثك.").ShowDialog();
+                new frmAlert("الرجاء إدخال رقم صحيح وموجب للحد الأدنى.").ShowDialog();
+                return;
             }
+
+            // جلب المستخدم الحالي لتسجيل من قام بالحركة
+            var currentUser = SessionManager.GetCurrentUser();
+            string empId = currentUser != null ? currentUser.EmployeeID : "System";
+
+            if (_currentMode == PanelMode.Add)
+            {
+                int lastIdNumber = DataService.GetInventoryItems().Any()
+                    ? DataService.GetInventoryItems().Select(i => int.Parse(i.ItemID.Substring(1))).Max()
+                    : 0;
+                string newId = "I" + (lastIdNumber + 1).ToString("D3");
+
+                var newItem = new InventoryItem
+                {
+                    ItemID = newId,
+                    ItemName = txtItemName.Text.Trim(),
+                    Category = (ItemCategory)Enum.Parse(typeof(ItemCategory), cmbCategory.SelectedItem.ToString()),
+                    Unit = txtUnit.Text.Trim(),
+                    CurrentQuantity = 0, // نضعها صفر مبدئياً، حركة المخزون هي من ستضيف الكمية
+                    MinimumQuantity = minQty,
+                    Description = txtDescription.Text.Trim(),
+                    IsActive = chkIsActive.Checked
+                };
+
+                DataService.AddInventoryItem(newItem);
+
+                // إذا أدخل المستخدم كمية ابتدائية، نسجلها كحركة "وارد" (رصيد افتتاحي)
+                if (currentQty > 0)
+                {
+                    var movement = new InventoryMovement
+                    {
+                        MovementID = "M" + Guid.NewGuid().ToString().Substring(0, 8),
+                        ItemID = newId,
+                        MovementType = MovementType.In, // وارد
+                        Quantity = currentQty,
+                        MovementDate = DateTime.Now,
+                        ReferenceID = "رصيد افتتاحي",
+                        PerformedBy = empId,
+                        Notes = "رصيد افتتاحي عند إضافة الصنف للنظام"
+                    };
+                    DataService.RecordMovement(movement); // هذه الدالة ستضيف الكمية للصنف
+                }
+
+                new frmAlert("تمت إضافة الصنف بنجاح.").ShowDialog();
+            }
+            else if (_currentMode == PanelMode.Edit)
+            {
+                // حساب الفارق بين الكمية القديمة والجديدة
+                double oldQty = _selectedItem.CurrentQuantity;
+                double difference = currentQty - oldQty;
+
+                _selectedItem.ItemName = txtItemName.Text.Trim();
+                _selectedItem.Category = (ItemCategory)Enum.Parse(typeof(ItemCategory), cmbCategory.SelectedItem.ToString());
+                _selectedItem.Unit = txtUnit.Text.Trim();
+                // ملاحظة: لا نعدل CurrentQuantity هنا يدوياً، سنترك حركة التسوية تقوم بذلك
+                _selectedItem.MinimumQuantity = minQty;
+                _selectedItem.Description = txtDescription.Text.Trim();
+                _selectedItem.IsActive = chkIsActive.Checked;
+
+                DataService.UpdateInventoryItem(_selectedItem);
+
+                // إذا قام المستخدم بتغيير الكمية، نسجل حركة "تسوية"
+                if (difference != 0)
+                {
+                    var movement = new InventoryMovement
+                    {
+                        MovementID = "M" + Guid.NewGuid().ToString().Substring(0, 8),
+                        ItemID = _selectedItem.ItemID,
+                        MovementType = MovementType.Adjustment, // تسوية
+                        Quantity = difference, // قد تكون موجبة (زيادة) أو سالبة (نقصان)
+                        MovementDate = DateTime.Now,
+                        ReferenceID = "تسوية يدوية",
+                        PerformedBy = empId,
+                        Notes = "تسوية رصيد يدوية من شاشة إدارة المخزون"
+                    };
+                    DataService.RecordMovement(movement); // هذه الدالة ستعدل رصيد الصنف
+                }
+
+                new frmAlert("تم تعديل بيانات الصنف بنجاح.").ShowDialog();
+            }
+
+            LoadInventoryData();
+            SetPanelMode(PanelMode.View);
         }
 
-        private void btnClear_Click(object sender, EventArgs e)
+
+        private void btnDelete_Click(object sender, EventArgs e)
         {
-            txtSearch.Clear();
-            cmbSearch.SelectedIndex = 0;
-            LoadInventoryItems();
-            txtSearch.Focus();
+            if (_selectedItem == null) return;
+
+            frmConfirm confirmDialog = new frmConfirm($"هل أنت متأكد من أنك تريد حذف الصنف '{_selectedItem.ItemName}'؟");
+            if (confirmDialog.ShowDialog() == DialogResult.Yes)
+            {
+                DataService.DeleteInventoryItem(_selectedItem.ItemID);
+                new frmAlert("تم حذف الصنف بنجاح.").ShowDialog();
+                LoadInventoryData();
+                SetPanelMode(PanelMode.View);
+            }
         }
+
+        private void btnSearch_Click(object sender, EventArgs e) { LoadInventoryData(); }
+        private void btnClear_Click(object sender, EventArgs e) { txtSearch.Clear(); LoadInventoryData(); }
+        private void btnAddNew_Click(object sender, EventArgs e) { SetPanelMode(PanelMode.Add); }
+        private void btnEdit_Click(object sender, EventArgs e) { if (_selectedItem != null) SetPanelMode(PanelMode.Edit); }
+        private void btnCancel_Click(object sender, EventArgs e) { SetPanelMode(PanelMode.View); }
+        private void btnBackToDashBoard_Click(object sender, EventArgs e) { this.Close(); }
     }
 }

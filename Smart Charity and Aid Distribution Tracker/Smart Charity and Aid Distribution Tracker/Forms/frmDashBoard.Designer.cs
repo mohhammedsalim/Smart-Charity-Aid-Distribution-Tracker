@@ -107,6 +107,7 @@
             this.btnUsers.Size = new System.Drawing.Size(160, 49);
             this.btnUsers.TabIndex = 6;
             this.btnUsers.Text = "المستخدمون";
+            this.btnUsers.Click += new System.EventHandler(this.btnUsers_Click);
             // 
             // btnReports
             // 
@@ -121,6 +122,7 @@
             this.btnReports.Size = new System.Drawing.Size(160, 49);
             this.btnReports.TabIndex = 5;
             this.btnReports.Text = "التقارير";
+            this.btnReports.Click += new System.EventHandler(this.btnReports_Click);
             // 
             // btnDisbursement
             // 

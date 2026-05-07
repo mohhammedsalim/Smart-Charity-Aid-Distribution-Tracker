@@ -20,8 +20,8 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Data
         {
             return new List<Beneficiary>
             {
-                new Beneficiary { BeneficiaryID = Guid.NewGuid().ToString(), FullName = "فاطمة محمد الأحمد", NationalID = "11980123456", Phone = "0912345678", Address = "طرابلس - حي الأندلس", FamilySize = 5, SocialStatus = "أرملة", NeedReason = "وفاة الزوج وعدم وجود معيل", RegistrationDate = new DateTime(2023, 5, 10), IsActive = true, Notes = "لديها ثلاثة أطفال في سن الدراسة." },
-                new Beneficiary { BeneficiaryID = Guid.NewGuid().ToString(), FullName = "علي سالم عبدالله", NationalID = "11975654321", Phone = "0923456789", Address = "بنغازي - شارع جمال عبد الناصر", FamilySize = 7, SocialStatus = "أسرة فقيرة", NeedReason = "دخل محدود وعائلة كبيرة", RegistrationDate = new DateTime(2022, 11, 22), IsActive = true, Notes = "يحتاج إلى مساعدة في المواد الغذائية بشكل دوري." }
+                new Beneficiary { BeneficiaryID = Guid.NewGuid().ToString(), FullName = "فاطمة محمد الأحمد", NationalID = "11980123456", Phone = "0912345678", Address = "طرابلس - حي الأندلس", FamilySize = 5, SocialStatus = SocialStatus.Married, NeedReason = "وفاة الزوج وعدم وجود معيل", RegistrationDate = new DateTime(2023, 5, 10), IsActive = true, Notes = "لديها ثلاثة أطفال في سن الدراسة." },
+                new Beneficiary { BeneficiaryID = Guid.NewGuid().ToString(), FullName = "علي سالم عبدالله", NationalID = "11975654321", Phone = "0923456789", Address = "بنغازي - شارع جمال عبد الناصر", FamilySize = 7, SocialStatus = SocialStatus.Married, NeedReason = "دخل محدود وعائلة كبيرة", RegistrationDate = new DateTime(2022, 11, 22), IsActive = true, Notes = "يحتاج إلى مساعدة في المواد الغذائية بشكل دوري." }
             };
         }
     }

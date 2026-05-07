@@ -1,4 +1,5 @@
-﻿using Smart_Charity_and_Aid_Distribution_Tracker.Models;
+﻿using Smart_Charity_and_Aid_Distribution_Tracker.Enums;
+using Smart_Charity_and_Aid_Distribution_Tracker.Models;
 using Smart_Charity_and_Aid_Distribution_Tracker.Services;
 using System;
 using System.Collections.Generic;
@@ -181,63 +182,72 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            // --- التحقق من المدخلات ---
-            if (cmbBeneficiaries.SelectedValue == null)
+            // 1. جلب المستفيد المحدد من القائمة المنسدلة بدلاً من المتغير المفقود
+            var selectedBeneficiary = cmbBeneficiaries.SelectedItem as Beneficiary;
+
+            if (selectedBeneficiary == null)
             {
-                new frmAlert("يجب اختيار مستفيد لإتمام العملية.").ShowDialog();
-                return;
-            }
-            if (!_cartItems.Any())
-            {
-                new frmAlert("يجب إضافة صنف واحد على الأقل للسلة.").ShowDialog();
+                new frmAlert("الرجاء تحديد المستفيد أولاً.").ShowDialog();
                 return;
             }
 
-            // --- تأكيد العملية ---
-            frmConfirm confirmDialog = new frmConfirm("هل أنت متأكد من أنك تريد حفظ عملية التوزيع هذه؟ سيتم خصم الكميات من المخزون.");
-            if (confirmDialog.ShowDialog() == DialogResult.Yes)
+            if (_cartItems.Count == 0)
             {
-                try
-                {
-                    // --- إنشاء كائن عملية التوزيع ---
-                    var newDistribution = new Distribution
-                    {
-                        // إنشاء ID فريد للعملية
-                        DistributionID = "D" + DateTime.Now.ToString("yyyyMMddHHmmss"),
-                        BeneficiaryID = cmbBeneficiaries.SelectedValue.ToString(),
-                        DistributionDate = DateTime.Now,
-                        Status = DistributionStatus.Completed,
-                        PerformedBy = "CurrentUser", // TODO: استبدل هذا باسم المستخدم الفعلي عند بناء نظام الصلاحيات
-                        Notes = "" // يمكن إضافة حقل للملاحظات لاحقاً
-                    };
-
-                    // --- ربط تفاصيل السلة بالعملية الرئيسية ---
-                    int detailCounter = 1;
-                    foreach (var cartItem in _cartItems)
-                    {
-                        newDistribution.Details.Add(new DistributionDetail
-                        {
-                            DistributionID = newDistribution.DistributionID,
-                            DetailID = newDistribution.DistributionID + "-" + detailCounter.ToString("D3"),
-                            ItemID = cartItem.ItemID,
-                            Quantity = cartItem.Quantity
-                        });
-                        detailCounter++;
-                    }
-
-                    // --- حفظ العملية وتحديث المخزون عبر DataService ---
-                    DataService.AddDistribution(newDistribution);
-
-                    new frmAlert("تم حفظ عملية التوزيع بنجاح!").ShowDialog();
-
-                    // --- إعادة تعيين الفورم لعملية جديدة ---
-                    ResetForm();
-                }
-                catch (Exception ex)
-                {
-                    new frmAlert($"حدث خطأ غير متوقع أثناء حفظ العملية: {ex.Message}").ShowDialog();
-                }
+                new frmAlert("سلة التوزيع فارغة. الرجاء إضافة أصناف.").ShowDialog();
+                return;
             }
+
+            var currentUser = SessionManager.GetCurrentUser();
+            if (currentUser == null)
+            {
+                new frmAlert("حدث خطأ في جلسة المستخدم. الرجاء تسجيل الدخول مجدداً.").ShowDialog();
+                return;
+            }
+
+            string newDistId = "D" + DateTime.Now.ToString("yyyyMMddHHmmss");
+
+            var distribution = new Distribution
+            {
+                DistributionID = newDistId,
+                BeneficiaryID = selectedBeneficiary.BeneficiaryID, // استخدام المتغير الجديد
+                DistributionDate = DateTime.Now,
+                PerformedBy = currentUser.EmployeeID,
+                Status = DistributionStatus.Completed,
+                Notes = "" // تركناها فارغة لأننا لا نملك txtNotes في التصميم
+            };
+
+            DataService.AddDistribution(distribution);
+
+            foreach (var cartItem in _cartItems)
+            {
+                var detail = new DistributionDetail
+                {
+                    DetailID = "DD" + Guid.NewGuid().ToString().Substring(0, 8),
+                    DistributionID = newDistId,
+                    ItemID = cartItem.ItemID,
+                    Quantity = cartItem.Quantity
+                };
+                DataService.AddDistributionDetail(detail);
+
+                var movement = new InventoryMovement
+                {
+                    MovementID = "M" + Guid.NewGuid().ToString().Substring(0, 8),
+                    ItemID = cartItem.ItemID,
+                    MovementType = MovementType.Out,
+                    Quantity = cartItem.Quantity,
+                    MovementDate = DateTime.Now,
+                    ReferenceID = newDistId,
+                    PerformedBy = currentUser.EmployeeID,
+                    Notes = $"صرف مساعدات للمستفيد: {selectedBeneficiary.FullName}" // استخدام المتغير الجديد
+                };
+
+                DataService.RecordMovement(movement);
+            }
+
+            new frmAlert("تم حفظ عملية التوزيع بنجاح وخصم المواد من المخزون.").ShowDialog();
+            ResetForm();
         }
+
+
     }
 }

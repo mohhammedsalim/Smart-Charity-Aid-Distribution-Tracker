@@ -51,7 +51,7 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Services
                     Phone = "0912345678",
                     Address = "طرابلس، شارع الزاوية",
                     FamilySize = 5,
-                    SocialStatus = "متزوج",
+                    SocialStatus = SocialStatus.Married,
                     NeedReason = "دخل محدود",
                     RegistrationDate = new DateTime(2023, 1, 15),
                     IsActive = true,
@@ -65,7 +65,7 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Services
                     Phone = "0923456789",
                     Address = "بنغازي، منطقة السلماني",
                     FamilySize = 3,
-                    SocialStatus = "أرملة",
+                    SocialStatus = SocialStatus.Widowed,
                     NeedReason = "وفاة العائل",
                     RegistrationDate = new DateTime(2023, 3, 20),
                     IsActive = true,
@@ -79,7 +79,7 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Services
                     Phone = "0914567890",
                     Address = "مصراتة، شارع طرابلس",
                     FamilySize = 7,
-                    SocialStatus = "متزوج",
+                    SocialStatus = SocialStatus.Married,
                     NeedReason = "بطالة",
                     RegistrationDate = new DateTime(2023, 5, 10),
                     IsActive = true,
@@ -93,7 +93,7 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Services
                     Phone = "0925678901",
                     Address = "سبها، حي الجديد",
                     FamilySize = 4,
-                    SocialStatus = "مطلقة",
+                    SocialStatus = SocialStatus.Married,
                     NeedReason = "عدم وجود عائل",
                     RegistrationDate = new DateTime(2023, 6, 1),
                     IsActive = false, // مثال على مستفيد غير نشط
@@ -108,33 +108,57 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Services
         public static List<User> GetUsers()
         {
             return new List<User>
-            {
-                new User { EmployeeID = "EMP001", FullName = "المدير العام", UserName = "admin", Password = "123", Role = UserRole.Admin, IsActive = true, CreatedDate = DateTime.Now },
-                new User { EmployeeID = "EMP002", FullName = "أحمد موظف", UserName = "user", Password = "123", Role = UserRole.User, IsActive = true, CreatedDate = DateTime.Now }
-            };
+    {
+        new User { EmployeeID = "E001", FullName = "Admin User", UserName = "admin", Password = "123", Role = UserRole.Admin, IsActive = true, CreatedDate = DateTime.Now },
+        new User { EmployeeID = "E002", FullName = "Admin User", UserName = "1", Password = "1", Role = UserRole.Admin, IsActive = true, CreatedDate = DateTime.Now },
+        new User { EmployeeID = "E003", FullName = "Employee User", UserName = "user", Password = "123", Role = UserRole.User, IsActive = true, CreatedDate = DateTime.Now }
+    };
         }
 
         public static List<Beneficiary> GetBeneficiaries()
         {
             return new List<Beneficiary>
-            {
-                new Beneficiary { BeneficiaryID = Guid.NewGuid().ToString(), FullName = "فاطمة محمد الأحمد", NationalID = "11980123456", Phone = "0912345678", Address = "طرابلس - حي الأندلس", FamilySize = 5, SocialStatus = "أرملة", NeedReason = "وفاة الزوج وعدم وجود معيل", RegistrationDate = new DateTime(2023, 5, 10), IsActive = true, Notes = "لديها ثلاثة أطفال في سن الدراسة." },
-                new Beneficiary { BeneficiaryID = Guid.NewGuid().ToString(), FullName = "علي سالم عبدالله", NationalID = "11975654321", Phone = "0923456789", Address = "بنغازي - شارع جمال عبد الناصر", FamilySize = 7, SocialStatus = "أسرة فقيرة", NeedReason = "دخل محدود وعائلة كبيرة", RegistrationDate = new DateTime(2022, 11, 22), IsActive = true, Notes = "يحتاج إلى مساعدة في المواد الغذائية بشكل دوري." }
-            };
+    {
+        new Beneficiary {
+            BeneficiaryID = "B001", NationalID = "1000000001", FullName = "أحمد محمد عبدالله",
+            Phone = "0500000001", Address = "الرياض، حي الياسمين",
+            FamilySize = 5, SocialStatus = SocialStatus.Married, NeedReason = "دخل محدود",
+            RegistrationDate = DateTime.Now.AddMonths(-6), IsActive = true, Notes = "يحتاج إلى دعم غذائي شهري"
+        },
+        new Beneficiary {
+            BeneficiaryID = "B002", NationalID = "1000000002", FullName = "فاطمة علي عبدالرحمن",
+            Phone = "0500000002", Address = "جدة، حي الملقا",
+            FamilySize = 3, SocialStatus = SocialStatus.Widowed, NeedReason = "أرملة تعول أيتام",
+            RegistrationDate = DateTime.Now.AddMonths(-2), IsActive = true, Notes = ""
         }
+    };
+        }
+
 
         public static List<InventoryItem> GetInventoryItems()
         {
             return new List<InventoryItem>
-            {
-                new InventoryItem { ItemID = "ITM-001", ItemName = "كيس دقيق فاخر", Category = ItemCategory.مواد_غذائية, Unit = "كيس", CurrentQuantity = 150, MinimumQuantity = 20, Description = "دقيق قمح أبيض، وزن 10 كجم", IsActive = true },
-                new InventoryItem { ItemID = "ITM-002", ItemName = "زيت طهي", Category = ItemCategory.مواد_غذائية, Unit = "لتر", CurrentQuantity = 200, MinimumQuantity = 50, Description = "زيت دوار الشمس، عبوة 1 لتر", IsActive = true },
-                new InventoryItem { ItemID = "ITM-003", ItemName = "بطانية شتوية مزدوجة", Category = ItemCategory.ملابس_ومفروشات, Unit = "قطعة", CurrentQuantity = 80, MinimumQuantity = 10, Description = "صوف صناعي عالي الجودة", IsActive = true },
-                new InventoryItem { ItemID = "ITM-004", ItemName = "معجون أسنان", Category = ItemCategory.مواد_نظافة, Unit = "قطعة", CurrentQuantity = 300, MinimumQuantity = 100, Description = "", IsActive = true },
-                new InventoryItem { ItemID = "ITM-005", ItemName = "حليب أطفال مجفف (المرحلة 1)", Category = ItemCategory.مستلزمات_أطفال, Unit = "علبة", CurrentQuantity = 50, MinimumQuantity = 15, Description = "للأطفال من 0-6 أشهر", IsActive = true },
-                new InventoryItem { ItemID = "ITM-006", ItemName = "سخان كهربائي قديم", Category = ItemCategory.أجهزة_كهربائية, Unit = "قطعة", CurrentQuantity = 5, MinimumQuantity = 1, Description = "تم التبرع به، يحتاج للفحص", IsActive = false }
-            };
+    {
+        new InventoryItem {
+            ItemID = "I001", ItemName = "أرز بسمتي 10 كيلو", Category = ItemCategory.مواد_غذائية,
+            Unit = "كيس", CurrentQuantity = 50, Description = "أرز بسمتي عالي الجودة",
+            MinimumQuantity = 10, IsActive = true // الخصائص الجديدة
+        },
+        new InventoryItem {
+            ItemID = "I002", ItemName = "زيت نباتي 1.5 لتر", Category = ItemCategory.مواد_غذائية,
+            Unit = "زجاجة", CurrentQuantity = 100, Description = "زيت قلي وطبخ",
+            MinimumQuantity = 20, IsActive = true // الخصائص الجديدة
+        },
+        new InventoryItem {
+            ItemID = "I003", ItemName = "بطانية شتوية", Category = ItemCategory.ملابس_ومفروشات,
+            Unit = "قطعة", CurrentQuantity = 30, Description = "بطانية مقاس مفرد",
+            MinimumQuantity = 5, IsActive = true // الخصائص الجديدة
         }
+    };
+        }
+
+
+
 
     }
 }

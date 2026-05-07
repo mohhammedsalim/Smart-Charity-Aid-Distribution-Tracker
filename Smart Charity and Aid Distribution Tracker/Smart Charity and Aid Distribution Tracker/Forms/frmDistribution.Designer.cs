@@ -77,7 +77,7 @@
             this.pnlHeader.Controls.Add(this.lblFormTitle);
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
-            this.pnlHeader.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlHeader.Margin = new System.Windows.Forms.Padding(4);
             this.pnlHeader.Name = "pnlHeader";
             this.pnlHeader.Size = new System.Drawing.Size(1600, 74);
             this.pnlHeader.TabIndex = 1;
@@ -91,7 +91,7 @@
             this.btnBackToDashBoard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnBackToDashBoard.ImageSize = new System.Drawing.Size(24, 24);
             this.btnBackToDashBoard.Location = new System.Drawing.Point(1384, 15);
-            this.btnBackToDashBoard.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBackToDashBoard.Margin = new System.Windows.Forms.Padding(4);
             this.btnBackToDashBoard.Name = "btnBackToDashBoard";
             this.btnBackToDashBoard.Size = new System.Drawing.Size(200, 49);
             this.btnBackToDashBoard.TabIndex = 1;
@@ -115,7 +115,7 @@
             this.pnlBody.Controls.Add(this.pnlSmart);
             this.pnlBody.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlBody.Location = new System.Drawing.Point(0, 74);
-            this.pnlBody.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlBody.Margin = new System.Windows.Forms.Padding(4);
             this.pnlBody.Name = "pnlBody";
             this.pnlBody.Padding = new System.Windows.Forms.Padding(13, 12, 13, 12);
             this.pnlBody.Size = new System.Drawing.Size(1600, 813);
@@ -131,7 +131,7 @@
             this.pnlSmart.Controls.Add(this.lblPanelTitle);
             this.pnlSmart.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlSmart.Location = new System.Drawing.Point(13, 12);
-            this.pnlSmart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlSmart.Margin = new System.Windows.Forms.Padding(4);
             this.pnlSmart.Name = "pnlSmart";
             this.pnlSmart.Size = new System.Drawing.Size(640, 789);
             this.pnlSmart.TabIndex = 1;
@@ -142,7 +142,7 @@
             this.pnlCart.Controls.Add(this.pnlCartHeader);
             this.pnlCart.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlCart.Location = new System.Drawing.Point(0, 262);
-            this.pnlCart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlCart.Margin = new System.Windows.Forms.Padding(4);
             this.pnlCart.Name = "pnlCart";
             this.pnlCart.Padding = new System.Windows.Forms.Padding(13, 0, 13, 0);
             this.pnlCart.Size = new System.Drawing.Size(640, 429);
@@ -180,7 +180,7 @@
             this.dgvCart.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvCart.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvCart.Location = new System.Drawing.Point(13, 49);
-            this.dgvCart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvCart.Margin = new System.Windows.Forms.Padding(4);
             this.dgvCart.Name = "dgvCart";
             this.dgvCart.RowHeadersVisible = false;
             this.dgvCart.RowHeadersWidth = 51;
@@ -245,7 +245,7 @@
             this.pnlCartHeader.Controls.Add(this.lblCartTitle);
             this.pnlCartHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlCartHeader.Location = new System.Drawing.Point(13, 0);
-            this.pnlCartHeader.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlCartHeader.Margin = new System.Windows.Forms.Padding(4);
             this.pnlCartHeader.Name = "pnlCartHeader";
             this.pnlCartHeader.Size = new System.Drawing.Size(614, 49);
             this.pnlCartHeader.TabIndex = 0;
@@ -271,7 +271,7 @@
             this.pnlAddItem.Controls.Add(this.label4);
             this.pnlAddItem.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlAddItem.Location = new System.Drawing.Point(0, 139);
-            this.pnlAddItem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlAddItem.Margin = new System.Windows.Forms.Padding(4);
             this.pnlAddItem.Name = "pnlAddItem";
             this.pnlAddItem.Size = new System.Drawing.Size(640, 123);
             this.pnlAddItem.TabIndex = 4;
@@ -282,7 +282,7 @@
             this.btnAddItemToCart.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold);
             this.btnAddItemToCart.ForeColor = System.Drawing.Color.White;
             this.btnAddItemToCart.Location = new System.Drawing.Point(29, 52);
-            this.btnAddItemToCart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAddItemToCart.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddItemToCart.Name = "btnAddItemToCart";
             this.btnAddItemToCart.Size = new System.Drawing.Size(160, 49);
             this.btnAddItemToCart.TabIndex = 10;
@@ -340,7 +340,7 @@
             this.cmbInventoryItems.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cmbInventoryItems.ItemHeight = 34;
             this.cmbInventoryItems.Location = new System.Drawing.Point(365, 52);
-            this.cmbInventoryItems.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbInventoryItems.Margin = new System.Windows.Forms.Padding(4);
             this.cmbInventoryItems.Name = "cmbInventoryItems";
             this.cmbInventoryItems.Size = new System.Drawing.Size(239, 40);
             this.cmbInventoryItems.TabIndex = 7;
@@ -362,7 +362,7 @@
             this.pnlBeneficiary.Controls.Add(this.label3);
             this.pnlBeneficiary.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlBeneficiary.Location = new System.Drawing.Point(0, 41);
-            this.pnlBeneficiary.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlBeneficiary.Margin = new System.Windows.Forms.Padding(4);
             this.pnlBeneficiary.Name = "pnlBeneficiary";
             this.pnlBeneficiary.Size = new System.Drawing.Size(640, 98);
             this.pnlBeneficiary.TabIndex = 3;
@@ -379,7 +379,7 @@
             this.cmbBeneficiaries.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cmbBeneficiaries.ItemHeight = 34;
             this.cmbBeneficiaries.Location = new System.Drawing.Point(29, 34);
-            this.cmbBeneficiaries.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbBeneficiaries.Margin = new System.Windows.Forms.Padding(4);
             this.cmbBeneficiaries.Name = "cmbBeneficiaries";
             this.cmbBeneficiaries.Size = new System.Drawing.Size(575, 40);
             this.cmbBeneficiaries.TabIndex = 5;
@@ -401,7 +401,7 @@
             this.pnlActions.Controls.Add(this.btnSave);
             this.pnlActions.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlActions.Location = new System.Drawing.Point(0, 691);
-            this.pnlActions.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlActions.Margin = new System.Windows.Forms.Padding(4);
             this.pnlActions.Name = "pnlActions";
             this.pnlActions.Size = new System.Drawing.Size(640, 98);
             this.pnlActions.TabIndex = 2;
@@ -412,7 +412,7 @@
             this.btnSave.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.Location = new System.Drawing.Point(29, 22);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(576, 55);
             this.btnSave.TabIndex = 4;
@@ -446,7 +446,7 @@
             this.ClientSize = new System.Drawing.Size(1600, 887);
             this.Controls.Add(this.pnlBody);
             this.Controls.Add(this.pnlHeader);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmDistribution";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;

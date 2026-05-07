@@ -3,6 +3,7 @@
     public enum UserRole
     {
         Admin, // مدير
-        User   // مستخدم عادي
+        User,   // مستخدم عادي
+        StoreKeeper // أمين المخزن
     }
 }

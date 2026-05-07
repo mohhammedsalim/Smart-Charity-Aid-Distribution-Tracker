@@ -1,7 +1,7 @@
-﻿using Smart_Charity_and_Aid_Distribution_Tracker.Models;
+﻿using Smart_Charity_and_Aid_Distribution_Tracker.Enums;
+using Smart_Charity_and_Aid_Distribution_Tracker.Models;
 using Smart_Charity_and_Aid_Distribution_Tracker.Services;
 using System;
-using System.Collections.Generic; // مهم لإضافة هذا السطر
 using System.Data;
 using System.Linq;
 using System.Windows.Forms;
@@ -10,50 +10,47 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
 {
     public partial class frmBeneficiarie : Form
     {
-        // متغير لتخزين وضع اللوحة الحالية (عرض، إضافة، تعديل)
         private enum PanelMode { View, Add, Edit }
         private PanelMode _currentMode;
-
-
-        // متغير لتخزين المستفيد المحدد حالياً
         private Beneficiary _selectedBeneficiary;
-
-        private string GenerateNewBeneficiaryId()
-        {
-            var allBeneficiaries = DataService.GetBeneficiaries();
-            if (!allBeneficiaries.Any())
-            {
-                return "B001"; // أول مستفيد في النظام
-            }
-
-            // هذا الكود يستخرج الرقم من أكبر ID ويزيده بواحد
-            // مثال: إذا كان أكبر ID هو "B023", فسيقوم بإنشاء "B024"
-            int maxIdNumber = allBeneficiaries
-                .Select(b => int.Parse(b.BeneficiaryID.Substring(1))) // تحويل "B001" -> 1
-                .Max();
-
-            return "B" + (maxIdNumber + 1).ToString("D3"); // "D3" تضمن وجود 3 أرقام مثل 001, 024
-        }
 
         public frmBeneficiarie()
         {
             InitializeComponent();
+            // أضف هذا السطر لضمان تشغيل دالة Load عند فتح الشاشة
+            this.Load += new System.EventHandler(this.frmBeneficiarie_Load);
         }
-
-        // --- 1. أحداث تحميل وإغلاق الفورم ---
 
         private void frmBeneficiarie_Load(object sender, EventArgs e)
         {
-            this.KeyPreview = true; // اجعل الفورم يلتقط ضغات المفاتيح قبل عناصر التحكم
-            // إعداد عناصر التحكم عند التحميل لأول مرة
-            SetupSearchComboBox();
-            LoadBeneficiaries(); // تم تغيير اسم الدالة للتوحيد
-            SetPanelMode(PanelMode.View); // ابدأ بوضع العرض
+            // 1. ربط الأحداث يدوياً لضمان عمل الشاشة
+            this.btnBackToDashBoard.Click += new System.EventHandler(this.btnBackToDashBoard_Click);
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            this.dgvBeneficiariesList.SelectionChanged += new System.EventHandler(this.dgvBeneficiariesList_SelectionChanged);
+            this.btnAddNew.Click += new System.EventHandler(this.btnAddNew_Click);
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmBeneficiarie_FormClosed);
+
+            // 2. إعداد القوائم وتحميل البيانات
+            SetupComboBoxes();
+            LoadBeneficiariesData();
+            SetPanelMode(PanelMode.View);
+
+            // 3. تطبيق الصلاحيات عند فتح الشاشة
+            var currentUser = SessionManager.GetCurrentUser();
+            if (currentUser != null && currentUser.Role == UserRole.User)
+            {
+                btnEdit.Visible = false;
+                btnDelete.Visible = false;
+            }
         }
 
         private void frmBeneficiarie_FormClosed(object sender, FormClosedEventArgs e)
         {
-            // عند إغلاق هذه الشاشة، أظهر لوحة التحكم مرة أخرى
             var dashboard = Application.OpenForms.OfType<frmDashBoard>().FirstOrDefault();
             if (dashboard != null)
             {
@@ -61,30 +58,37 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
             }
         }
 
-        // --- 2. التحكم في اللوحة الذكية (Smart Panel) ---
+        private void SetupComboBoxes()
+        {
+            // ربط قائمة الحالة الاجتماعية بـ Enum
+            cmbSocialStatus.DataSource = Enum.GetValues(typeof(SocialStatus));
+        }
 
         private void SetPanelMode(PanelMode mode)
         {
             _currentMode = mode;
 
-            // قائمة بجميع عناصر الإدخال
-            var inputControls = new List<Control> { txtFullName, txtNationalID, txtPhone, txtAddress, numFamilySize, cmbSocialStatus, txtNeedReason, dtpRegistrationDate, txtNotes };
-            // قائمة بجميع عناصر العرض (Labels)
-            var displayLabels = new List<Control> { lblFullNameText, lblNationalIDText, lblPhoneText, lblAddressText, lblFamilySizeText, lblSocialStatusText, lblNeedReasonText, lblRegistrationDateText, lblNotesText };
+            pnlView.Visible = (mode == PanelMode.View);
+            pnlInputs.Visible = (mode == PanelMode.Add || mode == PanelMode.Edit);
 
-            // إظهار/إخفاء عناصر الإدخال مقابل عناصر العرض
-            bool isViewMode = (mode == PanelMode.View);
-            foreach (var control in inputControls) control.Visible = !isViewMode;
-            foreach (var label in displayLabels) label.Visible = isViewMode;
+            btnSave.Visible = (mode == PanelMode.Add || mode == PanelMode.Edit);
+            btnCancel.Visible = (mode == PanelMode.Add || mode == PanelMode.Edit);
 
-            // التحكم في الأزرار بناءً على الوضع
-            btnAddNew.Visible = isViewMode;
-            btnEdit.Visible = isViewMode && _selectedBeneficiary != null; // لا تظهر "تعديل" إذا لم يتم تحديد أي شيء
-            btnDelete.Visible = isViewMode && _selectedBeneficiary != null; // لا تظهر "حذف" إذا لم يتم تحديد أي شيء
-            btnSave.Visible = !isViewMode;
-            btnCancel.Visible = !isViewMode;
+            btnAddNew.Visible = (mode == PanelMode.View);
 
-            // تحديث عنوان اللوحة وتفريغ/ملء الحقول
+            // إظهار أزرار التعديل والحذف فقط في وضع العرض وإذا كان هناك مستفيد محدد
+            bool hasSelected = (_selectedBeneficiary != null);
+            btnEdit.Visible = (mode == PanelMode.View && hasSelected);
+            btnDelete.Visible = (mode == PanelMode.View && hasSelected);
+
+            // تطبيق الصلاحيات على الأزرار
+            var currentUser = SessionManager.GetCurrentUser();
+            if (currentUser != null && currentUser.Role == UserRole.User)
+            {
+                btnEdit.Visible = false;
+                btnDelete.Visible = false;
+            }
+
             switch (mode)
             {
                 case PanelMode.View:
@@ -95,67 +99,51 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
                 case PanelMode.Add:
                     lblPanelTitle.Text = "إضافة مستفيد جديد";
                     ClearInputFields();
-                    txtFullName.Focus(); // التركيز على أول حقل
+                    chkIsActive.Checked = true; // افتراضياً المستفيد الجديد نشط
                     break;
 
                 case PanelMode.Edit:
                     lblPanelTitle.Text = "تعديل بيانات المستفيد";
                     FillInputFieldsWithSelectedBeneficiary();
-                    txtFullName.Focus(); // التركيز على أول حقل
                     break;
             }
         }
 
-        // --- 3. وظائف مساعدة للبيانات والواجهة ---
-
-        private void LoadBeneficiaries()
+        private void LoadBeneficiariesData()
         {
-            // حفظ السجل المحدد حالياً (إن وجد)
-            string selectedId = _selectedBeneficiary?.BeneficiaryID ?? null;
+            string searchTerm = txtSearch.Text.Trim().ToLower();
 
-            dgvBeneficiariesList.DataSource = null;
-            dgvBeneficiariesList.DataSource = DataService.GetBeneficiaries();
-            //CustomizeDataGridView();
+            var beneficiaries = DataService.GetBeneficiaries()
+                .Where(b => string.IsNullOrEmpty(searchTerm) ||
+                            b.FullName.ToLower().Contains(searchTerm) ||
+                            b.NationalID.Contains(searchTerm))
+                .Select(b => new {
+                    b.BeneficiaryID,
+                    b.NationalID,
+                    b.FullName,
+                    b.Phone,
+                    b.FamilySize,
+                    Status = b.IsActive ? "نشط" : "غير نشط"
+                })
+                .ToList();
 
-            // محاولة إعادة تحديد نفس السجل بعد التحديث
-            if (selectedId != null)
-            {
-                foreach (DataGridViewRow row in dgvBeneficiariesList.Rows)
-                {
-                    // استخدم nameof لضمان الوصول الصحيح للخلية
-                    if (Convert.ToString(row.Cells[nameof(Beneficiary.BeneficiaryID)].Value) == selectedId)
-                    {
-                        row.Selected = true;
-                        // قم بتعيين الخلية الحالية إلى أول عمود مرئي (الاسم الكامل)
-                        dgvBeneficiariesList.CurrentCell = row.Cells[nameof(Beneficiary.FullName)];
-                        break;
-                    }
-                }
-
-
-            }
+            dgvBeneficiariesList.DataSource = beneficiaries;
+            CustomizeDataGridView();
         }
 
-        //private void CustomizeDataGridView()
-        //{
-        //    // إخفاء الأعمدة غير المرغوب فيها
-        //    dgvBeneficiariesList.Columns["Id"].Visible = false;
-        //    dgvBeneficiariesList.Columns["Notes"].Visible = false;
-        //    dgvBeneficiariesList.Columns["NeedReason"].Visible = false;
-        //    dgvBeneficiariesList.Columns["RegistrationDate"].Visible = false;
-
-        //    // تغيير عناوين الأعمدة
-        //    dgvBeneficiariesList.Columns["FullName"].HeaderText = "الاسم الكامل";
-        //    dgvBeneficiariesList.Columns["NationalID"].HeaderText = "الرقم الوطني";
-        //    dgvBeneficiariesList.Columns["Phone"].HeaderText = "رقم الهاتف";
-        //    dgvBeneficiariesList.Columns["Address"].HeaderText = "العنوان";
-        //    dgvBeneficiariesList.Columns["FamilySize"].HeaderText = "عدد الأفراد";
-        //    dgvBeneficiariesList.Columns["SocialStatus"].HeaderText = "الحالة الاجتماعية";
-
-        //    // تعديل عرض الأعمدة
-        //    dgvBeneficiariesList.Columns["FullName"].Width = 200;
-        //    dgvBeneficiariesList.Columns["Address"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-        //}
+        private void CustomizeDataGridView()
+        {
+            if (dgvBeneficiariesList.Columns.Count > 0)
+            {
+                dgvBeneficiariesList.Columns["BeneficiaryID"].HeaderText = "رقم الملف";
+                dgvBeneficiariesList.Columns["NationalID"].HeaderText = "الرقم الوطني";
+                dgvBeneficiariesList.Columns["FullName"].HeaderText = "الاسم الكامل";
+                dgvBeneficiariesList.Columns["Phone"].HeaderText = "رقم الجوال";
+                dgvBeneficiariesList.Columns["FamilySize"].HeaderText = "أفراد الأسرة";
+                dgvBeneficiariesList.Columns["Status"].HeaderText = "الحالة";
+                dgvBeneficiariesList.Columns["FullName"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            }
+        }
 
         private void DisplayBeneficiaryDetails(Beneficiary b)
         {
@@ -166,16 +154,24 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
                 lblPhoneText.Text = b.Phone;
                 lblAddressText.Text = b.Address;
                 lblFamilySizeText.Text = b.FamilySize.ToString();
-                lblSocialStatusText.Text = b.SocialStatus;
+                lblSocialStatusText.Text = b.SocialStatus.ToString();
                 lblNeedReasonText.Text = b.NeedReason;
-                lblRegistrationDateText.Text = b.RegistrationDate.ToShortDateString();
-                lblNotesText.Text = b.Notes;
+                lblNotesText.Text = string.IsNullOrWhiteSpace(b.Notes) ? "لا توجد ملاحظات" : b.Notes;
+                lblIsActiveText.Text = b.IsActive ? "نشط" : "غير نشط";
+                lblIsActiveText.ForeColor = b.IsActive ? System.Drawing.Color.Green : System.Drawing.Color.Red;
             }
             else
             {
-                // تفريغ الحقول إذا لم يكن هناك مستفيد محدد
-                var displayLabels = new List<Label> { lblFullNameText, lblNationalIDText, lblPhoneText, lblAddressText, lblFamilySizeText, lblSocialStatusText, lblNeedReasonText, lblRegistrationDateText, lblNotesText };
-                foreach (var label in displayLabels) label.Text = "----";
+                lblFullNameText.Text = "----";
+                lblNationalIDText.Text = "----";
+                lblPhoneText.Text = "----";
+                lblAddressText.Text = "----";
+                lblFamilySizeText.Text = "----";
+                lblSocialStatusText.Text = "----";
+                lblNeedReasonText.Text = "----";
+                lblNotesText.Text = "----";
+                lblIsActiveText.Text = "----";
+                lblIsActiveText.ForeColor = System.Drawing.Color.FromArgb(64, 64, 64);
             }
         }
 
@@ -185,11 +181,11 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
             txtNationalID.Clear();
             txtPhone.Clear();
             txtAddress.Clear();
-            numFamilySize.Value = 0;
-            cmbSocialStatus.SelectedIndex = -1; // مسح التحديد
+            txtFamilySize.Clear();
             txtNeedReason.Clear();
-            dtpRegistrationDate.Value = DateTime.Now;
             txtNotes.Clear();
+            if (cmbSocialStatus.Items.Count > 0) cmbSocialStatus.SelectedIndex = 0;
+            chkIsActive.Checked = true;
         }
 
         private void FillInputFieldsWithSelectedBeneficiary()
@@ -200,287 +196,126 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
                 txtNationalID.Text = _selectedBeneficiary.NationalID;
                 txtPhone.Text = _selectedBeneficiary.Phone;
                 txtAddress.Text = _selectedBeneficiary.Address;
-                numFamilySize.Value = _selectedBeneficiary.FamilySize;
-                if (cmbSocialStatus.Items.Contains(_selectedBeneficiary.SocialStatus))
-                {
-                    cmbSocialStatus.SelectedItem = _selectedBeneficiary.SocialStatus;
-                }
-                else
-                {
-                    cmbSocialStatus.SelectedIndex = -1; // إذا لم يتم العثور على القيمة، لا تحدد أي شيء
-                }
+                txtFamilySize.Text = _selectedBeneficiary.FamilySize.ToString();
                 txtNeedReason.Text = _selectedBeneficiary.NeedReason;
-                dtpRegistrationDate.Value = _selectedBeneficiary.RegistrationDate;
                 txtNotes.Text = _selectedBeneficiary.Notes;
+                cmbSocialStatus.SelectedItem = _selectedBeneficiary.SocialStatus;
+                chkIsActive.Checked = _selectedBeneficiary.IsActive;
             }
         }
 
-        private void SetupSearchComboBox()
-        {
-            // إعداد قائمة البحث
-            cmbSearch.Items.Add("الاسم الكامل");
-            cmbSearch.Items.Add("الرقم الوطني");
-            cmbSearch.Items.Add("رقم الهاتف");
-            cmbSearch.SelectedIndex = 0; // تحديد "الاسم الكامل" كخيار افتراضي
-        }
-
-        // --- 4. أحداث الأزرار والجدول ---
-
-        private void btnBackToDashBoard_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        // الكود الجديد والمحصّن
         private void dgvBeneficiariesList_SelectionChanged(object sender, EventArgs e)
         {
-            // --- التحقق الأهم: هل الجدول فارغ؟ ---
-            if (dgvBeneficiariesList.Rows.Count == 0 || dgvBeneficiariesList.CurrentRow == null)
+            if (dgvBeneficiariesList.CurrentRow != null)
             {
-                // إذا كان الجدول فارغاً، لا يوجد شيء لعرضه
-                _selectedBeneficiary = null;
-            }
-            else if (dgvBeneficiariesList.CurrentRow.DataBoundItem is Beneficiary selected)
-            {
-                // إذا كان هناك صف محدد، قم بتعيين المستفيد
-                _selectedBeneficiary = selected;
+                string selectedId = dgvBeneficiariesList.CurrentRow.Cells["BeneficiaryID"].Value.ToString();
+                _selectedBeneficiary = DataService.GetBeneficiaryById(selectedId);
             }
             else
             {
-                // حالات أخرى غير متوقعة
                 _selectedBeneficiary = null;
             }
 
-            // الآن، قم بتحديث الواجهة بناءً على _selectedBeneficiary
-            // هذا الجزء سيعمل بشكل صحيح سواء كان المتغير null أو يحتوي على بيانات
             if (_currentMode == PanelMode.View)
             {
                 DisplayBeneficiaryDetails(_selectedBeneficiary);
-                btnEdit.Visible = (_selectedBeneficiary != null);
-                btnDelete.Visible = (_selectedBeneficiary != null);
-            }
-        }
 
-
-        private void btnAddNew_Click(object sender, EventArgs e)
-        {
-            _selectedBeneficiary = null; // إلغاء تحديد أي مستفيد حالي عند الإضافة
-            dgvBeneficiariesList.ClearSelection();
-            SetPanelMode(PanelMode.Add);
-        }
-
-        private void btnEdit_Click(object sender, EventArgs e)
-        {
-            if (_selectedBeneficiary != null)
-            {
-                SetPanelMode(PanelMode.Edit);
+                // تطبيق الصلاحيات
+                var currentUser = SessionManager.GetCurrentUser();
+                if (currentUser != null && currentUser.Role == UserRole.Admin)
+                {
+                    btnEdit.Visible = (_selectedBeneficiary != null);
+                    btnDelete.Visible = (_selectedBeneficiary != null);
+                }
+                else
+                {
+                    btnEdit.Visible = false;
+                    btnDelete.Visible = false;
+                }
             }
-            else
-            {
-                new frmAlert("الرجاء تحديد مستفيد أولاً لتعديل بياناته.").ShowDialog();
-            }
-        }
-
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            // إعادة تحديد المستفيد الذي كان محدداً قبل الضغط على "إضافة" أو "تعديل"
-            if (dgvBeneficiariesList.SelectedRows.Count > 0)
-            {
-                _selectedBeneficiary = dgvBeneficiariesList.SelectedRows[0].DataBoundItem as Beneficiary;
-            }
-            else
-            {
-                _selectedBeneficiary = null;
-            }
-            SetPanelMode(PanelMode.View);
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            // --- 1. التحقق من صحة المدخلات ---
-            if (string.IsNullOrWhiteSpace(txtFullName.Text))
+            // 1. التحقق من المدخلات الأساسية
+            if (string.IsNullOrWhiteSpace(txtFullName.Text) || string.IsNullOrWhiteSpace(txtNationalID.Text))
             {
-                new frmAlert("يرجى إدخال الاسم الكامل للمستفيد.").ShowDialog();
-                txtFullName.Focus();
-                return; // إيقاف التنفيذ
-            }
-            if (string.IsNullOrWhiteSpace(txtNationalID.Text))
-            {
-                new frmAlert("يرجى إدخال الرقم الوطني للمستفيد.").ShowDialog();
-                txtNationalID.Focus();
+                new frmAlert("يجب إدخال الاسم الكامل والرقم الوطني.").ShowDialog();
                 return;
             }
 
-            // --- 2. تحديد وضع التشغيل (إضافة أو تعديل) ---
+            // 2. التحقق من أن حجم الأسرة رقم صحيح
+            if (!int.TryParse(txtFamilySize.Text, out int familySize))
+            {
+                new frmAlert("الرجاء إدخال رقم صحيح لعدد أفراد الأسرة.").ShowDialog();
+                return;
+            }
+
             if (_currentMode == PanelMode.Add)
             {
-                // --- وضع الإضافة ---
+                // إنشاء ID جديد
+                int lastIdNumber = DataService.GetBeneficiaries().Any()
+                    ? DataService.GetBeneficiaries().Select(b => int.Parse(b.BeneficiaryID.Substring(1))).Max()
+                    : 0;
+                string newId = "B" + (lastIdNumber + 1).ToString("D3");
+
                 var newBeneficiary = new Beneficiary
                 {
-                    BeneficiaryID = GenerateNewBeneficiaryId(),
-                    FullName = txtFullName.Text,
-                    NationalID = txtNationalID.Text,
-                    Phone = txtPhone.Text,
-                    Address = txtAddress.Text,
-                    FamilySize = (int)numFamilySize.Value,
-                    SocialStatus = cmbSocialStatus.Text,
-                    NeedReason = txtNeedReason.Text,
-                    RegistrationDate = dtpRegistrationDate.Value,
-                    Notes = txtNotes.Text
+                    BeneficiaryID = newId,
+                    FullName = txtFullName.Text.Trim(),
+                    NationalID = txtNationalID.Text.Trim(),
+                    Phone = txtPhone.Text.Trim(),
+                    Address = txtAddress.Text.Trim(),
+                    FamilySize = familySize,
+                    SocialStatus = (SocialStatus)Enum.Parse(typeof(SocialStatus), cmbSocialStatus.SelectedItem.ToString()),
+                    NeedReason = txtNeedReason.Text.Trim(),
+                    Notes = txtNotes.Text.Trim(),
+                    IsActive = chkIsActive.Checked,
+                    RegistrationDate = DateTime.Now
                 };
 
                 DataService.AddBeneficiary(newBeneficiary);
-                _selectedBeneficiary = newBeneficiary; // تحديد المستفيد الجديد بعد إضافته
-                new frmAlert("تمت إضافة المستفيد بنجاح!").ShowDialog();
+                new frmAlert("تمت إضافة المستفيد بنجاح.").ShowDialog();
             }
             else if (_currentMode == PanelMode.Edit)
             {
-                // --- وضع التعديل ---
-                if (_selectedBeneficiary != null)
-                {
-                    _selectedBeneficiary.FullName = txtFullName.Text;
-                    _selectedBeneficiary.NationalID = txtNationalID.Text;
-                    _selectedBeneficiary.Phone = txtPhone.Text;
-                    _selectedBeneficiary.Address = txtAddress.Text;
-                    _selectedBeneficiary.FamilySize = (int)numFamilySize.Value;
-                    _selectedBeneficiary.SocialStatus = cmbSocialStatus.Text;
-                    _selectedBeneficiary.NeedReason = txtNeedReason.Text;
-                    _selectedBeneficiary.RegistrationDate = dtpRegistrationDate.Value;
-                    _selectedBeneficiary.Notes = txtNotes.Text;
+                _selectedBeneficiary.FullName = txtFullName.Text.Trim();
+                _selectedBeneficiary.NationalID = txtNationalID.Text.Trim();
+                _selectedBeneficiary.Phone = txtPhone.Text.Trim();
+                _selectedBeneficiary.Address = txtAddress.Text.Trim();
+                _selectedBeneficiary.FamilySize = familySize;
+                _selectedBeneficiary.SocialStatus = (SocialStatus)Enum.Parse(typeof(SocialStatus), cmbSocialStatus.SelectedItem.ToString());
+                _selectedBeneficiary.NeedReason = txtNeedReason.Text.Trim();
+                _selectedBeneficiary.Notes = txtNotes.Text.Trim();
+                _selectedBeneficiary.IsActive = chkIsActive.Checked;
 
-                    DataService.UpdateBeneficiary(_selectedBeneficiary);
-                    new frmAlert("تم تعديل بيانات المستفيد بنجاح!").ShowDialog();
-                }
+                DataService.UpdateBeneficiary(_selectedBeneficiary);
+                new frmAlert("تم تعديل بيانات المستفيد بنجاح.").ShowDialog();
             }
 
-            // --- 3. تحديث الواجهة ---
-            LoadBeneficiaries();    // إعادة تحميل القائمة لإظهار التغييرات
-            SetPanelMode(PanelMode.View);     // العودة إلى وضع العرض
+            LoadBeneficiariesData();
+            SetPanelMode(PanelMode.View);
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (_selectedBeneficiary == null)
-            {
-                new frmAlert("يرجى تحديد مستفيد لحذفه أولاً.").ShowDialog();
-                return;
-            }
+            if (_selectedBeneficiary == null) return;
 
-            frmConfirm confirmDialog = new frmConfirm($"هل أنت متأكد من أنك تريد حذف المستفيد '{_selectedBeneficiary.FullName}'؟ لا يمكن التراجع عن هذا الإجراء.");
-
+            frmConfirm confirmDialog = new frmConfirm($"هل أنت متأكد من أنك تريد حذف المستفيد '{_selectedBeneficiary.FullName}'؟");
             if (confirmDialog.ShowDialog() == DialogResult.Yes)
             {
                 DataService.DeleteBeneficiary(_selectedBeneficiary.BeneficiaryID);
                 new frmAlert("تم حذف المستفيد بنجاح.").ShowDialog();
-
-                _selectedBeneficiary = null; // مسح التحديد بعد الحذف
-                LoadBeneficiaries();
+                LoadBeneficiariesData();
                 SetPanelMode(PanelMode.View);
             }
         }
 
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-            // منطق البحث الفعلي
-            string searchTerm = txtSearch.Text.Trim().ToLower();
-            if (string.IsNullOrEmpty(searchTerm))
-            {
-                LoadBeneficiaries();
-                return;
-            }
-
-            var allBeneficiaries = DataService.GetBeneficiaries();
-            List<Beneficiary> filteredList = new List<Beneficiary>();
-
-            switch (cmbSearch.SelectedItem.ToString())
-            {
-                case "الاسم الكامل":
-                    filteredList = allBeneficiaries.Where(b => b.FullName.ToLower().Contains(searchTerm)).ToList();
-                    break;
-                case "الرقم الوطني":
-                    filteredList = allBeneficiaries.Where(b => b.NationalID.Contains(searchTerm)).ToList();
-                    break;
-                case "رقم الهاتف":
-                    filteredList = allBeneficiaries.Where(b => b.Phone.Contains(searchTerm)).ToList();
-                    break;
-            }
-
-            dgvBeneficiariesList.DataSource = null;
-            dgvBeneficiariesList.DataSource = filteredList;
-            //CustomizeDataGridView();
-
-            // ... بعد تحديث مصدر البيانات للجدول
-            if (filteredList.Count == 0)
-            {
-                new frmAlert("لم يتم العثور على نتائج تطابق بحثك.").ShowDialog();
-            }
-        }
-
-        private void btnClear_Click(object sender, EventArgs e)
-        {
-            txtSearch.Clear();
-            cmbSearch.SelectedIndex = 0;
-            LoadBeneficiaries(); // إعادة تحميل القائمة الكاملة
-            txtSearch.Focus();
-        }
-
-        private void frmBeneficiarie_KeyDown(object sender, KeyEventArgs e)
-        {
-            // إذا كان المستخدم في وضع الإضافة أو التعديل
-            if (_currentMode == PanelMode.Add || _currentMode == PanelMode.Edit)
-            {
-                if (e.KeyCode == Keys.Enter)
-                {
-                    // إيقاف صوت "الدينغ" المزعج عند الضغط على Enter
-                    e.SuppressKeyPress = true;
-                    // الانتقال إلى الحقل التالي
-                    this.SelectNextControl(this.ActiveControl, true, true, true, true);
-                }
-                else if (e.KeyCode == Keys.Escape)
-                {
-                    // الضغط على Escape يعادل الضغط على زر "إلغاء"
-                    btnCancel.PerformClick();
-                }
-            }
-        }
-
-        private void txtNotes_KeyDown(object sender, KeyEventArgs e)
-        {
-            // إذا ضغط المستخدم على Enter داخل حقل الملاحظات، لا تنتقل للحقل التالي
-            if (e.KeyCode == Keys.Enter)
-            {
-                // اسمح للـ TextBox بمعالجة ضغطة Enter (لإنشاء سطر جديد)
-                // ولا تمررها إلى الفورم
-                e.Handled = true;
-            }
-        }
-
-        // هذه هي الدالة الجديدة التي أنشأتها من المصمم
-        // الكود الجديد والموثوق
-        private void dgvBeneficiariesList_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
-        {
-            // التأكد من أن الجدول يحتوي على أعمدة قبل محاولة تخصيصها
-            if (dgvBeneficiariesList.Columns.Count == 0) return;
-
-            // --- استخدام nameof لضمان تطابق الأسماء ---
-            dgvBeneficiariesList.Columns[nameof(Beneficiary.BeneficiaryID)].Visible = false;
-            dgvBeneficiariesList.Columns[nameof(Beneficiary.Notes)].Visible = false;
-            dgvBeneficiariesList.Columns[nameof(Beneficiary.NeedReason)].Visible = false;
-            dgvBeneficiariesList.Columns[nameof(Beneficiary.RegistrationDate)].Visible = false;
-
-            // تغيير عناوين الأعمدة
-            dgvBeneficiariesList.Columns[nameof(Beneficiary.FullName)].HeaderText = "الاسم الكامل";
-            dgvBeneficiariesList.Columns[nameof(Beneficiary.NationalID)].HeaderText = "الرقم الوطني";
-            dgvBeneficiariesList.Columns[nameof(Beneficiary.Phone)].HeaderText = "رقم الهاتف";
-            dgvBeneficiariesList.Columns[nameof(Beneficiary.Address)].HeaderText = "العنوان";
-            dgvBeneficiariesList.Columns[nameof(Beneficiary.FamilySize)].HeaderText = "عدد الأفراد";
-            dgvBeneficiariesList.Columns[nameof(Beneficiary.SocialStatus)].HeaderText = "الحالة الاجتماعية";
-
-            // تعديل عرض الأعمدة
-            dgvBeneficiariesList.Columns[nameof(Beneficiary.FullName)].Width = 200;
-            dgvBeneficiariesList.Columns[nameof(Beneficiary.Address)].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-        }
-
-
+        private void btnSearch_Click(object sender, EventArgs e) { LoadBeneficiariesData(); }
+        private void btnClear_Click(object sender, EventArgs e) { txtSearch.Clear(); LoadBeneficiariesData(); }
+        private void btnAddNew_Click(object sender, EventArgs e) { SetPanelMode(PanelMode.Add); }
+        private void btnEdit_Click(object sender, EventArgs e) { if (_selectedBeneficiary != null) SetPanelMode(PanelMode.Edit); }
+        private void btnCancel_Click(object sender, EventArgs e) { SetPanelMode(PanelMode.View); }
+        private void btnBackToDashBoard_Click(object sender, EventArgs e) { this.Close(); }
     }
 }

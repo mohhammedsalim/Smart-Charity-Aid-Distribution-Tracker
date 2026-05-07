@@ -13,3 +13,4 @@ C:\Users\Dell\Desktop\tempConsoleApp\Smart Charity and Aid Distribution Tracker\
 C:\Users\Dell\Desktop\tempConsoleApp\Smart Charity and Aid Distribution Tracker\Smart Charity and Aid Distribution Tracker\obj\Debug\Smart Charity and Aid Distribution Tracker.pdb
 C:\Users\Dell\Desktop\tempConsoleApp\Smart Charity and Aid Distribution Tracker\Smart Charity and Aid Distribution Tracker\obj\Debug\Smart Charity and Aid Distribution Tracker.exe.config
 C:\Users\Dell\Desktop\tempConsoleApp\Smart Charity and Aid Distribution Tracker\Smart Charity and Aid Distribution Tracker\obj\Debug\Smart_Charity_and_Aid_Distribution_Tracker.Forms.frmDistribution.resources
+C:\Users\Dell\Desktop\tempConsoleApp\Smart Charity and Aid Distribution Tracker\Smart Charity and Aid Distribution Tracker\obj\Debug\Smart_Charity_and_Aid_Distribution_Tracker.Forms.frmUsers.resources

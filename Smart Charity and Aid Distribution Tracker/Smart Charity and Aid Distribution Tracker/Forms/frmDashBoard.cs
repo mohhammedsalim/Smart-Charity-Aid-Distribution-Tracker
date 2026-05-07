@@ -1,4 +1,5 @@
-﻿using Smart_Charity_and_Aid_Distribution_Tracker.Models; // المسار الصحيح
+﻿using Smart_Charity_and_Aid_Distribution_Tracker.Enums;
+using Smart_Charity_and_Aid_Distribution_Tracker.Models; // المسار الصحيح
 using Smart_Charity_and_Aid_Distribution_Tracker.Services; // المسار الصحيح
 using System;
 using System.Linq;
@@ -52,7 +53,28 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
             if (_currentUser != null)
             {
                 lblUserName.Text = _currentUser.FullName;
-            }   
+            }
+
+            // --- تطبيق الصلاحيات ---
+            // احصل على المستخدم الحالي من مدير الجلسة
+            var currentUser = SessionManager.GetCurrentUser();
+
+            // تحقق مما إذا كان المستخدم موجوداً وصلاحيته هي "مدير"
+            if (currentUser != null && currentUser.Role == UserRole.Admin)
+            {
+                // إذا كان مديراً، أظهر زر إدارة المستخدمين
+                btnUsers.Visible = true;
+            }
+            else
+            {
+                // إذا لم يكن مديراً، تأكد من أن الزر مخفي
+                btnUsers.Visible = false;
+            }
+
+            // يمكنك أيضاً عرض اسم المستخدم الحالي في مكان ما في لوحة التحكم
+            // على سبيل المثال، إذا كان لديك Label اسمه lblWelcomeUser
+            // lblWelcomeUser.Text = $"مرحباً، {currentUser?.FullName}";
+
         }
 
 
@@ -115,6 +137,20 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
 
         private void frmDashBoard_Activated(object sender, EventArgs e)
         {
+            // --- تطبيق الصلاحيات ---
+            var currentUser = SessionManager.GetCurrentUser();
+
+            // تحقق مما إذا كان المستخدم موجوداً وصلاحيته هي "مدير"
+            if (currentUser != null && currentUser.Role == UserRole.Admin)
+            {
+                // إذا كان مديراً، أظهر زر إدارة المستخدمين
+                btnUsers.Visible = true;
+            }
+            else
+            {
+                // إذا لم يكن مديراً، تأكد من أن الزر مخفي
+                btnUsers.Visible = false;
+            }
             // استدعاء وظيفة تحميل الإحصائيات
             LoadStatistics();
         }
@@ -138,7 +174,24 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
             this.Hide();
         }
 
+        private void btnReports_Click(object sender, EventArgs e)
+        {
+            // إنشاء نسخة جديدة من شاشة التقارير
+            frmDistributionReport reportForm = new frmDistributionReport();
 
+            // إظهار شاشة التقارير
+            reportForm.Show();
 
+            // إخفاء لوحة التحكم الحالية
+            this.Hide();
+        }
+
+        private void btnUsers_Click(object sender, EventArgs e)
+        {
+            frmUsers usersForm = new frmUsers();
+            usersForm.Show();
+            this.Hide();
     }
 }
+}
+

@@ -3,32 +3,136 @@
   "WorkspaceRootPath": "C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|c:\\users\\dell\\desktop\\tempconsoleapp\\smart charity and aid distribution tracker\\smart charity and aid distribution tracker\\forms\\frmdistribution.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmdistribution.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\smart charity and aid distribution tracker\\forms\\frmdistribution.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmdistribution.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\smart charity and aid distribution tracker\\forms\\frmdistribution.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmdistribution.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\smart charity and aid distribution tracker\\forms\\frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\smart charity and aid distribution tracker\\forms\\frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\smart charity and aid distribution tracker\\forms\\frminventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frminventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\smart charity and aid distribution tracker\\forms\\frminventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frminventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\smart charity and aid distribution tracker\\forms\\frminventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frminventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|c:\\users\\dell\\desktop\\tempconsoleapp\\smart charity and aid distribution tracker\\smart charity and aid distribution tracker\\forms\\frmdistribution.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmdistribution.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\smart charity and aid distribution tracker\\forms\\frmdistribution.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmdistribution.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\smart charity and aid distribution tracker\\forms\\frmdistribution.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmdistribution.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|c:\\users\\dell\\desktop\\tempconsoleapp\\smart charity and aid distribution tracker\\smart charity and aid distribution tracker\\forms\\frmdistributionreport.cs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmdistributionreport.cs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\smart charity and aid distribution tracker\\forms\\frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|c:\\users\\dell\\desktop\\tempconsoleapp\\smart charity and aid distribution tracker\\smart charity and aid distribution tracker\\forms\\frmdistributionreport.cs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmdistributionreport.cs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|c:\\users\\dell\\desktop\\tempconsoleapp\\smart charity and aid distribution tracker\\smart charity and aid distribution tracker\\services\\dataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\services\\dataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|c:\\users\\dell\\desktop\\tempconsoleapp\\smart charity and aid distribution tracker\\smart charity and aid distribution tracker\\services\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\services\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|c:\\users\\dell\\desktop\\tempconsoleapp\\smart charity and aid distribution tracker\\smart charity and aid distribution tracker\\models\\inventorymovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\models\\inventorymovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|c:\\users\\dell\\desktop\\tempconsoleapp\\smart charity and aid distribution tracker\\smart charity and aid distribution tracker\\enums\\movementtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\enums\\movementtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|c:\\users\\dell\\desktop\\tempconsoleapp\\smart charity and aid distribution tracker\\smart charity and aid distribution tracker\\forms\\frminventory.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frminventory.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|c:\\users\\dell\\desktop\\tempconsoleapp\\smart charity and aid distribution tracker\\smart charity and aid distribution tracker\\enums\\itemcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\enums\\itemcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|c:\\users\\dell\\desktop\\tempconsoleapp\\smart charity and aid distribution tracker\\smart charity and aid distribution tracker\\models\\class1.csinventoryitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\models\\class1.csinventoryitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|c:\\users\\dell\\desktop\\tempconsoleapp\\smart charity and aid distribution tracker\\smart charity and aid distribution tracker\\forms\\frmbeneficiarie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmbeneficiarie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|c:\\users\\dell\\desktop\\tempconsoleapp\\smart charity and aid distribution tracker\\smart charity and aid distribution tracker\\forms\\frmbeneficiarie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmbeneficiarie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|c:\\users\\dell\\desktop\\tempconsoleapp\\smart charity and aid distribution tracker\\smart charity and aid distribution tracker\\forms\\frmbeneficiarie.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmbeneficiarie.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|c:\\users\\dell\\desktop\\tempconsoleapp\\smart charity and aid distribution tracker\\smart charity and aid distribution tracker\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|c:\\users\\dell\\desktop\\tempconsoleapp\\smart charity and aid distribution tracker\\smart charity and aid distribution tracker\\data\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\data\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|c:\\users\\dell\\desktop\\tempconsoleapp\\smart charity and aid distribution tracker\\smart charity and aid distribution tracker\\models\\beneficiary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\models\\beneficiary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|c:\\users\\dell\\desktop\\tempconsoleapp\\smart charity and aid distribution tracker\\smart charity and aid distribution tracker\\enums\\socialstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\enums\\socialstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|c:\\users\\dell\\desktop\\tempconsoleapp\\smart charity and aid distribution tracker\\smart charity and aid distribution tracker\\enums\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\enums\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\smart charity and aid distribution tracker\\forms\\frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|c:\\users\\dell\\desktop\\tempconsoleapp\\smart charity and aid distribution tracker\\smart charity and aid distribution tracker\\forms\\frmusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|c:\\users\\dell\\desktop\\tempconsoleapp\\smart charity and aid distribution tracker\\smart charity and aid distribution tracker\\forms\\frmusers.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmusers.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|c:\\users\\dell\\desktop\\tempconsoleapp\\smart charity and aid distribution tracker\\smart charity and aid distribution tracker\\forms\\frmusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|c:\\users\\dell\\desktop\\tempconsoleapp\\smart charity and aid distribution tracker\\smart charity and aid distribution tracker\\services\\sessionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\services\\sessionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|c:\\users\\dell\\desktop\\tempconsoleapp\\smart charity and aid distribution tracker\\smart charity and aid distribution tracker\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|c:\\users\\dell\\desktop\\tempconsoleapp\\smart charity and aid distribution tracker\\smart charity and aid distribution tracker\\forms\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|c:\\users\\dell\\desktop\\tempconsoleapp\\smart charity and aid distribution tracker\\smart charity and aid distribution tracker\\forms\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|c:\\users\\dell\\desktop\\tempconsoleapp\\smart charity and aid distribution tracker\\smart charity and aid distribution tracker\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|c:\\users\\dell\\desktop\\tempconsoleapp\\smart charity and aid distribution tracker\\smart charity and aid distribution tracker\\forms\\frmdistributionreport.cs.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmdistributionreport.cs.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\smart charity and aid distribution tracker\\forms\\frmdashboard.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -42,7 +146,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 78,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 30,
           "Children": [
             {
               "$type": "Bookmark",
@@ -58,7 +162,341 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "InventoryMovement.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Models\\InventoryMovement.cs",
+              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Models\\InventoryMovement.cs",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Models\\InventoryMovement.cs",
+              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Models\\InventoryMovement.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-07T16:51:05.306Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MovementType.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Enums\\MovementType.cs",
+              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Enums\\MovementType.cs",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Enums\\MovementType.cs",
+              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Enums\\MovementType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-07T16:46:20.911Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "frmInventory.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmInventory.Designer.cs",
+              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmInventory.Designer.cs",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmInventory.Designer.cs",
+              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmInventory.Designer.cs",
+              "ViewState": "AgIAANACAAAAAAAAAAAowP8CAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-07T16:21:45.002Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ItemCategory.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Enums\\ItemCategory.cs",
+              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Enums\\ItemCategory.cs",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Enums\\ItemCategory.cs",
+              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Enums\\ItemCategory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-07T16:18:48.075Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Class1.csInventoryItem.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Models\\Class1.csInventoryItem.cs",
+              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Models\\Class1.csInventoryItem.cs",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Models\\Class1.csInventoryItem.cs",
+              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Models\\Class1.csInventoryItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-07T16:16:38.43Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "frmBeneficiarie.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmBeneficiarie.Designer.cs",
+              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmBeneficiarie.Designer.cs",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmBeneficiarie.Designer.cs",
+              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmBeneficiarie.Designer.cs",
+              "ViewState": "AgIAAAQDAAAAAAAAAAAowCkDAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-07T16:02:34.835Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "SeedData.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Data\\SeedData.cs",
+              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Data\\SeedData.cs",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Data\\SeedData.cs",
+              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Data\\SeedData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAD8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-07T15:59:52.777Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Beneficiary.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Models\\Beneficiary.cs",
+              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Models\\Beneficiary.cs",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Models\\Beneficiary.cs",
+              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Models\\Beneficiary.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-07T15:56:27.222Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "SocialStatus.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Enums\\SocialStatus.cs",
+              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Enums\\SocialStatus.cs",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Enums\\SocialStatus.cs",
+              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Enums\\SocialStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-07T15:55:38.662Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "frmUsers.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmUsers.Designer.cs",
+              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmUsers.Designer.cs",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmUsers.Designer.cs",
+              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmUsers.Designer.cs",
+              "ViewState": "AgIAAO8BAAAAAAAAAAAcwBECAABjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-07T14:35:50.85Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "UserRole.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Enums\\UserRole.cs",
+              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Enums\\UserRole.cs",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Enums\\UserRole.cs",
+              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Enums\\UserRole.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-07T14:10:51.155Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "frmBeneficiarie.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmBeneficiarie.cs",
+              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmBeneficiarie.cs",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmBeneficiarie.cs",
+              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmBeneficiarie.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-07T14:10:17.665Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "frmBeneficiarie.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmBeneficiarie.cs",
+              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmBeneficiarie.cs",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmBeneficiarie.cs [Design]",
+              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmBeneficiarie.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-07T14:10:15.243Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "SeedData.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Services\\SeedData.cs",
+              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Services\\SeedData.cs",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Services\\SeedData.cs",
+              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Services\\SeedData.cs",
+              "ViewState": "AgIAAHUAAAAAAAAAAAAgwIgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-07T13:59:31.255Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "frmUsers.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmUsers.cs",
+              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmUsers.cs",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmUsers.cs",
+              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmUsers.cs",
+              "ViewState": "AgIAALAAAAAAAAAAAAAwwPIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-07T13:35:46.919Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "frmUsers.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmUsers.cs",
+              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmUsers.cs",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmUsers.cs [Design]",
+              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmUsers.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-07T13:28:05.981Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "frmLogin.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmLogin.cs",
+              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmLogin.cs",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmLogin.cs",
+              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmLogin.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAowDEAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-07T13:23:10.384Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Program.cs",
+              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Program.cs",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Program.cs",
+              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-07T13:22:34.644Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "SessionManager.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Services\\SessionManager.cs",
+              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Services\\SessionManager.cs",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Services\\SessionManager.cs",
+              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Services\\SessionManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-07T13:20:53.531Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Services\\UserService.cs",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Services\\UserService.cs",
+              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Services\\UserService.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAAA8AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-07T13:20:14.425Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Models\\User.cs",
+              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-07T13:20:06.415Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DataService.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Services\\DataService.cs",
+              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Services\\DataService.cs",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Services\\DataService.cs",
+              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Services\\DataService.cs",
+              "ViewState": "AgIAAC0BAAAAAAAAAAAqwD8BAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-07T13:19:09.236Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "frmLogin.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmLogin.cs",
+              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmLogin.cs",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmLogin.cs [Design]",
+              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmLogin.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-07T13:18:26.593Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 7,
+              "Title": "frmDistributionReport.cs.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmDistributionReport.cs.cs",
+              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmDistributionReport.cs.cs",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmDistributionReport.cs.cs",
+              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmDistributionReport.cs.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-07T13:02:00.41Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "frmDistributionReport.cs.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmDistributionReport.cs.Designer.cs",
+              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmDistributionReport.cs.Designer.cs",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmDistributionReport.cs.Designer.cs",
+              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmDistributionReport.cs.Designer.cs",
+              "ViewState": "AgIAAJIAAAAAAAAAAAAAwMUBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-07T12:58:03.684Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "frmDistributionReport.cs.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmDistributionReport.cs.cs",
+              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmDistributionReport.cs.cs",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmDistributionReport.cs.cs [Design]",
+              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmDistributionReport.cs.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-07T12:54:59.909Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
               "Title": "frmDashBoard.Designer.cs",
               "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmDashBoard.Designer.cs",
               "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmDashBoard.Designer.cs",
@@ -66,89 +504,96 @@
               "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmDashBoard.Designer.cs",
               "ViewState": "AgIAAHAAAAAAAAAAAADwv4kAAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-06T22:43:16.3Z"
+              "WhenOpened": "2026-05-06T22:43:16.3Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
               "Title": "frmInventory.cs",
               "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmInventory.cs",
               "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmInventory.cs",
               "ToolTip": "C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmInventory.cs",
               "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmInventory.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAD4vx0AAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAPMAAAAAAAAAAAAuwAgBAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-06T22:41:04.926Z"
+              "WhenOpened": "2026-05-06T22:41:04.926Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "frmInventory.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmInventory.cs",
               "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmInventory.cs",
               "ToolTip": "C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmInventory.cs [Design]",
               "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmInventory.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-06T22:41:01.883Z"
+              "WhenOpened": "2026-05-06T22:41:01.883Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 23,
               "Title": "frmDashBoard.cs",
               "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmDashBoard.cs",
               "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmDashBoard.cs",
               "ToolTip": "C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmDashBoard.cs",
               "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmDashBoard.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAABMAAAAAAAAAA==",
+              "ViewState": "AgIAAHIAAAAAAAAAAIA5wJgAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-06T22:38:09.359Z"
+              "WhenOpened": "2026-05-06T22:38:09.359Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "frmDashBoard.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmDashBoard.cs",
               "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmDashBoard.cs",
               "ToolTip": "C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmDashBoard.cs [Design]",
               "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmDashBoard.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-06T22:37:04.639Z"
+              "WhenOpened": "2026-05-06T22:37:04.639Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "frmDistribution.cs",
               "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmDistribution.cs",
               "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmDistribution.cs",
               "ToolTip": "C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmDistribution.cs",
               "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmDistribution.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAjwEAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAALkAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-06T22:35:00.205Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "frmDistribution.Designer.cs",
               "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmDistribution.Designer.cs",
               "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmDistribution.Designer.cs",
               "ToolTip": "C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmDistribution.Designer.cs",
               "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmDistribution.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAPkBAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAA+wPkBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-06T22:32:44.81Z"
+              "WhenOpened": "2026-05-06T22:32:44.81Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "frmDistribution.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmDistribution.cs",
               "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmDistribution.cs",
               "ToolTip": "C:\\Users\\Dell\\Desktop\\tempConsoleApp\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmDistribution.cs [Design]",
               "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmDistribution.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-06T22:32:37.744Z"
+              "WhenOpened": "2026-05-06T22:32:37.744Z",
+              "EditorCaption": " [Design]"
             }
           ]
         },
