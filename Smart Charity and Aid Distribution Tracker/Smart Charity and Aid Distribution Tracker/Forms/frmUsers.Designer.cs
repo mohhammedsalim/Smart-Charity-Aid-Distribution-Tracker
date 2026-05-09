@@ -142,6 +142,7 @@
             this.dgvUsersList.ThemeStyle.RowsStyle.Height = 40;
             this.dgvUsersList.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(245)))), ((int)(((byte)(235)))));
             this.dgvUsersList.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.dgvUsersList.SelectionChanged += new System.EventHandler(this.dgvUsersList_SelectionChanged);
             // 
             // pnlSearch
             // 
@@ -168,6 +169,7 @@
             this.btnClear.Size = new System.Drawing.Size(100, 45);
             this.btnClear.TabIndex = 6;
             this.btnClear.Text = "مسح";
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnSearch
             // 
@@ -181,6 +183,7 @@
             this.btnSearch.Size = new System.Drawing.Size(100, 45);
             this.btnSearch.TabIndex = 5;
             this.btnSearch.Text = "بحث";
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // txtSearch
             // 
@@ -226,7 +229,7 @@
             this.pnlInputs.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlInputs.Location = new System.Drawing.Point(20, 65);
             this.pnlInputs.Name = "pnlInputs";
-            this.pnlInputs.Size = new System.Drawing.Size(510, 565);
+            this.pnlInputs.Size = new System.Drawing.Size(510, 510);
             this.pnlInputs.TabIndex = 3;
             // 
             // label1
@@ -431,7 +434,7 @@
             this.pnlActions.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlActions.Location = new System.Drawing.Point(20, 575);
             this.pnlActions.Name = "pnlActions";
-            this.pnlActions.Size = new System.Drawing.Size(510, 185); // زيادة الارتفاع ليحتوي 3 صفوف
+            this.pnlActions.Size = new System.Drawing.Size(510, 185);
             this.pnlActions.TabIndex = 2;
             // 
             // btnCancel
@@ -446,6 +449,7 @@
             this.btnCancel.Size = new System.Drawing.Size(240, 45);
             this.btnCancel.TabIndex = 1;
             this.btnCancel.Text = "إلغاء";
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnSave
             // 
@@ -459,6 +463,7 @@
             this.btnSave.Size = new System.Drawing.Size(240, 45);
             this.btnSave.TabIndex = 0;
             this.btnSave.Text = "حفظ";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnDelete
             // 
@@ -472,6 +477,7 @@
             this.btnDelete.Size = new System.Drawing.Size(155, 45);
             this.btnDelete.TabIndex = 4;
             this.btnDelete.Text = "حذف";
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnEdit
             // 
@@ -485,6 +491,7 @@
             this.btnEdit.Size = new System.Drawing.Size(160, 45);
             this.btnEdit.TabIndex = 3;
             this.btnEdit.Text = "تعديل";
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnAddNew
             // 
@@ -498,6 +505,7 @@
             this.btnAddNew.Size = new System.Drawing.Size(155, 45);
             this.btnAddNew.TabIndex = 2;
             this.btnAddNew.Text = "إضافة جديد";
+            this.btnAddNew.Click += new System.EventHandler(this.btnAddNew_Click);
             // 
             // btnResetPassword
             // 
@@ -511,7 +519,7 @@
             this.btnResetPassword.Size = new System.Drawing.Size(490, 45);
             this.btnResetPassword.TabIndex = 5;
             this.btnResetPassword.Text = "إعادة تعيين كلمة المرور";
-
+            this.btnResetPassword.Click += new System.EventHandler(this.btnResetPassword_Click);
             // 
             // lblPanelTitle
             // 
