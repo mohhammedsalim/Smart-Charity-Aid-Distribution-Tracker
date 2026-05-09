@@ -1,4 +1,5 @@
-﻿using Smart_Charity_and_Aid_Distribution_Tracker.Models;
+﻿using Smart_Charity_and_Aid_Distribution_Tracker.Helpers;
+using Smart_Charity_and_Aid_Distribution_Tracker.Models;
 using Smart_Charity_and_Aid_Distribution_Tracker.Services;
 using System;
 using System.Collections.Generic;
@@ -12,7 +13,8 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
     {
         public frmDistributionReport()
         {
-            InitializeComponent();
+            InitializeComponent(); FontManager.ApplyFontToControls(this);
+            this.Load += new System.EventHandler(this.frmDistributionReport_Load);
         }
 
         // --- 1. أحداث تحميل وإغلاق الفورم ---

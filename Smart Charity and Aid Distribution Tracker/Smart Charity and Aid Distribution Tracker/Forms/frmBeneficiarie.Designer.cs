@@ -21,10 +21,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.pnlHeader = new System.Windows.Forms.Panel();
-            this.btnBackToDashBoard = new Guna.UI2.WinForms.Guna2Button();
-            this.lblFormTitle = new System.Windows.Forms.Label();
             this.pnlBody = new System.Windows.Forms.Panel();
+            this.pnlList = new System.Windows.Forms.Panel();
             this.dgvBeneficiariesList = new Guna.UI2.WinForms.Guna2DataGridView();
             this.pnlSearch = new System.Windows.Forms.Panel();
             this.btnClear = new Guna.UI2.WinForms.Guna2Button();
@@ -76,8 +74,8 @@
             this.btnSave = new Guna.UI2.WinForms.Guna2Button();
             this.lblPanelTitle = new System.Windows.Forms.Label();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.pnlHeader.SuspendLayout();
             this.pnlBody.SuspendLayout();
+            this.pnlList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBeneficiariesList)).BeginInit();
             this.pnlSearch.SuspendLayout();
             this.pnlSmart.SuspendLayout();
@@ -86,52 +84,27 @@
             this.pnlActions.SuspendLayout();
             this.SuspendLayout();
             // 
-            // pnlHeader
-            // 
-            this.pnlHeader.BackColor = System.Drawing.Color.White;
-            this.pnlHeader.Controls.Add(this.btnBackToDashBoard);
-            this.pnlHeader.Controls.Add(this.lblFormTitle);
-            this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlHeader.Location = new System.Drawing.Point(0, 0);
-            this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(1200, 60);
-            this.pnlHeader.TabIndex = 0;
-            // 
-            // btnBackToDashBoard
-            // 
-            this.btnBackToDashBoard.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBackToDashBoard.BorderRadius = 8;
-            this.btnBackToDashBoard.FillColor = System.Drawing.Color.White;
-            this.btnBackToDashBoard.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btnBackToDashBoard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnBackToDashBoard.Location = new System.Drawing.Point(1038, 12);
-            this.btnBackToDashBoard.Name = "btnBackToDashBoard";
-            this.btnBackToDashBoard.Size = new System.Drawing.Size(150, 40);
-            this.btnBackToDashBoard.TabIndex = 1;
-            this.btnBackToDashBoard.Text = "العودة للرئيسية";
-            // 
-            // lblFormTitle
-            // 
-            this.lblFormTitle.AutoSize = true;
-            this.lblFormTitle.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
-            this.lblFormTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblFormTitle.Location = new System.Drawing.Point(12, 16);
-            this.lblFormTitle.Name = "lblFormTitle";
-            this.lblFormTitle.Size = new System.Drawing.Size(161, 29);
-            this.lblFormTitle.TabIndex = 0;
-            this.lblFormTitle.Text = "إدارة المستفيدين";
-            // 
             // pnlBody
             // 
-            this.pnlBody.Controls.Add(this.dgvBeneficiariesList);
-            this.pnlBody.Controls.Add(this.pnlSearch);
+            this.pnlBody.Controls.Add(this.pnlList);
             this.pnlBody.Controls.Add(this.pnlSmart);
             this.pnlBody.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlBody.Location = new System.Drawing.Point(0, 60);
+            this.pnlBody.Location = new System.Drawing.Point(0, 0);
             this.pnlBody.Name = "pnlBody";
-            this.pnlBody.Padding = new System.Windows.Forms.Padding(10);
-            this.pnlBody.Size = new System.Drawing.Size(1200, 661);
+            this.pnlBody.Padding = new System.Windows.Forms.Padding(0);
+            this.pnlBody.Size = new System.Drawing.Size(1600, 800);
             this.pnlBody.TabIndex = 1;
+            // 
+            // pnlList
+            // 
+            this.pnlList.Controls.Add(this.dgvBeneficiariesList);
+            this.pnlList.Controls.Add(this.pnlSearch);
+            this.pnlList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlList.Location = new System.Drawing.Point(20, 20);
+            this.pnlList.Name = "pnlList";
+            this.pnlList.Padding = new System.Windows.Forms.Padding(20);
+            this.pnlList.Size = new System.Drawing.Size(1110, 760);
+            this.pnlList.TabIndex = 3;
             // 
             // dgvBeneficiariesList
             // 
@@ -139,87 +112,109 @@
             this.dgvBeneficiariesList.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.dgvBeneficiariesList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvBeneficiariesList.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.dgvBeneficiariesList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Cairo", 16F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(132)))), ((int)(((byte)(73)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvBeneficiariesList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvBeneficiariesList.ColumnHeadersHeight = 35;
+            this.dgvBeneficiariesList.ColumnHeadersHeight = 45;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 11.25F);
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Cairo", 11F);
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(245)))), ((int)(((byte)(235)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvBeneficiariesList.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvBeneficiariesList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvBeneficiariesList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvBeneficiariesList.Location = new System.Drawing.Point(440, 70);
+            this.dgvBeneficiariesList.Location = new System.Drawing.Point(0, 80);
             this.dgvBeneficiariesList.MultiSelect = false;
             this.dgvBeneficiariesList.Name = "dgvBeneficiariesList";
             this.dgvBeneficiariesList.ReadOnly = true;
             this.dgvBeneficiariesList.RowHeadersVisible = false;
-            this.dgvBeneficiariesList.RowTemplate.Height = 30;
-            this.dgvBeneficiariesList.Size = new System.Drawing.Size(750, 581);
+            this.dgvBeneficiariesList.RowTemplate.Height = 40;
+            this.dgvBeneficiariesList.Size = new System.Drawing.Size(1090, 680);
             this.dgvBeneficiariesList.TabIndex = 2;
-            this.dgvBeneficiariesList.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.dgvBeneficiariesList.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
+            this.dgvBeneficiariesList.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvBeneficiariesList.ThemeStyle.AlternatingRowsStyle.Font = new System.Drawing.Font("Cairo", 11F);
+            this.dgvBeneficiariesList.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvBeneficiariesList.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(245)))), ((int)(((byte)(235)))));
+            this.dgvBeneficiariesList.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.dgvBeneficiariesList.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
+            this.dgvBeneficiariesList.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvBeneficiariesList.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.dgvBeneficiariesList.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvBeneficiariesList.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Cairo", 16F, System.Drawing.FontStyle.Bold);
             this.dgvBeneficiariesList.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgvBeneficiariesList.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvBeneficiariesList.ThemeStyle.HeaderStyle.Height = 45;
+            this.dgvBeneficiariesList.ThemeStyle.ReadOnly = true;
+            this.dgvBeneficiariesList.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvBeneficiariesList.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvBeneficiariesList.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Cairo", 11F);
+            this.dgvBeneficiariesList.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvBeneficiariesList.ThemeStyle.RowsStyle.Height = 40;
+            this.dgvBeneficiariesList.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(245)))), ((int)(((byte)(235)))));
+            this.dgvBeneficiariesList.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
             // 
             // pnlSearch
             // 
-            this.pnlSearch.BackColor = System.Drawing.Color.White;
+            this.pnlSearch.BackColor = System.Drawing.Color.Transparent;
             this.pnlSearch.Controls.Add(this.btnClear);
             this.pnlSearch.Controls.Add(this.btnSearch);
             this.pnlSearch.Controls.Add(this.txtSearch);
             this.pnlSearch.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSearch.Location = new System.Drawing.Point(440, 10);
+            this.pnlSearch.Location = new System.Drawing.Point(0, 0);
             this.pnlSearch.Name = "pnlSearch";
-            this.pnlSearch.Size = new System.Drawing.Size(750, 60);
+            this.pnlSearch.Padding = new System.Windows.Forms.Padding(0, 0, 0, 20);
+            this.pnlSearch.Size = new System.Drawing.Size(1090, 80);
             this.pnlSearch.TabIndex = 1;
             // 
             // btnClear
             // 
+            this.btnClear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClear.BorderRadius = 8;
             this.btnClear.FillColor = System.Drawing.Color.Gainsboro;
-            this.btnClear.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btnClear.Font = new System.Drawing.Font("Cairo", 11F, System.Drawing.FontStyle.Bold);
             this.btnClear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnClear.Location = new System.Drawing.Point(16, 10);
+            this.btnClear.Location = new System.Drawing.Point(440, 10);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(90, 40);
+            this.btnClear.Size = new System.Drawing.Size(100, 45);
             this.btnClear.TabIndex = 6;
             this.btnClear.Text = "مسح";
             // 
             // btnSearch
             // 
+            this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSearch.BorderRadius = 8;
-            this.btnSearch.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btnSearch.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.btnSearch.Font = new System.Drawing.Font("Cairo", 11F, System.Drawing.FontStyle.Bold);
             this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.Location = new System.Drawing.Point(112, 10);
+            this.btnSearch.Location = new System.Drawing.Point(550, 10);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(90, 40);
+            this.btnSearch.Size = new System.Drawing.Size(100, 45);
             this.btnSearch.TabIndex = 5;
             this.btnSearch.Text = "بحث";
             // 
             // txtSearch
             // 
             this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSearch.BorderRadius = 6;
+            this.txtSearch.BorderRadius = 8;
             this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtSearch.DefaultText = "";
-            this.txtSearch.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.txtSearch.Location = new System.Drawing.Point(444, 10);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.txtSearch.Font = new System.Drawing.Font("Cairo", 11F);
+            this.txtSearch.Location = new System.Drawing.Point(660, 10);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PasswordChar = '\0';
             this.txtSearch.PlaceholderText = "ابحث بالاسم أو الهوية...";
             this.txtSearch.SelectedText = "";
-            this.txtSearch.Size = new System.Drawing.Size(300, 40);
+            this.txtSearch.Size = new System.Drawing.Size(430, 45);
             this.txtSearch.TabIndex = 0;
             // 
             // pnlSmart
@@ -229,11 +224,105 @@
             this.pnlSmart.Controls.Add(this.pnlView);
             this.pnlSmart.Controls.Add(this.pnlActions);
             this.pnlSmart.Controls.Add(this.lblPanelTitle);
-            this.pnlSmart.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlSmart.Location = new System.Drawing.Point(10, 10);
+            this.pnlSmart.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlSmart.Location = new System.Drawing.Point(1130, 20);
             this.pnlSmart.Name = "pnlSmart";
-            this.pnlSmart.Size = new System.Drawing.Size(430, 641);
+            this.pnlSmart.Padding = new System.Windows.Forms.Padding(20, 20, 20, 0); // الصفر في النهاية يزيل الفراغ السفلي
+            this.pnlSmart.Size = new System.Drawing.Size(550, 760); 
             this.pnlSmart.TabIndex = 0;
+            // 
+            // lblPanelTitle
+            // 
+            this.lblPanelTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblPanelTitle.Font = new System.Drawing.Font("Cairo", 14F, System.Drawing.FontStyle.Bold);
+            this.lblPanelTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblPanelTitle.Location = new System.Drawing.Point(20, 20);
+            this.lblPanelTitle.Name = "lblPanelTitle";
+            this.lblPanelTitle.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
+            this.lblPanelTitle.Size = new System.Drawing.Size(410, 45);
+            this.lblPanelTitle.TabIndex = 0;
+            this.lblPanelTitle.Text = "تفاصيل المستفيد";
+            // 
+            // pnlActions
+            // 
+            this.pnlActions.Controls.Add(this.btnDelete);
+            this.pnlActions.Controls.Add(this.btnEdit);
+            this.pnlActions.Controls.Add(this.btnAddNew);
+            this.pnlActions.Controls.Add(this.btnCancel);
+            this.pnlActions.Controls.Add(this.btnSave);
+            this.pnlActions.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlActions.Location = new System.Drawing.Point(20, 660); // سيتعدل تلقائياً بسبب الـ Dock
+            this.pnlActions.Name = "pnlActions";
+            this.pnlActions.Size = new System.Drawing.Size(550, 75); // تأكد أن العرض يطابق عرض لوحتك، والارتفاع 75
+            this.pnlActions.TabIndex = 2;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDelete.BorderRadius = 8;
+            this.btnDelete.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnDelete.Font = new System.Drawing.Font("Cairo", 16F, System.Drawing.FontStyle.Bold);
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Location = new System.Drawing.Point(35, 15); // تم تعديل الموقع
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(150, 45);
+            this.btnDelete.TabIndex = 4;
+            this.btnDelete.Text = "حذف";
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEdit.BorderRadius = 8;
+            this.btnEdit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btnEdit.Font = new System.Drawing.Font("Cairo", 16F, System.Drawing.FontStyle.Bold);
+            this.btnEdit.ForeColor = System.Drawing.Color.White;
+            this.btnEdit.Location = new System.Drawing.Point(195, 15); // تم تعديل الموقع (فراغ 10 بكسل)
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(150, 45);
+            this.btnEdit.TabIndex = 3;
+            this.btnEdit.Text = "تعديل";
+            // 
+            // btnAddNew
+            // 
+            this.btnAddNew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAddNew.BorderRadius = 8;
+            this.btnAddNew.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.btnAddNew.Font = new System.Drawing.Font("Cairo", 16F, System.Drawing.FontStyle.Bold);
+            this.btnAddNew.ForeColor = System.Drawing.Color.White;
+            this.btnAddNew.Location = new System.Drawing.Point(355, 15); // تم تعديل الموقع (فراغ 10 بكسل)
+            this.btnAddNew.Name = "btnAddNew";
+            this.btnAddNew.Size = new System.Drawing.Size(155, 45);
+            this.btnAddNew.TabIndex = 2;
+            this.btnAddNew.Text = "إضافة جديد";
+
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCancel.BorderRadius = 8;
+            this.btnCancel.FillColor = System.Drawing.Color.Gainsboro;
+            this.btnCancel.Font = new System.Drawing.Font("Cairo", 16F, System.Drawing.FontStyle.Bold); // توحيد الخط
+            this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnCancel.Location = new System.Drawing.Point(35, 15); // نفس الارتفاع Y=15
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(230, 45); // زيادة العرض ليملأ النصف
+            this.btnCancel.TabIndex = 1;
+            this.btnCancel.Text = "إلغاء";
+            // 
+            // btnSave
+            // 
+            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSave.BorderRadius = 8;
+            this.btnSave.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.btnSave.Font = new System.Drawing.Font("Cairo", 16F, System.Drawing.FontStyle.Bold); // توحيد الخط
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.Location = new System.Drawing.Point(280, 15); // نفس الارتفاع Y=15 مع مسافة ممتازة
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(230, 45); // زيادة العرض ليملأ النصف الآخر
+            this.btnSave.TabIndex = 0;
+            this.btnSave.Text = "حفظ";
+
+
             // 
             // pnlInputs
             // 
@@ -256,228 +345,247 @@
             this.pnlInputs.Controls.Add(this.txtFullName);
             this.pnlInputs.Controls.Add(this.label1);
             this.pnlInputs.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlInputs.Location = new System.Drawing.Point(0, 40);
+            this.pnlInputs.Location = new System.Drawing.Point(20, 65);
             this.pnlInputs.Name = "pnlInputs";
-            this.pnlInputs.Size = new System.Drawing.Size(430, 471);
+            this.pnlInputs.Size = new System.Drawing.Size(410, 545);
             this.pnlInputs.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Cairo", 11F);
+            this.label1.Location = new System.Drawing.Point(310, 5);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(91, 29);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "الاسم الكامل";
+            // 
+            // txtFullName
+            // 
+            this.txtFullName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtFullName.BorderRadius = 8;
+            this.txtFullName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtFullName.DefaultText = "";
+            this.txtFullName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.txtFullName.Font = new System.Drawing.Font("Cairo", 11F);
+            this.txtFullName.Location = new System.Drawing.Point(10, 35);
+            this.txtFullName.Name = "txtFullName";
+            this.txtFullName.PasswordChar = '\0';
+            this.txtFullName.PlaceholderText = "الاسم الكامل...";
+            this.txtFullName.SelectedText = "";
+            this.txtFullName.Size = new System.Drawing.Size(380, 40);
+            this.txtFullName.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Cairo", 11F);
+            this.label2.Location = new System.Drawing.Point(310, 80);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(94, 29);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "الرقم الوطني";
+            // 
+            // txtNationalID
+            // 
+            this.txtNationalID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNationalID.BorderRadius = 8;
+            this.txtNationalID.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNationalID.DefaultText = "";
+            this.txtNationalID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.txtNationalID.Font = new System.Drawing.Font("Cairo", 11F);
+            this.txtNationalID.Location = new System.Drawing.Point(10, 110);
+            this.txtNationalID.Name = "txtNationalID";
+            this.txtNationalID.PasswordChar = '\0';
+            this.txtNationalID.PlaceholderText = "رقم الهوية...";
+            this.txtNationalID.SelectedText = "";
+            this.txtNationalID.Size = new System.Drawing.Size(380, 40);
+            this.txtNationalID.TabIndex = 3;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Cairo", 11F);
+            this.label3.Location = new System.Drawing.Point(320, 155);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(82, 29);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "رقم الجوال";
+            // 
+            // txtPhone
+            // 
+            this.txtPhone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPhone.BorderRadius = 8;
+            this.txtPhone.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPhone.DefaultText = "";
+            this.txtPhone.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.txtPhone.Font = new System.Drawing.Font("Cairo", 11F);
+            this.txtPhone.Location = new System.Drawing.Point(10, 185);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.PasswordChar = '\0';
+            this.txtPhone.PlaceholderText = "رقم الجوال...";
+            this.txtPhone.SelectedText = "";
+            this.txtPhone.Size = new System.Drawing.Size(380, 40);
+            this.txtPhone.TabIndex = 5;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Cairo", 11F);
+            this.label4.Location = new System.Drawing.Point(340, 230);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(56, 29);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "العنوان";
+            // 
+            // txtAddress
+            // 
+            this.txtAddress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtAddress.BorderRadius = 8;
+            this.txtAddress.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtAddress.DefaultText = "";
+            this.txtAddress.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.txtAddress.Font = new System.Drawing.Font("Cairo", 11F);
+            this.txtAddress.Location = new System.Drawing.Point(10, 260);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.PasswordChar = '\0';
+            this.txtAddress.PlaceholderText = "العنوان...";
+            this.txtAddress.SelectedText = "";
+            this.txtAddress.Size = new System.Drawing.Size(380, 40);
+            this.txtAddress.TabIndex = 7;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Cairo", 11F);
+            this.label7.Location = new System.Drawing.Point(280, 305);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(121, 29);
+            this.label7.TabIndex = 8;
+            this.label7.Text = "عدد أفراد الأسرة";
+            // 
+            // txtFamilySize
+            // 
+            this.txtFamilySize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtFamilySize.BorderRadius = 8;
+            this.txtFamilySize.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtFamilySize.DefaultText = "";
+            this.txtFamilySize.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.txtFamilySize.Font = new System.Drawing.Font("Cairo", 11F);
+            this.txtFamilySize.Location = new System.Drawing.Point(10, 335);
+            this.txtFamilySize.Name = "txtFamilySize";
+            this.txtFamilySize.PasswordChar = '\0';
+            this.txtFamilySize.PlaceholderText = "عدد الأفراد...";
+            this.txtFamilySize.SelectedText = "";
+            this.txtFamilySize.Size = new System.Drawing.Size(380, 40);
+            this.txtFamilySize.TabIndex = 9;
+            // 
+            // label8
+            // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Cairo", 11F);
+            this.label8.Location = new System.Drawing.Point(280, 380);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(120, 29);
+            this.label8.TabIndex = 10;
+            this.label8.Text = "الحالة الاجتماعية";
+            // 
+            // cmbSocialStatus
+            // 
+            this.cmbSocialStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbSocialStatus.BackColor = System.Drawing.Color.Transparent;
+            this.cmbSocialStatus.BorderRadius = 8;
+            this.cmbSocialStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbSocialStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbSocialStatus.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.cmbSocialStatus.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.cmbSocialStatus.Font = new System.Drawing.Font("Cairo", 11F);
+            this.cmbSocialStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbSocialStatus.ItemHeight = 35;
+            this.cmbSocialStatus.Location = new System.Drawing.Point(10, 410);
+            this.cmbSocialStatus.Name = "cmbSocialStatus";
+            this.cmbSocialStatus.Size = new System.Drawing.Size(380, 41);
+            this.cmbSocialStatus.TabIndex = 11;
+            // 
+            // label9
+            // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Cairo", 11F);
+            this.label9.Location = new System.Drawing.Point(290, 460);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(103, 29);
+            this.label9.TabIndex = 12;
+            this.label9.Text = "سبب الاحتياج";
+            // 
+            // txtNeedReason
+            // 
+            this.txtNeedReason.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNeedReason.BorderRadius = 8;
+            this.txtNeedReason.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNeedReason.DefaultText = "";
+            this.txtNeedReason.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.txtNeedReason.Font = new System.Drawing.Font("Cairo", 11F);
+            this.txtNeedReason.Location = new System.Drawing.Point(10, 490);
+            this.txtNeedReason.Name = "txtNeedReason";
+            this.txtNeedReason.PasswordChar = '\0';
+            this.txtNeedReason.PlaceholderText = "سبب الاحتياج...";
+            this.txtNeedReason.SelectedText = "";
+            this.txtNeedReason.Size = new System.Drawing.Size(380, 40);
+            this.txtNeedReason.TabIndex = 13;
+            // 
+            // label10
+            // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Cairo", 11F);
+            this.label10.Location = new System.Drawing.Point(320, 540);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(73, 29);
+            this.label10.TabIndex = 14;
+            this.label10.Text = "ملاحظات";
+            // 
+            // txtNotes
+            // 
+            this.txtNotes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNotes.BorderRadius = 8;
+            this.txtNotes.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNotes.DefaultText = "";
+            this.txtNotes.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.txtNotes.Font = new System.Drawing.Font("Cairo", 11F);
+            this.txtNotes.Location = new System.Drawing.Point(10, 570);
+            this.txtNotes.Multiline = true;
+            this.txtNotes.Name = "txtNotes";
+            this.txtNotes.PasswordChar = '\0';
+            this.txtNotes.PlaceholderText = "ملاحظات إضافية...";
+            this.txtNotes.SelectedText = "";
+            this.txtNotes.Size = new System.Drawing.Size(380, 70);
+            this.txtNotes.TabIndex = 15;
             // 
             // chkIsActive
             // 
+            this.chkIsActive.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkIsActive.AutoSize = true;
-            this.chkIsActive.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.chkIsActive.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
             this.chkIsActive.CheckedState.BorderRadius = 2;
             this.chkIsActive.CheckedState.BorderThickness = 0;
-            this.chkIsActive.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.chkIsActive.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.chkIsActive.Location = new System.Drawing.Point(294, 620);
+            this.chkIsActive.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.chkIsActive.Font = new System.Drawing.Font("Cairo", 11F);
+            this.chkIsActive.Location = new System.Drawing.Point(280, 650);
             this.chkIsActive.Name = "chkIsActive";
-            this.chkIsActive.Size = new System.Drawing.Size(104, 22);
+            this.chkIsActive.Size = new System.Drawing.Size(110, 33);
             this.chkIsActive.TabIndex = 16;
             this.chkIsActive.Text = "حساب نشط";
             this.chkIsActive.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.chkIsActive.UncheckedState.BorderRadius = 2;
             this.chkIsActive.UncheckedState.BorderThickness = 0;
             this.chkIsActive.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            // 
-            // txtNotes
-            // 
-            this.txtNotes.BorderRadius = 6;
-            this.txtNotes.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNotes.DefaultText = "";
-            this.txtNotes.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.txtNotes.Location = new System.Drawing.Point(32, 540);
-            this.txtNotes.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtNotes.Multiline = true;
-            this.txtNotes.Name = "txtNotes";
-            this.txtNotes.PasswordChar = '\0';
-            this.txtNotes.PlaceholderText = "ملاحظات إضافية...";
-            this.txtNotes.SelectedText = "";
-            this.txtNotes.Size = new System.Drawing.Size(366, 60);
-            this.txtNotes.TabIndex = 15;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.label10.Location = new System.Drawing.Point(341, 518);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(57, 18);
-            this.label10.TabIndex = 14;
-            this.label10.Text = "ملاحظات";
-            // 
-            // txtNeedReason
-            // 
-            this.txtNeedReason.BorderRadius = 6;
-            this.txtNeedReason.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNeedReason.DefaultText = "";
-            this.txtNeedReason.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.txtNeedReason.Location = new System.Drawing.Point(32, 460);
-            this.txtNeedReason.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtNeedReason.Name = "txtNeedReason";
-            this.txtNeedReason.PasswordChar = '\0';
-            this.txtNeedReason.PlaceholderText = "سبب الاحتياج...";
-            this.txtNeedReason.SelectedText = "";
-            this.txtNeedReason.Size = new System.Drawing.Size(366, 40);
-            this.txtNeedReason.TabIndex = 13;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.label9.Location = new System.Drawing.Point(318, 438);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(80, 18);
-            this.label9.TabIndex = 12;
-            this.label9.Text = "سبب الاحتياج";
-            // 
-            // cmbSocialStatus
-            // 
-            this.cmbSocialStatus.BackColor = System.Drawing.Color.Transparent;
-            this.cmbSocialStatus.BorderRadius = 6;
-            this.cmbSocialStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbSocialStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbSocialStatus.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.cmbSocialStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cmbSocialStatus.ItemHeight = 34;
-            this.cmbSocialStatus.Location = new System.Drawing.Point(32, 380);
-            this.cmbSocialStatus.Name = "cmbSocialStatus";
-            this.cmbSocialStatus.Size = new System.Drawing.Size(366, 40);
-            this.cmbSocialStatus.TabIndex = 11;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.label8.Location = new System.Drawing.Point(298, 359);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(100, 18);
-            this.label8.TabIndex = 10;
-            this.label8.Text = "الحالة الاجتماعية";
-            // 
-            // txtFamilySize
-            // 
-            this.txtFamilySize.BorderRadius = 6;
-            this.txtFamilySize.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtFamilySize.DefaultText = "";
-            this.txtFamilySize.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.txtFamilySize.Location = new System.Drawing.Point(32, 300);
-            this.txtFamilySize.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtFamilySize.Name = "txtFamilySize";
-            this.txtFamilySize.PasswordChar = '\0';
-            this.txtFamilySize.PlaceholderText = "عدد الأفراد...";
-            this.txtFamilySize.SelectedText = "";
-            this.txtFamilySize.Size = new System.Drawing.Size(366, 40);
-            this.txtFamilySize.TabIndex = 9;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.label7.Location = new System.Drawing.Point(296, 278);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(102, 18);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "عدد أفراد الأسرة";
-            // 
-            // txtAddress
-            // 
-            this.txtAddress.BorderRadius = 6;
-            this.txtAddress.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtAddress.DefaultText = "";
-            this.txtAddress.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.txtAddress.Location = new System.Drawing.Point(32, 220);
-            this.txtAddress.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtAddress.Name = "txtAddress";
-            this.txtAddress.PasswordChar = '\0';
-            this.txtAddress.PlaceholderText = "العنوان...";
-            this.txtAddress.SelectedText = "";
-            this.txtAddress.Size = new System.Drawing.Size(366, 40);
-            this.txtAddress.TabIndex = 7;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.label4.Location = new System.Drawing.Point(351, 198);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(47, 18);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "العنوان";
-            // 
-            // txtPhone
-            // 
-            this.txtPhone.BorderRadius = 6;
-            this.txtPhone.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPhone.DefaultText = "";
-            this.txtPhone.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.txtPhone.Location = new System.Drawing.Point(32, 140);
-            this.txtPhone.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtPhone.Name = "txtPhone";
-            this.txtPhone.PasswordChar = '\0';
-            this.txtPhone.PlaceholderText = "رقم الجوال...";
-            this.txtPhone.SelectedText = "";
-            this.txtPhone.Size = new System.Drawing.Size(366, 40);
-            this.txtPhone.TabIndex = 5;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.label3.Location = new System.Drawing.Point(328, 118);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 18);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "رقم الجوال";
-            // 
-            // txtNationalID
-            // 
-            this.txtNationalID.BorderRadius = 6;
-            this.txtNationalID.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNationalID.DefaultText = "";
-            this.txtNationalID.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.txtNationalID.Location = new System.Drawing.Point(32, 60);
-            this.txtNationalID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtNationalID.Name = "txtNationalID";
-            this.txtNationalID.PasswordChar = '\0';
-            this.txtNationalID.PlaceholderText = "رقم الهوية...";
-            this.txtNationalID.SelectedText = "";
-            this.txtNationalID.Size = new System.Drawing.Size(366, 40);
-            this.txtNationalID.TabIndex = 3;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.label2.Location = new System.Drawing.Point(321, 38);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 18);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "الرقم الوطني";
-            // 
-            // txtFullName
-            // 
-            this.txtFullName.BorderRadius = 6;
-            this.txtFullName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtFullName.DefaultText = "";
-            this.txtFullName.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.txtFullName.Location = new System.Drawing.Point(32, -20);
-            this.txtFullName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtFullName.Name = "txtFullName";
-            this.txtFullName.PasswordChar = '\0';
-            this.txtFullName.PlaceholderText = "الاسم الكامل...";
-            this.txtFullName.SelectedText = "";
-            this.txtFullName.Size = new System.Drawing.Size(366, 40);
-            this.txtFullName.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.label1.Location = new System.Drawing.Point(323, -42);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 18);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "الاسم الكامل";
             // 
             // pnlView
             // 
@@ -501,295 +609,223 @@
             this.pnlView.Controls.Add(this.lblFullNameText);
             this.pnlView.Controls.Add(this.lblFullNameLabel);
             this.pnlView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlView.Location = new System.Drawing.Point(0, 40);
+            this.pnlView.Location = new System.Drawing.Point(20, 65);
             this.pnlView.Name = "pnlView";
-            this.pnlView.Size = new System.Drawing.Size(430, 471);
+            this.pnlView.Size = new System.Drawing.Size(410, 545);
             this.pnlView.TabIndex = 4;
-            // 
-            // lblIsActiveText
-            // 
-            this.lblIsActiveText.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
-            this.lblIsActiveText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblIsActiveText.Location = new System.Drawing.Point(32, 560);
-            this.lblIsActiveText.Name = "lblIsActiveText";
-            this.lblIsActiveText.Size = new System.Drawing.Size(366, 23);
-            this.lblIsActiveText.TabIndex = 17;
-            this.lblIsActiveText.Text = "----";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.label20.Location = new System.Drawing.Point(326, 538);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(72, 18);
-            this.label20.TabIndex = 16;
-            this.label20.Text = "حالة الحساب";
-            // 
-            // lblNotesText
-            // 
-            this.lblNotesText.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
-            this.lblNotesText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblNotesText.Location = new System.Drawing.Point(32, 490);
-            this.lblNotesText.Name = "lblNotesText";
-            this.lblNotesText.Size = new System.Drawing.Size(366, 40);
-            this.lblNotesText.TabIndex = 15;
-            this.lblNotesText.Text = "----";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.label18.Location = new System.Drawing.Point(341, 468);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(57, 18);
-            this.label18.TabIndex = 14;
-            this.label18.Text = "ملاحظات";
-            // 
-            // lblNeedReasonText
-            // 
-            this.lblNeedReasonText.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
-            this.lblNeedReasonText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblNeedReasonText.Location = new System.Drawing.Point(32, 420);
-            this.lblNeedReasonText.Name = "lblNeedReasonText";
-            this.lblNeedReasonText.Size = new System.Drawing.Size(366, 23);
-            this.lblNeedReasonText.TabIndex = 13;
-            this.lblNeedReasonText.Text = "----";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.label16.Location = new System.Drawing.Point(318, 398);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(80, 18);
-            this.label16.TabIndex = 12;
-            this.label16.Text = "سبب الاحتياج";
-            // 
-            // lblSocialStatusText
-            // 
-            this.lblSocialStatusText.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
-            this.lblSocialStatusText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblSocialStatusText.Location = new System.Drawing.Point(32, 350);
-            this.lblSocialStatusText.Name = "lblSocialStatusText";
-            this.lblSocialStatusText.Size = new System.Drawing.Size(366, 23);
-            this.lblSocialStatusText.TabIndex = 11;
-            this.lblSocialStatusText.Text = "----";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.label14.Location = new System.Drawing.Point(298, 328);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(100, 18);
-            this.label14.TabIndex = 10;
-            this.label14.Text = "الحالة الاجتماعية";
-            // 
-            // lblFamilySizeText
-            // 
-            this.lblFamilySizeText.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
-            this.lblFamilySizeText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblFamilySizeText.Location = new System.Drawing.Point(32, 280);
-            this.lblFamilySizeText.Name = "lblFamilySizeText";
-            this.lblFamilySizeText.Size = new System.Drawing.Size(366, 23);
-            this.lblFamilySizeText.TabIndex = 9;
-            this.lblFamilySizeText.Text = "----";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.label12.Location = new System.Drawing.Point(296, 258);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(102, 18);
-            this.label12.TabIndex = 8;
-            this.label12.Text = "عدد أفراد الأسرة";
-            // 
-            // lblAddressText
-            // 
-            this.lblAddressText.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
-            this.lblAddressText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblAddressText.Location = new System.Drawing.Point(32, 210);
-            this.lblAddressText.Name = "lblAddressText";
-            this.lblAddressText.Size = new System.Drawing.Size(366, 23);
-            this.lblAddressText.TabIndex = 7;
-            this.lblAddressText.Text = "----";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.label11.Location = new System.Drawing.Point(351, 188);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(47, 18);
-            this.label11.TabIndex = 6;
-            this.label11.Text = "العنوان";
-            // 
-            // lblPhoneText
-            // 
-            this.lblPhoneText.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
-            this.lblPhoneText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblPhoneText.Location = new System.Drawing.Point(32, 140);
-            this.lblPhoneText.Name = "lblPhoneText";
-            this.lblPhoneText.Size = new System.Drawing.Size(366, 23);
-            this.lblPhoneText.TabIndex = 5;
-            this.lblPhoneText.Text = "----";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.label6.Location = new System.Drawing.Point(328, 118);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(70, 18);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "رقم الجوال";
-            // 
-            // lblNationalIDText
-            // 
-            this.lblNationalIDText.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
-            this.lblNationalIDText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblNationalIDText.Location = new System.Drawing.Point(32, 70);
-            this.lblNationalIDText.Name = "lblNationalIDText";
-            this.lblNationalIDText.Size = new System.Drawing.Size(366, 23);
-            this.lblNationalIDText.TabIndex = 3;
-            this.lblNationalIDText.Text = "----";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.label5.Location = new System.Drawing.Point(321, 48);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(77, 18);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "الرقم الوطني";
-            // 
-            // lblFullNameText
-            // 
-            this.lblFullNameText.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
-            this.lblFullNameText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblFullNameText.Location = new System.Drawing.Point(32, 0);
-            this.lblFullNameText.Name = "lblFullNameText";
-            this.lblFullNameText.Size = new System.Drawing.Size(366, 23);
-            this.lblFullNameText.TabIndex = 1;
-            this.lblFullNameText.Text = "----";
             // 
             // lblFullNameLabel
             // 
+            this.lblFullNameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblFullNameLabel.AutoSize = true;
-            this.lblFullNameLabel.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.lblFullNameLabel.Location = new System.Drawing.Point(323, -22);
+            this.lblFullNameLabel.Font = new System.Drawing.Font("Cairo", 11F);
+            this.lblFullNameLabel.Location = new System.Drawing.Point(310, 5);
             this.lblFullNameLabel.Name = "lblFullNameLabel";
-            this.lblFullNameLabel.Size = new System.Drawing.Size(75, 18);
+            this.lblFullNameLabel.Size = new System.Drawing.Size(91, 29);
             this.lblFullNameLabel.TabIndex = 0;
             this.lblFullNameLabel.Text = "الاسم الكامل";
             // 
-            // pnlActions
+            // lblFullNameText
             // 
-            this.pnlActions.Controls.Add(this.btnDelete);
-            this.pnlActions.Controls.Add(this.btnEdit);
-            this.pnlActions.Controls.Add(this.btnAddNew);
-            this.pnlActions.Controls.Add(this.btnCancel);
-            this.pnlActions.Controls.Add(this.btnSave);
-            this.pnlActions.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlActions.Location = new System.Drawing.Point(0, 511);
-            this.pnlActions.Name = "pnlActions";
-            this.pnlActions.Size = new System.Drawing.Size(430, 130);
-            this.pnlActions.TabIndex = 2;
+            this.lblFullNameText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblFullNameText.Font = new System.Drawing.Font("Cairo", 16F, System.Drawing.FontStyle.Bold);
+            this.lblFullNameText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblFullNameText.Location = new System.Drawing.Point(10, 35);
+            this.lblFullNameText.Name = "lblFullNameText";
+            this.lblFullNameText.Size = new System.Drawing.Size(380, 30);
+            this.lblFullNameText.TabIndex = 1;
+            this.lblFullNameText.Text = "----";
             // 
-            // btnDelete
+            // label5
             // 
-            this.btnDelete.BorderRadius = 8;
-            this.btnDelete.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnDelete.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
-            this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(32, 71);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(120, 45);
-            this.btnDelete.TabIndex = 4;
-            this.btnDelete.Text = "حذف";
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Cairo", 11F);
+            this.label5.Location = new System.Drawing.Point(310, 75);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(94, 29);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "الرقم الوطني";
             // 
-            // btnEdit
+            // lblNationalIDText
             // 
-            this.btnEdit.BorderRadius = 8;
-            this.btnEdit.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
-            this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.Location = new System.Drawing.Point(158, 71);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(120, 45);
-            this.btnEdit.TabIndex = 3;
-            this.btnEdit.Text = "تعديل";
+            this.lblNationalIDText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblNationalIDText.Font = new System.Drawing.Font("Cairo", 16F, System.Drawing.FontStyle.Bold);
+            this.lblNationalIDText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblNationalIDText.Location = new System.Drawing.Point(10, 105);
+            this.lblNationalIDText.Name = "lblNationalIDText";
+            this.lblNationalIDText.Size = new System.Drawing.Size(380, 30);
+            this.lblNationalIDText.TabIndex = 3;
+            this.lblNationalIDText.Text = "----";
             // 
-            // btnAddNew
+            // label6
             // 
-            this.btnAddNew.BorderRadius = 8;
-            this.btnAddNew.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
-            this.btnAddNew.ForeColor = System.Drawing.Color.White;
-            this.btnAddNew.Location = new System.Drawing.Point(284, 71);
-            this.btnAddNew.Name = "btnAddNew";
-            this.btnAddNew.Size = new System.Drawing.Size(114, 45);
-            this.btnAddNew.TabIndex = 2;
-            this.btnAddNew.Text = "إضافة جديد";
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Cairo", 11F);
+            this.label6.Location = new System.Drawing.Point(320, 145);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(82, 29);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "رقم الجوال";
             // 
-            // btnCancel
+            // lblPhoneText
             // 
-            this.btnCancel.BorderRadius = 8;
-            this.btnCancel.FillColor = System.Drawing.Color.Gainsboro;
-            this.btnCancel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
-            this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnCancel.Location = new System.Drawing.Point(32, 20);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(180, 45);
-            this.btnCancel.TabIndex = 1;
-            this.btnCancel.Text = "إلغاء";
+            this.lblPhoneText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblPhoneText.Font = new System.Drawing.Font("Cairo", 16F, System.Drawing.FontStyle.Bold);
+            this.lblPhoneText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblPhoneText.Location = new System.Drawing.Point(10, 175);
+            this.lblPhoneText.Name = "lblPhoneText";
+            this.lblPhoneText.Size = new System.Drawing.Size(380, 30);
+            this.lblPhoneText.TabIndex = 5;
+            this.lblPhoneText.Text = "----";
             // 
-            // btnSave
+            // label11
             // 
-            this.btnSave.BorderRadius = 8;
-            this.btnSave.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
-            this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(218, 20);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(180, 45);
-            this.btnSave.TabIndex = 0;
-            this.btnSave.Text = "حفظ";
+            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Cairo", 11F);
+            this.label11.Location = new System.Drawing.Point(340, 215);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(56, 29);
+            this.label11.TabIndex = 6;
+            this.label11.Text = "العنوان";
             // 
-            // lblPanelTitle
+            // lblAddressText
             // 
-            this.lblPanelTitle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblPanelTitle.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lblPanelTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblPanelTitle.Location = new System.Drawing.Point(0, 0);
-            this.lblPanelTitle.Name = "lblPanelTitle";
-            this.lblPanelTitle.Padding = new System.Windows.Forms.Padding(0, 10, 10, 0);
-            this.lblPanelTitle.Size = new System.Drawing.Size(430, 40);
-            this.lblPanelTitle.TabIndex = 0;
-            this.lblPanelTitle.Text = "تفاصيل المستفيد";
-            this.lblPanelTitle.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.lblAddressText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblAddressText.Font = new System.Drawing.Font("Cairo", 16F, System.Drawing.FontStyle.Bold);
+            this.lblAddressText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblAddressText.Location = new System.Drawing.Point(10, 245);
+            this.lblAddressText.Name = "lblAddressText";
+            this.lblAddressText.Size = new System.Drawing.Size(380, 30);
+            this.lblAddressText.TabIndex = 7;
+            this.lblAddressText.Text = "----";
             // 
-            // guna2Elipse1
+            // label12
             // 
-            this.guna2Elipse1.BorderRadius = 12;
-            this.guna2Elipse1.TargetControl = this.pnlSmart;
+            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Cairo", 11F);
+            this.label12.Location = new System.Drawing.Point(280, 285);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(121, 29);
+            this.label12.TabIndex = 8;
+            this.label12.Text = "عدد أفراد الأسرة";
+            // 
+            // lblFamilySizeText
+            // 
+            this.lblFamilySizeText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblFamilySizeText.Font = new System.Drawing.Font("Cairo", 16F, System.Drawing.FontStyle.Bold);
+            this.lblFamilySizeText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblFamilySizeText.Location = new System.Drawing.Point(10, 315);
+            this.lblFamilySizeText.Name = "lblFamilySizeText";
+            this.lblFamilySizeText.Size = new System.Drawing.Size(380, 30);
+            this.lblFamilySizeText.TabIndex = 9;
+            this.lblFamilySizeText.Text = "----";
+            // 
+            // label14
+            // 
+            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Cairo", 11F);
+            this.label14.Location = new System.Drawing.Point(280, 355);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(120, 29);
+            this.label14.TabIndex = 10;
+            this.label14.Text = "الحالة الاجتماعية";
+            // 
+            // lblSocialStatusText
+            // 
+            this.lblSocialStatusText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblSocialStatusText.Font = new System.Drawing.Font("Cairo", 16F, System.Drawing.FontStyle.Bold);
+            this.lblSocialStatusText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblSocialStatusText.Location = new System.Drawing.Point(10, 385);
+            this.lblSocialStatusText.Name = "lblSocialStatusText";
+            this.lblSocialStatusText.Size = new System.Drawing.Size(380, 30);
+            this.lblSocialStatusText.TabIndex = 11;
+            this.lblSocialStatusText.Text = "----";
+            // 
+            // label16
+            // 
+            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Cairo", 11F);
+            this.label16.Location = new System.Drawing.Point(290, 425);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(103, 29);
+            this.label16.TabIndex = 12;
+            this.label16.Text = "سبب الاحتياج";
+            // 
+            // lblNeedReasonText
+            // 
+            this.lblNeedReasonText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblNeedReasonText.Font = new System.Drawing.Font("Cairo", 16F, System.Drawing.FontStyle.Bold);
+            this.lblNeedReasonText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblNeedReasonText.Location = new System.Drawing.Point(10, 455);
+            this.lblNeedReasonText.Name = "lblNeedReasonText";
+            this.lblNeedReasonText.Size = new System.Drawing.Size(380, 30);
+            this.lblNeedReasonText.TabIndex = 13;
+            this.lblNeedReasonText.Text = "----";
+            // 
+            // label18
+            // 
+            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Cairo", 11F);
+            this.label18.Location = new System.Drawing.Point(320, 495);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(73, 29);
+            this.label18.TabIndex = 14;
+            this.label18.Text = "ملاحظات";
+            // 
+            // lblNotesText
+            // 
+            this.lblNotesText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblNotesText.Font = new System.Drawing.Font("Cairo", 16F, System.Drawing.FontStyle.Bold);
+            this.lblNotesText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblNotesText.Location = new System.Drawing.Point(10, 525);
+            this.lblNotesText.Name = "lblNotesText";
+            this.lblNotesText.Size = new System.Drawing.Size(380, 60);
+            this.lblNotesText.TabIndex = 15;
+            this.lblNotesText.Text = "----";
+            // 
+            // label20
+            // 
+            this.label20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Cairo", 11F);
+            this.label20.Location = new System.Drawing.Point(300, 595);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(94, 29);
+            this.label20.TabIndex = 16;
+            this.label20.Text = "حالة الحساب";
+            // 
+            // lblIsActiveText
+            // 
+            this.lblIsActiveText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblIsActiveText.Font = new System.Drawing.Font("Cairo", 16F, System.Drawing.FontStyle.Bold);
+            this.lblIsActiveText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblIsActiveText.Location = new System.Drawing.Point(10, 625);
+            this.lblIsActiveText.Name = "lblIsActiveText";
+            this.lblIsActiveText.Size = new System.Drawing.Size(380, 30);
+            this.lblIsActiveText.TabIndex = 17;
+            this.lblIsActiveText.Text = "----";
             // 
             // frmBeneficiarie
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.ClientSize = new System.Drawing.Size(1200, 721);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
+            this.ClientSize = new System.Drawing.Size(1600, 800);
             this.Controls.Add(this.pnlBody);
-            this.Controls.Add(this.pnlHeader);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmBeneficiarie";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
-            this.Text = "إدارة المستفيدين - نظام سند";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.pnlHeader.ResumeLayout(false);
-            this.pnlHeader.PerformLayout();
+            this.Text = "إدارة المستفيدين";
             this.pnlBody.ResumeLayout(false);
+            this.pnlList.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBeneficiariesList)).EndInit();
             this.pnlSearch.ResumeLayout(false);
             this.pnlSmart.ResumeLayout(false);
@@ -804,10 +840,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel pnlHeader;
-        private Guna.UI2.WinForms.Guna2Button btnBackToDashBoard;
-        private System.Windows.Forms.Label lblFormTitle;
         private System.Windows.Forms.Panel pnlBody;
+        private System.Windows.Forms.Panel pnlList;
         private Guna.UI2.WinForms.Guna2DataGridView dgvBeneficiariesList;
         private System.Windows.Forms.Panel pnlSearch;
         private Guna.UI2.WinForms.Guna2Button btnClear;
@@ -861,5 +895,4 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
     }
 }
-
 

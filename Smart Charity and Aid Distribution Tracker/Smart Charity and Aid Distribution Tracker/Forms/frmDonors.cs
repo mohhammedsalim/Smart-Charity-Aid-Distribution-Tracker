@@ -1,4 +1,5 @@
 ﻿using Smart_Charity_and_Aid_Distribution_Tracker.Enums;
+using Smart_Charity_and_Aid_Distribution_Tracker.Helpers;
 using Smart_Charity_and_Aid_Distribution_Tracker.Models;
 using Smart_Charity_and_Aid_Distribution_Tracker.Services;
 using System;
@@ -16,14 +17,14 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
 
         public frmDonors()
         {
-            InitializeComponent();
+            InitializeComponent(); FontManager.ApplyFontToControls(this);
+
             this.Load += new System.EventHandler(this.frmDonors_Load);
         }
 
         private void frmDonors_Load(object sender, EventArgs e)
         {
             // ربط الأحداث
-            this.btnBackToDashBoard.Click += new System.EventHandler(this.btnBackToDashBoard_Click);
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             this.dgvDonorsList.SelectionChanged += new System.EventHandler(this.dgvDonorsList_SelectionChanged);
@@ -261,6 +262,5 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
         private void btnAddNew_Click(object sender, EventArgs e) { SetPanelMode(PanelMode.Add); }
         private void btnEdit_Click(object sender, EventArgs e) { if (_selectedDonor != null) SetPanelMode(PanelMode.Edit); }
         private void btnCancel_Click(object sender, EventArgs e) { SetPanelMode(PanelMode.View); }
-        private void btnBackToDashBoard_Click(object sender, EventArgs e) { this.Close(); }
     }
 }

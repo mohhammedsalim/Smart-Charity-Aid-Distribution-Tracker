@@ -1,6 +1,6 @@
-﻿using Smart_Charity_and_Aid_Distribution_Tracker.Services;
+﻿using Smart_Charity_and_Aid_Distribution_Tracker.Helpers;
+using Smart_Charity_and_Aid_Distribution_Tracker.Services;
 using System;
-using System.Web.SessionState;
 using System.Windows.Forms;
 
 namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
@@ -10,7 +10,7 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
         public frmLogin()
         {
             InitializeComponent();
-
+            FontManager.ApplyFontToControls(this);
             // ربط حدث النقر على زر الدخول يدوياً
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
         }
@@ -37,18 +37,17 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
                 // --- نجح تسجيل الدخول ---
 
                 // أ. تخزين المستخدم الحالي في مكان عام يمكن الوصول إليه
-                //    (هذه هي أهم خطوة لتطبيق الصلاحيات لاحقاً)
                 SessionManager.SetCurrentUser(loggedInUser);
 
-                // ب. إظهار رسالة ترحيب (اختياري ولكن لطيف)
+                // ب. إظهار رسالة ترحيب
                 new frmAlert($"مرحباً بك، {loggedInUser.FullName}").ShowDialog();
 
                 // ج. إخفاء شاشة تسجيل الدخول الحالية
                 this.Hide();
 
-                // د. إنشاء وإظهار لوحة التحكم الرئيسية
-                frmDashBoard dashboard = new frmDashBoard(loggedInUser);
-                dashboard.Show();
+                // د. إنشاء وإظهار النافذة الرئيسية (frmMain) بدلاً من لوحة التحكم
+                frmMain mainForm = new frmMain(loggedInUser);
+                mainForm.Show();
             }
             else
             {
@@ -56,6 +55,22 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
                 new frmAlert("اسم المستخدم أو كلمة المرور غير صحيحة.").ShowDialog();
                 txtPassword.Clear(); // مسح حقل كلمة المرور فقط
                 txtUsername.Focus(); // إعادة التركيز على حقل اسم المستخدم
+            }
+        }
+
+        private void chkShowPassword_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkShowPassword.Checked)
+            {
+                // إظهار كلمة المرور
+                txtPassword.UseSystemPasswordChar = false;
+                txtPassword.PasswordChar = '\0';
+            }
+            else
+            {
+                // إخفاء كلمة المرور
+                txtPassword.UseSystemPasswordChar = true;
+                txtPassword.PasswordChar = '●';
             }
         }
     }

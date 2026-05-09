@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Smart_Charity_and_Aid_Distribution_Tracker.Helpers;
+using System;
 using System.Windows.Forms;
 
 namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
@@ -7,7 +8,8 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
     {
         public frmAlert(string message)
         {
-            InitializeComponent();
+            InitializeComponent(); FontManager.ApplyFontToControls(this);
+
             lblMessage.Text = message;
         }
 

@@ -1,4 +1,5 @@
 ﻿using Smart_Charity_and_Aid_Distribution_Tracker.Enums;
+using Smart_Charity_and_Aid_Distribution_Tracker.Helpers;
 using Smart_Charity_and_Aid_Distribution_Tracker.Models;
 using Smart_Charity_and_Aid_Distribution_Tracker.Services;
 using System;
@@ -17,6 +18,7 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
         public frmUsers()
         {
             InitializeComponent();
+            FontManager.ApplyFontToControls(this); this.Load += new System.EventHandler(this.frmUsers_Load);
         }
 
         private void frmUsers_Load(object sender, EventArgs e)
@@ -24,15 +26,6 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
             SetupComboBoxes();
             LoadUsersData();
             SetPanelMode(PanelMode.View);
-        }
-
-        private void frmUsers_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            var dashboard = Application.OpenForms.OfType<frmDashBoard>().FirstOrDefault();
-            if (dashboard != null)
-            {
-                dashboard.Show();
-            }
         }
 
         private void SetPanelMode(PanelMode mode)
@@ -137,11 +130,6 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
             }
         }
 
-        private void btnBackToDashBoard_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void btnSearch_Click(object sender, EventArgs e)
         {
             LoadUsersData();
@@ -213,7 +201,6 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
                     FullName = txtFullName.Text.Trim(),
                     UserName = txtUsername.Text.Trim(),
                     Password = txtPassword.Text,
-                    // --- التعديل هنا ---
                     Role = (UserRole)Enum.Parse(typeof(UserRole), cmbRole.SelectedItem.ToString()),
                     IsActive = true,
                     CreatedDate = DateTime.Now
@@ -225,7 +212,6 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
             {
                 _selectedUser.FullName = txtFullName.Text.Trim();
                 _selectedUser.UserName = txtUsername.Text.Trim();
-                // --- التعديل هنا أيضاً ---
                 _selectedUser.Role = (UserRole)Enum.Parse(typeof(UserRole), cmbRole.SelectedItem.ToString());
 
                 if (!string.IsNullOrWhiteSpace(txtPassword.Text))
@@ -240,7 +226,6 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
             LoadUsersData();
             SetPanelMode(PanelMode.View);
         }
-
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
@@ -277,6 +262,5 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
                 new frmAlert("تم إعادة تعيين كلمة المرور بنجاح.").ShowDialog();
             }
         }
-
     }
 }

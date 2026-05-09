@@ -1,4 +1,5 @@
 ﻿using Smart_Charity_and_Aid_Distribution_Tracker.Forms;
+using Smart_Charity_and_Aid_Distribution_Tracker.Helpers;
 using Smart_Charity_and_Aid_Distribution_Tracker.Services;
 using System;
 using System.Windows.Forms;
@@ -15,7 +16,7 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
+            FontManager.LoadFonts();
             SeedData.Initialize(); // قم بملء البيانات الأولية
 
             Application.Run(new frmLogin());

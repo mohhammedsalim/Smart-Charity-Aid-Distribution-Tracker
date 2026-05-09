@@ -1,4 +1,5 @@
 ﻿using Smart_Charity_and_Aid_Distribution_Tracker.Enums;
+using Smart_Charity_and_Aid_Distribution_Tracker.Helpers;
 using Smart_Charity_and_Aid_Distribution_Tracker.Models;
 using Smart_Charity_and_Aid_Distribution_Tracker.Services;
 using System;
@@ -16,7 +17,8 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
 
         public frmInventory()
         {
-            InitializeComponent();
+            InitializeComponent(); FontManager.ApplyFontToControls(this);
+
             // ربط حدث Load هنا لضمان تشغيله عند فتح الشاشة
             this.Load += new System.EventHandler(this.frmInventory_Load);
         }
@@ -24,7 +26,6 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
         private void frmInventory_Load(object sender, EventArgs e)
         {
             // 1. ربط الأحداث يدوياً
-            this.btnBackToDashBoard.Click += new System.EventHandler(this.btnBackToDashBoard_Click);
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             this.dgvInventoryList.SelectionChanged += new System.EventHandler(this.dgvInventoryList_SelectionChanged);
@@ -343,6 +344,5 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
         private void btnAddNew_Click(object sender, EventArgs e) { SetPanelMode(PanelMode.Add); }
         private void btnEdit_Click(object sender, EventArgs e) { if (_selectedItem != null) SetPanelMode(PanelMode.Edit); }
         private void btnCancel_Click(object sender, EventArgs e) { SetPanelMode(PanelMode.View); }
-        private void btnBackToDashBoard_Click(object sender, EventArgs e) { this.Close(); }
     }
 }

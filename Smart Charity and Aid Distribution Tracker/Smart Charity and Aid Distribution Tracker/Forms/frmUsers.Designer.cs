@@ -2,15 +2,8 @@
 {
     partial class frmUsers
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -22,20 +15,14 @@
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.pnlHeader = new System.Windows.Forms.Panel();
-            this.btnBackToDashBoard = new Guna.UI2.WinForms.Guna2Button();
-            this.lblFormTitle = new System.Windows.Forms.Label();
             this.pnlBody = new System.Windows.Forms.Panel();
+            this.pnlList = new System.Windows.Forms.Panel();
             this.dgvUsersList = new Guna.UI2.WinForms.Guna2DataGridView();
             this.pnlSearch = new System.Windows.Forms.Panel();
             this.btnClear = new Guna.UI2.WinForms.Guna2Button();
@@ -67,8 +54,8 @@
             this.btnSave = new Guna.UI2.WinForms.Guna2Button();
             this.lblPanelTitle = new System.Windows.Forms.Label();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.pnlHeader.SuspendLayout();
             this.pnlBody.SuspendLayout();
+            this.pnlList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsersList)).BeginInit();
             this.pnlSearch.SuspendLayout();
             this.pnlSmart.SuspendLayout();
@@ -77,53 +64,27 @@
             this.pnlActions.SuspendLayout();
             this.SuspendLayout();
             // 
-            // pnlHeader
-            // 
-            this.pnlHeader.BackColor = System.Drawing.Color.White;
-            this.pnlHeader.Controls.Add(this.btnBackToDashBoard);
-            this.pnlHeader.Controls.Add(this.lblFormTitle);
-            this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlHeader.Location = new System.Drawing.Point(0, 0);
-            this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(1200, 60);
-            this.pnlHeader.TabIndex = 3;
-            // 
-            // btnBackToDashBoard
-            // 
-            this.btnBackToDashBoard.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBackToDashBoard.BorderRadius = 8;
-            this.btnBackToDashBoard.FillColor = System.Drawing.Color.White;
-            this.btnBackToDashBoard.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btnBackToDashBoard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnBackToDashBoard.ImageSize = new System.Drawing.Size(24, 24);
-            this.btnBackToDashBoard.Location = new System.Drawing.Point(1038, 12);
-            this.btnBackToDashBoard.Name = "btnBackToDashBoard";
-            this.btnBackToDashBoard.Size = new System.Drawing.Size(150, 40);
-            this.btnBackToDashBoard.TabIndex = 1;
-            this.btnBackToDashBoard.Text = "العودة للرئيسية";
-            // 
-            // lblFormTitle
-            // 
-            this.lblFormTitle.AutoSize = true;
-            this.lblFormTitle.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFormTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblFormTitle.Location = new System.Drawing.Point(12, 16);
-            this.lblFormTitle.Name = "lblFormTitle";
-            this.lblFormTitle.Size = new System.Drawing.Size(177, 29);
-            this.lblFormTitle.TabIndex = 0;
-            this.lblFormTitle.Text = "إدارة المستخدمين";
-            // 
             // pnlBody
             // 
-            this.pnlBody.Controls.Add(this.dgvUsersList);
-            this.pnlBody.Controls.Add(this.pnlSearch);
+            this.pnlBody.Controls.Add(this.pnlList);
             this.pnlBody.Controls.Add(this.pnlSmart);
             this.pnlBody.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlBody.Location = new System.Drawing.Point(0, 60);
+            this.pnlBody.Location = new System.Drawing.Point(0, 0);
             this.pnlBody.Name = "pnlBody";
-            this.pnlBody.Padding = new System.Windows.Forms.Padding(10);
-            this.pnlBody.Size = new System.Drawing.Size(1200, 661);
-            this.pnlBody.TabIndex = 4;
+            this.pnlBody.Padding = new System.Windows.Forms.Padding(0);
+            this.pnlBody.Size = new System.Drawing.Size(1600, 800);
+            this.pnlBody.TabIndex = 1;
+            // 
+            // pnlList
+            // 
+            this.pnlList.Controls.Add(this.dgvUsersList);
+            this.pnlList.Controls.Add(this.pnlSearch);
+            this.pnlList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlList.Location = new System.Drawing.Point(20, 20);
+            this.pnlList.Name = "pnlList";
+            this.pnlList.Padding = new System.Windows.Forms.Padding(20);
+            this.pnlList.Size = new System.Drawing.Size(1030, 760);
+            this.pnlList.TabIndex = 3;
             // 
             // dgvUsersList
             // 
@@ -131,112 +92,110 @@
             this.dgvUsersList.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.dgvUsersList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvUsersList.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.dgvUsersList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(132)))), ((int)(((byte)(73)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvUsersList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvUsersList.ColumnHeadersHeight = 35;
-            this.dgvUsersList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgvUsersList.ColumnHeadersHeight = 45;
+            this.dgvUsersList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 11.25F);
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Cairo", 11F);
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(245)))), ((int)(((byte)(235)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvUsersList.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvUsersList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvUsersList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvUsersList.Location = new System.Drawing.Point(440, 70);
+            this.dgvUsersList.Location = new System.Drawing.Point(20, 100);
             this.dgvUsersList.MultiSelect = false;
             this.dgvUsersList.Name = "dgvUsersList";
             this.dgvUsersList.ReadOnly = true;
             this.dgvUsersList.RowHeadersVisible = false;
-            this.dgvUsersList.RowTemplate.Height = 30;
-            this.dgvUsersList.Size = new System.Drawing.Size(750, 581);
+            this.dgvUsersList.RowTemplate.Height = 40;
+            this.dgvUsersList.Size = new System.Drawing.Size(990, 640);
             this.dgvUsersList.TabIndex = 2;
             this.dgvUsersList.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgvUsersList.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.dgvUsersList.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.dgvUsersList.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.dgvUsersList.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dgvUsersList.ThemeStyle.BackColor = System.Drawing.Color.Gainsboro;
+            this.dgvUsersList.ThemeStyle.AlternatingRowsStyle.Font = new System.Drawing.Font("Cairo", 11F);
+            this.dgvUsersList.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvUsersList.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(245)))), ((int)(((byte)(235)))));
+            this.dgvUsersList.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.dgvUsersList.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
             this.dgvUsersList.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvUsersList.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dgvUsersList.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
             this.dgvUsersList.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvUsersList.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
+            this.dgvUsersList.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold);
             this.dgvUsersList.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dgvUsersList.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgvUsersList.ThemeStyle.HeaderStyle.Height = 35;
+            this.dgvUsersList.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvUsersList.ThemeStyle.HeaderStyle.Height = 45;
             this.dgvUsersList.ThemeStyle.ReadOnly = true;
             this.dgvUsersList.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvUsersList.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvUsersList.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Calibri", 11.25F);
+            this.dgvUsersList.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Cairo", 11F);
             this.dgvUsersList.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgvUsersList.ThemeStyle.RowsStyle.Height = 30;
-            this.dgvUsersList.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvUsersList.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvUsersList.ThemeStyle.RowsStyle.Height = 40;
+            this.dgvUsersList.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(245)))), ((int)(((byte)(235)))));
+            this.dgvUsersList.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
             // 
             // pnlSearch
             // 
-            this.pnlSearch.BackColor = System.Drawing.Color.White;
+            this.pnlSearch.BackColor = System.Drawing.Color.Transparent;
             this.pnlSearch.Controls.Add(this.btnClear);
             this.pnlSearch.Controls.Add(this.btnSearch);
             this.pnlSearch.Controls.Add(this.txtSearch);
             this.pnlSearch.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSearch.Location = new System.Drawing.Point(440, 10);
+            this.pnlSearch.Location = new System.Drawing.Point(20, 20);
             this.pnlSearch.Name = "pnlSearch";
-            this.pnlSearch.Size = new System.Drawing.Size(750, 60);
+            this.pnlSearch.Padding = new System.Windows.Forms.Padding(0, 0, 0, 20);
+            this.pnlSearch.Size = new System.Drawing.Size(990, 80);
             this.pnlSearch.TabIndex = 1;
             // 
             // btnClear
             // 
+            this.btnClear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClear.BorderRadius = 8;
             this.btnClear.FillColor = System.Drawing.Color.Gainsboro;
-            this.btnClear.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btnClear.Font = new System.Drawing.Font("Cairo", 11F, System.Drawing.FontStyle.Bold);
             this.btnClear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnClear.Location = new System.Drawing.Point(16, 10);
+            this.btnClear.Location = new System.Drawing.Point(10, 10);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(90, 40);
+            this.btnClear.Size = new System.Drawing.Size(100, 45);
             this.btnClear.TabIndex = 6;
             this.btnClear.Text = "مسح";
             // 
             // btnSearch
             // 
+            this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSearch.BorderRadius = 8;
-            this.btnSearch.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btnSearch.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.btnSearch.Font = new System.Drawing.Font("Cairo", 11F, System.Drawing.FontStyle.Bold);
             this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.Location = new System.Drawing.Point(112, 10);
+            this.btnSearch.Location = new System.Drawing.Point(120, 10);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(90, 40);
+            this.btnSearch.Size = new System.Drawing.Size(100, 45);
             this.btnSearch.TabIndex = 5;
             this.btnSearch.Text = "بحث";
             // 
             // txtSearch
             // 
             this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSearch.BorderRadius = 6;
+            this.txtSearch.BorderRadius = 8;
             this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtSearch.DefaultText = "";
-            this.txtSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearch.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearch.Location = new System.Drawing.Point(444, 10);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.txtSearch.Font = new System.Drawing.Font("Cairo", 11F);
+            this.txtSearch.Location = new System.Drawing.Point(230, 10);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PasswordChar = '\0';
             this.txtSearch.PlaceholderText = "ابحث بالاسم الكامل أو اسم المستخدم...";
             this.txtSearch.SelectedText = "";
-            this.txtSearch.Size = new System.Drawing.Size(300, 40);
+            this.txtSearch.Size = new System.Drawing.Size(750, 45);
             this.txtSearch.TabIndex = 0;
             // 
             // pnlSmart
@@ -246,14 +205,16 @@
             this.pnlSmart.Controls.Add(this.pnlView);
             this.pnlSmart.Controls.Add(this.pnlActions);
             this.pnlSmart.Controls.Add(this.lblPanelTitle);
-            this.pnlSmart.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlSmart.Location = new System.Drawing.Point(10, 10);
+            this.pnlSmart.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlSmart.Location = new System.Drawing.Point(1050, 20);
             this.pnlSmart.Name = "pnlSmart";
-            this.pnlSmart.Size = new System.Drawing.Size(430, 641);
+            this.pnlSmart.Padding = new System.Windows.Forms.Padding(20, 20, 20, 0);
+            this.pnlSmart.Size = new System.Drawing.Size(550, 760);
             this.pnlSmart.TabIndex = 0;
             // 
             // pnlInputs
             // 
+            this.pnlInputs.AutoScroll = true;
             this.pnlInputs.Controls.Add(this.cmbRole);
             this.pnlInputs.Controls.Add(this.label4);
             this.pnlInputs.Controls.Add(this.txtPassword);
@@ -263,133 +224,124 @@
             this.pnlInputs.Controls.Add(this.txtFullName);
             this.pnlInputs.Controls.Add(this.label1);
             this.pnlInputs.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlInputs.Location = new System.Drawing.Point(0, 40);
+            this.pnlInputs.Location = new System.Drawing.Point(20, 65);
             this.pnlInputs.Name = "pnlInputs";
-            this.pnlInputs.Size = new System.Drawing.Size(430, 421);
+            this.pnlInputs.Size = new System.Drawing.Size(510, 565);
             this.pnlInputs.TabIndex = 3;
             // 
-            // cmbRole
+            // label1
             // 
-            this.cmbRole.BackColor = System.Drawing.Color.Transparent;
-            this.cmbRole.BorderRadius = 6;
-            this.cmbRole.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbRole.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbRole.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbRole.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.cmbRole.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cmbRole.ItemHeight = 34;
-            this.cmbRole.Location = new System.Drawing.Point(32, 290);
-            this.cmbRole.Name = "cmbRole";
-            this.cmbRole.Size = new System.Drawing.Size(366, 40);
-            this.cmbRole.TabIndex = 7;
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Cairo", 11F);
+            this.label1.Location = new System.Drawing.Point(410, 5);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(91, 29);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "الاسم الكامل";
             // 
-            // label4
+            // txtFullName
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(339, 269);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(59, 18);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "الصلاحية";
+            this.txtFullName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtFullName.BorderRadius = 8;
+            this.txtFullName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtFullName.DefaultText = "";
+            this.txtFullName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.txtFullName.Font = new System.Drawing.Font("Cairo", 11F);
+            this.txtFullName.Location = new System.Drawing.Point(10, 35);
+            this.txtFullName.Name = "txtFullName";
+            this.txtFullName.PasswordChar = '\0';
+            this.txtFullName.PlaceholderText = "الاسم الكامل...";
+            this.txtFullName.SelectedText = "";
+            this.txtFullName.Size = new System.Drawing.Size(490, 40);
+            this.txtFullName.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Cairo", 11F);
+            this.label2.Location = new System.Drawing.Point(395, 85);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(106, 29);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "اسم المستخدم";
+            // 
+            // txtUsername
+            // 
+            this.txtUsername.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtUsername.BorderRadius = 8;
+            this.txtUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtUsername.DefaultText = "";
+            this.txtUsername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.txtUsername.Font = new System.Drawing.Font("Cairo", 11F);
+            this.txtUsername.Location = new System.Drawing.Point(10, 115);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.PasswordChar = '\0';
+            this.txtUsername.PlaceholderText = "اسم المستخدم...";
+            this.txtUsername.SelectedText = "";
+            this.txtUsername.Size = new System.Drawing.Size(490, 40);
+            this.txtUsername.TabIndex = 3;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Cairo", 11F);
+            this.label3.Location = new System.Drawing.Point(415, 165);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(86, 29);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "كلمة المرور";
             // 
             // txtPassword
             // 
-            this.txtPassword.BorderRadius = 6;
+            this.txtPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPassword.BorderRadius = 8;
             this.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPassword.DefaultText = "";
-            this.txtPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPassword.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPassword.Location = new System.Drawing.Point(32, 208);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.txtPassword.Font = new System.Drawing.Font("Cairo", 11F);
+            this.txtPassword.Location = new System.Drawing.Point(10, 195);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '●';
             this.txtPassword.PlaceholderText = "اتركه فارغاً لعدم التغيير";
             this.txtPassword.SelectedText = "";
-            this.txtPassword.Size = new System.Drawing.Size(366, 40);
+            this.txtPassword.Size = new System.Drawing.Size(490, 40);
             this.txtPassword.TabIndex = 5;
             this.txtPassword.UseSystemPasswordChar = true;
             // 
-            // label3
+            // label4
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(327, 186);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 18);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "كلمة المرور";
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Cairo", 11F);
+            this.label4.Location = new System.Drawing.Point(430, 245);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(71, 29);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "الصلاحية";
             // 
-            // txtUsername
+            // cmbRole
             // 
-            this.txtUsername.BorderRadius = 6;
-            this.txtUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtUsername.DefaultText = "";
-            this.txtUsername.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtUsername.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtUsername.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtUsername.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtUsername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUsername.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.txtUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUsername.Location = new System.Drawing.Point(32, 126);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.PasswordChar = '\0';
-            this.txtUsername.PlaceholderText = "";
-            this.txtUsername.SelectedText = "";
-            this.txtUsername.Size = new System.Drawing.Size(366, 40);
-            this.txtUsername.TabIndex = 3;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(308, 104);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 18);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "اسم المستخدم";
-            // 
-            // txtFullName
-            // 
-            this.txtFullName.BorderRadius = 6;
-            this.txtFullName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtFullName.DefaultText = "";
-            this.txtFullName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtFullName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtFullName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtFullName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtFullName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFullName.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.txtFullName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFullName.Location = new System.Drawing.Point(32, 44);
-            this.txtFullName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtFullName.Name = "txtFullName";
-            this.txtFullName.PasswordChar = '\0';
-            this.txtFullName.PlaceholderText = "";
-            this.txtFullName.SelectedText = "";
-            this.txtFullName.Size = new System.Drawing.Size(366, 40);
-            this.txtFullName.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(323, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 18);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "الاسم الكامل";
+            this.cmbRole.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbRole.BackColor = System.Drawing.Color.Transparent;
+            this.cmbRole.BorderRadius = 8;
+            this.cmbRole.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbRole.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.cmbRole.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.cmbRole.Font = new System.Drawing.Font("Cairo", 11F);
+            this.cmbRole.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbRole.ItemHeight = 35;
+            this.cmbRole.Location = new System.Drawing.Point(10, 275);
+            this.cmbRole.Name = "cmbRole";
+            this.cmbRole.Size = new System.Drawing.Size(490, 41);
+            this.cmbRole.TabIndex = 7;
             // 
             // pnlView
             // 
+            this.pnlView.AutoScroll = true;
             this.pnlView.Controls.Add(this.lblRoleText);
             this.pnlView.Controls.Add(this.label8);
             this.pnlView.Controls.Add(this.lblUsernameText);
@@ -397,70 +349,76 @@
             this.pnlView.Controls.Add(this.lblFullNameText);
             this.pnlView.Controls.Add(this.label5);
             this.pnlView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlView.Location = new System.Drawing.Point(0, 40);
+            this.pnlView.Location = new System.Drawing.Point(20, 65);
             this.pnlView.Name = "pnlView";
-            this.pnlView.Size = new System.Drawing.Size(430, 421);
+            this.pnlView.Size = new System.Drawing.Size(510, 565);
             this.pnlView.TabIndex = 4;
-            // 
-            // lblRoleText
-            // 
-            this.lblRoleText.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRoleText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblRoleText.Location = new System.Drawing.Point(32, 180);
-            this.lblRoleText.Name = "lblRoleText";
-            this.lblRoleText.Size = new System.Drawing.Size(366, 23);
-            this.lblRoleText.TabIndex = 5;
-            this.lblRoleText.Text = "----";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(339, 158);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(59, 18);
-            this.label8.TabIndex = 4;
-            this.label8.Text = "الصلاحية";
-            // 
-            // lblUsernameText
-            // 
-            this.lblUsernameText.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsernameText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblUsernameText.Location = new System.Drawing.Point(32, 110);
-            this.lblUsernameText.Name = "lblUsernameText";
-            this.lblUsernameText.Size = new System.Drawing.Size(366, 23);
-            this.lblUsernameText.TabIndex = 3;
-            this.lblUsernameText.Text = "----";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(308, 88);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(90, 18);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "اسم المستخدم";
-            // 
-            // lblFullNameText
-            // 
-            this.lblFullNameText.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFullNameText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblFullNameText.Location = new System.Drawing.Point(32, 40);
-            this.lblFullNameText.Name = "lblFullNameText";
-            this.lblFullNameText.Size = new System.Drawing.Size(366, 23);
-            this.lblFullNameText.TabIndex = 1;
-            this.lblFullNameText.Text = "----";
             // 
             // label5
             // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(323, 18);
+            this.label5.Font = new System.Drawing.Font("Cairo", 11F);
+            this.label5.Location = new System.Drawing.Point(410, 5);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(75, 18);
+            this.label5.Size = new System.Drawing.Size(91, 29);
             this.label5.TabIndex = 0;
             this.label5.Text = "الاسم الكامل";
+            // 
+            // lblFullNameText
+            // 
+            this.lblFullNameText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblFullNameText.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold);
+            this.lblFullNameText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblFullNameText.Location = new System.Drawing.Point(10, 35);
+            this.lblFullNameText.Name = "lblFullNameText";
+            this.lblFullNameText.Size = new System.Drawing.Size(490, 30);
+            this.lblFullNameText.TabIndex = 1;
+            this.lblFullNameText.Text = "----";
+            // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Cairo", 11F);
+            this.label6.Location = new System.Drawing.Point(395, 75);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(106, 29);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "اسم المستخدم";
+            // 
+            // lblUsernameText
+            // 
+            this.lblUsernameText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblUsernameText.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold);
+            this.lblUsernameText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblUsernameText.Location = new System.Drawing.Point(10, 105);
+            this.lblUsernameText.Name = "lblUsernameText";
+            this.lblUsernameText.Size = new System.Drawing.Size(490, 30);
+            this.lblUsernameText.TabIndex = 3;
+            this.lblUsernameText.Text = "----";
+            // 
+            // label8
+            // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Cairo", 11F);
+            this.label8.Location = new System.Drawing.Point(430, 145);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(71, 29);
+            this.label8.TabIndex = 4;
+            this.label8.Text = "الصلاحية";
+            // 
+            // lblRoleText
+            // 
+            this.lblRoleText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblRoleText.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold);
+            this.lblRoleText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblRoleText.Location = new System.Drawing.Point(10, 175);
+            this.lblRoleText.Name = "lblRoleText";
+            this.lblRoleText.Size = new System.Drawing.Size(490, 30);
+            this.lblRoleText.TabIndex = 5;
+            this.lblRoleText.Text = "----";
             // 
             // pnlActions
             // 
@@ -471,130 +429,121 @@
             this.pnlActions.Controls.Add(this.btnCancel);
             this.pnlActions.Controls.Add(this.btnSave);
             this.pnlActions.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlActions.Location = new System.Drawing.Point(0, 461);
+            this.pnlActions.Location = new System.Drawing.Point(20, 575);
             this.pnlActions.Name = "pnlActions";
-            this.pnlActions.Size = new System.Drawing.Size(430, 180);
+            this.pnlActions.Size = new System.Drawing.Size(510, 185); // زيادة الارتفاع ليحتوي 3 صفوف
             this.pnlActions.TabIndex = 2;
-            // 
-            // btnResetPassword
-            // 
-            this.btnResetPassword.BorderRadius = 8;
-            this.btnResetPassword.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnResetPassword.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
-            this.btnResetPassword.ForeColor = System.Drawing.Color.White;
-            this.btnResetPassword.Location = new System.Drawing.Point(32, 122);
-            this.btnResetPassword.Name = "btnResetPassword";
-            this.btnResetPassword.Size = new System.Drawing.Size(366, 45);
-            this.btnResetPassword.TabIndex = 5;
-            this.btnResetPassword.Text = "إعادة تعيين كلمة المرور";
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.BorderRadius = 8;
-            this.btnDelete.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnDelete.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
-            this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(32, 71);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(120, 45);
-            this.btnDelete.TabIndex = 4;
-            this.btnDelete.Text = "حذف";
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.BorderRadius = 8;
-            this.btnEdit.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
-            this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.Location = new System.Drawing.Point(158, 71);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(120, 45);
-            this.btnEdit.TabIndex = 3;
-            this.btnEdit.Text = "تعديل";
-            // 
-            // btnAddNew
-            // 
-            this.btnAddNew.BorderRadius = 8;
-            this.btnAddNew.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
-            this.btnAddNew.ForeColor = System.Drawing.Color.White;
-            this.btnAddNew.Location = new System.Drawing.Point(284, 71);
-            this.btnAddNew.Name = "btnAddNew";
-            this.btnAddNew.Size = new System.Drawing.Size(114, 45);
-            this.btnAddNew.TabIndex = 2;
-            this.btnAddNew.Text = "إضافة جديد";
             // 
             // btnCancel
             // 
+            this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancel.BorderRadius = 8;
             this.btnCancel.FillColor = System.Drawing.Color.Gainsboro;
-            this.btnCancel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
+            this.btnCancel.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold);
             this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnCancel.Location = new System.Drawing.Point(32, 20);
+            this.btnCancel.Location = new System.Drawing.Point(10, 15);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(180, 45);
+            this.btnCancel.Size = new System.Drawing.Size(240, 45);
             this.btnCancel.TabIndex = 1;
             this.btnCancel.Text = "إلغاء";
             // 
             // btnSave
             // 
+            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSave.BorderRadius = 8;
-            this.btnSave.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
+            this.btnSave.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.btnSave.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold);
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(218, 20);
+            this.btnSave.Location = new System.Drawing.Point(260, 15);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(180, 45);
+            this.btnSave.Size = new System.Drawing.Size(240, 45);
             this.btnSave.TabIndex = 0;
             this.btnSave.Text = "حفظ";
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDelete.BorderRadius = 8;
+            this.btnDelete.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnDelete.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold);
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Location = new System.Drawing.Point(10, 70);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(155, 45);
+            this.btnDelete.TabIndex = 4;
+            this.btnDelete.Text = "حذف";
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEdit.BorderRadius = 8;
+            this.btnEdit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btnEdit.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold);
+            this.btnEdit.ForeColor = System.Drawing.Color.White;
+            this.btnEdit.Location = new System.Drawing.Point(175, 70);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(160, 45);
+            this.btnEdit.TabIndex = 3;
+            this.btnEdit.Text = "تعديل";
+            // 
+            // btnAddNew
+            // 
+            this.btnAddNew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAddNew.BorderRadius = 8;
+            this.btnAddNew.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.btnAddNew.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold);
+            this.btnAddNew.ForeColor = System.Drawing.Color.White;
+            this.btnAddNew.Location = new System.Drawing.Point(345, 70);
+            this.btnAddNew.Name = "btnAddNew";
+            this.btnAddNew.Size = new System.Drawing.Size(155, 45);
+            this.btnAddNew.TabIndex = 2;
+            this.btnAddNew.Text = "إضافة جديد";
+            // 
+            // btnResetPassword
+            // 
+            this.btnResetPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnResetPassword.BorderRadius = 8;
+            this.btnResetPassword.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(156)))), ((int)(((byte)(18)))));
+            this.btnResetPassword.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold);
+            this.btnResetPassword.ForeColor = System.Drawing.Color.White;
+            this.btnResetPassword.Location = new System.Drawing.Point(10, 125);
+            this.btnResetPassword.Name = "btnResetPassword";
+            this.btnResetPassword.Size = new System.Drawing.Size(490, 45);
+            this.btnResetPassword.TabIndex = 5;
+            this.btnResetPassword.Text = "إعادة تعيين كلمة المرور";
+
             // 
             // lblPanelTitle
             // 
             this.lblPanelTitle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblPanelTitle.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPanelTitle.Font = new System.Drawing.Font("Cairo", 14F, System.Drawing.FontStyle.Bold);
             this.lblPanelTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblPanelTitle.Location = new System.Drawing.Point(0, 0);
+            this.lblPanelTitle.Location = new System.Drawing.Point(20, 20);
             this.lblPanelTitle.Name = "lblPanelTitle";
-            this.lblPanelTitle.Padding = new System.Windows.Forms.Padding(0, 10, 10, 0);
-            this.lblPanelTitle.Size = new System.Drawing.Size(430, 40);
+            this.lblPanelTitle.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
+            this.lblPanelTitle.Size = new System.Drawing.Size(510, 45);
             this.lblPanelTitle.TabIndex = 0;
             this.lblPanelTitle.Text = "تفاصيل المستخدم";
-            this.lblPanelTitle.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // guna2Elipse1
             // 
-            this.guna2Elipse1.BorderRadius = 12;
+            this.guna2Elipse1.BorderRadius = 15;
             this.guna2Elipse1.TargetControl = this.pnlSmart;
             // 
             // frmUsers
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.ClientSize = new System.Drawing.Size(1200, 721);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
+            this.ClientSize = new System.Drawing.Size(1600, 800);
             this.Controls.Add(this.pnlBody);
-            this.Controls.Add(this.pnlHeader);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmUsers";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
-            this.Text = "إدارة المستخدمين - نظام سند";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-
-            // --- !!! روابط الأحداث المضافة هنا في المكان الصحيح !!! ---
-            this.Load += new System.EventHandler(this.frmUsers_Load);
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmUsers_FormClosed);
-            this.btnBackToDashBoard.Click += new System.EventHandler(this.btnBackToDashBoard_Click);
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
-            this.dgvUsersList.SelectionChanged += new System.EventHandler(this.dgvUsersList_SelectionChanged);
-            this.btnAddNew.Click += new System.EventHandler(this.btnAddNew_Click);
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            this.btnResetPassword.Click += new System.EventHandler(this.btnResetPassword_Click);
-            // --- نهاية الروابط ---
-
-            this.pnlHeader.ResumeLayout(false);
-            this.pnlHeader.PerformLayout();
+            this.Text = "إدارة المستخدمين";
             this.pnlBody.ResumeLayout(false);
+            this.pnlList.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsersList)).EndInit();
             this.pnlSearch.ResumeLayout(false);
             this.pnlSmart.ResumeLayout(false);
@@ -609,10 +558,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel pnlHeader;
-        private Guna.UI2.WinForms.Guna2Button btnBackToDashBoard;
-        private System.Windows.Forms.Label lblFormTitle;
         private System.Windows.Forms.Panel pnlBody;
+        private System.Windows.Forms.Panel pnlList;
         private Guna.UI2.WinForms.Guna2DataGridView dgvUsersList;
         private System.Windows.Forms.Panel pnlSearch;
         private Guna.UI2.WinForms.Guna2Button btnClear;

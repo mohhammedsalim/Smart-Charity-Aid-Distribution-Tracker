@@ -1,4 +1,5 @@
 ﻿using Smart_Charity_and_Aid_Distribution_Tracker.Enums;
+using Smart_Charity_and_Aid_Distribution_Tracker.Helpers;
 using Smart_Charity_and_Aid_Distribution_Tracker.Models;
 using Smart_Charity_and_Aid_Distribution_Tracker.Services;
 using System;
@@ -17,14 +18,15 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
         public frmBeneficiarie()
         {
             InitializeComponent();
+            FontManager.ApplyFontToControls(this);
+
             // أضف هذا السطر لضمان تشغيل دالة Load عند فتح الشاشة
             this.Load += new System.EventHandler(this.frmBeneficiarie_Load);
         }
 
         private void frmBeneficiarie_Load(object sender, EventArgs e)
         {
-            // 1. ربط الأحداث يدوياً لضمان عمل الشاشة
-            this.btnBackToDashBoard.Click += new System.EventHandler(this.btnBackToDashBoard_Click);
+            // 1. ربط الأحداث يدوياً لضمان عمل الشاشة (تم إزالة زر العودة للرئيسية)
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             this.dgvBeneficiariesList.SelectionChanged += new System.EventHandler(this.dgvBeneficiariesList_SelectionChanged);
@@ -33,7 +35,6 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmBeneficiarie_FormClosed);
 
             // 2. إعداد القوائم وتحميل البيانات
             SetupComboBoxes();
@@ -46,15 +47,6 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
             {
                 btnEdit.Visible = false;
                 btnDelete.Visible = false;
-            }
-        }
-
-        private void frmBeneficiarie_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            var dashboard = Application.OpenForms.OfType<frmDashBoard>().FirstOrDefault();
-            if (dashboard != null)
-            {
-                dashboard.Show();
             }
         }
 
@@ -316,6 +308,5 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
         private void btnAddNew_Click(object sender, EventArgs e) { SetPanelMode(PanelMode.Add); }
         private void btnEdit_Click(object sender, EventArgs e) { if (_selectedBeneficiary != null) SetPanelMode(PanelMode.Edit); }
         private void btnCancel_Click(object sender, EventArgs e) { SetPanelMode(PanelMode.View); }
-        private void btnBackToDashBoard_Click(object sender, EventArgs e) { this.Close(); }
     }
 }
