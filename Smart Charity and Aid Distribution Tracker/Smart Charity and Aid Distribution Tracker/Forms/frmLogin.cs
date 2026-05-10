@@ -11,8 +11,15 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
         {
             InitializeComponent();
             FontManager.ApplyFontToControls(this);
-            // ربط حدث النقر على زر الدخول يدوياً
+
+            this.Load += new System.EventHandler(this.frmLogin_Load);
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+        }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+            // جعل المؤشر يقف تلقائياً في حقل اسم المستخدم عند فتح الشاشة
+            this.ActiveControl = txtUsername;
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -53,8 +60,9 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
             {
                 // --- فشل تسجيل الدخول ---
                 new frmAlert("اسم المستخدم أو كلمة المرور غير صحيحة.").ShowDialog();
-                txtPassword.Clear(); // مسح حقل كلمة المرور فقط
-                txtUsername.Focus(); // إعادة التركيز على حقل اسم المستخدم
+                txtPassword.Clear();
+                txtUsername.Focus();
+                txtUsername.SelectAll();
             }
         }
 
@@ -71,6 +79,55 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
                 // إخفاء كلمة المرور
                 txtPassword.UseSystemPasswordChar = true;
                 txtPassword.PasswordChar = '●';
+            }
+        }
+
+        private void txtUsername_KeyDown(object sender, KeyEventArgs e)
+        {
+            // لما يكون محدد على اسم المستخدم ويضغط Enter
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true; // هذي تمنع صوت "الطن" المزعج
+
+                if (string.IsNullOrWhiteSpace(txtUsername.Text))
+                {
+                    new frmAlert("الرجاء إدخال اسم المستخدم أولاً.").ShowDialog();
+                    txtUsername.Focus();
+                }
+                else
+                {
+                    if (string.IsNullOrWhiteSpace(txtPassword.Text))
+                    {
+                        txtPassword.Focus();
+                    }
+                    else
+                    {
+                        btnLogin.PerformClick();
+                    }
+                }
+            }
+        }
+
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            // لما يكون محدد على كلمة المرور ويضغط Enter
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true; // تمنع الصوت المزعج
+
+                if (string.IsNullOrWhiteSpace(txtPassword.Text))
+                {
+                    new frmAlert("الرجاء إدخال كلمة المرور أولاً.").ShowDialog();
+                }
+                else if (string.IsNullOrWhiteSpace(txtUsername.Text))
+                {
+                    new frmAlert("الرجاء إدخال اسم المستخدم أولاً.").ShowDialog();
+                    txtUsername.Focus();
+                }
+                else
+                {
+                    btnLogin.PerformClick(); // ينفذ كود زر الدخول كأنه ضغط عليه بالماوس
+                }
             }
         }
     }

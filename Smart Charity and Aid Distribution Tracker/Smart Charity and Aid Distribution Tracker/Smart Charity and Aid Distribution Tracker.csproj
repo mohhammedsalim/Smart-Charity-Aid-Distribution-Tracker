@@ -148,6 +148,9 @@
     <Compile Include="Services\SeedData.cs" />
     <Compile Include="Services\SessionManager.cs" />
     <Compile Include="Services\UserService.cs" />
+    <EmbeddedResource Include="Forms\frmAlert.resx">
+      <DependentUpon>frmAlert.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmBeneficiarie.resx">
       <DependentUpon>frmBeneficiarie.cs</DependentUpon>
     </EmbeddedResource>
@@ -177,6 +180,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Fonts\Cairo-Bold.ttf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -199,5 +203,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <Content Include="Sources\images.png" />
+    <None Include="Sources\IMG\images.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

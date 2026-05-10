@@ -50,9 +50,10 @@
             this.lblMessage.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMessage.ForeColor = System.Drawing.Color.DimGray;
             this.lblMessage.Location = new System.Drawing.Point(0, 0);
+            this.lblMessage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMessage.Name = "lblMessage";
-            this.lblMessage.Padding = new System.Windows.Forms.Padding(20, 20, 20, 70);
-            this.lblMessage.Size = new System.Drawing.Size(450, 200);
+            this.lblMessage.Padding = new System.Windows.Forms.Padding(27, 25, 27, 86);
+            this.lblMessage.Size = new System.Drawing.Size(600, 246);
             this.lblMessage.TabIndex = 0;
             this.lblMessage.Text = "نص الرسالة هنا";
             this.lblMessage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -64,25 +65,29 @@
             this.btnOk.FillColor = System.Drawing.Color.ForestGreen;
             this.btnOk.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOk.ForeColor = System.Drawing.Color.White;
-            this.btnOk.Location = new System.Drawing.Point(165, 148);
+            this.btnOk.Location = new System.Drawing.Point(220, 182);
+            this.btnOk.Margin = new System.Windows.Forms.Padding(4);
             this.btnOk.Name = "btnOk";
-            this.btnOk.Size = new System.Drawing.Size(120, 40);
+            this.btnOk.Size = new System.Drawing.Size(160, 49);
             this.btnOk.TabIndex = 1;
             this.btnOk.Text = "موافق";
             this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
             // frmAlert
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AcceptButton = this.btnOk;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(450, 200);
+            this.ClientSize = new System.Drawing.Size(600, 246);
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.lblMessage);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmAlert";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmAlert";
+            this.Load += new System.EventHandler(this.frmAlert_Load);
             this.ResumeLayout(false);
 
         }
