@@ -259,12 +259,24 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
                 return;
             }
 
-            // 2. التحقق من أن حجم الأسرة رقم صحيح
-            if (!int.TryParse(txtFamilySize.Text, out int familySize))
+            string nationalId = txtNationalID.Text.Trim();
+
+            // التحقق من أن الطول 12 بالضبط، وأن كلها أرقام (كإجراء احترازي إضافي)
+            if (nationalId.Length != 12 || !nationalId.All(char.IsDigit))
             {
-                new frmAlert("الرجاء إدخال رقم صحيح لعدد أفراد الأسرة.").ShowDialog();
-                return;
+                new frmAlert("الرقم الوطني يجب أن يتكون من 12 رقماً فقط.").ShowDialog();
+                txtNationalID.Focus();
+                return; // إيقاف عملية الحفظ
             }
+
+            // التحقق من عدد أفراد الأسرة
+            if (!int.TryParse(txtFamilySize.Text.Trim(), out int familySize) || familySize < 1)
+            {
+                new frmAlert("عدد أفراد الأسرة يجب أن يكون رقماً صحيحاً 1 فأكثر.").ShowDialog();
+                txtFamilySize.Focus();
+                return; // إيقاف عملية الحفظ
+            }
+
 
             if (_currentMode == PanelMode.Add)
             {
@@ -331,5 +343,19 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
         private void btnAddNew_Click(object sender, EventArgs e) { SetPanelMode(PanelMode.Add); }
         private void btnEdit_Click(object sender, EventArgs e) { if (_selectedBeneficiary != null) SetPanelMode(PanelMode.Edit); }
         private void btnCancel_Click(object sender, EventArgs e) { SetPanelMode(PanelMode.View); }
+
+        private void txtFamilySize_KeyDown(object sender, KeyEventArgs e)
+        {
+            
+        }
+
+        private void txtFamilySize_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // السماح فقط بالأرقام ومفتاح المسح
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

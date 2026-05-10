@@ -24,8 +24,11 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Services
                 GetInventoryItems(),
                 GetDonors(),
                 GetDonations(),
-                GetDistributions()
+                GetDistributions(),
+                GetFinancialTransactions() 
             );
+
+
         }
 
 
@@ -200,6 +203,23 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Services
                 list.Add(dist);
             }
             return list;
+        }
+
+        private static List<FinancialTransaction> GetFinancialTransactions()
+        {
+            return new List<FinancialTransaction>
+            {
+                new FinancialTransaction
+                {
+                    TransactionID = "TRX_INIT_001",
+                    Type = TransactionType.وارد,
+                    Amount = 5000,
+                    TransactionDate = DateTime.Now,
+                    ReferenceID = "SYS_INIT",
+                    PerformedBy = "System",
+                    Notes = "رصيد افتتاحي مبدئي"
+                }
+            };
         }
     }
 }

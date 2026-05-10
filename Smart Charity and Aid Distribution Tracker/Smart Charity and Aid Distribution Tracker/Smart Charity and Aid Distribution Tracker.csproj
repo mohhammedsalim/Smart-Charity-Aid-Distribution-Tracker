@@ -60,6 +60,7 @@
     <Compile Include="Enums\ItemCategory.cs" />
     <Compile Include="Enums\MovementType.cs" />
     <Compile Include="Enums\SocialStatus.cs" />
+    <Compile Include="Enums\TransactionType.cs" />
     <Compile Include="Enums\UserRole.cs" />
     <Compile Include="Forms\frmAlert.cs">
       <SubType>Form</SubType>
@@ -140,6 +141,7 @@
     <Compile Include="Models\DistributionDetail.cs" />
     <Compile Include="Models\Donation.cs" />
     <Compile Include="Models\Donor.cs" />
+    <Compile Include="Models\FinancialTransaction.cs" />
     <Compile Include="Models\InventoryMovement.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Program.cs" />

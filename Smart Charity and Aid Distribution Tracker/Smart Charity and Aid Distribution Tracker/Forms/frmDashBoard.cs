@@ -27,11 +27,19 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
         {
             try
             {
+
+                double treasuryBalance = DataService.GetTreasuryBalance();
+                // استخدام "N2" لعرض الرقم مع فاصلة الآلاف ورقمين عشريين (مثال: 1,500.00)
+                string lblTreasuryBalance= treasuryBalance.ToString("N2") + " د.ل";
+                lblNumberDisbursement.Text = lblTreasuryBalance;
+
                 // قراءة البيانات الحقيقية فقط
                 lblNumberBeneficiaries.Text = DataService.GetBeneficiaries().Count.ToString();
                 lblNumberInventory.Text = DataService.GetAllInventoryItems().Count.ToString();
                 lblNumberDonations.Text = DataService.GetDonations().Count.ToString();
-                lblNumberDisbursement.Text = DataService.GetAllDistributions().Count.ToString();
+                //lblNumberDisbursement.Text = DataService.GetAllDistributions().Count.ToString();
+
+                
             }
             catch (Exception ex)
             {

@@ -19,6 +19,8 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Services
         private static List<Donor> _donors = new List<Donor>();
         private static List<Donation> _donations = new List<Donation>();
         private static List<DistributionDetail> _distributionDetails = new List<DistributionDetail>();
+        private static List<FinancialTransaction> _financialTransactions = new List<FinancialTransaction>();
+
 
         // ==========================================
         // --- المُنشئ الثابت لجلب البيانات ---
@@ -36,7 +38,9 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Services
             List<InventoryItem> inventoryItems,
             List<Donor> donors,
             List<Donation> donations,
-            List<Distribution> distributions)
+            List<Distribution> distributions,
+            List<FinancialTransaction> financialTransactions
+            )
         {
             _users = users;
             _beneficiaries = beneficiaries;
@@ -44,7 +48,10 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Services
             _donors = donors;
             _donations = donations;
             _distributions = distributions;
+            _financialTransactions = financialTransactions;
+
         }
+
 
 
         // ==========================================
@@ -316,5 +323,20 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Services
             var donation = _donations.FirstOrDefault(d => d.DonationID == id);
             if (donation != null) _donations.Remove(donation);
         }
+
+        // دالة لحساب الرصيد الحالي للصندوق
+        public static double GetTreasuryBalance()
+        {
+            double totalIn = _financialTransactions.Where(t => t.Type == TransactionType.وارد).Sum(t => t.Amount);
+            double totalOut = _financialTransactions.Where(t => t.Type == TransactionType.صادر).Sum(t => t.Amount);
+            return totalIn - totalOut;
+        }
+
+        // دالة لتسجيل حركة مالية جديدة
+        public static void RecordFinancialTransaction(FinancialTransaction transaction)
+        {
+            _financialTransactions.Add(transaction);
+        }
+
     }
 }

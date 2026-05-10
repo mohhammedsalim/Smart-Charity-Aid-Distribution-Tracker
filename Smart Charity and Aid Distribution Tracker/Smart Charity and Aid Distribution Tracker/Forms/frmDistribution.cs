@@ -40,19 +40,33 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
 
         private void SetupComboBoxes()
         {
-            // تحميل المستفيدين النشطين فقط
-            var activeBeneficiaries = DataService.GetBeneficiaries().Where(b => b.IsActive).ToList();
+            // 1. تحميل المستفيدين النشطين فقط
+            var activeBeneficiaries = DataService.GetBeneficiaries().Where(b => b.IsActive == true).ToList();
             cmbBeneficiary.DataSource = activeBeneficiaries;
             cmbBeneficiary.DisplayMember = "FullName";
             cmbBeneficiary.ValueMember = "BeneficiaryID";
             cmbBeneficiary.SelectedIndex = -1;
 
-            // تحميل الأصناف النشطة فقط
-            var activeItems = DataService.GetAllInventoryItems().Where(i => i.IsActive).ToList();
+            // --- الترتيب الصحيح لتفعيل البحث ---
+            cmbBeneficiary.DropDownStyle = ComboBoxStyle.DropDown;
+            cmbBeneficiary.AutoCompleteSource = AutoCompleteSource.ListItems; // 1. تحديد المصدر أولاً
+            cmbBeneficiary.AutoCompleteMode = AutoCompleteMode.SuggestAppend; // 2. تفعيل البحث ثانياً
+            cmbBeneficiary.MaxDropDownItems = 5;
+            cmbBeneficiary.IntegralHeight = false;
+
+            // 2. تحميل الأصناف النشطة فقط
+            var activeItems = DataService.GetAllInventoryItems().Where(i => i.IsActive == true).ToList();
             cmbItem.DataSource = activeItems;
             cmbItem.DisplayMember = "ItemName";
             cmbItem.ValueMember = "ItemID";
             cmbItem.SelectedIndex = -1;
+
+            // --- الترتيب الصحيح لتفعيل البحث ---
+            cmbItem.DropDownStyle = ComboBoxStyle.DropDown;
+            cmbItem.AutoCompleteSource = AutoCompleteSource.ListItems; // 1. تحديد المصدر أولاً
+            cmbItem.AutoCompleteMode = AutoCompleteMode.SuggestAppend; // 2. تفعيل البحث ثانياً
+            cmbItem.MaxDropDownItems = 5;
+            cmbItem.IntegralHeight = false;
         }
 
         // --- منطق التبديل بين عيني ونقدي ---
@@ -178,12 +192,36 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
                     return;
                 }
 
+                // 1. التحقق من توفر رصيد كافٍ في الصندوق قبل الصرف
+                double currentBalance = DataService.GetTreasuryBalance();
+                if (currentBalance < amount)
+                {
+                    new frmAlert($"عفواً، الرصيد الحالي في الصندوق ({currentBalance}) لا يكفي لإتمام عملية الصرف.").ShowDialog();
+                    return;
+                }
+
                 distribution.Type = DonationType.نقدي;
                 distribution.Amount = amount;
 
+                // 2. حفظ عملية التوزيع
                 DataService.AddDistribution(distribution);
-                new frmAlert("تم حفظ عملية الصرف النقدي بنجاح!").ShowDialog();
+
+                // 3. تسجيل الحركة المالية (صادر) لخصم المبلغ من الصندوق
+                var finTransaction = new FinancialTransaction
+                {
+                    TransactionID = "TRX" + DateTime.Now.ToString("yyyyMMddHHmmss"),
+                    Type = TransactionType.صادر,
+                    Amount = amount,
+                    TransactionDate = DateTime.Now,
+                    ReferenceID = distribution.DistributionID,
+                    PerformedBy = performedBy,
+                    Notes = $"صرف مساعدة نقدية للمستفيد: {cmbBeneficiary.Text}"
+                };
+                DataService.RecordFinancialTransaction(finTransaction);
+
+                new frmAlert("تم حفظ عملية الصرف النقدي وخصم المبلغ من الصندوق بنجاح!").ShowDialog();
             }
+
             else
             {
                 // --- حفظ صرف عيني ---
@@ -249,9 +287,5 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
             rbInKind.Checked = true; // العودة للوضع الافتراضي
         }
 
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

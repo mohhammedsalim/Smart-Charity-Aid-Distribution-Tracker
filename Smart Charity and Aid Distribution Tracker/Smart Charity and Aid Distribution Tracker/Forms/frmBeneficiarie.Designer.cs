@@ -266,7 +266,7 @@
             this.chkIsActive.CheckedState.BorderThickness = 0;
             this.chkIsActive.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
             this.chkIsActive.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.chkIsActive.Location = new System.Drawing.Point(329, 647);
+            this.chkIsActive.Location = new System.Drawing.Point(326, 679);
             this.chkIsActive.Name = "chkIsActive";
             this.chkIsActive.Size = new System.Drawing.Size(101, 28);
             this.chkIsActive.TabIndex = 16;
@@ -284,13 +284,13 @@
             this.txtNotes.DefaultText = "";
             this.txtNotes.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
             this.txtNotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.txtNotes.Location = new System.Drawing.Point(95, 713);
+            this.txtNotes.Location = new System.Drawing.Point(76, 572);
             this.txtNotes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNotes.Multiline = true;
             this.txtNotes.Name = "txtNotes";
             this.txtNotes.PlaceholderText = "ملاحظات إضافية...";
             this.txtNotes.SelectedText = "";
-            this.txtNotes.Size = new System.Drawing.Size(475, 88);
+            this.txtNotes.Size = new System.Drawing.Size(380, 88);
             this.txtNotes.TabIndex = 15;
             // 
             // label10
@@ -325,7 +325,7 @@
             this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label9.Location = new System.Drawing.Point(332, 462);
+            this.label9.Location = new System.Drawing.Point(340, 462);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(93, 24);
             this.label9.TabIndex = 12;
@@ -343,9 +343,9 @@
             this.cmbSocialStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.cmbSocialStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cmbSocialStatus.ItemHeight = 35;
-            this.cmbSocialStatus.Location = new System.Drawing.Point(148, 801);
+            this.cmbSocialStatus.Location = new System.Drawing.Point(76, 412);
             this.cmbSocialStatus.Name = "cmbSocialStatus";
-            this.cmbSocialStatus.Size = new System.Drawing.Size(743, 41);
+            this.cmbSocialStatus.Size = new System.Drawing.Size(380, 41);
             this.cmbSocialStatus.TabIndex = 11;
             this.cmbSocialStatus.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -375,6 +375,8 @@
             this.txtFamilySize.SelectedText = "";
             this.txtFamilySize.Size = new System.Drawing.Size(380, 40);
             this.txtFamilySize.TabIndex = 9;
+            this.txtFamilySize.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtFamilySize_KeyDown);
+            this.txtFamilySize.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFamilySize_KeyPress);
             // 
             // label7
             // 

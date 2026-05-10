@@ -97,7 +97,7 @@
             // lblNumberBeneficiaries
             // 
             this.lblNumberBeneficiaries.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lblNumberBeneficiaries.Font = new System.Drawing.Font("Cairo", 28F, System.Drawing.FontStyle.Bold);
+            this.lblNumberBeneficiaries.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Bold);
             this.lblNumberBeneficiaries.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.lblNumberBeneficiaries.Location = new System.Drawing.Point(0, 55);
             this.lblNumberBeneficiaries.Name = "lblNumberBeneficiaries";
@@ -108,19 +108,15 @@
             // 
             // label4
             // 
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = false; // 1. إيقاف التحجيم التلقائي
-            this.label4.Dock = System.Windows.Forms.DockStyle.Top; // 2. التثبيت في الأعلى
-            this.label4.Font = new System.Drawing.Font("Cairo", 14F, System.Drawing.FontStyle.Bold);
+            this.label4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.label4.Location = new System.Drawing.Point(0, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(365, 50); // 3. إعطاء ارتفاع مناسب
+            this.label4.Size = new System.Drawing.Size(364, 50);
             this.label4.TabIndex = 0;
             this.label4.Text = "إجمالي المستفيدين";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter; // 4. توسيط النص
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnlDonations
             // 
@@ -143,7 +139,7 @@
             // lblNumberDonations
             // 
             this.lblNumberDonations.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lblNumberDonations.Font = new System.Drawing.Font("Cairo", 28F, System.Drawing.FontStyle.Bold);
+            this.lblNumberDonations.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Bold);
             this.lblNumberDonations.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
             this.lblNumberDonations.Location = new System.Drawing.Point(0, 55);
             this.lblNumberDonations.Name = "lblNumberDonations";
@@ -154,13 +150,12 @@
             // 
             // label6
             // 
-            this.label6.AutoSize = false;
             this.label6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label6.Font = new System.Drawing.Font("Cairo", 14F, System.Drawing.FontStyle.Bold);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.label6.Location = new System.Drawing.Point(0, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(365, 50);
+            this.label6.Size = new System.Drawing.Size(364, 50);
             this.label6.TabIndex = 0;
             this.label6.Text = "إجمالي التبرعات";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -186,7 +181,7 @@
             // lblNumberInventory
             // 
             this.lblNumberInventory.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lblNumberInventory.Font = new System.Drawing.Font("Cairo", 28F, System.Drawing.FontStyle.Bold);
+            this.lblNumberInventory.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Bold);
             this.lblNumberInventory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(156)))), ((int)(((byte)(18)))));
             this.lblNumberInventory.Location = new System.Drawing.Point(0, 55);
             this.lblNumberInventory.Name = "lblNumberInventory";
@@ -197,13 +192,12 @@
             // 
             // label8
             // 
-            this.label8.AutoSize = false;
             this.label8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label8.Font = new System.Drawing.Font("Cairo", 14F, System.Drawing.FontStyle.Bold);
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.label8.Location = new System.Drawing.Point(0, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(365, 50);
+            this.label8.Size = new System.Drawing.Size(364, 50);
             this.label8.TabIndex = 0;
             this.label8.Text = "أصناف المخزون";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -229,7 +223,7 @@
             // lblNumberDisbursement
             // 
             this.lblNumberDisbursement.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lblNumberDisbursement.Font = new System.Drawing.Font("Cairo", 28F, System.Drawing.FontStyle.Bold);
+            this.lblNumberDisbursement.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Bold);
             this.lblNumberDisbursement.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(43)))));
             this.lblNumberDisbursement.Location = new System.Drawing.Point(0, 55);
             this.lblNumberDisbursement.Name = "lblNumberDisbursement";
@@ -240,15 +234,14 @@
             // 
             // label10
             // 
-            this.label10.AutoSize = false;
             this.label10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label10.Font = new System.Drawing.Font("Cairo", 14F, System.Drawing.FontStyle.Bold);
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.label10.Location = new System.Drawing.Point(0, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(365, 50);
+            this.label10.Size = new System.Drawing.Size(367, 50);
             this.label10.TabIndex = 0;
-            this.label10.Text = "عمليات الصرف";
+            this.label10.Text = "صندوق مالي";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tlpContent
@@ -291,7 +284,7 @@
             chartArea1.Name = "ChartArea1";
             this.chartStatistics.ChartAreas.Add(chartArea1);
             this.chartStatistics.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend1.Font = new System.Drawing.Font("Cairo", 10F);
+            legend1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             legend1.IsTextAutoFit = false;
             legend1.Name = "Legend1";
             this.chartStatistics.Legends.Add(legend1);
@@ -299,12 +292,12 @@
             this.chartStatistics.Name = "chartStatistics";
             series1.ChartArea = "ChartArea1";
             series1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            series1.Font = new System.Drawing.Font("Cairo", 10F);
+            series1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             series1.Legend = "Legend1";
             series1.Name = "التبرعات";
             series2.ChartArea = "ChartArea1";
             series2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(43)))));
-            series2.Font = new System.Drawing.Font("Cairo", 10F);
+            series2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             series2.Legend = "Legend1";
             series2.Name = "عمليات الصرف";
             this.chartStatistics.Series.Add(series1);
@@ -316,7 +309,7 @@
             // label1
             // 
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Font = new System.Drawing.Font("Cairo", 14F, System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label1.Location = new System.Drawing.Point(20, 20);
             this.label1.Name = "label1";
@@ -351,7 +344,7 @@
             this.dgvRecentActivities.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(132)))), ((int)(((byte)(73)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -360,7 +353,7 @@
             this.dgvRecentActivities.ColumnHeadersHeight = 45;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Cairo", 11F);
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(245)))), ((int)(((byte)(235)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
@@ -377,7 +370,7 @@
             this.dgvRecentActivities.Size = new System.Drawing.Size(864, 509);
             this.dgvRecentActivities.TabIndex = 2;
             this.dgvRecentActivities.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgvRecentActivities.ThemeStyle.AlternatingRowsStyle.Font = new System.Drawing.Font("Cairo", 11F);
+            this.dgvRecentActivities.ThemeStyle.AlternatingRowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.dgvRecentActivities.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvRecentActivities.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(245)))), ((int)(((byte)(235)))));
             this.dgvRecentActivities.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
@@ -385,14 +378,14 @@
             this.dgvRecentActivities.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvRecentActivities.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
             this.dgvRecentActivities.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvRecentActivities.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold);
+            this.dgvRecentActivities.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.dgvRecentActivities.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dgvRecentActivities.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvRecentActivities.ThemeStyle.HeaderStyle.Height = 45;
             this.dgvRecentActivities.ThemeStyle.ReadOnly = true;
             this.dgvRecentActivities.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvRecentActivities.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvRecentActivities.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Cairo", 11F);
+            this.dgvRecentActivities.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.dgvRecentActivities.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvRecentActivities.ThemeStyle.RowsStyle.Height = 40;
             this.dgvRecentActivities.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(245)))), ((int)(((byte)(235)))));
@@ -401,7 +394,7 @@
             // label2
             // 
             this.label2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label2.Font = new System.Drawing.Font("Cairo", 14F, System.Drawing.FontStyle.Bold);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label2.Location = new System.Drawing.Point(20, 20);
             this.label2.Name = "label2";
@@ -424,13 +417,9 @@
             this.Text = "لوحة التحكم";
             this.tlpCards.ResumeLayout(false);
             this.pnlBeneficiaries.ResumeLayout(false);
-            this.pnlBeneficiaries.PerformLayout();
             this.pnlDonations.ResumeLayout(false);
-            this.pnlDonations.PerformLayout();
             this.pnlInventory.ResumeLayout(false);
-            this.pnlInventory.PerformLayout();
             this.pnlDisbursement.ResumeLayout(false);
-            this.pnlDisbursement.PerformLayout();
             this.tlpContent.ResumeLayout(false);
             this.pnlChart.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chartStatistics)).EndInit();

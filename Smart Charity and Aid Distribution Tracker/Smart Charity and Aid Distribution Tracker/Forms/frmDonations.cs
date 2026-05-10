@@ -344,6 +344,42 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
 
                 DataService.AddDonation(newDonation);
 
+                // تأكد من وجود هذا في بداية الدالة
+                string performedBy = currentUser != null ? currentUser.EmployeeID : "System";
+
+                // ... (الكود الخاص بك للتحقق من المدخلات) ...
+
+                // إنشاء كائن التبرع
+                var donation = new Donation
+                {
+                    DonationID = "DON" + DateTime.Now.ToString("yyyyMMddHHmmss"),
+                    DonorID = cmbDonor.SelectedValue.ToString(),
+                    DonationType = DonationType.نقدي,
+                    Amount = amount,
+                    DonationDate = DateTime.Now,
+                    ReceivedBy = performedBy,
+                    Notes = txtNotes.Text.Trim()
+                };
+
+                // حفظ التبرع
+                DataService.AddDonation(donation);
+
+                // تسجيل الحركة المالية (وارد) لإضافة المبلغ للصندوق
+                var finTransaction = new FinancialTransaction
+                {
+                    TransactionID = "TRX" + DateTime.Now.ToString("yyyyMMddHHmmss"),
+                    Type = TransactionType.وارد,
+                    Amount = amount,
+                    TransactionDate = DateTime.Now,
+                    ReferenceID = newDonation.DonationID, // استخدمنا newDonation هنا
+                    PerformedBy = performedBy, // استخدمنا performedBy هنا
+                    Notes = $"تبرع نقدي من المتبرع: {cmbDonor.Text}"
+                };
+                DataService.RecordFinancialTransaction(finTransaction);
+
+                new frmAlert("تم حفظ التبرع النقدي وإضافته للصندوق بنجاح!").ShowDialog();
+
+
                 // --- السحر هنا: تسجيل حركة المخزون (وارد) للتبرع العيني ---
                 if (type == DonationType.عيني)
                 {
