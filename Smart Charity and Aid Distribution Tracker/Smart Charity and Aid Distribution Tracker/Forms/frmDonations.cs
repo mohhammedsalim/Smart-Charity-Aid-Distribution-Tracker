@@ -41,6 +41,13 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
             SetupComboBoxes();
             LoadDonationsData();
             SetPanelMode(PanelMode.View);
+
+            var currentUser = SessionManager.GetCurrentUser();
+            if (currentUser != null && currentUser.Role == UserRole.مستخدم_عادي)
+            {
+                btnEdit.Visible = false;
+                btnDelete.Visible = false;
+            }
         }
         // --- ميزة التنقل السلس والبحث السريع بزر Enter ---
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
