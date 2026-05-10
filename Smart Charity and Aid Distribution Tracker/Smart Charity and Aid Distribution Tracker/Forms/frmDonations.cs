@@ -42,6 +42,37 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
             LoadDonationsData();
             SetPanelMode(PanelMode.View);
         }
+        // --- ميزة التنقل السلس والبحث السريع بزر Enter ---
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == Keys.Enter)
+            {
+                // إذا كان المؤشر في حقل البحث، قم بتنفيذ البحث
+                if (this.ActiveControl == txtSearch)
+                {
+                    btnSearch.PerformClick();
+                    return true;
+                }
+
+                // استثناء حقل الملاحظات (للسماح بالنزول لسطر جديد)
+                if (this.ActiveControl == txtNotes)
+                {
+                    return base.ProcessCmdKey(ref msg, keyData);
+                }
+
+                // استثناء الأزرار والجداول
+                if (this.ActiveControl is Guna.UI2.WinForms.Guna2Button ||
+                    this.ActiveControl is Guna.UI2.WinForms.Guna2DataGridView)
+                {
+                    return base.ProcessCmdKey(ref msg, keyData);
+                }
+
+                // تحويل ضغطة Enter إلى Tab للانتقال للحقل التالي
+                SendKeys.Send("{TAB}");
+                return true;
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
 
         private void frmDonations_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -75,7 +106,7 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
 
             DonationType type = (DonationType)cmbDonationType.SelectedItem;
 
-            if (type == DonationType.Cash)
+            if (type == DonationType.نقدي)
             {
                 // إظهار حقل المبلغ وإخفاء الصنف والكمية
                 txtAmount.Visible = true;
@@ -110,7 +141,7 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
             btnCancel.Visible = (mode == PanelMode.Add || mode == PanelMode.Edit);
 
             var currentUser = SessionManager.GetCurrentUser();
-            bool canModify = currentUser != null && (currentUser.Role == UserRole.Admin || currentUser.Role == UserRole.User);
+            bool canModify = currentUser != null && (currentUser.Role == UserRole.مدير || currentUser.Role == UserRole.مستخدم_عادي);
 
             btnAddNew.Visible = (mode == PanelMode.View && canModify);
 
@@ -146,7 +177,7 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
                             d.DonationID,
                             DonorName = donor.FullName,
                             Type = d.DonationType.ToString(),
-                            Details = d.DonationType == DonationType.Cash ? $"{d.Amount} ريال" : $"{d.Quantity} وحدة",
+                            Details = d.DonationType == DonationType.نقدي ? $"{d.Amount} ريال" : $"{d.Quantity} وحدة",
                             d.DonationDate
                         };
 
@@ -181,7 +212,7 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
                 lblDonorText.Text = donor != null ? donor.FullName : "غير معروف";
                 lblDonationTypeText.Text = donation.DonationType.ToString();
 
-                if (donation.DonationType == DonationType.Cash)
+                if (donation.DonationType == DonationType.نقدي)
                 {
                     lblAmountText.Text = donation.Amount.ToString();
                     lblItemText.Text = "----";
@@ -225,7 +256,7 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
                 cmbDonor.SelectedValue = _selectedDonation.DonorID;
                 cmbDonationType.SelectedItem = _selectedDonation.DonationType;
 
-                if (_selectedDonation.DonationType == DonationType.Cash)
+                if (_selectedDonation.DonationType == DonationType.نقدي)
                 {
                     txtAmount.Text = _selectedDonation.Amount.ToString();
                 }
@@ -269,7 +300,7 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
             double amount = 0;
             double quantity = 0;
 
-            if (type == DonationType.Cash)
+            if (type == DonationType.نقدي)
             {
                 if (!double.TryParse(txtAmount.Text, out amount) || amount <= 0)
                 {
@@ -303,9 +334,9 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
                     DonationID = newId,
                     DonorID = cmbDonor.SelectedValue.ToString(),
                     DonationType = type,
-                    ItemID = type == DonationType.InKind ? cmbItem.SelectedValue.ToString() : null,
-                    Quantity = type == DonationType.InKind ? quantity : 0,
-                    Amount = type == DonationType.Cash ? amount : 0,
+                    ItemID = type == DonationType.عيني ? cmbItem.SelectedValue.ToString() : null,
+                    Quantity = type == DonationType.عيني ? quantity : 0,
+                    Amount = type == DonationType.نقدي ? amount : 0,
                     DonationDate = DateTime.Now,
                     ReceivedBy = empId,
                     Notes = txtNotes.Text.Trim()
@@ -314,14 +345,14 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
                 DataService.AddDonation(newDonation);
 
                 // --- السحر هنا: تسجيل حركة المخزون (وارد) للتبرع العيني ---
-                if (type == DonationType.InKind)
+                if (type == DonationType.عيني)
                 {
                     var donorName = ((Donor)cmbDonor.SelectedItem).FullName;
                     var movement = new InventoryMovement
                     {
                         MovementID = "M" + Guid.NewGuid().ToString().Substring(0, 8),
                         ItemID = newDonation.ItemID,
-                        MovementType = MovementType.In, // وارد
+                        MovementType = MovementType.وارد, // وارد
                         Quantity = quantity,
                         MovementDate = DateTime.Now,
                         ReferenceID = newId,

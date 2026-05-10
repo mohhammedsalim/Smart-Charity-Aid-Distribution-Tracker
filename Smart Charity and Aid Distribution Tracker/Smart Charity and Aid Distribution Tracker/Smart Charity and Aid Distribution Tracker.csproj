@@ -163,6 +163,12 @@
     <EmbeddedResource Include="Forms\frmDonations.resx">
       <DependentUpon>frmDonations.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDonors.resx">
+      <DependentUpon>frmDonors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmInventory.resx">
+      <DependentUpon>frmInventory.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>

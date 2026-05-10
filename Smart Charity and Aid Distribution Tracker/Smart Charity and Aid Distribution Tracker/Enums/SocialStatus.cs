@@ -2,9 +2,9 @@
 {
     public enum SocialStatus
     {
-        Single,     // أعزب
-        Married,    // متزوج
-        Divorced,   // مطلق
-        Widowed     // أرمل
+        أعزب,
+        متزوج,
+        مطلق,
+        أرمل
     }
 }

@@ -1,10 +1,9 @@
-﻿using System.ComponentModel;
-public enum DistributionStatus
+﻿namespace Smart_Charity_and_Aid_Distribution_Tracker.Enums
 {
-    [Description("منفذة")]
-    Completed,
-    [Description("ملغاة")]
-    Cancelled,
-    [Description("معلقة")]
-    Pending
+    public enum DistributionStatus
+    {
+        منفذة,
+        ملغاة,
+        معلقة
+    }
 }

@@ -288,6 +288,7 @@
             this.cmbInventoryItems.Name = "cmbInventoryItems";
             this.cmbInventoryItems.Size = new System.Drawing.Size(490, 40);
             this.cmbInventoryItems.TabIndex = 7;
+            this.cmbInventoryItems.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label4
             // 
@@ -326,6 +327,7 @@
             this.cmbBeneficiaries.Name = "cmbBeneficiaries";
             this.cmbBeneficiaries.Size = new System.Drawing.Size(490, 40);
             this.cmbBeneficiaries.TabIndex = 5;
+            this.cmbBeneficiaries.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.cmbBeneficiaries.SelectedIndexChanged += new System.EventHandler(this.cmbBeneficiaries_SelectedIndexChanged);
             // 
             // label3

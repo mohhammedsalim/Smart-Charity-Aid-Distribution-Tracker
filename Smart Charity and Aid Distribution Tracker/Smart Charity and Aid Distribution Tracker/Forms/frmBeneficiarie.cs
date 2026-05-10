@@ -43,11 +43,34 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
 
             // 3. تطبيق الصلاحيات عند فتح الشاشة
             var currentUser = SessionManager.GetCurrentUser();
-            if (currentUser != null && currentUser.Role == UserRole.User)
+            if (currentUser != null && currentUser.Role == UserRole.مستخدم_عادي)
             {
                 btnEdit.Visible = false;
                 btnDelete.Visible = false;
             }
+        }
+        // --- ميزة التنقل السلس بزر Enter بين جميع الحقول ---
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == Keys.Enter)
+            {
+                // 1. استثناء حقل الملاحظات (لأنه متعدد الأسطر ونحتاج Enter للنزول لسطر جديد)
+                if (this.ActiveControl is Guna.UI2.WinForms.Guna2TextBox txt && txt.Multiline)
+                {
+                    return base.ProcessCmdKey(ref msg, keyData);
+                }
+
+                // 2. استثناء الأزرار (حتى يعمل زر الحفظ أو البحث عند تحديده والضغط على Enter)
+                if (this.ActiveControl is Guna.UI2.WinForms.Guna2Button)
+                {
+                    return base.ProcessCmdKey(ref msg, keyData);
+                }
+
+                // 3. تحويل ضغطة Enter إلى Tab للانتقال للحقل التالي بسلاسة كالبرق
+                SendKeys.Send("{TAB}");
+                return true;
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
         }
 
         private void SetupComboBoxes()
@@ -75,7 +98,7 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
 
             // تطبيق الصلاحيات على الأزرار
             var currentUser = SessionManager.GetCurrentUser();
-            if (currentUser != null && currentUser.Role == UserRole.User)
+            if (currentUser != null && currentUser.Role == UserRole.مستخدم_عادي)
             {
                 btnEdit.Visible = false;
                 btnDelete.Visible = false;
@@ -214,7 +237,7 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
 
                 // تطبيق الصلاحيات
                 var currentUser = SessionManager.GetCurrentUser();
-                if (currentUser != null && currentUser.Role == UserRole.Admin)
+                if (currentUser != null && currentUser.Role == UserRole.مدير)
                 {
                     btnEdit.Visible = (_selectedBeneficiary != null);
                     btnDelete.Visible = (_selectedBeneficiary != null);
