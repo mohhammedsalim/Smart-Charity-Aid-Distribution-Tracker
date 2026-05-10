@@ -4,250 +4,254 @@ using Smart_Charity_and_Aid_Distribution_Tracker.Models;
 using Smart_Charity_and_Aid_Distribution_Tracker.Services;
 using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
 using System.Windows.Forms;
+using TheArtOfDevHtmlRenderer.Adapters;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Menu;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Tab;
 
 namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
 {
     public partial class frmDistribution : Form
     {
-        private List<DistributionDetail> _cartItems = new List<DistributionDetail>();
-        private bool _isLoading = false;
-
         public frmDistribution()
         {
             InitializeComponent();
             FontManager.ApplyFontToControls(this);
+
+            // ربط الأحداث
+            this.Load += FrmDistribution_Load;
+            this.btnAddItemToCart.Click += BtnAddItemToCart_Click;
+            this.btnRemoveFromCart.Click += BtnRemoveFromCart_Click;
+            this.btnClearCart.Click += BtnClearCart_Click;
+            this.btnSave.Click += BtnSave_Click;
+
+            // أحداث تغيير نوع الصرف
+            this.rbInKind.CheckedChanged += RbType_CheckedChanged;
+            this.rbCash.CheckedChanged += RbType_CheckedChanged;
         }
 
-        private void frmDistribution_Load(object sender, EventArgs e)
+        private void FrmDistribution_Load(object sender, EventArgs e)
         {
-            this.BeginInvoke(new Action(() =>
+            SetupComboBoxes();
+            ResetForm();
+        }
+
+        private void SetupComboBoxes()
+        {
+            // تحميل المستفيدين النشطين فقط
+            var activeBeneficiaries = DataService.GetBeneficiaries().Where(b => b.IsActive).ToList();
+            cmbBeneficiary.DataSource = activeBeneficiaries;
+            cmbBeneficiary.DisplayMember = "FullName";
+            cmbBeneficiary.ValueMember = "BeneficiaryID";
+            cmbBeneficiary.SelectedIndex = -1;
+
+            // تحميل الأصناف النشطة فقط
+            var activeItems = DataService.GetAllInventoryItems().Where(i => i.IsActive).ToList();
+            cmbItem.DataSource = activeItems;
+            cmbItem.DisplayMember = "ItemName";
+            cmbItem.ValueMember = "ItemID";
+            cmbItem.SelectedIndex = -1;
+        }
+
+        // --- منطق التبديل بين عيني ونقدي ---
+        private void RbType_CheckedChanged(object sender, EventArgs e)
+        {
+            bool isInKind = rbInKind.Checked;
+
+            // إظهار/إخفاء عناصر الصرف العيني
+            label3.Visible = isInKind; // كلمة الصنف
+            cmbItem.Visible = isInKind;
+            label4.Visible = isInKind; // كلمة الكمية
+            numQuantity.Visible = isInKind; // استخدام numQuantity بدلاً من txtQuantity
+            btnAddItemToCart.Visible = isInKind;
+            btnRemoveFromCart.Visible = isInKind;
+            btnClearCart.Visible = isInKind;
+            pnlView.Visible = isInKind; // جدول السلة
+
+            // إظهار/إخفاء عناصر الصرف النقدي
+            lblAmount.Visible = !isInKind;
+            txtAmount.Visible = !isInKind;
+        }
+
+        // --- منطق السلة (للصرف العيني) ---
+        private void BtnAddItemToCart_Click(object sender, EventArgs e)
+        {
+            if (cmbItem.SelectedItem == null)
             {
-                ResetForm();
-                LoadComboBoxes();
-            }));
-        }
-
-        // تحميل البيانات في القوائم فقط (بدون مسح)
-        private void LoadComboBoxes()
-        {
-            _isLoading = true;
-
-            cmbBeneficiaries.DataSource = null;
-            cmbBeneficiaries.Items.Clear();
-            cmbBeneficiaries.DataSource = DataService.GetBeneficiaries();
-            cmbBeneficiaries.DisplayMember = "FullName";
-            cmbBeneficiaries.ValueMember = "BeneficiaryID";
-            cmbBeneficiaries.SelectedIndex = -1;
-
-            var activeItems = DataService.GetAllInventoryItems()
-                                         .Where(item => item.IsActive && item.CurrentQuantity > 0)
-                                         .ToList();
-            cmbInventoryItems.DataSource = null;
-            cmbInventoryItems.Items.Clear();
-            cmbInventoryItems.DataSource = activeItems;
-            cmbInventoryItems.DisplayMember = "ItemName";
-            cmbInventoryItems.ValueMember = "ItemID";
-            cmbInventoryItems.SelectedIndex = -1;
-
-            _isLoading = false;
-        }
-        // --- ميزة التنقل السلس بزر Enter ---
-        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
-        {
-            if (keyData == Keys.Enter)
-            {
-                // إذا كان المؤشر في حقل الكمية، قم بالضغط على زر "إضافة للسلة" تلقائياً
-                if (this.ActiveControl == numQuantity)
-                {
-                    btnAddItemToCart.PerformClick();
-                    cmbInventoryItems.Focus(); // العودة للصنف لإضافة صنف آخر بسرعة
-                    return true;
-                }
-
-                // استثناء الأزرار وجدول السلة
-                if (this.ActiveControl is Guna.UI2.WinForms.Guna2Button ||
-                    this.ActiveControl is Guna.UI2.WinForms.Guna2DataGridView)
-                {
-                    return base.ProcessCmdKey(ref msg, keyData);
-                }
-
-                // تحويل ضغطة Enter إلى Tab للانتقال للحقل التالي
-                SendKeys.Send("{TAB}");
-                return true;
-            }
-            return base.ProcessCmdKey(ref msg, keyData);
-        }
-
-        private void ResetForm()
-        {
-            _isLoading = true;
-
-            // مسح القوائم أولاً
-            cmbBeneficiaries.DataSource = null;
-            cmbBeneficiaries.Items.Clear();
-            cmbInventoryItems.DataSource = null;
-            cmbInventoryItems.Items.Clear();
-
-            numQuantity.Value = 1;
-
-            _cartItems.Clear();
-            RefreshCartGrid();
-
-            lblPanelTitle.Text = "الخطوة 1: اختر المستفيد";
-            pnlAddItem.Enabled = false;
-            pnlCart.Enabled = true;  // السلة دائماً مفعلة للعرض
-            btnSave.Enabled = false;
-
-            _isLoading = false;
-        }
-
-        private void RefreshCartGrid()
-        {
-            dgvCart.Rows.Clear();
-
-            foreach (var cartItem in _cartItems)
-            {
-                var inventoryItem = DataService.GetAllInventoryItems()
-                                               .FirstOrDefault(i => i.ItemID == cartItem.ItemID);
-                if (inventoryItem != null)
-                {
-                    dgvCart.Rows.Add(inventoryItem.ItemID, inventoryItem.ItemName,
-                                     cartItem.Quantity, inventoryItem.Unit);
-                }
-            }
-
-            btnSave.Enabled = _cartItems.Any();
-        }
-
-        private void cmbBeneficiaries_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (_isLoading) return;
-
-            bool beneficiarySelected = cmbBeneficiaries.SelectedIndex != -1;
-            pnlAddItem.Enabled = beneficiarySelected;
-            pnlCart.Enabled = beneficiarySelected;
-
-            if (beneficiarySelected)
-                lblPanelTitle.Text = "الخطوة 2: أضف أصنافاً للسلة";
-        }
-
-        private void btnAddItemToCart_Click(object sender, EventArgs e)
-        {
-            if (cmbInventoryItems.SelectedValue == null)
-            {
-                new frmAlert("يرجى اختيار صنف لإضافته.").ShowDialog();
+                new frmAlert("الرجاء اختيار صنف أولاً.").ShowDialog();
                 return;
             }
 
-            string selectedItemId = cmbInventoryItems.SelectedValue.ToString();
-            double quantityToAdd = (double)numQuantity.Value;
+            double quantity = Convert.ToDouble(numQuantity.Value);
 
-            var inventoryItem = DataService.GetAllInventoryItems()
-                                           .FirstOrDefault(i => i.ItemID == selectedItemId);
-            if (inventoryItem != null && quantityToAdd > inventoryItem.CurrentQuantity)
+            if (quantity <= 0)
             {
-                new frmAlert($"الكمية المطلوبة ({quantityToAdd}) أكبر من الكمية المتاحة ({inventoryItem.CurrentQuantity}).").ShowDialog();
+                new frmAlert("الرجاء إدخال كمية أكبر من الصفر.").ShowDialog();
                 return;
             }
 
-            var existingCartItem = _cartItems.FirstOrDefault(item => item.ItemID == selectedItemId);
-            if (existingCartItem != null)
+            var selectedItem = (InventoryItem)cmbItem.SelectedItem;
+
+            // التحقق من توفر الكمية في المخزون
+            if (selectedItem.CurrentQuantity < quantity)
             {
-                existingCartItem.Quantity += quantityToAdd;
+                new frmAlert($"الكمية المطلوبة غير متوفرة. المتاح في المخزون: {selectedItem.CurrentQuantity} {selectedItem.Unit}").ShowDialog();
+                return;
+            }
+
+            // التحقق مما إذا كان الصنف موجوداً مسبقاً في السلة
+            foreach (DataGridViewRow row in dgvCart.Rows)
+            {
+                if (row.Cells["colItemID"].Value.ToString() == selectedItem.ItemID)
+                {
+                    double currentCartQty = Convert.ToDouble(row.Cells["colQuantity"].Value);
+                    double newTotalQty = currentCartQty + quantity;
+
+                    if (selectedItem.CurrentQuantity < newTotalQty)
+                    {
+                        new frmAlert($"لا يمكنك إضافة المزيد. إجمالي المطلوب يتجاوز المتاح في المخزون.").ShowDialog();
+                        return;
+                    }
+
+                    row.Cells["colQuantity"].Value = newTotalQty;
+                    numQuantity.Value = 1; // تصفير العداد بعد الإضافة
+                    return;
+                }
+            }
+
+            // إضافة صف جديد للسلة
+            dgvCart.Rows.Add(selectedItem.ItemID, selectedItem.ItemName, quantity, selectedItem.Unit);
+            numQuantity.Value = 1; // تصفير العداد
+        }
+
+        private void BtnRemoveFromCart_Click(object sender, EventArgs e)
+        {
+            if (dgvCart.CurrentRow != null)
+            {
+                dgvCart.Rows.Remove(dgvCart.CurrentRow);
             }
             else
             {
-                _cartItems.Add(new DistributionDetail
-                {
-                    ItemID = selectedItemId,
-                    Quantity = quantityToAdd
-                });
+                new frmAlert("الرجاء تحديد صنف من السلة لحذفه.").ShowDialog();
             }
-
-            RefreshCartGrid();
         }
 
-        private void dgvCart_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
+        private void BtnClearCart_Click(object sender, EventArgs e)
         {
-            if (e.Row.Cells["colItemID"].Value != null)
+            if (dgvCart.Rows.Count > 0)
             {
-                string itemIdToRemove = e.Row.Cells["colItemID"].Value.ToString();
-                var itemToRemove = _cartItems.FirstOrDefault(item => item.ItemID == itemIdToRemove);
-                if (itemToRemove != null)
-                    _cartItems.Remove(itemToRemove);
+                dgvCart.Rows.Clear();
             }
-            btnSave.Enabled = _cartItems.Any();
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        // --- منطق الحفظ ---
+        private void BtnSave_Click(object sender, EventArgs e)
         {
-            var selectedBeneficiary = cmbBeneficiaries.SelectedItem as Beneficiary;
-
-            if (selectedBeneficiary == null)
+            if (cmbBeneficiary.SelectedItem == null)
             {
-                new frmAlert("الرجاء تحديد المستفيد أولاً.").ShowDialog();
-                return;
-            }
-
-            if (_cartItems.Count == 0)
-            {
-                new frmAlert("سلة التوزيع فارغة. الرجاء إضافة أصناف.").ShowDialog();
+                new frmAlert("الرجاء اختيار المستفيد.").ShowDialog();
                 return;
             }
 
             var currentUser = SessionManager.GetCurrentUser();
-            if (currentUser == null)
-            {
-                new frmAlert("حدث خطأ في جلسة المستخدم. الرجاء تسجيل الدخول مجدداً.").ShowDialog();
-                return;
-            }
+            string performedBy = currentUser != null ? currentUser.EmployeeID : "System";
 
-            string newDistId = "D" + DateTime.Now.ToString("yyyyMMddHHmmss");
-
+            // إنشاء كائن التوزيع الأساسي
             var distribution = new Distribution
             {
-                DistributionID = newDistId,
-                BeneficiaryID = selectedBeneficiary.BeneficiaryID,
+                DistributionID = "DIST" + DateTime.Now.ToString("yyyyMMddHHmmss"),
+                BeneficiaryID = cmbBeneficiary.SelectedValue.ToString(),
                 DistributionDate = DateTime.Now,
-                PerformedBy = currentUser.EmployeeID,
+                PerformedBy = performedBy,
                 Status = DistributionStatus.منفذة,
-                Notes = ""
+                Notes = txtNotes.Text.Trim()
             };
 
-            DataService.AddDistribution(distribution);
-
-            foreach (var cartItem in _cartItems)
+            if (rbCash.Checked)
             {
-                var detail = new DistributionDetail
+                // --- حفظ صرف نقدي ---
+                if (!double.TryParse(txtAmount.Text, out double amount) || amount <= 0)
                 {
-                    DetailID = "DD" + Guid.NewGuid().ToString().Substring(0, 8),
-                    DistributionID = newDistId,
-                    ItemID = cartItem.ItemID,
-                    Quantity = cartItem.Quantity
-                };
-                DataService.AddDistributionDetail(detail);
+                    new frmAlert("الرجاء إدخال مبلغ نقدي صحيح وأكبر من الصفر.").ShowDialog();
+                    return;
+                }
 
-                var movement = new InventoryMovement
+                distribution.Type = DonationType.نقدي;
+                distribution.Amount = amount;
+
+                DataService.AddDistribution(distribution);
+                new frmAlert("تم حفظ عملية الصرف النقدي بنجاح!").ShowDialog();
+            }
+            else
+            {
+                // --- حفظ صرف عيني ---
+                if (dgvCart.Rows.Count == 0)
                 {
-                    MovementID = "M" + Guid.NewGuid().ToString().Substring(0, 8),
-                    ItemID = cartItem.ItemID,
-                    MovementType = MovementType.صادر,
-                    Quantity = cartItem.Quantity,
-                    MovementDate = DateTime.Now,
-                    ReferenceID = newDistId,
-                    PerformedBy = currentUser.EmployeeID,
-                    Notes = $"صرف مساعدات للمستفيد: {selectedBeneficiary.FullName}"
-                };
-                DataService.RecordMovement(movement);
+                    new frmAlert("السلة فارغة. الرجاء إضافة أصناف أولاً.").ShowDialog();
+                    return;
+                }
+
+                distribution.Type = DonationType.عيني;
+                distribution.Amount = 0;
+
+                // حفظ التوزيع
+                DataService.AddDistribution(distribution);
+
+                // حفظ التفاصيل وخصم المخزون
+                foreach (DataGridViewRow row in dgvCart.Rows)
+                {
+                    string itemId = row.Cells["colItemID"].Value.ToString();
+                    double qty = Convert.ToDouble(row.Cells["colQuantity"].Value);
+
+                    var detail = new DistributionDetail
+                    {
+                        DetailID = Guid.NewGuid().ToString(),
+                        DistributionID = distribution.DistributionID,
+                        ItemID = itemId,
+                        Quantity = qty
+                    };
+                    DataService.AddDistributionDetail(detail);
+
+                    var movement = new InventoryMovement
+                    {
+                        MovementID = "M" + Guid.NewGuid().ToString().Substring(0, 8),
+                        ItemID = itemId,
+                        MovementType = MovementType.صادر,
+                        Quantity = qty,
+                        MovementDate = DateTime.Now,
+                        ReferenceID = distribution.DistributionID,
+                        PerformedBy = performedBy,
+                        Notes = $"صرف مساعدات للمستفيد: {cmbBeneficiary.Text}"
+                    };
+
+                    // تسجيل حركة المخزون (صادر)
+                    DataService.RecordMovement(
+                        movement
+                    );
+                }
+
+                new frmAlert("تم حفظ عملية الصرف العيني وخصم المخزون بنجاح!").ShowDialog();
             }
 
-            new frmAlert("تم حفظ عملية التوزيع بنجاح وخصم المواد من المخزون.").ShowDialog();
-
             ResetForm();
-            LoadComboBoxes();
+        }
+
+        private void ResetForm()
+        {
+            cmbBeneficiary.SelectedIndex = -1;
+            cmbItem.SelectedIndex = -1;
+            numQuantity.Value = 1;
+            txtAmount.Clear();
+            txtNotes.Clear();
+            dgvCart.Rows.Clear();
+            rbInKind.Checked = true; // العودة للوضع الافتراضي
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

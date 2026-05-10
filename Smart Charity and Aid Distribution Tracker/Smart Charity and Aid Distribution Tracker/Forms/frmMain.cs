@@ -126,7 +126,18 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
             }
             else
             {
-                Application.Exit();
+                try
+                {
+                    Application.Exit();
+                }
+                catch (System.NullReferenceException ex)
+                {
+                    MessageBox.Show("حدث خطأ أثناء إغلاق التطبيق: " + ex.Message, "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("حدث خطأ أثناء إغلاق التطبيق: " + ex.Message, "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 

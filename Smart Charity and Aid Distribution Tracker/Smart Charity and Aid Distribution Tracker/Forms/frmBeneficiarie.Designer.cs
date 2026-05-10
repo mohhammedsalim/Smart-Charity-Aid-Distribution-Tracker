@@ -18,9 +18,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlBody = new System.Windows.Forms.Panel();
             this.pnlList = new System.Windows.Forms.Panel();
             this.dgvBeneficiariesList = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -109,26 +109,26 @@
             // 
             this.dgvBeneficiariesList.AllowUserToAddRows = false;
             this.dgvBeneficiariesList.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
-            this.dgvBeneficiariesList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgvBeneficiariesList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvBeneficiariesList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(132)))), ((int)(((byte)(73)))));
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvBeneficiariesList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(132)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBeneficiariesList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvBeneficiariesList.ColumnHeadersHeight = 45;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(245)))), ((int)(((byte)(235)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvBeneficiariesList.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(245)))), ((int)(((byte)(235)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvBeneficiariesList.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvBeneficiariesList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvBeneficiariesList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvBeneficiariesList.Location = new System.Drawing.Point(20, 100);
@@ -182,7 +182,7 @@
             this.btnClear.FillColor = System.Drawing.Color.Gainsboro;
             this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
             this.btnClear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnClear.Location = new System.Drawing.Point(373, 10);
+            this.btnClear.Location = new System.Drawing.Point(324, 16);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(100, 45);
             this.btnClear.TabIndex = 6;
@@ -195,7 +195,7 @@
             this.btnSearch.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
             this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
             this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.Location = new System.Drawing.Point(483, 10);
+            this.btnSearch.Location = new System.Drawing.Point(434, 16);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(100, 45);
             this.btnSearch.TabIndex = 5;
@@ -209,7 +209,7 @@
             this.txtSearch.DefaultText = "";
             this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
             this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.txtSearch.Location = new System.Drawing.Point(593, 10);
+            this.txtSearch.Location = new System.Drawing.Point(544, 16);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PlaceholderText = "ابحث بالاسم أو الهوية...";
@@ -266,7 +266,7 @@
             this.chkIsActive.CheckedState.BorderThickness = 0;
             this.chkIsActive.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
             this.chkIsActive.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.chkIsActive.Location = new System.Drawing.Point(376, 650);
+            this.chkIsActive.Location = new System.Drawing.Point(329, 647);
             this.chkIsActive.Name = "chkIsActive";
             this.chkIsActive.Size = new System.Drawing.Size(101, 28);
             this.chkIsActive.TabIndex = 16;
@@ -284,13 +284,13 @@
             this.txtNotes.DefaultText = "";
             this.txtNotes.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
             this.txtNotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.txtNotes.Location = new System.Drawing.Point(97, 570);
+            this.txtNotes.Location = new System.Drawing.Point(95, 713);
             this.txtNotes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNotes.Multiline = true;
             this.txtNotes.Name = "txtNotes";
             this.txtNotes.PlaceholderText = "ملاحظات إضافية...";
             this.txtNotes.SelectedText = "";
-            this.txtNotes.Size = new System.Drawing.Size(380, 70);
+            this.txtNotes.Size = new System.Drawing.Size(475, 88);
             this.txtNotes.TabIndex = 15;
             // 
             // label10
@@ -298,7 +298,7 @@
             this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label10.Location = new System.Drawing.Point(407, 540);
+            this.label10.Location = new System.Drawing.Point(363, 542);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(67, 24);
             this.label10.TabIndex = 14;
@@ -312,7 +312,7 @@
             this.txtNeedReason.DefaultText = "";
             this.txtNeedReason.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
             this.txtNeedReason.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.txtNeedReason.Location = new System.Drawing.Point(97, 490);
+            this.txtNeedReason.Location = new System.Drawing.Point(76, 490);
             this.txtNeedReason.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNeedReason.Name = "txtNeedReason";
             this.txtNeedReason.PlaceholderText = "سبب الاحتياج...";
@@ -325,7 +325,7 @@
             this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label9.Location = new System.Drawing.Point(377, 460);
+            this.label9.Location = new System.Drawing.Point(332, 462);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(93, 24);
             this.label9.TabIndex = 12;
@@ -343,9 +343,9 @@
             this.cmbSocialStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.cmbSocialStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cmbSocialStatus.ItemHeight = 35;
-            this.cmbSocialStatus.Location = new System.Drawing.Point(97, 410);
+            this.cmbSocialStatus.Location = new System.Drawing.Point(148, 801);
             this.cmbSocialStatus.Name = "cmbSocialStatus";
-            this.cmbSocialStatus.Size = new System.Drawing.Size(380, 41);
+            this.cmbSocialStatus.Size = new System.Drawing.Size(743, 41);
             this.cmbSocialStatus.TabIndex = 11;
             this.cmbSocialStatus.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -354,7 +354,7 @@
             this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label8.Location = new System.Drawing.Point(367, 380);
+            this.label8.Location = new System.Drawing.Point(323, 382);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(110, 24);
             this.label8.TabIndex = 10;
@@ -368,7 +368,7 @@
             this.txtFamilySize.DefaultText = "";
             this.txtFamilySize.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
             this.txtFamilySize.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.txtFamilySize.Location = new System.Drawing.Point(97, 335);
+            this.txtFamilySize.Location = new System.Drawing.Point(76, 335);
             this.txtFamilySize.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtFamilySize.Name = "txtFamilySize";
             this.txtFamilySize.PlaceholderText = "عدد الأفراد...";
@@ -381,7 +381,7 @@
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label7.Location = new System.Drawing.Point(367, 305);
+            this.label7.Location = new System.Drawing.Point(323, 307);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(108, 24);
             this.label7.TabIndex = 8;
@@ -395,7 +395,7 @@
             this.txtAddress.DefaultText = "";
             this.txtAddress.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
             this.txtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.txtAddress.Location = new System.Drawing.Point(97, 260);
+            this.txtAddress.Location = new System.Drawing.Point(76, 260);
             this.txtAddress.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.PlaceholderText = "العنوان...";
@@ -408,7 +408,7 @@
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label4.Location = new System.Drawing.Point(427, 230);
+            this.label4.Location = new System.Drawing.Point(383, 232);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(52, 24);
             this.label4.TabIndex = 6;
@@ -422,7 +422,7 @@
             this.txtPhone.DefaultText = "";
             this.txtPhone.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
             this.txtPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.txtPhone.Location = new System.Drawing.Point(97, 185);
+            this.txtPhone.Location = new System.Drawing.Point(76, 185);
             this.txtPhone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.PlaceholderText = "رقم الجوال...";
@@ -435,7 +435,7 @@
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label3.Location = new System.Drawing.Point(407, 155);
+            this.label3.Location = new System.Drawing.Point(363, 157);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(75, 24);
             this.label3.TabIndex = 4;
@@ -449,7 +449,7 @@
             this.txtNationalID.DefaultText = "";
             this.txtNationalID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
             this.txtNationalID.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.txtNationalID.Location = new System.Drawing.Point(97, 110);
+            this.txtNationalID.Location = new System.Drawing.Point(76, 110);
             this.txtNationalID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNationalID.Name = "txtNationalID";
             this.txtNationalID.PlaceholderText = "رقم الهوية...";
@@ -462,7 +462,7 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label2.Location = new System.Drawing.Point(397, 80);
+            this.label2.Location = new System.Drawing.Point(352, 82);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(86, 24);
             this.label2.TabIndex = 2;
@@ -476,7 +476,7 @@
             this.txtFullName.DefaultText = "";
             this.txtFullName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
             this.txtFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.txtFullName.Location = new System.Drawing.Point(97, 35);
+            this.txtFullName.Location = new System.Drawing.Point(76, 35);
             this.txtFullName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtFullName.Name = "txtFullName";
             this.txtFullName.PlaceholderText = "الاسم الكامل...";
@@ -489,7 +489,7 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label1.Location = new System.Drawing.Point(397, 5);
+            this.label1.Location = new System.Drawing.Point(352, 7);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(81, 24);
             this.label1.TabIndex = 0;

@@ -21,5 +21,8 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Models
         {
             Details = new List<DistributionDetail>();
         }
+
+        public DonationType Type { get; set; } // عيني أو نقدي
+        public double Amount { get; set; } // المبلغ (يُستخدم فقط إذا كان النوع نقدي)
     }
 }

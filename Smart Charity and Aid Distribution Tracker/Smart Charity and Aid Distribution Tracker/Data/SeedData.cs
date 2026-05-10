@@ -12,8 +12,8 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Data
             return new List<User>
             {
                 new User { EmployeeID = "EMP001", FullName = "المدير العام", UserName = "admin", Password = "123", Role = UserRole.مدير, IsActive = true, CreatedDate = DateTime.Now },
-   new User { EmployeeID = "EMP002", FullName = "أحمد موظف", UserName = "user", Password = "123", Role = UserRole.مستخدم_عادي, IsActive = true, CreatedDate = DateTime.Now }
-   };
+                new User { EmployeeID = "EMP002", FullName = "أحمد موظف", UserName = "user", Password = "123", Role = UserRole.مستخدم_عادي, IsActive = true, CreatedDate = DateTime.Now }
+             };
         }
 
         public static List<Beneficiary> GetBeneficiaries()

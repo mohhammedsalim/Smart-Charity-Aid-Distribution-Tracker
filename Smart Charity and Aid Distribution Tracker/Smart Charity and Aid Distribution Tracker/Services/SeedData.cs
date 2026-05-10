@@ -33,9 +33,9 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Services
         {
             return new List<User>
             {
-                new User { EmployeeID = "E001", FullName = "المدير العام", UserName = "admin", Password = "123", Role = UserRole.مدير, IsActive = true, CreatedDate = DateTime.Now },
-                new User { EmployeeID = "E002", FullName = "موظف إدخال", UserName = "1", Password = "1", Role = UserRole.مدير, IsActive = true, CreatedDate = DateTime.Now },
-                new User { EmployeeID = "E003", FullName = "مستخدم عادي", UserName = "user", Password = "123", Role = UserRole.مستخدم_عادي, IsActive = true, CreatedDate = DateTime.Now }
+                new User { EmployeeID = "E001", FullName = "المدير العام", UserName = "مدير", Password = "123", Role = UserRole.مدير, IsActive = true, CreatedDate = DateTime.Now },
+                new User { EmployeeID = "E002", FullName = "موظف إدخال", UserName = "1", Password = "1", Role = UserRole.أمين_مخزن, IsActive = true, CreatedDate = DateTime.Now },
+                new User { EmployeeID = "E003", FullName = "مستخدم عادي", UserName = "موظف", Password = "123", Role = UserRole.مستخدم_عادي, IsActive = true, CreatedDate = DateTime.Now }
             };
         }
 

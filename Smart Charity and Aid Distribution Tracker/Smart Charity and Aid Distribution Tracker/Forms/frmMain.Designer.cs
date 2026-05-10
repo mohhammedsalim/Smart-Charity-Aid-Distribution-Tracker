@@ -22,11 +22,11 @@
             this.btnHome = new Guna.UI2.WinForms.Guna2Button();
             this.btnBeneficiaries = new Guna.UI2.WinForms.Guna2Button();
             this.btnInventory = new Guna.UI2.WinForms.Guna2Button();
-            this.btnDonations = new Guna.UI2.WinForms.Guna2Button();
             this.btnDisbursement = new Guna.UI2.WinForms.Guna2Button();
             this.btnReports = new Guna.UI2.WinForms.Guna2Button();
             this.btnDonors = new Guna.UI2.WinForms.Guna2Button();
             this.btnUsers = new Guna.UI2.WinForms.Guna2Button();
+            this.btnDonations = new Guna.UI2.WinForms.Guna2Button();
             this.lblBrand = new System.Windows.Forms.Label();
             this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
             this.pnlStatusBar = new Guna.UI2.WinForms.Guna2Panel();
@@ -74,7 +74,7 @@
             // 
             this.btnHome.BorderRadius = 8;
             this.btnHome.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            this.btnHome.Font = new System.Drawing.Font("Cairo", 10.5F, System.Drawing.FontStyle.Bold);
+            this.btnHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Bold);
             this.btnHome.ForeColor = System.Drawing.Color.White;
             this.btnHome.Location = new System.Drawing.Point(1175, 18);
             this.btnHome.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
@@ -88,7 +88,7 @@
             // 
             this.btnBeneficiaries.BorderRadius = 8;
             this.btnBeneficiaries.FillColor = System.Drawing.Color.Transparent;
-            this.btnBeneficiaries.Font = new System.Drawing.Font("Cairo", 10.5F, System.Drawing.FontStyle.Bold);
+            this.btnBeneficiaries.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Bold);
             this.btnBeneficiaries.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.btnBeneficiaries.Location = new System.Drawing.Point(1013, 18);
             this.btnBeneficiaries.Name = "btnBeneficiaries";
@@ -101,7 +101,7 @@
             // 
             this.btnInventory.BorderRadius = 8;
             this.btnInventory.FillColor = System.Drawing.Color.Transparent;
-            this.btnInventory.Font = new System.Drawing.Font("Cairo", 10.5F, System.Drawing.FontStyle.Bold);
+            this.btnInventory.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Bold);
             this.btnInventory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.btnInventory.Location = new System.Drawing.Point(894, 18);
             this.btnInventory.Name = "btnInventory";
@@ -110,24 +110,11 @@
             this.btnInventory.Text = "المخزون";
             this.btnInventory.Click += new System.EventHandler(this.btnInventory_Click);
             // 
-            // btnDonations
-            // 
-            this.btnDonations.BorderRadius = 8;
-            this.btnDonations.FillColor = System.Drawing.Color.Transparent;
-            this.btnDonations.Font = new System.Drawing.Font("Cairo", 10.5F, System.Drawing.FontStyle.Bold);
-            this.btnDonations.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.btnDonations.Location = new System.Drawing.Point(202, 18);
-            this.btnDonations.Name = "btnDonations";
-            this.btnDonations.Size = new System.Drawing.Size(113, 40);
-            this.btnDonations.TabIndex = 4;
-            this.btnDonations.Text = "التبرعات";
-            this.btnDonations.Click += new System.EventHandler(this.btnDonations_Click);
-            // 
             // btnDisbursement
             // 
             this.btnDisbursement.BorderRadius = 8;
             this.btnDisbursement.FillColor = System.Drawing.Color.Transparent;
-            this.btnDisbursement.Font = new System.Drawing.Font("Cairo", 10.5F, System.Drawing.FontStyle.Bold);
+            this.btnDisbursement.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Bold);
             this.btnDisbursement.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.btnDisbursement.Location = new System.Drawing.Point(725, 18);
             this.btnDisbursement.Name = "btnDisbursement";
@@ -140,7 +127,7 @@
             // 
             this.btnReports.BorderRadius = 8;
             this.btnReports.FillColor = System.Drawing.Color.Transparent;
-            this.btnReports.Font = new System.Drawing.Font("Cairo", 10.5F, System.Drawing.FontStyle.Bold);
+            this.btnReports.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Bold);
             this.btnReports.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.btnReports.Location = new System.Drawing.Point(607, 18);
             this.btnReports.Name = "btnReports";
@@ -153,7 +140,7 @@
             // 
             this.btnDonors.BorderRadius = 8;
             this.btnDonors.FillColor = System.Drawing.Color.Transparent;
-            this.btnDonors.Font = new System.Drawing.Font("Cairo", 10.5F, System.Drawing.FontStyle.Bold);
+            this.btnDonors.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Bold);
             this.btnDonors.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.btnDonors.Location = new System.Drawing.Point(501, 18);
             this.btnDonors.Name = "btnDonors";
@@ -166,7 +153,7 @@
             // 
             this.btnUsers.BorderRadius = 8;
             this.btnUsers.FillColor = System.Drawing.Color.Transparent;
-            this.btnUsers.Font = new System.Drawing.Font("Cairo", 10.5F, System.Drawing.FontStyle.Bold);
+            this.btnUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Bold);
             this.btnUsers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.btnUsers.Location = new System.Drawing.Point(321, 18);
             this.btnUsers.Name = "btnUsers";
@@ -175,10 +162,23 @@
             this.btnUsers.Text = "المستخدمون";
             this.btnUsers.Click += new System.EventHandler(this.btnUsers_Click);
             // 
+            // btnDonations
+            // 
+            this.btnDonations.BorderRadius = 8;
+            this.btnDonations.FillColor = System.Drawing.Color.Transparent;
+            this.btnDonations.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Bold);
+            this.btnDonations.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.btnDonations.Location = new System.Drawing.Point(202, 18);
+            this.btnDonations.Name = "btnDonations";
+            this.btnDonations.Size = new System.Drawing.Size(113, 40);
+            this.btnDonations.TabIndex = 4;
+            this.btnDonations.Text = "التبرعات";
+            this.btnDonations.Click += new System.EventHandler(this.btnDonations_Click);
+            // 
             // lblBrand
             // 
             this.lblBrand.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lblBrand.Font = new System.Drawing.Font("Cairo", 14F, System.Drawing.FontStyle.Bold);
+            this.lblBrand.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.lblBrand.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
             this.lblBrand.Location = new System.Drawing.Point(1294, 0);
             this.lblBrand.Name = "lblBrand";
@@ -193,7 +193,7 @@
             this.btnLogout.BorderRadius = 8;
             this.btnLogout.BorderThickness = 1;
             this.btnLogout.FillColor = System.Drawing.Color.White;
-            this.btnLogout.Font = new System.Drawing.Font("Cairo", 10.5F, System.Drawing.FontStyle.Bold);
+            this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Bold);
             this.btnLogout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
             this.btnLogout.Location = new System.Drawing.Point(20, 15);
             this.btnLogout.Name = "btnLogout";
@@ -220,9 +220,9 @@
             // 
             this.lblUserName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblUserName.AutoSize = true;
-            this.lblUserName.Font = new System.Drawing.Font("Cairo", 10F, System.Drawing.FontStyle.Bold);
+            this.lblUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.lblUserName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            this.lblUserName.Location = new System.Drawing.Point(1350, 7);
+            this.lblUserName.Location = new System.Drawing.Point(1313, 9);
             this.lblUserName.Name = "lblUserName";
             this.lblUserName.Size = new System.Drawing.Size(37, 20);
             this.lblUserName.TabIndex = 1;
@@ -232,7 +232,7 @@
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Cairo", 10F);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.label3.Location = new System.Drawing.Point(1420, 7);
             this.label3.Name = "label3";
