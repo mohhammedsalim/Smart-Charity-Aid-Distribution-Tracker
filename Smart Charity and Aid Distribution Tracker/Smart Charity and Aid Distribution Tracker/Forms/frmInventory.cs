@@ -29,11 +29,7 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             this.dgvInventoryList.SelectionChanged += new System.EventHandler(this.dgvInventoryList_SelectionChanged);
-            this.btnAddNew.Click += new System.EventHandler(this.btnAddNew_Click);
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+          
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmInventory_FormClosed);
 
             // 2. إعداد القوائم وتحميل البيانات

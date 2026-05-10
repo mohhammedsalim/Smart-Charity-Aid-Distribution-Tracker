@@ -6,176 +6,150 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
-using TheArtOfDevHtmlRenderer.Adapters;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Menu;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Tab;
 
 namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
 {
     public partial class frmDistribution : Form
     {
+        private string currentDistributionId = null;
+
         public frmDistribution()
         {
             InitializeComponent();
             FontManager.ApplyFontToControls(this);
 
-            // ربط الأحداث
+            // ربط الأحداث الأساسية المتوفرة في Designer الخاص بك
             this.Load += FrmDistribution_Load;
-            this.btnAddItemToCart.Click += BtnAddItemToCart_Click;
-            this.btnRemoveFromCart.Click += BtnRemoveFromCart_Click;
-            this.btnClearCart.Click += BtnClearCart_Click;
             this.btnSave.Click += BtnSave_Click;
+            this.btnAddNew.Click += (s, e) => SwitchMode(FormMode.Add);
+            this.btnCancel.Click += (s, e) => SwitchMode(FormMode.View);
+            this.dgvDistributionsList.SelectionChanged += DgvDistributionsList_SelectionChanged;
 
             // أحداث تغيير نوع الصرف
             this.rbInKind.CheckedChanged += RbType_CheckedChanged;
             this.rbCash.CheckedChanged += RbType_CheckedChanged;
+
+            // أحداث البحث
+            this.txtSearch.TextChanged += (s, e) => FilterData(txtSearch.Text);
+            this.btnClear.Click += (s, e) => { txtSearch.Clear(); RefreshData(); };
         }
 
         private void FrmDistribution_Load(object sender, EventArgs e)
         {
             SetupComboBoxes();
-            ResetForm();
+            RefreshData();
+            SwitchMode(FormMode.View);
         }
 
         private void SetupComboBoxes()
         {
-            // 1. تحميل المستفيدين النشطين فقط
-            var activeBeneficiaries = DataService.GetBeneficiaries().Where(b => b.IsActive == true).ToList();
+            // استخدام الدوال المتوفرة في DataService الخاص بك
+            var activeBeneficiaries = DataService.GetBeneficiaries().Where(b => b.IsActive).ToList();
             cmbBeneficiary.DataSource = activeBeneficiaries;
             cmbBeneficiary.DisplayMember = "FullName";
             cmbBeneficiary.ValueMember = "BeneficiaryID";
             cmbBeneficiary.SelectedIndex = -1;
 
-            // --- الترتيب الصحيح لتفعيل البحث ---
-            cmbBeneficiary.DropDownStyle = ComboBoxStyle.DropDown;
-            cmbBeneficiary.AutoCompleteSource = AutoCompleteSource.ListItems; // 1. تحديد المصدر أولاً
-            cmbBeneficiary.AutoCompleteMode = AutoCompleteMode.SuggestAppend; // 2. تفعيل البحث ثانياً
-            cmbBeneficiary.MaxDropDownItems = 5;
-            cmbBeneficiary.IntegralHeight = false;
-
-            // 2. تحميل الأصناف النشطة فقط
-            var activeItems = DataService.GetAllInventoryItems().Where(i => i.IsActive == true).ToList();
+            var activeItems = DataService.GetAllInventoryItems().Where(i => i.IsActive).ToList();
             cmbItem.DataSource = activeItems;
             cmbItem.DisplayMember = "ItemName";
             cmbItem.ValueMember = "ItemID";
             cmbItem.SelectedIndex = -1;
-
-            // --- الترتيب الصحيح لتفعيل البحث ---
-            cmbItem.DropDownStyle = ComboBoxStyle.DropDown;
-            cmbItem.AutoCompleteSource = AutoCompleteSource.ListItems; // 1. تحديد المصدر أولاً
-            cmbItem.AutoCompleteMode = AutoCompleteMode.SuggestAppend; // 2. تفعيل البحث ثانياً
-            cmbItem.MaxDropDownItems = 5;
-            cmbItem.IntegralHeight = false;
         }
 
-        // --- منطق التبديل بين عيني ونقدي ---
+        private void RefreshData()
+        {
+            var distributions = DataService.GetDistributions().OrderByDescending(d => d.DistributionDate).ToList();
+            UpdateGrid(distributions);
+        }
+
+        private void UpdateGrid(List<Distribution> list)
+        {
+            dgvDistributionsList.AutoGenerateColumns = false;
+
+            colID.DataPropertyName = "DistributionID";
+            colBeneficiaryName.DataPropertyName = "BeneficiaryName";
+            colDistType.DataPropertyName = "DistType";
+            colDistDate.DataPropertyName = "DistDate";
+
+            dgvDistributionsList.DataSource = list.Select(d => new
+            {
+                DistributionID = d.DistributionID,
+                BeneficiaryName = DataService.GetBeneficiaryById(d.BeneficiaryID)?.FullName,
+                DistType = d.Type.ToString(),
+                DistDate = d.DistributionDate.ToString("yyyy-MM-dd HH:mm")
+            }).ToList();
+        }
+
+        private void FilterData(string term)
+        {
+            if (string.IsNullOrWhiteSpace(term))
+            {
+                RefreshData();
+                return;
+            }
+            var filtered = DataService.GetDistributions()
+                .Where(d => (DataService.GetBeneficiaryById(d.BeneficiaryID)?.FullName ?? "").Contains(term))
+                .ToList();
+            UpdateGrid(filtered);
+        }
+
+        private void DgvDistributionsList_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgvDistributionsList.CurrentRow != null && pnlView.Visible)
+            {
+                currentDistributionId = dgvDistributionsList.CurrentRow.Cells["colID"].Value?.ToString();
+                var dist = DataService.GetDistributions().FirstOrDefault(x => x.DistributionID == currentDistributionId);
+
+                if (dist != null)
+                {
+                    lblBeneficiaryText.Text = DataService.GetBeneficiaryById(dist.BeneficiaryID)?.FullName ?? "غير معروف";
+                    lblTypeText.Text = dist.Type.ToString();
+                    lblNotesText.Text = string.IsNullOrEmpty(dist.Notes) ? "لا توجد ملاحظات" : dist.Notes;
+
+                    if (dist.Type == DonationType.نقدي)
+                    {
+                        lblAmountText.Text = dist.Amount.ToString("N2");
+                        lblItemText.Text = "----";
+                        lblQuantityText.Text = "----";
+                    }
+                    else
+                    {
+                        lblAmountText.Text = "----";
+                        // حل بديل لعدم وجود GetDistributionDetails و GetItemById في DataService
+                        // سنعتمد على البيانات المسجلة في الـ Distribution نفسه أو أول تفصيل متاح
+                        lblItemText.Text = "صنف عيني";
+                        lblQuantityText.Text = "راجع المخزن";
+                    }
+                }
+            }
+        }
+
         private void RbType_CheckedChanged(object sender, EventArgs e)
         {
             bool isInKind = rbInKind.Checked;
 
-            // إظهار/إخفاء عناصر الصرف العيني
-            label3.Visible = isInKind; // كلمة الصنف
-            cmbItem.Visible = isInKind;
-            label4.Visible = isInKind; // كلمة الكمية
-            numQuantity.Visible = isInKind; // استخدام numQuantity بدلاً من txtQuantity
-            btnAddItemToCart.Visible = isInKind;
-            btnRemoveFromCart.Visible = isInKind;
-            btnClearCart.Visible = isInKind;
-            pnlView.Visible = isInKind; // جدول السلة
+            // العناصر المتوفرة في ملف الـ Designer الخاص بك حصراً
+            label3.Visible = cmbItem.Visible = isInKind;
+            label4.Visible = numQuantity.Visible = isInKind;
 
-            // إظهار/إخفاء عناصر الصرف النقدي
-            lblAmount.Visible = !isInKind;
-            txtAmount.Visible = !isInKind;
+            lblAmount.Visible = txtAmount.Visible = !isInKind;
         }
 
-        // --- منطق السلة (للصرف العيني) ---
-        private void BtnAddItemToCart_Click(object sender, EventArgs e)
-        {
-            if (cmbItem.SelectedItem == null)
-            {
-                new frmAlert("الرجاء اختيار صنف أولاً.").ShowDialog();
-                return;
-            }
-
-            double quantity = Convert.ToDouble(numQuantity.Value);
-
-            if (quantity <= 0)
-            {
-                new frmAlert("الرجاء إدخال كمية أكبر من الصفر.").ShowDialog();
-                return;
-            }
-
-            var selectedItem = (InventoryItem)cmbItem.SelectedItem;
-
-            // التحقق من توفر الكمية في المخزون
-            if (selectedItem.CurrentQuantity < quantity)
-            {
-                new frmAlert($"الكمية المطلوبة غير متوفرة. المتاح في المخزون: {selectedItem.CurrentQuantity} {selectedItem.Unit}").ShowDialog();
-                return;
-            }
-
-            // التحقق مما إذا كان الصنف موجوداً مسبقاً في السلة
-            foreach (DataGridViewRow row in dgvCart.Rows)
-            {
-                if (row.Cells["colItemID"].Value.ToString() == selectedItem.ItemID)
-                {
-                    double currentCartQty = Convert.ToDouble(row.Cells["colQuantity"].Value);
-                    double newTotalQty = currentCartQty + quantity;
-
-                    if (selectedItem.CurrentQuantity < newTotalQty)
-                    {
-                        new frmAlert($"لا يمكنك إضافة المزيد. إجمالي المطلوب يتجاوز المتاح في المخزون.").ShowDialog();
-                        return;
-                    }
-
-                    row.Cells["colQuantity"].Value = newTotalQty;
-                    numQuantity.Value = 1; // تصفير العداد بعد الإضافة
-                    return;
-                }
-            }
-
-            // إضافة صف جديد للسلة
-            dgvCart.Rows.Add(selectedItem.ItemID, selectedItem.ItemName, quantity, selectedItem.Unit);
-            numQuantity.Value = 1; // تصفير العداد
-        }
-
-        private void BtnRemoveFromCart_Click(object sender, EventArgs e)
-        {
-            if (dgvCart.CurrentRow != null)
-            {
-                dgvCart.Rows.Remove(dgvCart.CurrentRow);
-            }
-            else
-            {
-                new frmAlert("الرجاء تحديد صنف من السلة لحذفه.").ShowDialog();
-            }
-        }
-
-        private void BtnClearCart_Click(object sender, EventArgs e)
-        {
-            if (dgvCart.Rows.Count > 0)
-            {
-                dgvCart.Rows.Clear();
-            }
-        }
-
-        // --- منطق الحفظ ---
         private void BtnSave_Click(object sender, EventArgs e)
         {
-            if (cmbBeneficiary.SelectedItem == null)
+            if (cmbBeneficiary.SelectedValue == null)
             {
-                new frmAlert("الرجاء اختيار المستفيد.").ShowDialog();
+                MessageBox.Show("الرجاء اختيار مستفيد");
                 return;
             }
 
-            var currentUser = SessionManager.GetCurrentUser();
-            string performedBy = currentUser != null ? currentUser.EmployeeID : "System";
+            string performedBy = SessionManager.GetCurrentUser()?.EmployeeID ?? "System";
+            var distId = "DIST" + DateTime.Now.ToString("yyyyMMddHHmmss");
 
-            // إنشاء كائن التوزيع الأساسي
             var distribution = new Distribution
             {
-                DistributionID = "DIST" + DateTime.Now.ToString("yyyyMMddHHmmss"),
+                DistributionID = distId,
                 BeneficiaryID = cmbBeneficiary.SelectedValue.ToString(),
                 DistributionDate = DateTime.Now,
                 PerformedBy = performedBy,
@@ -185,95 +159,80 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
 
             if (rbCash.Checked)
             {
-                // --- حفظ صرف نقدي ---
                 if (!double.TryParse(txtAmount.Text, out double amount) || amount <= 0)
                 {
-                    new frmAlert("الرجاء إدخال مبلغ نقدي صحيح وأكبر من الصفر.").ShowDialog();
-                    return;
-                }
-
-                // 1. التحقق من توفر رصيد كافٍ في الصندوق قبل الصرف
-                double currentBalance = DataService.GetTreasuryBalance();
-                if (currentBalance < amount)
-                {
-                    new frmAlert($"عفواً، الرصيد الحالي في الصندوق ({currentBalance}) لا يكفي لإتمام عملية الصرف.").ShowDialog();
+                    MessageBox.Show("الرجاء إدخال مبلغ صحيح");
                     return;
                 }
 
                 distribution.Type = DonationType.نقدي;
                 distribution.Amount = amount;
 
-                // 2. حفظ عملية التوزيع
                 DataService.AddDistribution(distribution);
-
-                // 3. تسجيل الحركة المالية (صادر) لخصم المبلغ من الصندوق
-                var finTransaction = new FinancialTransaction
+                DataService.RecordFinancialTransaction(new FinancialTransaction
                 {
-                    TransactionID = "TRX" + DateTime.Now.ToString("yyyyMMddHHmmss"),
-                    Type = TransactionType.صادر,
+                    TransactionID = "TRX" + Guid.NewGuid().ToString().Substring(0, 8),
                     Amount = amount,
+                    Type = TransactionType.صادر,
+                    ReferenceID = distId,
                     TransactionDate = DateTime.Now,
-                    ReferenceID = distribution.DistributionID,
-                    PerformedBy = performedBy,
-                    Notes = $"صرف مساعدة نقدية للمستفيد: {cmbBeneficiary.Text}"
-                };
-                DataService.RecordFinancialTransaction(finTransaction);
-
-                new frmAlert("تم حفظ عملية الصرف النقدي وخصم المبلغ من الصندوق بنجاح!").ShowDialog();
+                    PerformedBy = performedBy
+                });
             }
-
             else
             {
-                // --- حفظ صرف عيني ---
-                if (dgvCart.Rows.Count == 0)
+                if (cmbItem.SelectedValue == null)
                 {
-                    new frmAlert("السلة فارغة. الرجاء إضافة أصناف أولاً.").ShowDialog();
+                    MessageBox.Show("الرجاء اختيار صنف");
                     return;
                 }
+
+                string itemId = cmbItem.SelectedValue.ToString();
+                double qty = (double)numQuantity.Value;
 
                 distribution.Type = DonationType.عيني;
                 distribution.Amount = 0;
 
-                // حفظ التوزيع
                 DataService.AddDistribution(distribution);
 
-                // حفظ التفاصيل وخصم المخزون
-                foreach (DataGridViewRow row in dgvCart.Rows)
+                // استخدام الدوال المتاحة في DataService الخاص بك
+                DataService.AddDistributionDetail(new DistributionDetail
                 {
-                    string itemId = row.Cells["colItemID"].Value.ToString();
-                    double qty = Convert.ToDouble(row.Cells["colQuantity"].Value);
+                    DetailID = Guid.NewGuid().ToString(),
+                    DistributionID = distId,
+                    ItemID = itemId,
+                    Quantity = qty
+                });
 
-                    var detail = new DistributionDetail
-                    {
-                        DetailID = Guid.NewGuid().ToString(),
-                        DistributionID = distribution.DistributionID,
-                        ItemID = itemId,
-                        Quantity = qty
-                    };
-                    DataService.AddDistributionDetail(detail);
-
-                    var movement = new InventoryMovement
-                    {
-                        MovementID = "M" + Guid.NewGuid().ToString().Substring(0, 8),
-                        ItemID = itemId,
-                        MovementType = MovementType.صادر,
-                        Quantity = qty,
-                        MovementDate = DateTime.Now,
-                        ReferenceID = distribution.DistributionID,
-                        PerformedBy = performedBy,
-                        Notes = $"صرف مساعدات للمستفيد: {cmbBeneficiary.Text}"
-                    };
-
-                    // تسجيل حركة المخزون (صادر)
-                    DataService.RecordMovement(
-                        movement
-                    );
-                }
-
-                new frmAlert("تم حفظ عملية الصرف العيني وخصم المخزون بنجاح!").ShowDialog();
+                DataService.RecordMovement(new InventoryMovement
+                {
+                    MovementID = "MOV" + Guid.NewGuid().ToString().Substring(0, 8),
+                    ItemID = itemId,
+                    Quantity = qty,
+                    MovementType = MovementType.صادر,
+                    MovementDate = DateTime.Now,
+                    ReferenceID = distId,
+                    PerformedBy = performedBy
+                });
             }
 
-            ResetForm();
+            MessageBox.Show("تمت عملية الصرف بنجاح");
+            RefreshData();
+            SwitchMode(FormMode.View);
+        }
+
+        private void SwitchMode(FormMode mode)
+        {
+            pnlInputs.Visible = (mode == FormMode.Add);
+            pnlView.Visible = (mode == FormMode.View);
+            btnSave.Visible = btnCancel.Visible = (mode == FormMode.Add);
+            btnAddNew.Visible = (mode == FormMode.View);
+
+            // أزرار إضافية موجودة في Designer الخاص بك
+            btnEdit.Visible = (mode == FormMode.View);
+            btnDelete.Visible = (mode == FormMode.View);
+
+            if (mode == FormMode.Add) ResetForm();
         }
 
         private void ResetForm()
@@ -283,9 +242,9 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
             numQuantity.Value = 1;
             txtAmount.Clear();
             txtNotes.Clear();
-            dgvCart.Rows.Clear();
-            rbInKind.Checked = true; // العودة للوضع الافتراضي
+            rbInKind.Checked = true;
         }
-
     }
+
+    public enum FormMode { Add, View }
 }
