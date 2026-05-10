@@ -171,6 +171,11 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
                     FillInputFieldsWithSelectedDonation();
                     break;
             }
+            if (currentUser != null && currentUser.Role == UserRole.مستخدم_عادي)
+            {
+                btnEdit.Visible = false;
+                btnDelete.Visible = false;
+            }
         }
 
         private void LoadDonationsData()

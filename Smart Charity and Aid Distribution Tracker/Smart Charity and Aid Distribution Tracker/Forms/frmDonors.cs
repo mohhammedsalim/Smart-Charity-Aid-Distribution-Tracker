@@ -35,15 +35,17 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmDonors_FormClosed);
 
-            SetupComboBoxes();
-            LoadDonorsData();
-            SetPanelMode(PanelMode.View);
             var currentUser = SessionManager.GetCurrentUser();
             if (currentUser != null && currentUser.Role == UserRole.مستخدم_عادي)
             {
                 btnEdit.Visible = false;
                 btnDelete.Visible = false;
             }
+
+            SetupComboBoxes();
+            LoadDonorsData();
+            SetPanelMode(PanelMode.View);
+            
         }
         // --- ميزة التنقل السلس والبحث السريع بزر Enter ---
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
@@ -126,6 +128,12 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
                     lblPanelTitle.Text = "تعديل بيانات المتبرع";
                     FillInputFieldsWithSelectedDonor();
                     break;
+            }
+            
+            if (currentUser != null && currentUser.Role == UserRole.مستخدم_عادي)
+            {
+                btnEdit.Visible = false;
+                btnDelete.Visible = false;
             }
         }
 
