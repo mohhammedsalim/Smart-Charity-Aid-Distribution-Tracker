@@ -24,6 +24,10 @@
             this.pnlBody = new System.Windows.Forms.Panel();
             this.pnlList = new System.Windows.Forms.Panel();
             this.dgvDistributionsList = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.colID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colBeneficiaryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDistType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDistDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlSearch = new System.Windows.Forms.Panel();
             this.btnClear = new Guna.UI2.WinForms.Guna2Button();
             this.btnSearch = new Guna.UI2.WinForms.Guna2Button();
@@ -65,10 +69,6 @@
             this.btnSave = new Guna.UI2.WinForms.Guna2Button();
             this.lblPanelTitle = new System.Windows.Forms.Label();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.colID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colBeneficiaryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDistType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDistDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlBody.SuspendLayout();
             this.pnlList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDistributionsList)).BeginInit();
@@ -164,6 +164,36 @@
             this.dgvDistributionsList.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(245)))), ((int)(((byte)(235)))));
             this.dgvDistributionsList.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
             // 
+            // colID
+            // 
+            this.colID.HeaderText = "رقم العملية";
+            this.colID.MinimumWidth = 6;
+            this.colID.Name = "colID";
+            this.colID.ReadOnly = true;
+            this.colID.Visible = false;
+            // 
+            // colBeneficiaryName
+            // 
+            this.colBeneficiaryName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colBeneficiaryName.HeaderText = "المستفيد";
+            this.colBeneficiaryName.MinimumWidth = 6;
+            this.colBeneficiaryName.Name = "colBeneficiaryName";
+            this.colBeneficiaryName.ReadOnly = true;
+            // 
+            // colDistType
+            // 
+            this.colDistType.HeaderText = "نوع الصرف";
+            this.colDistType.MinimumWidth = 6;
+            this.colDistType.Name = "colDistType";
+            this.colDistType.ReadOnly = true;
+            // 
+            // colDistDate
+            // 
+            this.colDistDate.HeaderText = "التاريخ";
+            this.colDistDate.MinimumWidth = 6;
+            this.colDistDate.Name = "colDistDate";
+            this.colDistDate.ReadOnly = true;
+            // 
             // pnlSearch
             // 
             this.pnlSearch.BackColor = System.Drawing.Color.Transparent;
@@ -212,7 +242,7 @@
             this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
             this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.txtSearch.Location = new System.Drawing.Point(250, 10);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PlaceholderText = "ابحث عن عملية صرف...";
             this.txtSearch.SelectedText = "";
@@ -277,8 +307,10 @@
             this.cmbBeneficiary.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.cmbBeneficiary.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cmbBeneficiary.ItemHeight = 35;
-            this.cmbBeneficiary.Location = new System.Drawing.Point(120, 35); this.cmbBeneficiary.Name = "cmbBeneficiary";
-            this.cmbBeneficiary.Size = new System.Drawing.Size(380, 41); this.cmbBeneficiary.TabIndex = 0;
+            this.cmbBeneficiary.Location = new System.Drawing.Point(120, 35);
+            this.cmbBeneficiary.Name = "cmbBeneficiary";
+            this.cmbBeneficiary.Size = new System.Drawing.Size(380, 41);
+            this.cmbBeneficiary.TabIndex = 0;
             this.cmbBeneficiary.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label6
@@ -311,7 +343,7 @@
             this.rbCash.CheckedState.InnerColor = System.Drawing.Color.White;
             this.rbCash.CheckedState.InnerOffset = -4;
             this.rbCash.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.rbCash.Location = new System.Drawing.Point(150, 10);
+            this.rbCash.Location = new System.Drawing.Point(26, 10);
             this.rbCash.Name = "rbCash";
             this.rbCash.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.rbCash.Size = new System.Drawing.Size(104, 28);
@@ -332,7 +364,7 @@
             this.rbInKind.CheckedState.InnerColor = System.Drawing.Color.White;
             this.rbInKind.CheckedState.InnerOffset = -4;
             this.rbInKind.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.rbInKind.Location = new System.Drawing.Point(350, 10);
+            this.rbInKind.Location = new System.Drawing.Point(225, 10);
             this.rbInKind.Name = "rbInKind";
             this.rbInKind.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.rbInKind.Size = new System.Drawing.Size(107, 28);
@@ -367,7 +399,8 @@
             this.cmbItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.cmbItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cmbItem.ItemHeight = 35;
-            this.cmbItem.Location = new System.Drawing.Point(120, 195); this.cmbItem.Name = "cmbItem";
+            this.cmbItem.Location = new System.Drawing.Point(120, 195);
+            this.cmbItem.Name = "cmbItem";
             this.cmbItem.Size = new System.Drawing.Size(380, 41);
             this.cmbItem.TabIndex = 2;
             this.cmbItem.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -393,6 +426,7 @@
             this.numQuantity.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
             this.numQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.numQuantity.Location = new System.Drawing.Point(120, 275);
+            this.numQuantity.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.numQuantity.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -435,7 +469,7 @@
             this.txtAmount.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
             this.txtAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.txtAmount.Location = new System.Drawing.Point(120, 355);
-            this.txtAmount.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAmount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtAmount.Name = "txtAmount";
             this.txtAmount.PlaceholderText = "أدخل المبلغ النقدي";
             this.txtAmount.SelectedText = "";
@@ -462,7 +496,7 @@
             this.txtNotes.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
             this.txtNotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.txtNotes.Location = new System.Drawing.Point(120, 435);
-            this.txtNotes.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNotes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNotes.Multiline = true;
             this.txtNotes.Name = "txtNotes";
             this.txtNotes.PlaceholderText = "أي ملاحظات إضافية حول عملية الصرف...";
@@ -717,38 +751,6 @@
             // 
             this.guna2Elipse1.BorderRadius = 15;
             this.guna2Elipse1.TargetControl = this.pnlSmart;
-            // 
-            // colID
-            // 
-            this.colID.HeaderText = "رقم العملية";
-            this.colID.MinimumWidth = 6;
-            this.colID.Name = "colID";
-            this.colID.ReadOnly = true;
-            this.colID.Visible = false;
-            // 
-            // colBeneficiaryName
-            // 
-            this.colBeneficiaryName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colBeneficiaryName.HeaderText = "المستفيد";
-            this.colBeneficiaryName.MinimumWidth = 6;
-            this.colBeneficiaryName.Name = "colBeneficiaryName";
-            this.colBeneficiaryName.ReadOnly = true;
-            // 
-            // colDistType
-            // 
-            this.colDistType.HeaderText = "نوع الصرف";
-            this.colDistType.MinimumWidth = 6;
-            this.colDistType.Name = "colDistType";
-            this.colDistType.ReadOnly = true;
-            this.colDistType.Width = 150;
-            // 
-            // colDistDate
-            // 
-            this.colDistDate.HeaderText = "التاريخ";
-            this.colDistDate.MinimumWidth = 6;
-            this.colDistDate.Name = "colDistDate";
-            this.colDistDate.ReadOnly = true;
-            this.colDistDate.Width = 150;
             // 
             // frmDistribution
             // 

@@ -146,6 +146,9 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
 
             string performedBy = SessionManager.GetCurrentUser()?.EmployeeID ?? "System";
             var distId = "DIST" + DateTime.Now.ToString("yyyyMMddHHmmss");
+            string selectedBeneficiaryId = cmbBeneficiary.SelectedValue.ToString();
+            string currentUser = SessionManager.GetCurrentUser()?.FullName ?? "System";
+            string newDistId = "DIST-" + DateTime.Now.ToString("yyyyMMddHHmmss");
 
             var distribution = new Distribution
             {
@@ -161,10 +164,15 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
             {
                 if (!double.TryParse(txtAmount.Text, out double amount) || amount <= 0)
                 {
-                    MessageBox.Show("الرجاء إدخال مبلغ صحيح");
+                    new frmAlert("الرجاء إدخال مبلغ صحيح أكبر من الصفر.").ShowDialog();
                     return;
                 }
-
+                double currentBalance = DataService.GetTreasuryBalance();
+                if (amount > currentBalance)
+                {
+                    new frmAlert($"الرصيد المالي غير كافٍ! الرصيد المتاح هو: {currentBalance} د.ل").ShowDialog();
+                    return;
+                }
                 distribution.Type = DonationType.نقدي;
                 distribution.Amount = amount;
 
@@ -185,6 +193,17 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
                 {
                     MessageBox.Show("الرجاء اختيار صنف");
                     return;
+                }
+                var requestedItems = new Dictionary<string, double>();
+                // التحقق الفعلي من توفر الكمية في المخزون
+                foreach (var reqItem in requestedItems)
+                {
+                    var inventoryItem = DataService.GetAllInventoryItems().FirstOrDefault(i => i.ItemID == reqItem.Key);
+                    if (inventoryItem != null && reqItem.Value > inventoryItem.CurrentQuantity)
+                    {
+                        new frmAlert($"الكمية المطلوبة من '{inventoryItem.ItemName}' ({reqItem.Value}) تتجاوز المخزون المتاح ({inventoryItem.CurrentQuantity})!").ShowDialog();
+                        return;
+                    }
                 }
 
                 string itemId = cmbItem.SelectedValue.ToString();
@@ -214,6 +233,8 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
                     ReferenceID = distId,
                     PerformedBy = performedBy
                 });
+
+
             }
 
             MessageBox.Show("تمت عملية الصرف بنجاح");

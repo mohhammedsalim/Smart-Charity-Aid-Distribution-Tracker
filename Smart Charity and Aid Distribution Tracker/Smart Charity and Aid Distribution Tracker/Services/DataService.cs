@@ -180,6 +180,17 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Services
             return _inventoryItems;
         }
 
+        public static InventoryItem GetInventoryItemByName(string itemName)
+        {
+            if (string.IsNullOrWhiteSpace(itemName))
+                return null;
+
+            // يجلب أول صنف يتطابق اسمه تماماً مع النص المدخل
+            return _inventoryItems
+                .FirstOrDefault(i => i.ItemName.Equals(itemName, StringComparison.OrdinalIgnoreCase));
+        }
+
+
         public static List<InventoryItem> GetInventoryItems()
         {
             return _inventoryItems;
