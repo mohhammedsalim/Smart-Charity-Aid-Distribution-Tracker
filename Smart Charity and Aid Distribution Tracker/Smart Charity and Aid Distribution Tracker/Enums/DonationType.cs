@@ -2,7 +2,7 @@
 {
     public enum DonationType
     {
-        InKind, // عيني (مواد تضاف للمخزون)
-        Cash    // نقدي (مبالغ مالية)
+        عيني,
+        نقدي
     }
 }

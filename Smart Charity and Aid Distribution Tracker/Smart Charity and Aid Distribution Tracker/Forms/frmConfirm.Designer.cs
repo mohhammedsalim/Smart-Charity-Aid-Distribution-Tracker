@@ -2,15 +2,8 @@
 {
     partial class frmConfirm
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -22,10 +15,6 @@
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
@@ -38,18 +27,19 @@
             // 
             // guna2Elipse1
             // 
-            this.guna2Elipse1.BorderRadius = 12;
+            this.guna2Elipse1.BorderRadius = 15;
             this.guna2Elipse1.TargetControl = this;
             // 
             // guna2ShadowForm1
             // 
+            this.guna2ShadowForm1.BorderRadius = 15;
             this.guna2ShadowForm1.TargetForm = this;
             // 
             // lblMessage
             // 
             this.lblMessage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblMessage.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMessage.ForeColor = System.Drawing.Color.DimGray;
+            this.lblMessage.Font = new System.Drawing.Font("Cairo", 13F, System.Drawing.FontStyle.Bold);
+            this.lblMessage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblMessage.Location = new System.Drawing.Point(0, 0);
             this.lblMessage.Name = "lblMessage";
             this.lblMessage.Padding = new System.Windows.Forms.Padding(20, 20, 20, 70);
@@ -62,12 +52,12 @@
             // 
             this.btnYes.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnYes.BorderRadius = 8;
-            this.btnYes.FillColor = System.Drawing.Color.ForestGreen;
-            this.btnYes.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnYes.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.btnYes.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold);
             this.btnYes.ForeColor = System.Drawing.Color.White;
-            this.btnYes.Location = new System.Drawing.Point(233, 148);
+            this.btnYes.Location = new System.Drawing.Point(235, 140);
             this.btnYes.Name = "btnYes";
-            this.btnYes.Size = new System.Drawing.Size(120, 40);
+            this.btnYes.Size = new System.Drawing.Size(130, 45);
             this.btnYes.TabIndex = 1;
             this.btnYes.Text = "نعم";
             this.btnYes.Click += new System.EventHandler(this.btnYes_Click);
@@ -76,19 +66,19 @@
             // 
             this.btnNo.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnNo.BorderRadius = 8;
-            this.btnNo.FillColor = System.Drawing.Color.Crimson;
-            this.btnNo.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNo.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(43)))));
+            this.btnNo.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold);
             this.btnNo.ForeColor = System.Drawing.Color.White;
-            this.btnNo.Location = new System.Drawing.Point(97, 148);
+            this.btnNo.Location = new System.Drawing.Point(85, 140);
             this.btnNo.Name = "btnNo";
-            this.btnNo.Size = new System.Drawing.Size(120, 40);
+            this.btnNo.Size = new System.Drawing.Size(130, 45);
             this.btnNo.TabIndex = 2;
             this.btnNo.Text = "لا";
             this.btnNo.Click += new System.EventHandler(this.btnNo_Click);
             // 
             // frmConfirm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(450, 200);
@@ -97,8 +87,10 @@
             this.Controls.Add(this.lblMessage);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmConfirm";
+            this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.RightToLeftLayout = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "frmConfirm";
+            this.Text = "تأكيد";
             this.ResumeLayout(false);
 
         }

@@ -1,22 +1,5 @@
 ﻿using System.ComponentModel; // أضف هذا
 
-//public enum ItemCategory
-//{
-//    [Description("مواد غذائية")]
-//    مواد_غذائية,
-//    [Description("ملابس ومفروشات")]
-//    ملابس_ومفروشات,
-//    [Description("أجهزة كهربائية")]
-//    أجهزة_كهربائية,
-//    [Description("مواد نظافة")]
-//    مواد_نظافة,
-//    [Description("مستلزمات أطفال")]
-//    مستلزمات_أطفال,
-//    [Description("أدوية ومستلزمات طبية")]
-//    أدوية_ومستلزمات_طبية,
-//    [Description("أخرى")]
-//    أخرى
-//}
 
 public enum ItemCategory
 {

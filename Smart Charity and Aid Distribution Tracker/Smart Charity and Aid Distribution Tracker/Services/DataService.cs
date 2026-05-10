@@ -223,15 +223,15 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Services
             {
                 movement.QuantityBefore = item.CurrentQuantity;
 
-                if (movement.MovementType == MovementType.In)
+                if (movement.MovementType == MovementType.وارد)
                 {
                     item.CurrentQuantity += movement.Quantity;
                 }
-                else if (movement.MovementType == MovementType.Out)
+                else if (movement.MovementType == MovementType.صادر)
                 {
                     item.CurrentQuantity -= movement.Quantity;
                 }
-                else if (movement.MovementType == MovementType.Adjustment)
+                else if (movement.MovementType == MovementType.تسوية)
                 {
                     item.CurrentQuantity += movement.Quantity;
                 }

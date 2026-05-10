@@ -3,116 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\smart charity and aid distribution tracker\\forms\\frmusers.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmusers.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\smart charity and aid distribution tracker\\forms\\frmusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\smart charity and aid distribution tracker\\forms\\frmusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|c:\\users\\azezs\\desktop\\tes\\smart-charity-aid-distribution-tracker\\smart charity and aid distribution tracker\\smart charity and aid distribution tracker\\helpers\\fontmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\helpers\\fontmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\smart charity and aid distribution tracker\\forms\\frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\smart charity and aid distribution tracker\\forms\\frmdonors.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmdonors.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\smart charity and aid distribution tracker\\forms\\frmdonations.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmdonations.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\smart charity and aid distribution tracker\\forms\\frmdistribution.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmdistribution.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\smart charity and aid distribution tracker\\forms\\frminventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frminventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\smart charity and aid distribution tracker\\forms\\frmconfirm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmconfirm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\smart charity and aid distribution tracker\\forms\\frmdonations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmdonations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\smart charity and aid distribution tracker\\forms\\frmbeneficiarie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmbeneficiarie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\smart charity and aid distribution tracker\\forms\\frmbeneficiarie.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmbeneficiarie.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\smart charity and aid distribution tracker\\forms\\frminventory.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frminventory.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\smart charity and aid distribution tracker\\forms\\frmdistribution.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmdistribution.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\smart charity and aid distribution tracker\\forms\\frmmain.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmmain.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\smart charity and aid distribution tracker\\forms\\frmdistribution.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmdistribution.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\smart charity and aid distribution tracker\\services\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\services\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\smart charity and aid distribution tracker\\services\\dataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\services\\dataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\smart charity and aid distribution tracker\\forms\\frmbeneficiarie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmbeneficiarie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\smart charity and aid distribution tracker\\forms\\frmalert.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmalert.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\smart charity and aid distribution tracker\\forms\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\smart charity and aid distribution tracker\\forms\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\smart charity and aid distribution tracker\\forms\\frmdistributionreport.cs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmdistributionreport.cs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\smart charity and aid distribution tracker\\forms\\frmdistributionreport.cs.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmdistributionreport.cs.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\smart charity and aid distribution tracker\\forms\\frmdistributionreport.cs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmdistributionreport.cs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\smart charity and aid distribution tracker\\forms\\frmdashboard.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmdashboard.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\smart charity and aid distribution tracker\\forms\\frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\smart charity and aid distribution tracker\\forms\\frminventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -127,28 +19,188 @@
       "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmdonations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\smart charity and aid distribution tracker\\forms\\frmdonors.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmdonors.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\smart charity and aid distribution tracker\\forms\\frmdistributionreport.cs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmdistributionreport.cs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\smart charity and aid distribution tracker\\forms\\frmdistribution.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmdistribution.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\smart charity and aid distribution tracker\\forms\\frmbeneficiarie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmbeneficiarie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\smart charity and aid distribution tracker\\forms\\frmconfirm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmconfirm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\smart charity and aid distribution tracker\\forms\\frmdistribution.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmdistribution.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\smart charity and aid distribution tracker\\forms\\frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\smart charity and aid distribution tracker\\forms\\frmbeneficiarie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmbeneficiarie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\smart charity and aid distribution tracker\\forms\\frmbeneficiarie.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmbeneficiarie.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\smart charity and aid distribution tracker\\forms\\frmalert.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmalert.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\smart charity and aid distribution tracker\\forms\\frmalert.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmalert.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|c:\\users\\azezs\\desktop\\tes\\smart-charity-aid-distribution-tracker\\smart charity and aid distribution tracker\\smart charity and aid distribution tracker\\forms\\frmalert.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmalert.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\smart charity and aid distribution tracker\\forms\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\smart charity and aid distribution tracker\\forms\\frmusers.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
-      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmusers.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\smart charity and aid distribution tracker\\forms\\frmlogin.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmlogin.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\smart charity and aid distribution tracker\\forms\\frmconfirm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmconfirm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\smart charity and aid distribution tracker\\forms\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\smart charity and aid distribution tracker\\forms\\frmalert.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmalert.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|c:\\users\\azezs\\desktop\\tes\\smart-charity-aid-distribution-tracker\\smart charity and aid distribution tracker\\smart charity and aid distribution tracker\\forms\\frmconfirm.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmconfirm.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\smart charity and aid distribution tracker\\forms\\frmusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\smart charity and aid distribution tracker\\forms\\frminventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frminventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\smart charity and aid distribution tracker\\forms\\frmdonors.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmdonors.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\smart charity and aid distribution tracker\\forms\\frmdonations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmdonations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\smart charity and aid distribution tracker\\forms\\frmdistributionreport.cs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmdistributionreport.cs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\smart charity and aid distribution tracker\\forms\\frmdistribution.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmdistribution.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\smart charity and aid distribution tracker\\forms\\frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\smart charity and aid distribution tracker\\services\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\services\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|c:\\users\\azezs\\desktop\\tes\\smart-charity-aid-distribution-tracker\\smart charity and aid distribution tracker\\smart charity and aid distribution tracker\\enums\\distributionstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\enums\\distributionstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|c:\\users\\azezs\\desktop\\tes\\smart-charity-aid-distribution-tracker\\smart charity and aid distribution tracker\\smart charity and aid distribution tracker\\enums\\donationtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\enums\\donationtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|c:\\users\\azezs\\desktop\\tes\\smart-charity-aid-distribution-tracker\\smart charity and aid distribution tracker\\smart charity and aid distribution tracker\\enums\\donortype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\enums\\donortype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|c:\\users\\azezs\\desktop\\tes\\smart-charity-aid-distribution-tracker\\smart charity and aid distribution tracker\\smart charity and aid distribution tracker\\enums\\itemcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\enums\\itemcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\smart charity and aid distribution tracker\\services\\dataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\services\\dataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|c:\\users\\azezs\\desktop\\tes\\smart-charity-aid-distribution-tracker\\smart charity and aid distribution tracker\\smart charity and aid distribution tracker\\enums\\movementtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\enums\\movementtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|c:\\users\\azezs\\desktop\\tes\\smart-charity-aid-distribution-tracker\\smart charity and aid distribution tracker\\smart charity and aid distribution tracker\\data\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\data\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|c:\\users\\azezs\\desktop\\tes\\smart-charity-aid-distribution-tracker\\smart charity and aid distribution tracker\\smart charity and aid distribution tracker\\enums\\socialstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\enums\\socialstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|c:\\users\\azezs\\desktop\\tes\\smart-charity-aid-distribution-tracker\\smart charity and aid distribution tracker\\smart charity and aid distribution tracker\\enums\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\enums\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|c:\\users\\azezs\\desktop\\tes\\smart-charity-aid-distribution-tracker\\smart charity and aid distribution tracker\\smart charity and aid distribution tracker\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|c:\\users\\azezs\\desktop\\tes\\smart-charity-aid-distribution-tracker\\smart charity and aid distribution tracker\\smart charity and aid distribution tracker\\forms\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\smart charity and aid distribution tracker\\forms\\frminventory.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frminventory.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|c:\\users\\azezs\\desktop\\tes\\smart-charity-aid-distribution-tracker\\smart charity and aid distribution tracker\\smart charity and aid distribution tracker\\forms\\frmusers.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmusers.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\smart charity and aid distribution tracker\\forms\\frmdonations.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmdonations.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\smart charity and aid distribution tracker\\forms\\frmdonors.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmdonors.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|c:\\users\\azezs\\desktop\\tes\\smart-charity-aid-distribution-tracker\\smart charity and aid distribution tracker\\smart charity and aid distribution tracker\\forms\\frmbeneficiarie.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmbeneficiarie.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\smart charity and aid distribution tracker\\helpers\\fontmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\helpers\\fontmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\smart charity and aid distribution tracker\\forms\\frmmain.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmmain.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\smart charity and aid distribution tracker\\forms\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\smart charity and aid distribution tracker\\forms\\frmdistributionreport.cs.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmdistributionreport.cs.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\smart charity and aid distribution tracker\\forms\\frmdashboard.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmdashboard.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\smart charity and aid distribution tracker\\forms\\frmusers.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmusers.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\smart charity and aid distribution tracker\\forms\\frmconfirm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|solutionrelative:smart charity and aid distribution tracker\\forms\\frmconfirm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DAADC680-41B8-45EC-9508-1FF125F86B24}|Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker.csproj|C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\smart charity and aid distribution tracker\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -162,39 +214,259 @@
       "DocumentGroups": [
         {
           "DockedWidth": 78,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 7,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "frmInventory.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmInventory.Designer.cs",
+              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmInventory.Designer.cs",
+              "ToolTip": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmInventory.Designer.cs",
+              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmInventory.Designer.cs",
+              "ViewState": "AgIAADMBAAAAAAAAAAAAAEQBAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T18:19:57.292Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{6324226f-61b6-4f28-92ee-18d4b5fe1e48}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FontManager.cs",
-              "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Helpers\\FontManager.cs",
-              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Helpers\\FontManager.cs",
-              "ToolTip": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Helpers\\FontManager.cs",
-              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Helpers\\FontManager.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAgwC8AAABBAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "frmDistribution.cs",
+              "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmDistribution.cs",
+              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmDistribution.cs",
+              "ToolTip": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmDistribution.cs",
+              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmDistribution.cs",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAAAFIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-09T22:49:54.529Z",
+              "WhenOpened": "2026-05-09T15:49:25.09Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "frmInventory.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmInventory.cs",
-              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmInventory.cs",
-              "ToolTip": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmInventory.cs [Design]",
-              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmInventory.cs [Design]",
+              "DocumentIndex": 4,
+              "Title": "frmDistributionReport.cs.cs",
+              "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmDistributionReport.cs.cs",
+              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmDistributionReport.cs.cs",
+              "ToolTip": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmDistributionReport.cs.cs",
+              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmDistributionReport.cs.cs",
+              "ViewState": "AgIAAF8AAAAAAAAAAAAAAHQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-09T15:56:27.429Z"
+              "WhenOpened": "2026-05-09T15:50:19.21Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "frmDonations.cs",
+              "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmDonations.cs",
+              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmDonations.cs",
+              "ToolTip": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmDonations.cs",
+              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmDonations.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAAAEsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T18:49:02.556Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "frmDonors.cs",
+              "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmDonors.cs",
+              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmDonors.cs",
+              "ToolTip": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmDonors.cs",
+              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmDonors.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAAEgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T15:50:28.603Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmInventory.cs",
+              "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmInventory.cs",
+              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmInventory.cs",
+              "ToolTip": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmInventory.cs",
+              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmInventory.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAAAEoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T15:50:32.043Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmUsers.cs",
+              "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmUsers.cs",
+              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmUsers.cs",
+              "ToolTip": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmUsers.cs",
+              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmUsers.cs",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAAAFoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T15:50:34.657Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "frmBeneficiarie.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmBeneficiarie.cs",
+              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmBeneficiarie.cs",
+              "ToolTip": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmBeneficiarie.cs [Design]",
+              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmBeneficiarie.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T15:12:18.134Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "frmConfirm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmConfirm.cs",
+              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmConfirm.cs",
+              "ToolTip": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmConfirm.cs [Design]",
+              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmConfirm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T15:12:34.962Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "frmDistribution.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmDistribution.Designer.cs",
+              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmDistribution.Designer.cs",
+              "ToolTip": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmDistribution.Designer.cs",
+              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmDistribution.Designer.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAA8AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T15:24:40.498Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "frmDashBoard.cs",
+              "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmDashBoard.cs",
+              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmDashBoard.cs",
+              "ToolTip": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmDashBoard.cs",
+              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmDashBoard.cs",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAAAGUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T15:18:00.18Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "frmBeneficiarie.cs",
+              "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmBeneficiarie.cs",
+              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmBeneficiarie.cs",
+              "ToolTip": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmBeneficiarie.cs",
+              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmBeneficiarie.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAAAEoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T15:49:56.218Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "frmBeneficiarie.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmBeneficiarie.Designer.cs",
+              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmBeneficiarie.Designer.cs",
+              "ToolTip": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmBeneficiarie.Designer.cs",
+              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmBeneficiarie.Designer.cs",
+              "ViewState": "AgIAAGsDAAAAAAAAAAAAAIADAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T16:43:54.989Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "frmAlert.cs",
+              "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmAlert.cs",
+              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmAlert.cs",
+              "ToolTip": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmAlert.cs",
+              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmAlert.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAqwDYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T15:49:49.729Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "frmAlert.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmAlert.cs",
+              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmAlert.cs",
+              "ToolTip": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmAlert.cs [Design]",
+              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmAlert.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T15:12:15.956Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "frmAlert.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmAlert.Designer.cs",
+              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmAlert.Designer.cs",
+              "ToolTip": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmAlert.Designer.cs",
+              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmAlert.Designer.cs",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAAAEwAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-10T10:15:56.703Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "frmLogin.cs",
+              "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmLogin.cs",
+              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmLogin.cs",
+              "ToolTip": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmLogin.cs",
+              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmLogin.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAqwBsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T15:46:00.074Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "frmLogin.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmLogin.Designer.cs",
+              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmLogin.Designer.cs",
+              "ToolTip": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmLogin.Designer.cs",
+              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmLogin.Designer.cs",
+              "ViewState": "AgIAAH8AAAAAAAAAAAAAAIsAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T15:38:39.006Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "frmLogin.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmLogin.cs",
+              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmLogin.cs",
+              "ToolTip": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmLogin.cs [Design]",
+              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmLogin.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T15:38:37.096Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
               "Title": "frmUsers.cs [Design]",
               "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmUsers.cs",
               "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmUsers.cs",
@@ -206,236 +478,52 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "frmDonations.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmDonations.Designer.cs",
-              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmDonations.Designer.cs",
-              "ToolTip": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmDonations.Designer.cs",
-              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmDonations.Designer.cs",
-              "ViewState": "AgIAAH8CAAAAAAAAAAAkwJMCAAAAAAAAAAAAAA==",
+              "DocumentIndex": 20,
+              "Title": "frmInventory.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmInventory.cs",
+              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmInventory.cs",
+              "ToolTip": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmInventory.cs [Design]",
+              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmInventory.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-09T16:25:53.438Z"
+              "WhenOpened": "2026-05-09T15:56:27.429Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 18,
+              "Title": "frmConfirm.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmConfirm.Designer.cs",
+              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmConfirm.Designer.cs",
+              "ToolTip": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmConfirm.Designer.cs",
+              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmConfirm.Designer.cs",
+              "ViewState": "AgIAAFUAAAAAAAAAAAAAAGoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-10T10:17:10.199Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
               "Title": "frmDonors.cs [Design]",
               "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmDonors.cs",
               "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmDonors.cs",
               "ToolTip": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmDonors.cs [Design]",
               "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmDonors.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-09T16:25:53.018Z"
+              "WhenOpened": "2026-05-09T16:25:53.018Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "frmUsers.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmUsers.Designer.cs",
-              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmUsers.Designer.cs",
-              "ToolTip": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmUsers.Designer.cs",
-              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmUsers.Designer.cs",
-              "ViewState": "AgIAAEcCAAAAAAAAAAAmwFsCAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-09T16:07:38.131Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "frmUsers.cs",
-              "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmUsers.cs",
-              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmUsers.cs",
-              "ToolTip": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmUsers.cs",
-              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmUsers.cs",
-              "ViewState": "AgIAAPcAAAAAAAAAAAAgwAYBAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-09T15:50:34.657Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "frmDistribution.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmDistribution.cs",
-              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmDistribution.cs",
-              "ToolTip": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmDistribution.cs [Design]",
-              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmDistribution.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-09T15:24:34.726Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "frmDashBoard.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmDashBoard.cs",
-              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmDashBoard.cs",
-              "ToolTip": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmDashBoard.cs [Design]",
-              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmDashBoard.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-09T15:12:36.034Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "frmConfirm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmConfirm.cs",
-              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmConfirm.cs",
-              "ToolTip": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmConfirm.cs [Design]",
-              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmConfirm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-09T15:12:34.962Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 22,
               "Title": "frmDonations.cs [Design]",
               "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmDonations.cs",
               "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmDonations.cs",
               "ToolTip": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmDonations.cs [Design]",
               "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmDonations.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-09T16:25:45.035Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "frmBeneficiarie.cs",
-              "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmBeneficiarie.cs",
-              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmBeneficiarie.cs",
-              "ToolTip": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmBeneficiarie.cs",
-              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmBeneficiarie.cs",
-              "ViewState": "AgIAAHgAAAAAAAAAAAAnwIIAAABRAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-09T15:49:56.218Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "frmBeneficiarie.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmBeneficiarie.Designer.cs",
-              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmBeneficiarie.Designer.cs",
-              "ToolTip": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmBeneficiarie.Designer.cs",
-              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmBeneficiarie.Designer.cs",
-              "ViewState": "AgIAAHwCAAAAAAAAAAArwIcCAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-09T16:43:54.989Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "frmInventory.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmInventory.Designer.cs",
-              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmInventory.Designer.cs",
-              "ToolTip": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmInventory.Designer.cs",
-              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmInventory.Designer.cs",
-              "ViewState": "AgIAADQBAAAAAAAAAAArwD8BAABDAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-09T18:19:57.292Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "SeedData.cs",
-              "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Services\\SeedData.cs",
-              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Services\\SeedData.cs",
-              "ToolTip": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Services\\SeedData.cs",
-              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Services\\SeedData.cs",
-              "ViewState": "AgIAALMAAAAAAAAAAAAwwMIAAAA9AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-09T20:28:30.234Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "frmDistribution.cs",
-              "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmDistribution.cs",
-              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmDistribution.cs",
-              "ToolTip": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmDistribution.cs",
-              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmDistribution.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAAMwDwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-09T15:49:25.09Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "frmDistribution.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmDistribution.Designer.cs",
-              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmDistribution.Designer.cs",
-              "ToolTip": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmDistribution.Designer.cs",
-              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmDistribution.Designer.cs",
-              "ViewState": "AgIAAHEAAAAAAAAAAAArwHwAAABrAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-09T15:24:40.498Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "DataService.cs",
-              "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Services\\DataService.cs",
-              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Services\\DataService.cs",
-              "ToolTip": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Services\\DataService.cs",
-              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Services\\DataService.cs",
-              "ViewState": "AgIAAC4BAAAAAAAAAAAkwEABAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-09T18:49:49.702Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "frmMain.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmMain.Designer.cs",
-              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmMain.Designer.cs",
-              "ToolTip": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmMain.Designer.cs",
-              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmMain.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-09T21:04:50.694Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "frmBeneficiarie.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmBeneficiarie.cs",
-              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmBeneficiarie.cs",
-              "ToolTip": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmBeneficiarie.cs [Design]",
-              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmBeneficiarie.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-09T15:12:18.134Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "frmAlert.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmAlert.cs",
-              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmAlert.cs",
-              "ToolTip": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmAlert.cs [Design]",
-              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmAlert.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-09T15:12:15.956Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "frmMain.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmMain.cs",
-              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmMain.cs",
-              "ToolTip": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmMain.cs [Design]",
-              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmMain.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-09T16:07:20.515Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "frmLogin.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmLogin.cs",
-              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmLogin.cs",
-              "ToolTip": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmLogin.cs [Design]",
-              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmLogin.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-09T15:38:37.096Z"
+              "WhenOpened": "2026-05-09T16:25:45.035Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
@@ -446,11 +534,280 @@
               "ToolTip": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmDistributionReport.cs.cs [Design]",
               "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmDistributionReport.cs.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-09T16:25:40.797Z"
+              "WhenOpened": "2026-05-09T16:25:40.797Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 24,
+              "Title": "frmDistribution.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmDistribution.cs",
+              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmDistribution.cs",
+              "ToolTip": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmDistribution.cs [Design]",
+              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmDistribution.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T15:24:34.726Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "frmDashBoard.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmDashBoard.cs",
+              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmDashBoard.cs",
+              "ToolTip": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmDashBoard.cs [Design]",
+              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmDashBoard.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T15:12:36.034Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "SeedData.cs",
+              "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Services\\SeedData.cs",
+              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Services\\SeedData.cs",
+              "ToolTip": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Services\\SeedData.cs",
+              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Services\\SeedData.cs",
+              "ViewState": "AgIAAK8AAAAAAAAAAAAjwLcAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T20:28:30.234Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "DistributionStatus.cs",
+              "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Enums\\DistributionStatus.cs",
+              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Enums\\DistributionStatus.cs",
+              "ToolTip": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Enums\\DistributionStatus.cs",
+              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Enums\\DistributionStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-10T09:49:34.136Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "DonationType.cs",
+              "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Enums\\DonationType.cs",
+              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Enums\\DonationType.cs",
+              "ToolTip": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Enums\\DonationType.cs",
+              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Enums\\DonationType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-10T09:49:38.469Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "DonorType.cs",
+              "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Enums\\DonorType.cs",
+              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Enums\\DonorType.cs",
+              "ToolTip": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Enums\\DonorType.cs",
+              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Enums\\DonorType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-10T09:49:39.945Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "ItemCategory.cs",
+              "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Enums\\ItemCategory.cs",
+              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Enums\\ItemCategory.cs",
+              "ToolTip": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Enums\\ItemCategory.cs",
+              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Enums\\ItemCategory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-10T09:49:40.586Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "DataService.cs",
+              "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Services\\DataService.cs",
+              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Services\\DataService.cs",
+              "ToolTip": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Services\\DataService.cs",
+              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Services\\DataService.cs",
+              "ViewState": "AgIAAN0AAAAAAAAAAAAjwOkAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T18:49:49.702Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "MovementType.cs",
+              "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Enums\\MovementType.cs",
+              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Enums\\MovementType.cs",
+              "ToolTip": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Enums\\MovementType.cs",
+              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Enums\\MovementType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-10T09:55:31.174Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "SeedData.cs",
+              "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Data\\SeedData.cs",
+              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Data\\SeedData.cs",
+              "ToolTip": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Data\\SeedData.cs",
+              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Data\\SeedData.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAewBYAAADxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-10T09:50:33.216Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "SocialStatus.cs",
+              "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Enums\\SocialStatus.cs",
+              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Enums\\SocialStatus.cs",
+              "ToolTip": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Enums\\SocialStatus.cs",
+              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Enums\\SocialStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-10T09:49:47.82Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "UserRole.cs",
+              "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Enums\\UserRole.cs",
+              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Enums\\UserRole.cs",
+              "ToolTip": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Enums\\UserRole.cs",
+              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Enums\\UserRole.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAQAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-10T09:49:46.541Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Services\\UserService.cs",
+              "ToolTip": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Services\\UserService.cs",
+              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Services\\UserService.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAewBEAAAB2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-10T09:54:59.189Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "frmMain.cs",
+              "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmMain.cs",
+              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmMain.cs",
+              "ToolTip": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmMain.cs",
+              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmMain.cs",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAjwFUAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-10T09:54:07.504Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "frmUsers.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmUsers.Designer.cs",
+              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmUsers.Designer.cs",
+              "ToolTip": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmUsers.Designer.cs",
+              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmUsers.Designer.cs",
+              "ViewState": "AgIAABsBAAAAAAAAAAAYwC4BAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-10T09:44:29.671Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "frmDonations.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmDonations.Designer.cs",
+              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmDonations.Designer.cs",
+              "ToolTip": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmDonations.Designer.cs",
+              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmDonations.Designer.cs",
+              "ViewState": "AgIAAKYBAAAAAAAAAAAAAK0BAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T16:25:53.438Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "frmDonors.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmDonors.Designer.cs",
+              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmDonors.Designer.cs",
+              "ToolTip": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmDonors.Designer.cs",
+              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmDonors.Designer.cs",
+              "ViewState": "AgIAAJ0BAAAAAAAAAAArwKkBAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T16:26:02.463Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "frmBeneficiarie.resx",
+              "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmBeneficiarie.resx",
+              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmBeneficiarie.resx",
+              "ToolTip": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmBeneficiarie.resx",
+              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmBeneficiarie.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2026-05-10T09:26:51.317Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "FontManager.cs",
+              "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Helpers\\FontManager.cs",
+              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Helpers\\FontManager.cs",
+              "ToolTip": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Helpers\\FontManager.cs",
+              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Helpers\\FontManager.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAgwC8AAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T22:49:54.529Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "frmMain.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmMain.Designer.cs",
+              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmMain.Designer.cs",
+              "ToolTip": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmMain.Designer.cs",
+              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmMain.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T21:04:50.694Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "frmMain.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmMain.cs",
+              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmMain.cs",
+              "ToolTip": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmMain.cs [Design]",
+              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmMain.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T16:07:20.515Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
               "Title": "frmDistributionReport.cs.Designer.cs",
               "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmDistributionReport.cs.Designer.cs",
               "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmDistributionReport.cs.Designer.cs",
@@ -458,23 +815,12 @@
               "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmDistributionReport.cs.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-09T20:26:14.083Z"
+              "WhenOpened": "2026-05-09T20:26:14.083Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "frmDistributionReport.cs.cs",
-              "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmDistributionReport.cs.cs",
-              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmDistributionReport.cs.cs",
-              "ToolTip": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmDistributionReport.cs.cs",
-              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmDistributionReport.cs.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAgwCsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-09T15:50:19.21Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 47,
               "Title": "frmDashBoard.Designer.cs",
               "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmDashBoard.Designer.cs",
               "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmDashBoard.Designer.cs",
@@ -482,83 +828,12 @@
               "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmDashBoard.Designer.cs",
               "ViewState": "AgIAAOkAAAAAAAAAAAAqwPsAAABSAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-09T15:14:33.516Z"
+              "WhenOpened": "2026-05-09T15:14:33.516Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "frmDashBoard.cs",
-              "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmDashBoard.cs",
-              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmDashBoard.cs",
-              "ToolTip": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmDashBoard.cs",
-              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmDashBoard.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-09T15:18:00.18Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "frmDonors.cs",
-              "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmDonors.cs",
-              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmDonors.cs",
-              "ToolTip": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmDonors.cs",
-              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmDonors.cs",
-              "ViewState": "AgIAAP4AAAAAAAAAAAAAwAoBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-09T15:50:28.603Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "frmInventory.cs",
-              "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmInventory.cs",
-              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmInventory.cs",
-              "ToolTip": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmInventory.cs",
-              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmInventory.cs",
-              "ViewState": "AgIAAFABAAAAAAAAAAAAwFwBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-09T15:50:32.043Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "frmDonations.cs",
-              "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmDonations.cs",
-              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmDonations.cs",
-              "ToolTip": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmDonations.cs",
-              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmDonations.cs",
-              "ViewState": "AgIAAGcBAAAAAAAAAAAAAHIBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-09T18:49:02.556Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "frmDonors.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmDonors.Designer.cs",
-              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmDonors.Designer.cs",
-              "ToolTip": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmDonors.Designer.cs",
-              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmDonors.Designer.cs",
-              "ViewState": "AgIAAHgAAAAAAAAAAAAhwIcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-09T16:26:02.463Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "frmLogin.cs",
-              "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmLogin.cs",
-              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmLogin.cs",
-              "ToolTip": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmLogin.cs",
-              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmLogin.cs",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAcwE0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-09T15:46:00.074Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 48,
               "Title": "frmUsers.resx",
               "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmUsers.resx",
               "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmUsers.resx",
@@ -570,7 +845,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 49,
               "Title": "frmConfirm.cs",
               "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmConfirm.cs",
               "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmConfirm.cs",
@@ -578,35 +853,12 @@
               "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmConfirm.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAYAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-09T15:50:00.646Z"
+              "WhenOpened": "2026-05-09T15:50:00.646Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "frmLogin.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmLogin.Designer.cs",
-              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmLogin.Designer.cs",
-              "ToolTip": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmLogin.Designer.cs",
-              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmLogin.Designer.cs",
-              "ViewState": "AgIAAOsAAAAAAAAAAAAcwPkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-09T15:38:39.006Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "frmAlert.cs",
-              "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmAlert.cs",
-              "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Forms\\frmAlert.cs",
-              "ToolTip": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Forms\\frmAlert.cs",
-              "RelativeToolTip": "Smart Charity and Aid Distribution Tracker\\Forms\\frmAlert.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAYAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-09T15:49:49.729Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 50,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\azezs\\Desktop\\tes\\Smart-Charity-Aid-Distribution-Tracker\\Smart Charity and Aid Distribution Tracker\\Smart Charity and Aid Distribution Tracker\\Program.cs",
               "RelativeDocumentMoniker": "Smart Charity and Aid Distribution Tracker\\Program.cs",

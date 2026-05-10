@@ -39,6 +39,37 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
             LoadDonorsData();
             SetPanelMode(PanelMode.View);
         }
+        // --- ميزة التنقل السلس والبحث السريع بزر Enter ---
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == Keys.Enter)
+            {
+                // إذا كان المؤشر في حقل البحث، قم بتنفيذ البحث
+                if (this.ActiveControl == txtSearch)
+                {
+                    btnSearch.PerformClick();
+                    return true;
+                }
+
+                // استثناء الحقول متعددة الأسطر (للسماح بالنزول لسطر جديد)
+                if (this.ActiveControl == txtAddress || this.ActiveControl == txtNotes)
+                {
+                    return base.ProcessCmdKey(ref msg, keyData);
+                }
+
+                // استثناء الأزرار والجداول
+                if (this.ActiveControl is Guna.UI2.WinForms.Guna2Button ||
+                    this.ActiveControl is Guna.UI2.WinForms.Guna2DataGridView)
+                {
+                    return base.ProcessCmdKey(ref msg, keyData);
+                }
+
+                // تحويل ضغطة Enter إلى Tab للانتقال للحقل التالي
+                SendKeys.Send("{TAB}");
+                return true;
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
 
         private void frmDonors_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -67,7 +98,7 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
             btnCancel.Visible = (mode == PanelMode.Add || mode == PanelMode.Edit);
 
             var currentUser = SessionManager.GetCurrentUser();
-            bool canModify = currentUser != null && (currentUser.Role == UserRole.Admin || currentUser.Role == UserRole.User);
+            bool canModify = currentUser != null && (currentUser.Role == UserRole.مدير || currentUser.Role == UserRole.مستخدم_عادي);
 
             btnAddNew.Visible = (mode == PanelMode.View && canModify);
 

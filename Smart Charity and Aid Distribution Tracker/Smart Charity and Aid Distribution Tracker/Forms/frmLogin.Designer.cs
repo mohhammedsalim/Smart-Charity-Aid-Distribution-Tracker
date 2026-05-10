@@ -47,7 +47,6 @@
             this.pnlMain.Controls.Add(this.lblTitle);
             this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlMain.Location = new System.Drawing.Point(0, 0);
-            this.pnlMain.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlMain.Name = "pnlMain";
             this.pnlMain.Size = new System.Drawing.Size(533, 615);
             this.pnlMain.TabIndex = 0;
@@ -60,12 +59,11 @@
             this.chkShowPassword.CheckedState.BorderThickness = 0;
             this.chkShowPassword.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
             this.chkShowPassword.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.chkShowPassword.Font = new System.Drawing.Font("Cairo", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkShowPassword.Font = new System.Drawing.Font("Cairo", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkShowPassword.ForeColor = System.Drawing.Color.Gray;
             this.chkShowPassword.Location = new System.Drawing.Point(67, 425);
-            this.chkShowPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chkShowPassword.Name = "chkShowPassword";
-            this.chkShowPassword.Size = new System.Drawing.Size(136, 24);
+            this.chkShowPassword.Size = new System.Drawing.Size(136, 30);
             this.chkShowPassword.TabIndex = 10;
             this.chkShowPassword.Text = "إظهار كلمة المرور";
             this.chkShowPassword.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -78,7 +76,6 @@
             // 
             this.picLogo.ImageRotate = 0F;
             this.picLogo.Location = new System.Drawing.Point(213, 37);
-            this.picLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.picLogo.Name = "picLogo";
             this.picLogo.Size = new System.Drawing.Size(107, 98);
             this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -91,9 +88,8 @@
             this.lblSubtitle.Font = new System.Drawing.Font("Cairo", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSubtitle.ForeColor = System.Drawing.Color.Gray;
             this.lblSubtitle.Location = new System.Drawing.Point(125, 203);
-            this.lblSubtitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSubtitle.Name = "lblSubtitle";
-            this.lblSubtitle.Size = new System.Drawing.Size(224, 24);
+            this.lblSubtitle.Size = new System.Drawing.Size(224, 29);
             this.lblSubtitle.TabIndex = 5;
             this.lblSubtitle.Text = "يرجى إدخال بياناتك لتسجيل الدخول";
             // 
@@ -106,7 +102,6 @@
             this.btnClose.HoverState.IconColor = System.Drawing.Color.White;
             this.btnClose.IconColor = System.Drawing.Color.Gray;
             this.btnClose.Location = new System.Drawing.Point(469, 4);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(60, 36);
             this.btnClose.TabIndex = 4;
@@ -122,7 +117,6 @@
             this.btnLogin.ForeColor = System.Drawing.Color.White;
             this.btnLogin.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(132)))), ((int)(((byte)(73)))));
             this.btnLogin.Location = new System.Drawing.Point(67, 480);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.ShadowDecoration.BorderRadius = 8;
             this.btnLogin.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
@@ -143,7 +137,7 @@
             this.txtPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            this.txtPassword.Font = new System.Drawing.Font("Cairo", 12F);
+            this.txtPassword.Font = new System.Drawing.Font("Cairo", 7F);
             this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
             this.txtPassword.IconRightOffset = new System.Drawing.Point(10, 0);
             this.txtPassword.Location = new System.Drawing.Point(67, 357);
@@ -186,9 +180,8 @@
             this.lblTitle.Font = new System.Drawing.Font("Cairo", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.lblTitle.Location = new System.Drawing.Point(104, 139);
-            this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(237, 42);
+            this.lblTitle.Size = new System.Drawing.Size(237, 56);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "نظام سند الخيري";
             // 
@@ -218,7 +211,6 @@
             this.ClientSize = new System.Drawing.Size(533, 615);
             this.Controls.Add(this.pnlMain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmLogin";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;

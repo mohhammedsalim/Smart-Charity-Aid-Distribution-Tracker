@@ -33,9 +33,9 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Services
         {
             return new List<User>
             {
-                new User { EmployeeID = "E001", FullName = "المدير العام", UserName = "admin", Password = "123", Role = UserRole.Admin, IsActive = true, CreatedDate = DateTime.Now },
-                new User { EmployeeID = "E002", FullName = "موظف إدخال", UserName = "1", Password = "1", Role = UserRole.Admin, IsActive = true, CreatedDate = DateTime.Now },
-                new User { EmployeeID = "E003", FullName = "مستخدم عادي", UserName = "user", Password = "123", Role = UserRole.User, IsActive = true, CreatedDate = DateTime.Now }
+                new User { EmployeeID = "E001", FullName = "المدير العام", UserName = "admin", Password = "123", Role = UserRole.مدير, IsActive = true, CreatedDate = DateTime.Now },
+                new User { EmployeeID = "E002", FullName = "موظف إدخال", UserName = "1", Password = "1", Role = UserRole.مدير, IsActive = true, CreatedDate = DateTime.Now },
+                new User { EmployeeID = "E003", FullName = "مستخدم عادي", UserName = "user", Password = "123", Role = UserRole.مستخدم_عادي, IsActive = true, CreatedDate = DateTime.Now }
             };
         }
 
@@ -44,8 +44,8 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Services
             var list = new List<Beneficiary>
             {
                 // بياناتك الأصلية
-                new Beneficiary { BeneficiaryID = "B001", NationalID = "1000000001", FullName = "أحمد محمد عبدالله", Phone = "0500000001", Address = "الرياض، حي الياسمين", FamilySize = 5, SocialStatus = SocialStatus.Married, NeedReason = "دخل محدود", RegistrationDate = DateTime.Now.AddMonths(-6), IsActive = true, Notes = "يحتاج إلى دعم غذائي شهري" },
-                new Beneficiary { BeneficiaryID = "B002", NationalID = "1000000002", FullName = "فاطمة علي عبدالرحمن", Phone = "0500000002", Address = "جدة، حي الملقا", FamilySize = 3, SocialStatus = SocialStatus.Widowed, NeedReason = "أرملة تعول أيتام", RegistrationDate = DateTime.Now.AddMonths(-2), IsActive = true, Notes = "" }
+                new Beneficiary { BeneficiaryID = "B001", NationalID = "1000000001", FullName = "أحمد محمد عبدالله", Phone = "0500000001", Address = "الرياض، حي الياسمين", FamilySize = 5, SocialStatus = SocialStatus.متزوج, NeedReason = "دخل محدود", RegistrationDate = DateTime.Now.AddMonths(-6), IsActive = true, Notes = "يحتاج إلى دعم غذائي شهري" },
+                new Beneficiary { BeneficiaryID = "B002", NationalID = "1000000002", FullName = "فاطمة علي عبدالرحمن", Phone = "0500000002", Address = "جدة، حي الملقا", FamilySize = 3, SocialStatus = SocialStatus.أرمل, NeedReason = "أرملة تعول أيتام", RegistrationDate = DateTime.Now.AddMonths(-2), IsActive = true, Notes = "" }
             };
 
             // توليد 50 مستفيد إضافي
@@ -108,9 +108,9 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Services
             var list = new List<Donor>
             {
                 // بياناتك الأصلية
-                new Donor { DonorID = "DN001", FullName = "فاعل خير", Phone = "0555555555", DonorType = DonorType.Individual, RegistrationDate = DateTime.Now.AddDays(-30) },
-                new Donor { DonorID = "DN002", FullName = "مؤسسة العطاء", Phone = "0111111111", DonorType = DonorType.Company, RegistrationDate = DateTime.Now.AddDays(-15) },
-                new Donor { DonorID = "DN003", FullName = "محمد صالح", Phone = "0501234567", DonorType = DonorType.Individual, RegistrationDate = DateTime.Now.AddDays(-5) }
+                new Donor { DonorID = "DN001", FullName = "فاعل خير", Phone = "0555555555", DonorType = DonorType.فرد, RegistrationDate = DateTime.Now.AddDays(-30) },
+                new Donor { DonorID = "DN002", FullName = "مؤسسة العطاء", Phone = "0111111111", DonorType = DonorType.شركة, RegistrationDate = DateTime.Now.AddDays(-15) },
+                new Donor { DonorID = "DN003", FullName = "محمد صالح", Phone = "0501234567", DonorType = DonorType. جهة_حكومية, RegistrationDate = DateTime.Now.AddDays(-5) }
             };
 
             // توليد 30 متبرع إضافي
@@ -121,7 +121,7 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Services
                     DonorID = "DN" + i.ToString("D3"),
                     FullName = "متبرع " + i,
                     Phone = "05" + rnd.Next(10000000, 99999999).ToString(),
-                    DonorType = rnd.Next(0, 2) == 0 ? DonorType.Individual : DonorType.Company,
+                    DonorType = rnd.Next(0, 2) == 0 ? DonorType.فرد : DonorType.شركة,
                     RegistrationDate = DateTime.Now.AddDays(-rnd.Next(1, 365))
                 });
             }
@@ -133,10 +133,10 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Services
             var list = new List<Donation>
             {
                 // بياناتك الأصلية
-                new Donation { DonationID = "DO001", DonorID = "DN001", DonationType = DonationType.Cash, Amount = 5000, DonationDate = DateTime.Now.AddDays(-10) },
-                new Donation { DonationID = "DO002", DonorID = "DN002", DonationType = DonationType.InKind, ItemID = "I001", Quantity = 50, DonationDate = DateTime.Now.AddDays(-5) },
-                new Donation { DonationID = "DO003", DonorID = "DN003", DonationType = DonationType.Cash, Amount = 1500, DonationDate = DateTime.Now.AddDays(-2) },
-                new Donation { DonationID = "DO004", DonorID = "DN001", DonationType = DonationType.InKind, ItemID = "I003", Quantity = 20, DonationDate = DateTime.Now.AddDays(-1) }
+                new Donation { DonationID = "DO001", DonorID = "DN001", DonationType = DonationType.نقدي, Amount = 5000, DonationDate = DateTime.Now.AddDays(-10) },
+                new Donation { DonationID = "DO002", DonorID = "DN002", DonationType = DonationType.عيني, ItemID = "I001", Quantity = 50, DonationDate = DateTime.Now.AddDays(-5) },
+                new Donation { DonationID = "DO003", DonorID = "DN003", DonationType = DonationType.نقدي, Amount = 1500, DonationDate = DateTime.Now.AddDays(-2) },
+                new Donation { DonationID = "DO004", DonorID = "DN001", DonationType = DonationType.عيني, ItemID = "I003", Quantity = 20, DonationDate = DateTime.Now.AddDays(-1) }
             };
 
             // توليد 100 عملية تبرع إضافية
@@ -147,7 +147,7 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Services
                 {
                     DonationID = "DO" + i.ToString("D4"),
                     DonorID = "DN" + rnd.Next(1, 34).ToString("D3"),
-                    DonationType = isCash ? DonationType.Cash : DonationType.InKind,
+                    DonationType = isCash ? DonationType.نقدي : DonationType.عيني,
                     Amount = isCash ? rnd.Next(100, 5000) : 0,
                     ItemID = isCash ? null : "I" + rnd.Next(1, 12).ToString("D3"),
                     Quantity = isCash ? 0 : rnd.Next(10, 100),
@@ -162,11 +162,11 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Services
             var list = new List<Distribution>();
 
             // بياناتك الأصلية
-            var dist1 = new Distribution { DistributionID = "D001", BeneficiaryID = "B001", DistributionDate = DateTime.Now.AddDays(-2), Status = DistributionStatus.Completed, PerformedBy = "E001", Details = new List<DistributionDetail>() };
+            var dist1 = new Distribution { DistributionID = "D001", BeneficiaryID = "B001", DistributionDate = DateTime.Now.AddDays(-2), Status = DistributionStatus.منفذة, PerformedBy = "E001", Details = new List<DistributionDetail>() };
             dist1.Details.Add(new DistributionDetail { DetailID = "DD001", DistributionID = "D001", ItemID = "I001", Quantity = 2 });
             dist1.Details.Add(new DistributionDetail { DetailID = "DD002", DistributionID = "D001", ItemID = "I002", Quantity = 3 });
 
-            var dist2 = new Distribution { DistributionID = "D002", BeneficiaryID = "B002", DistributionDate = DateTime.Now.AddDays(-1), Status = DistributionStatus.Completed, PerformedBy = "E001", Details = new List<DistributionDetail>() };
+            var dist2 = new Distribution { DistributionID = "D002", BeneficiaryID = "B002", DistributionDate = DateTime.Now.AddDays(-1), Status = DistributionStatus.منفذة, PerformedBy = "E001", Details = new List<DistributionDetail>() };
             dist2.Details.Add(new DistributionDetail { DetailID = "DD003", DistributionID = "D002", ItemID = "I001", Quantity = 1 });
             dist2.Details.Add(new DistributionDetail { DetailID = "DD004", DistributionID = "D002", ItemID = "I003", Quantity = 2 });
 
@@ -181,7 +181,7 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Services
                     DistributionID = "D" + i.ToString("D4"),
                     BeneficiaryID = "B" + rnd.Next(1, 53).ToString("D3"),
                     DistributionDate = DateTime.Now.AddDays(-rnd.Next(1, 150)),
-                    Status = DistributionStatus.Completed,
+                    Status = DistributionStatus.منفذة,
                     PerformedBy = "E001",
                     Details = new List<DistributionDetail>()
                 };

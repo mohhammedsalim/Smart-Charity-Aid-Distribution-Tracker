@@ -81,7 +81,6 @@
             this.pnlBody.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlBody.Location = new System.Drawing.Point(0, 0);
             this.pnlBody.Name = "pnlBody";
-            this.pnlBody.Padding = new System.Windows.Forms.Padding(0);
             this.pnlBody.Size = new System.Drawing.Size(1600, 800);
             this.pnlBody.TabIndex = 1;
             // 
@@ -90,10 +89,10 @@
             this.pnlList.Controls.Add(this.dgvDonorsList);
             this.pnlList.Controls.Add(this.pnlSearch);
             this.pnlList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlList.Location = new System.Drawing.Point(20, 20);
+            this.pnlList.Location = new System.Drawing.Point(0, 0);
             this.pnlList.Name = "pnlList";
             this.pnlList.Padding = new System.Windows.Forms.Padding(20);
-            this.pnlList.Size = new System.Drawing.Size(1030, 760);
+            this.pnlList.Size = new System.Drawing.Size(1050, 800);
             this.pnlList.TabIndex = 3;
             // 
             // dgvDonorsList
@@ -105,17 +104,16 @@
             this.dgvDonorsList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(132)))), ((int)(((byte)(73)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvDonorsList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvDonorsList.ColumnHeadersHeight = 45;
-            this.dgvDonorsList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Cairo", 11F);
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(245)))), ((int)(((byte)(235)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
@@ -128,11 +126,12 @@
             this.dgvDonorsList.Name = "dgvDonorsList";
             this.dgvDonorsList.ReadOnly = true;
             this.dgvDonorsList.RowHeadersVisible = false;
+            this.dgvDonorsList.RowHeadersWidth = 51;
             this.dgvDonorsList.RowTemplate.Height = 40;
-            this.dgvDonorsList.Size = new System.Drawing.Size(990, 640);
+            this.dgvDonorsList.Size = new System.Drawing.Size(1010, 680);
             this.dgvDonorsList.TabIndex = 2;
             this.dgvDonorsList.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgvDonorsList.ThemeStyle.AlternatingRowsStyle.Font = new System.Drawing.Font("Cairo", 11F);
+            this.dgvDonorsList.ThemeStyle.AlternatingRowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.dgvDonorsList.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvDonorsList.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(245)))), ((int)(((byte)(235)))));
             this.dgvDonorsList.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
@@ -140,14 +139,14 @@
             this.dgvDonorsList.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvDonorsList.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
             this.dgvDonorsList.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvDonorsList.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold);
+            this.dgvDonorsList.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.dgvDonorsList.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dgvDonorsList.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvDonorsList.ThemeStyle.HeaderStyle.Height = 45;
             this.dgvDonorsList.ThemeStyle.ReadOnly = true;
             this.dgvDonorsList.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvDonorsList.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvDonorsList.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Cairo", 11F);
+            this.dgvDonorsList.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.dgvDonorsList.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvDonorsList.ThemeStyle.RowsStyle.Height = 40;
             this.dgvDonorsList.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(245)))), ((int)(((byte)(235)))));
@@ -164,7 +163,7 @@
             this.pnlSearch.Location = new System.Drawing.Point(20, 20);
             this.pnlSearch.Name = "pnlSearch";
             this.pnlSearch.Padding = new System.Windows.Forms.Padding(0, 0, 0, 20);
-            this.pnlSearch.Size = new System.Drawing.Size(990, 80);
+            this.pnlSearch.Size = new System.Drawing.Size(1010, 80);
             this.pnlSearch.TabIndex = 1;
             // 
             // cmbSearch
@@ -176,10 +175,10 @@
             this.cmbSearch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSearch.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
             this.cmbSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            this.cmbSearch.Font = new System.Drawing.Font("Cairo", 11F);
+            this.cmbSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.cmbSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cmbSearch.ItemHeight = 39;
-            this.cmbSearch.Location = new System.Drawing.Point(780, 10);
+            this.cmbSearch.Location = new System.Drawing.Point(800, 10);
             this.cmbSearch.Name = "cmbSearch";
             this.cmbSearch.Size = new System.Drawing.Size(200, 45);
             this.cmbSearch.TabIndex = 7;
@@ -189,9 +188,9 @@
             this.btnClear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClear.BorderRadius = 8;
             this.btnClear.FillColor = System.Drawing.Color.Gainsboro;
-            this.btnClear.Font = new System.Drawing.Font("Cairo", 11F, System.Drawing.FontStyle.Bold);
+            this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
             this.btnClear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnClear.Location = new System.Drawing.Point(10, 10);
+            this.btnClear.Location = new System.Drawing.Point(30, 10);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(100, 45);
             this.btnClear.TabIndex = 6;
@@ -202,9 +201,9 @@
             this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSearch.BorderRadius = 8;
             this.btnSearch.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            this.btnSearch.Font = new System.Drawing.Font("Cairo", 11F, System.Drawing.FontStyle.Bold);
+            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
             this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.Location = new System.Drawing.Point(120, 10);
+            this.btnSearch.Location = new System.Drawing.Point(140, 10);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(100, 45);
             this.btnSearch.TabIndex = 5;
@@ -217,10 +216,10 @@
             this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtSearch.DefaultText = "";
             this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            this.txtSearch.Font = new System.Drawing.Font("Cairo", 11F);
-            this.txtSearch.Location = new System.Drawing.Point(230, 10);
+            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.txtSearch.Location = new System.Drawing.Point(250, 10);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.PasswordChar = '\0';
             this.txtSearch.PlaceholderText = "ابحث هنا...";
             this.txtSearch.SelectedText = "";
             this.txtSearch.Size = new System.Drawing.Size(540, 45);
@@ -234,10 +233,10 @@
             this.pnlSmart.Controls.Add(this.pnlActions);
             this.pnlSmart.Controls.Add(this.lblPanelTitle);
             this.pnlSmart.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlSmart.Location = new System.Drawing.Point(1050, 20);
+            this.pnlSmart.Location = new System.Drawing.Point(1050, 0);
             this.pnlSmart.Name = "pnlSmart";
             this.pnlSmart.Padding = new System.Windows.Forms.Padding(20, 20, 20, 0);
-            this.pnlSmart.Size = new System.Drawing.Size(550, 760);
+            this.pnlSmart.Size = new System.Drawing.Size(550, 800);
             this.pnlSmart.TabIndex = 0;
             // 
             // pnlInputs
@@ -258,100 +257,63 @@
             this.pnlInputs.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlInputs.Location = new System.Drawing.Point(20, 65);
             this.pnlInputs.Name = "pnlInputs";
-            this.pnlInputs.Size = new System.Drawing.Size(510, 620);
+            this.pnlInputs.Size = new System.Drawing.Size(510, 660);
             this.pnlInputs.TabIndex = 3;
             // 
-            // labelFullName
+            // txtNotes
             // 
-            this.labelFullName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelFullName.AutoSize = true;
-            this.labelFullName.Font = new System.Drawing.Font("Cairo", 11F);
-            this.labelFullName.Location = new System.Drawing.Point(410, 5);
-            this.labelFullName.Name = "labelFullName";
-            this.labelFullName.Size = new System.Drawing.Size(91, 29);
-            this.labelFullName.TabIndex = 0;
-            this.labelFullName.Text = "اسم المتبرع";
+            this.txtNotes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNotes.BorderRadius = 8;
+            this.txtNotes.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNotes.DefaultText = "";
+            this.txtNotes.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.txtNotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.txtNotes.Location = new System.Drawing.Point(120, 435);
+            this.txtNotes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNotes.Multiline = true;
+            this.txtNotes.Name = "txtNotes";
+            this.txtNotes.PlaceholderText = "ملاحظات إضافية...";
+            this.txtNotes.SelectedText = "";
+            this.txtNotes.Size = new System.Drawing.Size(380, 70);
+            this.txtNotes.TabIndex = 11;
             // 
-            // txtFullName
+            // labelNotes
             // 
-            this.txtFullName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtFullName.BorderRadius = 8;
-            this.txtFullName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtFullName.DefaultText = "";
-            this.txtFullName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            this.txtFullName.Font = new System.Drawing.Font("Cairo", 11F);
-            this.txtFullName.Location = new System.Drawing.Point(10, 35);
-            this.txtFullName.Name = "txtFullName";
-            this.txtFullName.PasswordChar = '\0';
-            this.txtFullName.PlaceholderText = "اسم المتبرع أو الجهة...";
-            this.txtFullName.SelectedText = "";
-            this.txtFullName.Size = new System.Drawing.Size(490, 40);
-            this.txtFullName.TabIndex = 1;
+            this.labelNotes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelNotes.AutoSize = true;
+            this.labelNotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.labelNotes.Location = new System.Drawing.Point(428, 405);
+            this.labelNotes.Name = "labelNotes";
+            this.labelNotes.Size = new System.Drawing.Size(67, 24);
+            this.labelNotes.TabIndex = 10;
+            this.labelNotes.Text = "ملاحظات";
             // 
-            // labelPhone
+            // txtAddress
             // 
-            this.labelPhone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelPhone.AutoSize = true;
-            this.labelPhone.Font = new System.Drawing.Font("Cairo", 11F);
-            this.labelPhone.Location = new System.Drawing.Point(419, 85);
-            this.labelPhone.Name = "labelPhone";
-            this.labelPhone.Size = new System.Drawing.Size(82, 29);
-            this.labelPhone.TabIndex = 2;
-            this.labelPhone.Text = "رقم الهاتف";
+            this.txtAddress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtAddress.BorderRadius = 8;
+            this.txtAddress.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtAddress.DefaultText = "";
+            this.txtAddress.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.txtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.txtAddress.Location = new System.Drawing.Point(120, 355);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.PlaceholderText = "العنوان...";
+            this.txtAddress.SelectedText = "";
+            this.txtAddress.Size = new System.Drawing.Size(380, 40);
+            this.txtAddress.TabIndex = 9;
             // 
-            // txtPhone
+            // labelAddress
             // 
-            this.txtPhone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPhone.BorderRadius = 8;
-            this.txtPhone.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPhone.DefaultText = "";
-            this.txtPhone.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            this.txtPhone.Font = new System.Drawing.Font("Cairo", 11F);
-            this.txtPhone.Location = new System.Drawing.Point(10, 115);
-            this.txtPhone.Name = "txtPhone";
-            this.txtPhone.PasswordChar = '\0';
-            this.txtPhone.PlaceholderText = "رقم الهاتف...";
-            this.txtPhone.SelectedText = "";
-            this.txtPhone.Size = new System.Drawing.Size(490, 40);
-            this.txtPhone.TabIndex = 3;
-            // 
-            // labelEmail
-            // 
-            this.labelEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelEmail.AutoSize = true;
-            this.labelEmail.Font = new System.Drawing.Font("Cairo", 11F);
-            this.labelEmail.Location = new System.Drawing.Point(385, 165);
-            this.labelEmail.Name = "labelEmail";
-            this.labelEmail.Size = new System.Drawing.Size(116, 29);
-            this.labelEmail.TabIndex = 4;
-            this.labelEmail.Text = "البريد الإلكتروني";
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtEmail.BorderRadius = 8;
-            this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtEmail.DefaultText = "";
-            this.txtEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            this.txtEmail.Font = new System.Drawing.Font("Cairo", 11F);
-            this.txtEmail.Location = new System.Drawing.Point(10, 195);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.PasswordChar = '\0';
-            this.txtEmail.PlaceholderText = "البريد الإلكتروني...";
-            this.txtEmail.SelectedText = "";
-            this.txtEmail.Size = new System.Drawing.Size(490, 40);
-            this.txtEmail.TabIndex = 5;
-            // 
-            // labelDonorType
-            // 
-            this.labelDonorType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelDonorType.AutoSize = true;
-            this.labelDonorType.Font = new System.Drawing.Font("Cairo", 11F);
-            this.labelDonorType.Location = new System.Drawing.Point(415, 245);
-            this.labelDonorType.Name = "labelDonorType";
-            this.labelDonorType.Size = new System.Drawing.Size(86, 29);
-            this.labelDonorType.TabIndex = 6;
-            this.labelDonorType.Text = "نوع المتبرع";
+            this.labelAddress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelAddress.AutoSize = true;
+            this.labelAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.labelAddress.Location = new System.Drawing.Point(445, 325);
+            this.labelAddress.Name = "labelAddress";
+            this.labelAddress.Size = new System.Drawing.Size(52, 24);
+            this.labelAddress.TabIndex = 8;
+            this.labelAddress.Text = "العنوان";
             // 
             // cmbDonorType
             // 
@@ -362,68 +324,106 @@
             this.cmbDonorType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDonorType.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
             this.cmbDonorType.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            this.cmbDonorType.Font = new System.Drawing.Font("Cairo", 11F);
+            this.cmbDonorType.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.cmbDonorType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cmbDonorType.ItemHeight = 35;
-            this.cmbDonorType.Location = new System.Drawing.Point(10, 275);
+            this.cmbDonorType.Location = new System.Drawing.Point(120, 275);
             this.cmbDonorType.Name = "cmbDonorType";
-            this.cmbDonorType.Size = new System.Drawing.Size(490, 41);
+            this.cmbDonorType.Size = new System.Drawing.Size(380, 41);
             this.cmbDonorType.TabIndex = 7;
+            this.cmbDonorType.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // labelAddress
+            // labelDonorType
             // 
-            this.labelAddress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelAddress.AutoSize = true;
-            this.labelAddress.Font = new System.Drawing.Font("Cairo", 11F);
-            this.labelAddress.Location = new System.Drawing.Point(445, 325);
-            this.labelAddress.Name = "labelAddress";
-            this.labelAddress.Size = new System.Drawing.Size(56, 29);
-            this.labelAddress.TabIndex = 8;
-            this.labelAddress.Text = "العنوان";
+            this.labelDonorType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelDonorType.AutoSize = true;
+            this.labelDonorType.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.labelDonorType.Location = new System.Drawing.Point(415, 245);
+            this.labelDonorType.Name = "labelDonorType";
+            this.labelDonorType.Size = new System.Drawing.Size(82, 24);
+            this.labelDonorType.TabIndex = 6;
+            this.labelDonorType.Text = "نوع المتبرع";
             // 
-            // txtAddress
+            // txtEmail
             // 
-            this.txtAddress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtAddress.BorderRadius = 8;
-            this.txtAddress.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtAddress.DefaultText = "";
-            this.txtAddress.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            this.txtAddress.Font = new System.Drawing.Font("Cairo", 11F);
-            this.txtAddress.Location = new System.Drawing.Point(10, 355);
-            this.txtAddress.Name = "txtAddress";
-            this.txtAddress.PasswordChar = '\0';
-            this.txtAddress.PlaceholderText = "العنوان...";
-            this.txtAddress.SelectedText = "";
-            this.txtAddress.Size = new System.Drawing.Size(490, 40);
-            this.txtAddress.TabIndex = 9;
+            this.txtEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtEmail.BorderRadius = 8;
+            this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtEmail.DefaultText = "";
+            this.txtEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.txtEmail.Location = new System.Drawing.Point(120, 195);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.PlaceholderText = "البريد الإلكتروني...";
+            this.txtEmail.SelectedText = "";
+            this.txtEmail.Size = new System.Drawing.Size(380, 40);
+            this.txtEmail.TabIndex = 5;
             // 
-            // labelNotes
+            // labelEmail
             // 
-            this.labelNotes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelNotes.AutoSize = true;
-            this.labelNotes.Font = new System.Drawing.Font("Cairo", 11F);
-            this.labelNotes.Location = new System.Drawing.Point(428, 405);
-            this.labelNotes.Name = "labelNotes";
-            this.labelNotes.Size = new System.Drawing.Size(73, 29);
-            this.labelNotes.TabIndex = 10;
-            this.labelNotes.Text = "ملاحظات";
+            this.labelEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelEmail.AutoSize = true;
+            this.labelEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.labelEmail.Location = new System.Drawing.Point(385, 165);
+            this.labelEmail.Name = "labelEmail";
+            this.labelEmail.Size = new System.Drawing.Size(111, 24);
+            this.labelEmail.TabIndex = 4;
+            this.labelEmail.Text = "البريد الإلكتروني";
             // 
-            // txtNotes
+            // txtPhone
             // 
-            this.txtNotes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNotes.BorderRadius = 8;
-            this.txtNotes.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNotes.DefaultText = "";
-            this.txtNotes.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            this.txtNotes.Font = new System.Drawing.Font("Cairo", 11F);
-            this.txtNotes.Location = new System.Drawing.Point(10, 435);
-            this.txtNotes.Multiline = true;
-            this.txtNotes.Name = "txtNotes";
-            this.txtNotes.PasswordChar = '\0';
-            this.txtNotes.PlaceholderText = "ملاحظات إضافية...";
-            this.txtNotes.SelectedText = "";
-            this.txtNotes.Size = new System.Drawing.Size(490, 70);
-            this.txtNotes.TabIndex = 11;
+            this.txtPhone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPhone.BorderRadius = 8;
+            this.txtPhone.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPhone.DefaultText = "";
+            this.txtPhone.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.txtPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.txtPhone.Location = new System.Drawing.Point(120, 115);
+            this.txtPhone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.PlaceholderText = "رقم الهاتف...";
+            this.txtPhone.SelectedText = "";
+            this.txtPhone.Size = new System.Drawing.Size(380, 40);
+            this.txtPhone.TabIndex = 3;
+            // 
+            // labelPhone
+            // 
+            this.labelPhone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelPhone.AutoSize = true;
+            this.labelPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.labelPhone.Location = new System.Drawing.Point(419, 85);
+            this.labelPhone.Name = "labelPhone";
+            this.labelPhone.Size = new System.Drawing.Size(74, 24);
+            this.labelPhone.TabIndex = 2;
+            this.labelPhone.Text = "رقم الهاتف";
+            // 
+            // txtFullName
+            // 
+            this.txtFullName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtFullName.BorderRadius = 8;
+            this.txtFullName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtFullName.DefaultText = "";
+            this.txtFullName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.txtFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.txtFullName.Location = new System.Drawing.Point(120, 35);
+            this.txtFullName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtFullName.Name = "txtFullName";
+            this.txtFullName.PlaceholderText = "اسم المتبرع أو الجهة...";
+            this.txtFullName.SelectedText = "";
+            this.txtFullName.Size = new System.Drawing.Size(380, 40);
+            this.txtFullName.TabIndex = 1;
+            // 
+            // labelFullName
+            // 
+            this.labelFullName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelFullName.AutoSize = true;
+            this.labelFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.labelFullName.Location = new System.Drawing.Point(410, 5);
+            this.labelFullName.Name = "labelFullName";
+            this.labelFullName.Size = new System.Drawing.Size(79, 24);
+            this.labelFullName.TabIndex = 0;
+            this.labelFullName.Text = "اسم المتبرع";
             // 
             // pnlView
             // 
@@ -443,112 +443,35 @@
             this.pnlView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlView.Location = new System.Drawing.Point(20, 65);
             this.pnlView.Name = "pnlView";
-            this.pnlView.Size = new System.Drawing.Size(510, 620);
+            this.pnlView.Size = new System.Drawing.Size(510, 660);
             this.pnlView.TabIndex = 4;
             // 
-            // labelFullNameView
+            // lblNotesText
             // 
-            this.labelFullNameView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelFullNameView.AutoSize = true;
-            this.labelFullNameView.Font = new System.Drawing.Font("Cairo", 11F);
-            this.labelFullNameView.Location = new System.Drawing.Point(410, 5);
-            this.labelFullNameView.Name = "labelFullNameView";
-            this.labelFullNameView.Size = new System.Drawing.Size(91, 29);
-            this.labelFullNameView.TabIndex = 0;
-            this.labelFullNameView.Text = "اسم المتبرع";
+            this.lblNotesText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblNotesText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lblNotesText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblNotesText.Location = new System.Drawing.Point(10, 385);
+            this.lblNotesText.Name = "lblNotesText";
+            this.lblNotesText.Size = new System.Drawing.Size(490, 60);
+            this.lblNotesText.TabIndex = 11;
+            this.lblNotesText.Text = "----";
             // 
-            // lblFullNameText
+            // labelNotesView
             // 
-            this.lblFullNameText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblFullNameText.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold);
-            this.lblFullNameText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblFullNameText.Location = new System.Drawing.Point(10, 35);
-            this.lblFullNameText.Name = "lblFullNameText";
-            this.lblFullNameText.Size = new System.Drawing.Size(490, 30);
-            this.lblFullNameText.TabIndex = 1;
-            this.lblFullNameText.Text = "----";
-            // 
-            // labelPhoneView
-            // 
-            this.labelPhoneView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelPhoneView.AutoSize = true;
-            this.labelPhoneView.Font = new System.Drawing.Font("Cairo", 11F);
-            this.labelPhoneView.Location = new System.Drawing.Point(419, 75);
-            this.labelPhoneView.Name = "labelPhoneView";
-            this.labelPhoneView.Size = new System.Drawing.Size(82, 29);
-            this.labelPhoneView.TabIndex = 2;
-            this.labelPhoneView.Text = "رقم الهاتف";
-            // 
-            // lblPhoneText
-            // 
-            this.lblPhoneText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblPhoneText.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold);
-            this.lblPhoneText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblPhoneText.Location = new System.Drawing.Point(10, 105);
-            this.lblPhoneText.Name = "lblPhoneText";
-            this.lblPhoneText.Size = new System.Drawing.Size(490, 30);
-            this.lblPhoneText.TabIndex = 3;
-            this.lblPhoneText.Text = "----";
-            // 
-            // labelEmailView
-            // 
-            this.labelEmailView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelEmailView.AutoSize = true;
-            this.labelEmailView.Font = new System.Drawing.Font("Cairo", 11F);
-            this.labelEmailView.Location = new System.Drawing.Point(385, 145);
-            this.labelEmailView.Name = "labelEmailView";
-            this.labelEmailView.Size = new System.Drawing.Size(116, 29);
-            this.labelEmailView.TabIndex = 4;
-            this.labelEmailView.Text = "البريد الإلكتروني";
-            // 
-            // lblEmailText
-            // 
-            this.lblEmailText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblEmailText.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold);
-            this.lblEmailText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblEmailText.Location = new System.Drawing.Point(10, 175);
-            this.lblEmailText.Name = "lblEmailText";
-            this.lblEmailText.Size = new System.Drawing.Size(490, 30);
-            this.lblEmailText.TabIndex = 5;
-            this.lblEmailText.Text = "----";
-            // 
-            // labelDonorTypeView
-            // 
-            this.labelDonorTypeView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelDonorTypeView.AutoSize = true;
-            this.labelDonorTypeView.Font = new System.Drawing.Font("Cairo", 11F);
-            this.labelDonorTypeView.Location = new System.Drawing.Point(415, 215);
-            this.labelDonorTypeView.Name = "labelDonorTypeView";
-            this.labelDonorTypeView.Size = new System.Drawing.Size(86, 29);
-            this.labelDonorTypeView.TabIndex = 6;
-            this.labelDonorTypeView.Text = "نوع المتبرع";
-            // 
-            // lblDonorTypeText
-            // 
-            this.lblDonorTypeText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblDonorTypeText.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold);
-            this.lblDonorTypeText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblDonorTypeText.Location = new System.Drawing.Point(10, 245);
-            this.lblDonorTypeText.Name = "lblDonorTypeText";
-            this.lblDonorTypeText.Size = new System.Drawing.Size(490, 30);
-            this.lblDonorTypeText.TabIndex = 7;
-            this.lblDonorTypeText.Text = "----";
-            // 
-            // labelAddressView
-            // 
-            this.labelAddressView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelAddressView.AutoSize = true;
-            this.labelAddressView.Font = new System.Drawing.Font("Cairo", 11F);
-            this.labelAddressView.Location = new System.Drawing.Point(445, 285);
-            this.labelAddressView.Name = "labelAddressView";
-            this.labelAddressView.Size = new System.Drawing.Size(56, 29);
-            this.labelAddressView.TabIndex = 8;
-            this.labelAddressView.Text = "العنوان";
+            this.labelNotesView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelNotesView.AutoSize = true;
+            this.labelNotesView.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.labelNotesView.Location = new System.Drawing.Point(428, 355);
+            this.labelNotesView.Name = "labelNotesView";
+            this.labelNotesView.Size = new System.Drawing.Size(67, 24);
+            this.labelNotesView.TabIndex = 10;
+            this.labelNotesView.Text = "ملاحظات";
             // 
             // lblAddressText
             // 
             this.lblAddressText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblAddressText.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold);
+            this.lblAddressText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.lblAddressText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblAddressText.Location = new System.Drawing.Point(10, 315);
             this.lblAddressText.Name = "lblAddressText";
@@ -556,27 +479,104 @@
             this.lblAddressText.TabIndex = 9;
             this.lblAddressText.Text = "----";
             // 
-            // labelNotesView
+            // labelAddressView
             // 
-            this.labelNotesView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelNotesView.AutoSize = true;
-            this.labelNotesView.Font = new System.Drawing.Font("Cairo", 11F);
-            this.labelNotesView.Location = new System.Drawing.Point(428, 355);
-            this.labelNotesView.Name = "labelNotesView";
-            this.labelNotesView.Size = new System.Drawing.Size(73, 29);
-            this.labelNotesView.TabIndex = 10;
-            this.labelNotesView.Text = "ملاحظات";
+            this.labelAddressView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelAddressView.AutoSize = true;
+            this.labelAddressView.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.labelAddressView.Location = new System.Drawing.Point(445, 285);
+            this.labelAddressView.Name = "labelAddressView";
+            this.labelAddressView.Size = new System.Drawing.Size(52, 24);
+            this.labelAddressView.TabIndex = 8;
+            this.labelAddressView.Text = "العنوان";
             // 
-            // lblNotesText
+            // lblDonorTypeText
             // 
-            this.lblNotesText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblNotesText.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold);
-            this.lblNotesText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblNotesText.Location = new System.Drawing.Point(10, 385);
-            this.lblNotesText.Name = "lblNotesText";
-            this.lblNotesText.Size = new System.Drawing.Size(490, 60);
-            this.lblNotesText.TabIndex = 11;
-            this.lblNotesText.Text = "----";
+            this.lblDonorTypeText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblDonorTypeText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lblDonorTypeText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblDonorTypeText.Location = new System.Drawing.Point(10, 245);
+            this.lblDonorTypeText.Name = "lblDonorTypeText";
+            this.lblDonorTypeText.Size = new System.Drawing.Size(490, 30);
+            this.lblDonorTypeText.TabIndex = 7;
+            this.lblDonorTypeText.Text = "----";
+            // 
+            // labelDonorTypeView
+            // 
+            this.labelDonorTypeView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelDonorTypeView.AutoSize = true;
+            this.labelDonorTypeView.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.labelDonorTypeView.Location = new System.Drawing.Point(415, 215);
+            this.labelDonorTypeView.Name = "labelDonorTypeView";
+            this.labelDonorTypeView.Size = new System.Drawing.Size(82, 24);
+            this.labelDonorTypeView.TabIndex = 6;
+            this.labelDonorTypeView.Text = "نوع المتبرع";
+            // 
+            // lblEmailText
+            // 
+            this.lblEmailText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblEmailText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lblEmailText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblEmailText.Location = new System.Drawing.Point(10, 175);
+            this.lblEmailText.Name = "lblEmailText";
+            this.lblEmailText.Size = new System.Drawing.Size(490, 30);
+            this.lblEmailText.TabIndex = 5;
+            this.lblEmailText.Text = "----";
+            // 
+            // labelEmailView
+            // 
+            this.labelEmailView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelEmailView.AutoSize = true;
+            this.labelEmailView.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.labelEmailView.Location = new System.Drawing.Point(385, 145);
+            this.labelEmailView.Name = "labelEmailView";
+            this.labelEmailView.Size = new System.Drawing.Size(111, 24);
+            this.labelEmailView.TabIndex = 4;
+            this.labelEmailView.Text = "البريد الإلكتروني";
+            // 
+            // lblPhoneText
+            // 
+            this.lblPhoneText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblPhoneText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lblPhoneText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblPhoneText.Location = new System.Drawing.Point(10, 105);
+            this.lblPhoneText.Name = "lblPhoneText";
+            this.lblPhoneText.Size = new System.Drawing.Size(490, 30);
+            this.lblPhoneText.TabIndex = 3;
+            this.lblPhoneText.Text = "----";
+            // 
+            // labelPhoneView
+            // 
+            this.labelPhoneView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelPhoneView.AutoSize = true;
+            this.labelPhoneView.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.labelPhoneView.Location = new System.Drawing.Point(419, 75);
+            this.labelPhoneView.Name = "labelPhoneView";
+            this.labelPhoneView.Size = new System.Drawing.Size(74, 24);
+            this.labelPhoneView.TabIndex = 2;
+            this.labelPhoneView.Text = "رقم الهاتف";
+            // 
+            // lblFullNameText
+            // 
+            this.lblFullNameText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblFullNameText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lblFullNameText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblFullNameText.Location = new System.Drawing.Point(10, 35);
+            this.lblFullNameText.Name = "lblFullNameText";
+            this.lblFullNameText.Size = new System.Drawing.Size(490, 30);
+            this.lblFullNameText.TabIndex = 1;
+            this.lblFullNameText.Text = "----";
+            // 
+            // labelFullNameView
+            // 
+            this.labelFullNameView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelFullNameView.AutoSize = true;
+            this.labelFullNameView.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.labelFullNameView.Location = new System.Drawing.Point(410, 5);
+            this.labelFullNameView.Name = "labelFullNameView";
+            this.labelFullNameView.Size = new System.Drawing.Size(79, 24);
+            this.labelFullNameView.TabIndex = 0;
+            this.labelFullNameView.Text = "اسم المتبرع";
             // 
             // pnlActions
             // 
@@ -586,7 +586,7 @@
             this.pnlActions.Controls.Add(this.btnCancel);
             this.pnlActions.Controls.Add(this.btnSave);
             this.pnlActions.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlActions.Location = new System.Drawing.Point(20, 685);
+            this.pnlActions.Location = new System.Drawing.Point(20, 725);
             this.pnlActions.Name = "pnlActions";
             this.pnlActions.Size = new System.Drawing.Size(510, 75);
             this.pnlActions.TabIndex = 2;
@@ -596,7 +596,7 @@
             this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDelete.BorderRadius = 8;
             this.btnDelete.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnDelete.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold);
+            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnDelete.ForeColor = System.Drawing.Color.White;
             this.btnDelete.Location = new System.Drawing.Point(10, 15);
             this.btnDelete.Name = "btnDelete";
@@ -609,7 +609,7 @@
             this.btnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEdit.BorderRadius = 8;
             this.btnEdit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.btnEdit.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold);
+            this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnEdit.ForeColor = System.Drawing.Color.White;
             this.btnEdit.Location = new System.Drawing.Point(175, 15);
             this.btnEdit.Name = "btnEdit";
@@ -622,7 +622,7 @@
             this.btnAddNew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAddNew.BorderRadius = 8;
             this.btnAddNew.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            this.btnAddNew.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold);
+            this.btnAddNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnAddNew.ForeColor = System.Drawing.Color.White;
             this.btnAddNew.Location = new System.Drawing.Point(345, 15);
             this.btnAddNew.Name = "btnAddNew";
@@ -635,7 +635,7 @@
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancel.BorderRadius = 8;
             this.btnCancel.FillColor = System.Drawing.Color.Gainsboro;
-            this.btnCancel.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold);
+            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnCancel.Location = new System.Drawing.Point(10, 15);
             this.btnCancel.Name = "btnCancel";
@@ -648,7 +648,7 @@
             this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSave.BorderRadius = 8;
             this.btnSave.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            this.btnSave.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold);
+            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.Location = new System.Drawing.Point(260, 15);
             this.btnSave.Name = "btnSave";
@@ -659,7 +659,7 @@
             // lblPanelTitle
             // 
             this.lblPanelTitle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblPanelTitle.Font = new System.Drawing.Font("Cairo", 14F, System.Drawing.FontStyle.Bold);
+            this.lblPanelTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.lblPanelTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblPanelTitle.Location = new System.Drawing.Point(20, 20);
             this.lblPanelTitle.Name = "lblPanelTitle";

@@ -41,6 +41,37 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
             LoadInventoryData();
             SetPanelMode(PanelMode.View);
         }
+        // --- ميزة التنقل السلس والبحث السريع بزر Enter ---
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == Keys.Enter)
+            {
+                // إذا كان المؤشر في حقل البحث، قم بتنفيذ البحث
+                if (this.ActiveControl == txtSearch)
+                {
+                    btnSearch.PerformClick();
+                    return true;
+                }
+
+                // استثناء الحقول متعددة الأسطر (للسماح بالنزول لسطر جديد)
+                if (this.ActiveControl == txtDescription)
+                {
+                    return base.ProcessCmdKey(ref msg, keyData);
+                }
+
+                // استثناء الأزرار والجداول
+                if (this.ActiveControl is Guna.UI2.WinForms.Guna2Button ||
+                    this.ActiveControl is Guna.UI2.WinForms.Guna2DataGridView)
+                {
+                    return base.ProcessCmdKey(ref msg, keyData);
+                }
+
+                // تحويل ضغطة Enter إلى Tab للانتقال للحقل التالي
+                SendKeys.Send("{TAB}");
+                return true;
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
 
         private void frmInventory_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -75,7 +106,7 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
 
             // تطبيق الصلاحيات: المدير وأمين المخزون فقط يمكنهم الإضافة والتعديل والحذف
             var currentUser = SessionManager.GetCurrentUser();
-            bool canModify = currentUser != null && (currentUser.Role == UserRole.Admin || currentUser.Role == UserRole.StoreKeeper);
+            bool canModify = currentUser != null && (currentUser.Role == UserRole.مدير || currentUser.Role == UserRole.أمين_مخزن);
 
             btnAddNew.Visible = (mode == PanelMode.View && canModify);
 
@@ -272,7 +303,7 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
                     {
                         MovementID = "M" + Guid.NewGuid().ToString().Substring(0, 8),
                         ItemID = newId,
-                        MovementType = MovementType.In, // وارد
+                        MovementType = MovementType.وارد, // وارد
                         Quantity = currentQty,
                         MovementDate = DateTime.Now,
                         ReferenceID = "رصيد افتتاحي",
@@ -307,7 +338,7 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
                     {
                         MovementID = "M" + Guid.NewGuid().ToString().Substring(0, 8),
                         ItemID = _selectedItem.ItemID,
-                        MovementType = MovementType.Adjustment, // تسوية
+                        MovementType = MovementType.تسوية, // تسوية
                         Quantity = difference, // قد تكون موجبة (زيادة) أو سالبة (نقصان)
                         MovementDate = DateTime.Now,
                         ReferenceID = "تسوية يدوية",

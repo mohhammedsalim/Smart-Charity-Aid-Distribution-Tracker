@@ -2,8 +2,8 @@
 {
     public enum DonorType
     {
-        Individual, // فرد
-        Company,    // شركة
-        Government  // جهة حكومية
+        فرد,
+        شركة,
+        جهة_حكومية
     }
 }

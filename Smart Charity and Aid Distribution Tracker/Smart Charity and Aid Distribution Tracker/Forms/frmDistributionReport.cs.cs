@@ -87,6 +87,33 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
             // تفريغ جدول التفاصيل عند كل تحديث
             dgvDetails.Rows.Clear();
         }
+        // --- ميزة التنقل السلس والبحث السريع بزر Enter ---
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == Keys.Enter)
+            {
+                // إذا كان المؤشر في حقل البحث أو التواريخ، قم بتنفيذ البحث فوراً
+                if (this.ActiveControl == txtSearch ||
+                    this.ActiveControl == dtpStartDate ||
+                    this.ActiveControl == dtpEndDate)
+                {
+                    btnSearch.PerformClick();
+                    return true;
+                }
+
+                // استثناء الأزرار والجداول
+                if (this.ActiveControl is Guna.UI2.WinForms.Guna2Button ||
+                    this.ActiveControl is Guna.UI2.WinForms.Guna2DataGridView)
+                {
+                    return base.ProcessCmdKey(ref msg, keyData);
+                }
+
+                // تحويل ضغطة Enter إلى Tab للانتقال للحقل التالي
+                SendKeys.Send("{TAB}");
+                return true;
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
 
         private void DisplayDistributionDetails(string distributionId)
         {

@@ -8,9 +8,14 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
     {
         public frmAlert(string message)
         {
-            InitializeComponent(); FontManager.ApplyFontToControls(this);
+            InitializeComponent();
+            FontManager.ApplyFontToControls(this);
 
             lblMessage.Text = message;
+
+            // --- الحل السحري والرسمي في الويندوز ---
+            this.AcceptButton = btnOk; // عند الضغط على Enter
+            this.CancelButton = btnOk; // عند الضغط على Escape
         }
 
         private void btnOk_Click(object sender, EventArgs e)

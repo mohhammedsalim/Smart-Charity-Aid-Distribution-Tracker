@@ -11,8 +11,40 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
         {
             InitializeComponent();
             FontManager.ApplyFontToControls(this);
+
+            // --- السطر الجديد لحل المشكلة ---
+            this.AcceptButton = null; // إلغاء الزر الافتراضي لمنع التداخل
+
             // ربط حدث النقر على زر الدخول يدوياً
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+
+            // ربط أحداث لوحة المفاتيح
+            this.txtUsername.KeyDown += new KeyEventHandler(this.txtUsername_KeyDown);
+            this.txtPassword.KeyDown += new KeyEventHandler(this.txtPassword_KeyDown);
+
+            // التركيز التلقائي على حقل اسم المستخدم عند فتح الشاشة
+            this.Load += (s, e) => { this.ActiveControl = txtUsername; };
+        }
+
+
+        // حدث الضغط على زر في حقل اسم المستخدم
+        private void txtUsername_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true; // لمنع صوت "الرنين" المزعج للويندوز
+                txtPassword.Focus();       // الانتقال التلقائي لحقل كلمة المرور
+            }
+        }
+
+        // حدث الضغط على زر في حقل كلمة المرور
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true;
+                btnLogin.PerformClick();   // تنفيذ عملية تسجيل الدخول كأنك ضغطت على الزر
+            }
         }
 
         private void btnLogin_Click(object sender, EventArgs e)

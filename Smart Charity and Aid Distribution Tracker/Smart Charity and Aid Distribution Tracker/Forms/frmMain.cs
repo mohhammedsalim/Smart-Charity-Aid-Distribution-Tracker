@@ -83,7 +83,7 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
         {
             var currentUser = SessionManager.GetCurrentUser();
 
-            if (currentUser != null && currentUser.Role == UserRole.Admin)
+            if (currentUser != null && currentUser.Role == UserRole.مدير)
                 btnUsers.Visible = true;
             else
                 btnUsers.Visible = false;

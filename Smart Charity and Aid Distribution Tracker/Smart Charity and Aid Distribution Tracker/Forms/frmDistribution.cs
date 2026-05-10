@@ -54,6 +54,32 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
 
             _isLoading = false;
         }
+        // --- ميزة التنقل السلس بزر Enter ---
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == Keys.Enter)
+            {
+                // إذا كان المؤشر في حقل الكمية، قم بالضغط على زر "إضافة للسلة" تلقائياً
+                if (this.ActiveControl == numQuantity)
+                {
+                    btnAddItemToCart.PerformClick();
+                    cmbInventoryItems.Focus(); // العودة للصنف لإضافة صنف آخر بسرعة
+                    return true;
+                }
+
+                // استثناء الأزرار وجدول السلة
+                if (this.ActiveControl is Guna.UI2.WinForms.Guna2Button ||
+                    this.ActiveControl is Guna.UI2.WinForms.Guna2DataGridView)
+                {
+                    return base.ProcessCmdKey(ref msg, keyData);
+                }
+
+                // تحويل ضغطة Enter إلى Tab للانتقال للحقل التالي
+                SendKeys.Send("{TAB}");
+                return true;
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
 
         private void ResetForm()
         {
@@ -187,7 +213,7 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
                 BeneficiaryID = selectedBeneficiary.BeneficiaryID,
                 DistributionDate = DateTime.Now,
                 PerformedBy = currentUser.EmployeeID,
-                Status = DistributionStatus.Completed,
+                Status = DistributionStatus.منفذة,
                 Notes = ""
             };
 
@@ -208,7 +234,7 @@ namespace Smart_Charity_and_Aid_Distribution_Tracker.Forms
                 {
                     MovementID = "M" + Guid.NewGuid().ToString().Substring(0, 8),
                     ItemID = cartItem.ItemID,
-                    MovementType = MovementType.Out,
+                    MovementType = MovementType.صادر,
                     Quantity = cartItem.Quantity,
                     MovementDate = DateTime.Now,
                     ReferenceID = newDistId,
